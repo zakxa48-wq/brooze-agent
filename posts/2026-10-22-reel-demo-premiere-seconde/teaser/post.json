@@ -1,0 +1,11 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-24T18:30:00+02:00",
+  "avatar": "Karim",
+  "pilier": "Teaser du Reel",
+  "hypothese": "Une story qui annonce le Reel augmente sa portée les premières heures.",
+  "nouveau_format": false,
+  "slides": [
+    { "layout": "cover", "theme": "encre", "label": "Nouveau Reel", "titre": "Ton problème n'est pas ta *caméra*.", "taille": "t-l", "texte": "30 secondes pour comprendre ce qui fait partir tes clients. Il est sur notre profil.", "swipe": "Voir le Reel" }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "demo-premiere-seconde",
+  "fps": 30,
+  "source": [
+    0,
+    30.0
+  ],
+  "fin": 2.4,
+  "avatar": "Karim",
+  "idee": "La première seconde décide. Pas besoin de refilmer : on remonte l'existant.",
+  "hypothese": "Un Reel où la vidéo FAIT ce qu'elle dit (fil qui défile, chrono d'une seconde, musique coupée sur « coupe le son ») retient mieux qu'un Reel explicatif.",
+  "hook": {
+    "choisi": "Tu as filmé ton restaurant cent fois.",
+    "ecartes": [
+      "Ta caméra n'est pas le problème.",
+      "Filmé cent fois. Personne ne s'arrête."
+    ]
+  },
+  "scenes": [
+    {
+      "de": 0,
+      "type": "telephone",
+      "theme": "encre",
+      "mots": [
+        0,
+        6
+      ],
+      "cuivre": [
+        5,
+        6
+      ],
+      "echelle": 0.78,
+      "decalage_y": 270,
+      "transition": "coupe",
+      "vitesse": 2600,
+      "titre_y": 250,
+      "label": "Restaurants, commerçants",
+      "taille": 150
+    },
+    {
+      "de": "@7",
+      "type": "texte",
+      "theme": "papier",
+      "mots": [
+        7,
+        14
+      ],
+      "cuivre": [
+        9
+      ],
+      "transition": "volet"
+    },
+    {
+      "de": "@15",
+      "type": "texte",
+      "theme": "encre",
+      "mots": [
+        15,
+        21
+      ],
+      "transition": "glisse"
+    },
+    {
+      "de": "@22",
+      "type": "compteur",
+      "theme": "papier",
+      "label": "La première seconde",
+      "t0": 8.9,
+      "t1": 9.9,
+      "de_val": 0,
+      "a_val": 1,
+      "decimales": 1,
+      "unite": "s",
+      "cuivre_fin": true,
+      "transition": "zoom"
+    },
+    {
+      "de": "@26",
+      "type": "slam",
+      "theme": "encre",
+      "mots": [
+        26,
+        29
+      ],
+      "transition": "glisse"
+    },
+    {
+      "de": "@30",
+      "type": "texte",
+      "theme": "encre",
+      "mots": [
+        30,
+        38
+      ],
+      "transition": "coupe"
+    },
+    {
+      "de": "@39",
+      "type": "telephone",
+      "theme": "papier",
+      "mots": [
+        39,
+        41
+      ],
+      "echelle": 0.78,
+      "decalage_y": 270,
+      "vitesse": 3000,
+      "transition": "volet",
+      "titre_y": 300
+    },
+    {
+      "de": "@42",
+      "type": "son",
+      "theme": "papier",
+      "mots": [
+        42,
+        48
+      ],
+      "cuivre": [
+        46
+      ],
+      "t_coupe": "@46",
+      "transition": "glisse"
+    },
+    {
+      "de": "@49",
+      "type": "texte",
+      "theme": "encre",
+      "mots": [
+        49,
+        53
+      ],
+      "cuivre": [
+        52,
+        53
+      ],
+      "transition": "coupe"
+    },
+    {
+      "de": "@54",
+      "type": "texte",
+      "theme": "papier",
+      "mots": [
+        54,
+        63
+      ],
+      "cuivre": [
+        62,
+        63
+      ],
+      "transition": "glisse"
+    },
+    {
+      "de": "@64",
+      "type": "texte",
+      "theme": "encre",
+      "mots": [
+        64,
+        71
+      ],
+      "transition": "glisse"
+    },
+    {
+      "de": "@72",
+      "type": "montage",
+      "theme": "papier",
+      "mots": [
+        72,
+        77
+      ],
+      "cuivre": [
+        77
+      ],
+      "t_range": "@73",
+      "transition": "glisse"
+    },
+    {
+      "de": "@78",
+      "type": "fin",
+      "theme": "encre",
+      "mots": [
+        78,
+        84
+      ],
+      "t_logo": "@84>",
+      "transition": "volet"
+    }
+  ],
+  "musique": {
+    "bpm": 96,
+    "tonalite": "la",
+    "sections": [
+      [
+        0.2,
+        "@15",
+        "intro"
+      ],
+      [
+        "@15",
+        "@47",
+        "tension"
+      ],
+      [
+        "@54",
+        "@72",
+        "suspens"
+      ],
+      [
+        "@72",
+        32.1,
+        "resolution"
+      ]
+    ],
+    "accord_final": "@78"
+  },
+  "silences": [
+    [
+      "@47",
+      "@54"
+    ]
+  ],
+  "couverture": {
+    "theme": "encre",
+    "label": "Commerçants",
+    "titre": "Ton problème n'est pas ta *caméra*."
+  },
+  "version": 2
+}

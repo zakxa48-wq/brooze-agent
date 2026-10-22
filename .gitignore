@@ -1,2 +1,10 @@
 node_modules/
 templates/_rendu.html
+reel/.outils/
+# Dossiers de travail des Reels : on garde storyboard, transcription, rapports et planches, pas les fichiers lourds
+sorties/*/_*
+sorties/*/images/
+sorties/*/reel_sceptique/
+sorties/*/*.wav
+sorties/*/*.flac
+sorties/*/brouillon.mp4

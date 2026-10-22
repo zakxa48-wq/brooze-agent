@@ -1,0 +1,12 @@
+{
+ "source": "inbox/audio/demo-premiere-seconde.m4a",
+ "duree_brut": 30.88,
+ "duree_voix": 30.12,
+ "rapport_parole_bruit_db": 41.2,
+ "saturation": 0.0,
+ "mots": 85,
+ "debit_mots_s": 2.82,
+ "transcription": "Tu raffimais ton restaurant sans foie et pourtant, personne ne s'arrête sur tes vidéos. Le problème, ce n'est pas ta caméra. C'est la première seconde. Si rien ne bouge, si on ne comprend pas ce que tu vends, le pouce continue. Alors avant de publier, coupe le son. et regarde ta première seconde. Est-ce qu'on comprend tout de suite pourquoi venir chez toi si la réponse est non ? Ne refile rien. Remonte ce que tu as déjà. Chez Brooze, c'est exactement ce qu'on fait.",
+ "verdict": "ok",
+ "raisons": []
+}
