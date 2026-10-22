@@ -91,6 +91,20 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 .mot .trait { position:absolute; left:0; right:0; top:54%; height:.085em; background:var(--encre); transform-origin:0 50%; transform:scaleX(0); border-radius:.05em; }
 .encre .mot .trait { background:var(--papier); }
 
+/* Plan réel (photo, rush, rendu photoréaliste) : plein cadre, caméra vivante, étalonnage */
+.plan .fond { background:#0B0908; }
+.plan .media { position:absolute; left:50%; top:50%; width:1080px; height:1920px; margin:-960px 0 0 -540px; object-fit:cover; will-change:transform; }
+.plan .calque { position:absolute; left:50%; top:50%; width:1080px; height:1920px; margin:-960px 0 0 -540px; object-fit:cover; pointer-events:none; }
+.plan .voile { position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(to bottom, rgba(10,8,7,.35) 0%, rgba(10,8,7,0) 22%, rgba(10,8,7,0) 56%, rgba(10,8,7,.5) 76%, rgba(10,8,7,.62) 100%); }
+/* un titre posé sur une image : le haut s'assombrit franchement pour qu'il se lise sur n'importe quel fond */
+.plan .voile.titre { background:linear-gradient(to bottom, rgba(10,8,7,.72) 0%, rgba(10,8,7,.5) 24%, rgba(10,8,7,0) 46%, rgba(10,8,7,0) 56%, rgba(10,8,7,.5) 76%, rgba(10,8,7,.62) 100%); }
+.plan .titre-plan { position:absolute; left:96px; right:96px; top:300px; }
+.plan .titre-plan .bloc { color:var(--papier); text-shadow:0 6px 30px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.35); }
+#st.image .ligne { color:#F7F6F2; background:none; box-shadow:none; padding:0; font-size:66px;
+  text-shadow:0 4px 22px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.6); }
+#st.image .w { opacity:.78; display:inline-block; }
+#st.image .w.on { opacity:1; }
 #grain { position:absolute; z-index:11; inset:-64px; pointer-events:none; opacity:.075; mix-blend-mode:overlay; }
 #vignette { position:absolute; z-index:12; inset:0; pointer-events:none; background:radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.22) 100%); }
 </style>
@@ -115,6 +129,18 @@ const E = {   // courbes : jamais de linéaire à l'écran
   pose: p => 1 - (1 + 9 * p) * Math.exp(-9 * p),
 };
 const prog = (t, a, d) => clamp((t - a) / d);
+// Ressort amorti (réponse à un échelon) : u = temps écoulé (s), f = fréquence propre (Hz), z = amortissement.
+// z ≈ 0,75 : une arrivée vivante avec un dépassement à peine perceptible ; z = 1 : se pose sans dépasser.
+function ressort(u, f = 2.2, z = .78) {
+  if (u <= 0) return 0;
+  const w = 2 * Math.PI * f;
+  if (z >= 1) return 1 - (1 + w * u) * Math.exp(-w * u);
+  const wd = w * Math.sqrt(1 - z * z);
+  return 1 - Math.exp(-z * w * u) * (Math.cos(wd * u) + z / Math.sqrt(1 - z * z) * Math.sin(wd * u));
+}
+// Hasard déterministe (même image à chaque rendu) et bruit lisse pour la caméra à l'épaule
+const hasard = n => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const bruit = (t, s) => (Math.sin(t * 1.13 + s * 3.1) * .5 + Math.sin(t * 2.71 + s * 7.7) * .3 + Math.sin(t * 5.93 + s * 1.9) * .2);
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // Typographie française : espace insécable avant ? ! : ; et après «
 const fr = s => esc(s).replace(/\s*([?!:;»])/g, ' $1').replace(/«\s*/g, '« ');
@@ -140,12 +166,15 @@ function blocMots(sc, style = '') {
   }
   return h + '</div>';
 }
+// Chaque mot arrive au ressort, avec de petites différences (retard, raideur, hauteur de départ) tirées d'un hasard
+// déterministe : rien n'entre exactement comme le mot d'avant, c'est ce qui enlève l'effet « mécanique ».
 function animerMots(el, t) {
   el.querySelectorAll('.mot').forEach(m => {
-    const i = +m.dataset.i, p = E.expo(prog(t, tMot(i), .42)), inner = m.firstChild;
+    const i = +m.dataset.i, inner = m.firstChild, h1 = hasard(i), h2 = hasard(i + 97);
+    const u = t - (tMot(i) + (h1 - .5) * .05), p = ressort(u, 2.4 + h2 * .8, .8);
     const fort = m.classList.contains('cuivre');
-    inner.style.transform = `translateY(${(1 - p) * 108}%)` + (fort ? ` scale(${1 + .14 * (1 - E.pose(prog(t, tMot(i), .5)))})` : '');
-    inner.style.opacity = p > 0 ? 1 : 0;
+    inner.style.transform = `translateY(${(1 - p) * (96 + h1 * 22)}%)` + (fort ? ` scale(${1 + .12 * (1 - ressort(u, 3.2, 1))})` : '');
+    inner.style.opacity = u > 0 ? Math.min(1, u / .06) : 0;
   });
 }
 
@@ -421,6 +450,46 @@ T.barre = {
   montre: sc => range(sc.mots),
 };
 
+// Plan réel : photo, rush vidéo (séquence d'images extraite par rendu.mjs) ou rendu photoréaliste.
+// cadre : [[x, y, zoom] au début, [x, y, zoom] à la fin] (x, y = point visé de 0 à 1) ; calques : avant-plans détourés
+// (PNG) qui bougent plus que le fond = parallaxe ; etalonnage : chaud | neutre | froid | nuit ; mots : titre optionnel.
+const ETALON = { chaud: 'contrast(1.06) saturate(1.04) sepia(.08)', neutre: 'contrast(1.04)', froid: 'contrast(1.06) saturate(.92) hue-rotate(-6deg)',
+  nuit: 'contrast(1.12) brightness(.86) saturate(.9)' };
+T.plan = {
+  construire(sc) {
+    const media = sc.video ? `<img class="media">` : `<img class="media" src="${sc.image}">`;
+    const calques = (sc.calques ?? []).map((c, k) => `<img class="calque" data-k="${k}" src="${c.image}">`).join('');
+    return media + calques + `<div class="voile${sc.mots ? ' titre' : ''}" style="opacity:${sc.voile ?? 1}"></div>` +
+      (sc.mots ? `<div class="titre-plan" style="top:${sc.titre_y ?? 300}px">${blocMots(sc)}</div>` : '');
+  },
+  apres(el, sc) {
+    if (sc.mots) ajusterBloc(el.querySelector('.bloc'), sc.taille ?? 150, sc.hauteur ?? 520);
+    el.querySelector('.media').style.filter = ETALON[sc.etalonnage ?? 'chaud'] ?? sc.etalonnage;
+  },
+  async charger(el, sc, t) {
+    if (!sc.video) return;
+    const n = clamp(Math.floor((t - sc.de) * R.fps) + 1, 1, sc.n_images);
+    const img = el.querySelector('.media'), src = `${sc.dossier}/${String(n).padStart(5, '0')}.jpg`;
+    if (img.dataset.src !== src) { img.src = src; img.dataset.src = src; await img.decode().catch(() => {}); }
+  },
+  animer(el, sc, t) {
+    animerMots(el, t);
+    const [c0, c1] = sc.cadre ?? [[.5, .5, 1.08], [.5, .46, 1.16]];
+    const p = E.doux(prog(t, sc.de, (sc.a + .5) - sc.de));      // le mouvement continue pendant la transition de sortie
+    const zx = c0[2] + (c1[2] - c0[2]) * p, fx = c0[0] + (c1[0] - c0[0]) * p, fy = c0[1] + (c1[1] - c0[1]) * p;
+    // garder le cadre plein : le décalage ne dépasse jamais la marge que donne le zoom
+    const mx = 540 * (zx - 1), my = 960 * (zx - 1);
+    const dx = clamp((.5 - fx) * 1080 * zx, -mx, mx), dy = clamp((.5 - fy) * 1920 * zx, -my, my);
+    el.querySelector('.media').style.transform = `translate(${dx}px, ${dy}px) scale(${zx})`;
+    el.querySelectorAll('.calque').forEach(c => {
+      const pr = sc.calques[+c.dataset.k].profondeur ?? 1.6;    // > 1 : plus proche, bouge plus
+      c.style.transform = `translate(${dx * pr}px, ${dy * pr}px) scale(${1 + (zx - 1) * pr})`;
+    });
+  },
+  impact: sc => sc.t_impact,
+  montre: sc => range(sc.mots),
+};
+
 // Couverture : une image fixe, titre fort lisible en vignette
 T.couverture = {
   construire(sc) { return (sc.label ? `<div class="label">${esc(sc.label)}</div>` : '') + `<div class="bloc">${md(sc.titre)}</div>` + (sc.sous ? `<div class="sous">${md(sc.sous)}</div>` : ''); },
@@ -429,10 +498,10 @@ T.couverture = {
 };
 
 // Flou de mouvement vertical : un filtre SVG par élément (un filtre partagé contaminerait les autres scènes)
-function flou(el, id, px) {
+function flou(el, id, px, axe = 'y') {
   let f = document.getElementById(id);
-  if (!f) { document.getElementById('filtres').insertAdjacentHTML('beforeend', `<filter id="${id}" x="-5%" y="-10%" width="110%" height="120%"><feGaussianBlur stdDeviation="0 0"/></filter>`); f = document.getElementById(id); }
-  f.firstChild.setAttribute('stdDeviation', `0 ${px.toFixed(1)}`);
+  if (!f) { document.getElementById('filtres').insertAdjacentHTML('beforeend', `<filter id="${id}" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="0 0"/></filter>`); f = document.getElementById(id); }
+  f.firstChild.setAttribute('stdDeviation', axe === 'x' ? `${px.toFixed(1)} 0` : `0 ${px.toFixed(1)}`);
   el.style.filter = px > .5 ? `url(#${id})` : 'none';
 }
 window.flou = flou;
@@ -458,6 +527,11 @@ const TR = {
   // Zoom : l'ancienne scène part (0–45 %), la nouvelle arrive ensuite (35–100 %) : jamais deux textes superposés
   zoom: { d: .45, entree: (el, p) => { const q = prog(p, .35, .65); el.style.transform = `scale(${.9 + .1 * E.expo(q)})`; el.style.opacity = E.sortie(q); return 0; },
           sortie: (el, p) => { const q = prog(p, 0, .45); el.style.transform = `scale(${1 + .16 * E.entree(q)})`; el.style.opacity = 1 - E.sortie(q); return 0; } },
+  // Panoramique filé : les deux plans solidaires filent à l'horizontale, flou de mouvement proportionnel à la vitesse
+  whip: { d: .34, axe: 'x', entree: (el, p) => { el.style.transform = `translateX(${(1 - E.expo(p)) * 1080}px)`; return Math.min(40, 70 * Math.pow(2, -10 * p)); },
+          sortie: (el, p) => { el.style.transform = `translateX(${(1 - E.expo(p)) * 1080 - 1080}px)`; return Math.min(40, 70 * Math.pow(2, -10 * p)); } },
+  // Fondu court entre deux images réelles, le nouveau plan arrive en reculant légèrement (respiration naturelle)
+  fondu: { d: .4, entree: (el, p) => { el.style.opacity = E.doux(p); el.style.transform = `scale(${1.035 - .035 * E.sortie(p)})`; return 0; }, sortie: () => 0 },
   volet: { d: .38, entree: (el, p) => { el.style.clipPath = `inset(${(1 - E.doux(p)) * 100}% 0 0 0)`; return 0; }, sortie: () => 0 },
 };
 
@@ -470,7 +544,7 @@ window.init = async (data) => {
     const el = document.createElement('div');
     el.className = `scene ${sc.theme ?? 'papier'} ${sc.type}`; el.style.zIndex = k + 1;
     el.innerHTML = `<div class="fond"></div>${(sc.theme ?? 'papier') === 'encre' ? '<div class="faisceau"></div>' : ''}<div class="camera"><div class="contenu">${T[sc.type].construire(sc)}</div></div>`;
-    if (sc.type === 'telephone' || sc.type === 'clip') el.querySelector('.contenu').style.cssText = 'left:0;right:0;top:0;bottom:0;display:block';
+    if (['telephone', 'clip', 'plan'].includes(sc.type)) el.querySelector('.contenu').style.cssText = 'left:0;right:0;top:0;bottom:0;display:block';
     cadre.appendChild(el); sc.el = el;
   });
   await document.fonts.ready;
@@ -494,12 +568,18 @@ window.rendre = async (t) => {
     if (j === k && tr.d && j > 0) flou = tr.entree(el, prog(t, sc.de, tr.d));
     el.dataset.sortie = suiv && t >= suiv.de && trs?.d ? '1' : '';
     if (el.dataset.sortie) flou = trs.sortie(el, prog(t, suiv.de, trs.d));
-    window.flou(el, `sc${j}`, flou);
+    window.flou(el, `sc${j}`, flou, (el.dataset.sortie ? trs : tr)?.axe ?? 'y');
     // caméra : poussée lente continue (jamais d'image figée), secousse amortie sur les impacts
     const cam = el.querySelector('.camera'), p = prog(t, sc.de, sc.a - sc.de);
     let sx = 0, sy = 0; const ti = T[sc.type].impact?.(sc);
     if (ti != null && t >= ti) { const u = t - ti, a = 9 * Math.exp(-u / .07); sx = a * Math.sin(u * 95); sy = a * Math.cos(u * 77); }
-    cam.style.transform = `translate(${sx}px, ${sy - 18 * E.doux(p)}px) scale(${1 + (sc.poussee ?? .045) * E.doux(p)})`;
+    // caméra à l'épaule : dérive lente + micro-tremblement, plus présente sur les images réelles
+    const main = sc.main ?? (sc.type === 'plan' ? 1 : .45);
+    const hx = main * (7 * bruit(t * .55, 1) + 2.2 * bruit(t * 3.1, 2)), hy = main * (6 * bruit(t * .5, 3) + 2 * bruit(t * 2.9, 4));
+    const hr = main * .22 * bruit(t * .4, 5);
+    // coup de zoom sur les mots forts (reel.punch) : arrive en ~60 ms, se relâche en ~0,5 s
+    let pz = 0; for (const tp of R.punch ?? []) { const u = t - tp; if (u >= 0 && u < 1.2) pz += .055 * (1 - Math.exp(-u / .03)) * Math.exp(-u / .32); }
+    cam.style.transform = `translate(${sx + hx}px, ${sy + hy - 18 * E.doux(p)}px) rotate(${hr}deg) scale(${1 + (sc.poussee ?? .045) * E.doux(p) + pz})`;
     T[sc.type].animer(el, sc, t, ctx);
   });
   // clips : attendre que l'image du moment soit décodée
@@ -524,8 +604,11 @@ function sousTitres(t, sc) {
   const fini = groupe.at(-1)[0].end < sc.de + .02;
   if (t < debut || t > fin || fini || groupe.some(([, j]) => montres.has(j))) { st.style.display = 'none'; return; }
   st.style.display = 'flex';
-  st.className = (sc.theme ?? 'papier') === 'encre' ? 'sombre' : 'clair';
-  l.innerHTML = groupe.map(([m, j]) => `<span class="w${t >= m.start - AVANCE ? ' on' : ''}">${fr(m.w)}</span>`).join(' ');
+  st.className = ['plan', 'clip'].includes(sc.type) ? 'image' : (sc.theme ?? 'papier') === 'encre' ? 'sombre' : 'clair';
+  l.innerHTML = groupe.map(([m, j]) => {
+    const u = t - (m.start - AVANCE), on = u >= 0, s = on ? 1 + .07 * Math.max(0, 1 - ressort(u, 3.4, 1)) : 1;
+    return `<span class="w${on ? ' on' : ''}" style="transform:scale(${s.toFixed(3)})">${fr(m.w.replace(/["“”]/g, ''))}</span>`;
+  }).join(' ');
 }
 
 // ---------- contrôle : texte hors zone sûre, texte trop petit ----------

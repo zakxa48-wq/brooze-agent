@@ -5,6 +5,8 @@ Usage : python3 reel/son.py sorties/<id>/reel.json   → voix_reel.wav, partitio
 Tout est synthétisé (aucun échantillon, aucune musique protégée). Les temps viennent des scènes et des mots calés :
 le son tombe à l'image près. Sons automatiques :
   transition glisse / zoom  → whoosh centré sur la coupe        transition volet → glisse_douce
+  transition whip           → whoosh court droite → gauche       punch (coups de zoom) → low_hit discret
+  plan / clip (images réelles) → ambiance « airy » très basse, sauf sans_air
   slam                      → low_hit + snap à l'impact          duel → papier (A), snap (B)
   compteur                  → tick à chaque dixième d'anneau, lock si cuivre_fin
   telephone                 → glisse_tel pendant le défilement   liste → papier par point
@@ -47,6 +49,8 @@ def main(fichier):
             de, a, tr = sc['_de'], sc['_a'], sc.get('transition', 'glisse')
             if k > 0 and tr in ('glisse', 'zoom'):
                 ev.append(dict(t=max(0, de - .22), son='whoosh', g=.55, args=dict(d=.45, pan=[-.6, .6])))
+            elif k > 0 and tr == 'whip':     # panoramique filé : whoosh court qui traverse la stéréo de droite à gauche
+                ev.append(dict(t=max(0, de - .16), son='whoosh', g=.6, args=dict(d=.34, pan=[.8, -.8], peak=.5)))
             elif k > 0 and tr == 'volet':
                 ev.append(dict(t=max(0, de - .05), son='glisse_douce', g=.6, args=dict(d=.5)))
             typ = sc['type']
@@ -69,6 +73,13 @@ def main(fichier):
             elif typ == 'fin':
                 tl = temps(sc.get('t_logo', de + .2))
                 ev += [dict(t=tl, son='shimmer', g=.5, args=dict(d=.6)), dict(t=tl + .6, son='lock', g=.5)]
+        # coups de zoom sur les mots forts : un grave discret, à l'image de l'impact
+        for tp in reel.get('punch', []):
+            ev.append(dict(t=temps(tp) + .12, son='low_hit', g=.35))
+        # air : une ambiance très basse sous les images réelles (un plan réel sans air sonne faux)
+        for k, sc in enumerate(scenes):
+            if sc['type'] in ('plan', 'clip') and not sc.get('sans_air'):
+                ev.append(dict(t=sc['_de'], son='airy', g=.18, args=dict(d=max(.3, sc['_a'] - sc['_de'] + .3))))
     for e in reel.get('sons', []):
         ev.append(dict(e, t=temps(e['t'])))
 

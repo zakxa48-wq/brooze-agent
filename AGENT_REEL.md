@@ -94,29 +94,47 @@ Il produit `voix.wav` (nettoyée : passe-haut, débruitage léger, pauses > 0,55
   vers les mêmes `voix.wav` et `mots.json` (copie-les).
 
 ## 3. Direction créative (avant tout rendu)
+**Lis `reel/MONTAGE.md` avant chaque storyboard** : images réelles au moins 60 % du temps, 3 gros textes maximum,
+caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet signature, budget de calcul.
+
+0. **Les images d'abord** : `python3 reel/rushs.py liste /home/user/brooze-voix` (rushs et photos de Zak, à décrire
+   s'ils sont nouveaux : `rushs.py indexer`, puis regarde chaque planche `index/rushs/<id>.jpg` et remplis
+   `rushs.json`). Puis les rendus existants (`brooze-kit/projets/*/img|livraison`, sans textes incrustés), puis
+   `reel/stock.py` si le réseau l'autorise, puis des **images photoréalistes fixes** avec le skill `brooze-3d`
+   (une scène, plusieurs angles de caméra = plusieurs plans ; exemple : `sorties/2026-10-23-apple-montre-v2/3d/scene.py`).
 1. **Hook** avec `instagram-hook-engine` : au moins 3 hooks (provocatrice, intrigante, mixer), score HSS, garde le
    meilleur. Le texte écran reprend les **mots exacts** de la voix (règle Brooze). Si le meilleur hook n'est pas au
    début de l'audio, choisis une fenêtre qui commence par lui. Ne réordonne jamais les phrases (on ne fait pas dire à
    Zak ce qu'il n'a pas dit).
 2. **Concept** avec `brooze-direction` : une règle de monde unique, et la vidéo FAIT ce qu'elle dit dès que possible
    (le son se coupe quand il dit « coupe le son », le chrono dure vraiment une seconde…).
-3. **Storyboard** : `sorties/<id>/reel.json` (exemple complet : `sorties/demo-premiere-seconde/reel.json`). Chaque
-   idée de la voix a son visuel, rien n'est décoratif. Une scène par idée, 1,5 à 4 s.
+3. **Storyboard** : `sorties/<id>/reel.json` (exemple de référence en images réelles :
+   `sorties/2026-10-23-apple-montre-v2/reel.json` ; en typo : `sorties/demo-premiere-seconde/reel.json`). Chaque idée
+   de la voix a une image qui la MONTRE. Plans de 1,2 à 2,5 s en moyenne, un moment nerveux de coupes courtes.
    - Temps : `"@12"` = début du mot 12 (index de `mots.json`) moins 0,12 s, `"@12>"` = fin du mot 12.
-   - Scènes : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
+   - **Scène principale `plan`** : une image réelle plein cadre. `image` (photo, rendu) ou `video` (rush ; `debut`,
+     `vitesse` 0,5 = ralenti, `cadrage` 0–1 pour le recadrage 9:16), `cadre` [[x, y, zoom] début, [x, y, zoom] fin]
+     (point visé de 0 à 1, zoom ≥ 1,05 : c'est le mouvement de caméra, varie-le d'un plan à l'autre), `calques`
+     [{image PNG détourée, profondeur 1,5–2}] pour la parallaxe, `etalonnage` (chaud par défaut, le même partout),
+     `main` (caméra à l'épaule, 1 par défaut), `mots` [a, b] pour un gros titre par-dessus (compte dans les 3).
+   - `punch` : ["@12", …] coups de zoom sur 2 à 4 mots forts (avec un grave discret au son).
+   - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
      fictives qui défile ; `arret` pour s'arrêter sur un post), `compteur` (anneau chrono), `duel` (A barré / B),
      `liste`, `son` (onde qui s'écrase à `t_coupe`), `montage` (rushs épars qui se rangent sur une timeline),
      `clip` (séquence précalculée, ex. 3D), `fin` (wordmark + « Envoie-nous un message » + @broozeproduction).
    - Champs utiles : `mots` [a, b], `cuivre` [indices] (un seul élément cuivre par image), `label`, `theme`
-     (`papier` / `encre` / `studio`), `transition` (`glisse` poussée plein cadre / `volet` / `zoom` / `coupe`), `taille`.
+     (`papier` / `encre` / `studio`), `transition` (`coupe` par défaut entre images réelles, `whip` panoramique filé,
+     `fondu`, `glisse` poussée plein cadre, `volet`, `zoom` ; 2 types maximum hors coupe), `taille`.
    - Les mots affichés par une scène ne sont pas répétés en sous-titres ; les autres le sont, en bas dans la zone sûre.
-   - Varie : jamais 3 scènes `texte` d'affilée sans un visuel (`telephone`, `compteur`, `son`, `montage`, `duel`…).
+   - Varie : jamais 2 scènes graphiques d'affilée ; jamais deux plans de suite avec le même mouvement de caméra.
      Besoin d'un visuel qui n'existe pas ? Ajoute un type de scène dans `reel/moteur.html` (déterministe :
      tout dépend de `t`, courbes `E.*`, jamais de linéaire), vérifie-le en `--controle`, garde-le pour la suite.
    - `musique` (sections `intro`, `tension`, `calme`, `suspens`, `resolution`…), `silences` (un silence voulu est un
      instrument), `sons` en plus des sons automatiques.
    - `couverture` : titre fort lisible en vignette (2–3 lignes), même DA.
-4. **3D seulement si elle sert** : un objet ou une métaphore que la 2D ne rend pas. Rendu avec `monde3d` du skill
+4. **3D animée seulement si elle sert** (sinon : image fixe photoréaliste + `plan`, ~5 % du coût pour ~90 % de
+   l'effet ; rendus de 30 s à 3 min par image en 1080×1920, `spp` 48–64 avec débruitage). 3D animée : un objet ou une
+   métaphore que rien d'autre ne rend. Rendu avec `monde3d` du skill
    `brooze-direction` (ou `brooze-3d` / `brooze-anim` pour Blender), puis scène `clip` avec `"video": "plan3d.mp4"`.
    Toujours `--controle`, puis brouillon en `--echelle 0.5`, puis final. Si le rendu ne tient pas dans le temps
    d'exécution : simplifie la scène, ou rends-la par morceaux sur plusieurs exécutions (`render.py --range` si
@@ -135,6 +153,8 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
 ## 5. Contrôle qualité obligatoire (3 boucles maximum)
 1. `python3 reel/controle.py sorties/<id>/reel.mp4 sorties/<id>/reel.json` : format, i/s, codecs, durée < 90 s,
    poids < 95 Mo, −14 LUFS ±1, crête ≤ −1 dBTP, glitchs (flash, saut, noir). Code de sortie 1 = bloquant.
+   Il affiche aussi `a_justifier` (images réelles < 60 %, plus de 3 gros textes, plus de 2 types de transition) :
+   corrige, ou justifie dans le journal pourquoi ce Reel fait exception.
 2. **brooze-sceptique** : `python3 <skill brooze-sceptique>/scripts/inspecter.py reel.mp4 --mots mots.json` dans
    `sorties/<id>/`, puis regarde CHAQUE image produite (planche, bandes, interface simulée, début muet) et passe les
    4 regards. Écris le rapport et l'ordre de correction dans `sorties/<id>/sceptique_passeN.md`.

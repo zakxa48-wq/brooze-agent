@@ -13,3 +13,7 @@ sorties/_banque/
 # Jamais d'audio brut dans ce dépôt public : l'audio de Zak ne vit que dans brooze-voix (privé)
 sorties/**/*.m4a
 sorties/**/*.mp3
+# Fichiers de scène Blender (lourds, régénérables par scene.py)
+*.blend
+*.blend1
+sorties/*/_reel_*.mp4

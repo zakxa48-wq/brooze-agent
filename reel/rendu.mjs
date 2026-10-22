@@ -38,15 +38,32 @@ const resoudre = o => Array.isArray(o) ? o.map(resoudre) : o && typeof o === 'ob
   : temps(o);
 const scenes = resoudre(reel.scenes);
 
-// Clips (séquences précalculées, ex. rendu 3D) : extraits en images au fps du Reel
-for (const sc of scenes.filter(s => s.type === 'clip')) {
-  const dir = path.join(dossier, `_clip_${path.basename(sc.video, path.extname(sc.video))}`);
+// Vidéos (rush de Zak, rendu 3D animé…) des scènes clip et plan : extraites en images au fps du Reel.
+// plan.video accepte debut (s dans le rush), vitesse (0,5 = ralenti fondu), cadrage (0–1 : où recadrer en 9:16).
+for (const [k, sc] of scenes.entries()) {
+  if (!['clip', 'plan'].includes(sc.type) || !sc.video) continue;
+  // durée utile = durée de la scène + la transition de sortie (le plan continue de vivre pendant qu'il part)
+  const fin = scenes[k + 1]?.de ?? duree, debut = sc.debut ?? 0, vitesse = sc.vitesse ?? 1, cx = sc.cadrage ?? .5;
+  const dureeScene = fin - sc.de + .8;
+  const cle = `${path.basename(sc.video, path.extname(sc.video))}_${debut}_${vitesse}_${cx}`.replace(/[^\w.-]/g, '_');
+  const dir = path.join(dossier, `_clip_${cle}`);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
-    execFileSync('ffmpeg', ['-v', 'error', '-i', path.resolve(dossier, sc.video), '-vf', `fps=${fps},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920`, '-q:v', '2', path.join(dir, '%05d.jpg')]);
+    // ralenti : interpolation par fondu d'images (économique, sans saccade) ; recadrage 9:16 centré sur `cadrage`
+    const ralenti = vitesse !== 1 ? `setpts=${(1 / vitesse).toFixed(4)}*PTS,minterpolate=fps=${fps}:mi_mode=blend,` : '';
+    const vf = `${ralenti}fps=${fps},scale=-2:1920:force_original_aspect_ratio=increase,crop=1080:1920:(in_w-1080)*${cx}:0`;
+    execFileSync('ffmpeg', ['-v', 'error', '-ss', String(debut), '-t', String(dureeScene * vitesse), '-i', path.resolve(dossier, sc.video),
+      '-an', '-vf', vf, '-q:v', '2', path.join(dir, '%05d.jpg')]);
   }
   sc.dossier = pathToFileURL(dir).href; sc.n_images = fs.readdirSync(dir).length;
 }
+// Images (photos, rendus photoréalistes, calques détourés) : chemins relatifs au dossier du Reel
+for (const sc of scenes.filter(s => s.type === 'plan')) {
+  if (sc.image) sc.image = pathToFileURL(path.resolve(dossier, sc.image)).href;
+  for (const c of sc.calques ?? []) c.image = pathToFileURL(path.resolve(dossier, c.image)).href;
+}
+// Coups de zoom sur les mots forts : "@i" → attaque du mot i (1 image avant)
+const punch = (reel.punch ?? []).map(v => typeof v === 'string' ? temps(v) + .12 - 1 / fps : v);
 
 const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--allow-file-access-from-files'] });
 const echelle = opt('--brouillon') ? .5 : 1;
@@ -64,7 +81,7 @@ if (opt('--couverture')) {
   await navigateur.close(); process.exit(0);
 }
 
-await page.evaluate(d => window.init(d), { fps, duree, mots, scenes, sansSousTitres: reel.sous_titres === false });
+await page.evaluate(d => window.init(d), { fps, duree, mots, scenes, punch, sansSousTitres: reel.sous_titres === false });
 
 const audits = new Map();
 const noter = (t, pb) => pb.forEach(p => { if (!audits.has(p)) audits.set(p, t.toFixed(2)); });
@@ -90,7 +107,9 @@ const mix = path.join(dossier, 'mix.flac');
 if (!brouillon && !fs.existsSync(mix)) { console.error('mix.flac absent : lancer d\'abord python3 reel/son.py'); process.exit(2); }
 const args = ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-'];
 if (!brouillon) args.push('-i', mix);
-args.push('-c:v', 'libx264', '-preset', brouillon ? 'veryfast' : 'slow', '-crf', brouillon ? '23' : '17', '-pix_fmt', 'yuv420p',
+// Débit plafonné : le grain et la caméra à l'épaule sur des images détaillées font exploser un encodage à qualité
+// constante (240 Mo pour 41 s). 14 Mb/s ≈ 75 Mo pour 45 s, au-dessus de ce qu'Instagram garde après recompression.
+args.push('-c:v', 'libx264', '-preset', brouillon ? 'veryfast' : 'slow', '-crf', brouillon ? '23' : '18', '-maxrate', '14M', '-bufsize', '28M', '-pix_fmt', 'yuv420p',
   '-profile:v', 'high', '-r', String(fps), '-movflags', '+faststart');
 if (!brouillon) args.push('-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-shortest');
 args.push(sortie);

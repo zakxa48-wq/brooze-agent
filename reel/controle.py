@@ -43,7 +43,7 @@ def main(video, reel_json=None):
         critere(pic <= -1, f'crête vraie {pic:.1f} dBTP (max −1)')
 
     # Coupes attendues = débuts de scène (dans le temps du Reel)
-    coupes, cles = [], [0.3]
+    coupes, cles, pb_montage, montage = [], [0.3], [], {}
     if reel_json:
         reel = json.load(open(reel_json))
         mots = json.load(open(os.path.join(dossier, reel.get('mots', 'mots.json'))))
@@ -53,6 +53,18 @@ def main(video, reel_json=None):
                 m = mots[int(x[1:].rstrip('>'))]; return (m['end'] if x.endswith('>') else m['start'] - .12) - t0
             return x
         debuts = [temps(s['de']) for s in reel['scenes']][1:]
+        # Montage (MONTAGE.md) : part d'images réelles, nombre de gros textes, transitions répétées.
+        # Avertissements non bloquants : l'agent les corrige ou les justifie dans le journal.
+        bornes = [temps(x['de']) for x in reel['scenes']] + [duree]
+        reel_s = sum(bornes[k + 1] - bornes[k] for k, x in enumerate(reel['scenes']) if x['type'] in ('plan', 'clip'))
+        gros = sum(1 for x in reel['scenes'] if x['type'] in ('texte', 'slam', 'barre', 'specs') or (x['type'] == 'plan' and x.get('mots')))
+        trs = [x.get('transition', 'glisse') for x in reel['scenes'][1:]]
+        types_tr = {t for t in trs if t != 'coupe'}
+        part = reel_s / duree
+        montage = dict(part_images_reelles=round(part, 2), gros_textes=gros, transitions=sorted(types_tr))
+        (ok if part >= .6 else pb_montage).append(f'images réelles {part:.0%} du temps (objectif ≥ 60 %)')
+        (ok if gros <= 3 else pb_montage).append(f'{gros} moments de gros texte (objectif ≤ 3)')
+        (ok if len(types_tr) <= 2 else pb_montage).append(f"types de transition hors coupe : {', '.join(sorted(types_tr)) or 'aucun'} (objectif ≤ 2)")
         coupes = [round(d, 2) for d in debuts]
         for d in debuts: cles += [d - .05, d + .2, d + .6]
     cles.append(duree - .1)
@@ -76,10 +88,10 @@ def main(video, reel_json=None):
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', os.path.join(imgs, '%03d.jpg'), '-vf',
                     f'tile={cols}x{(len(cles) + cols - 1) // cols}:padding=6:color=0x222222', '-frames:v', '1',
                     os.path.join(dossier, 'planche_cles.jpg')], check=True)
-    res = dict(video=video, ok=ok, problemes=pb, glitchs=rapport_g or g.stdout[-800:], images_cles=cles,
+    res = dict(video=video, ok=ok, problemes=pb, montage=montage, a_justifier=pb_montage, glitchs=rapport_g or g.stdout[-800:], images_cles=cles,
                planche=os.path.join(dossier, 'planche_cles.jpg'), bandes=sortie_g)
     json.dump(res, open(os.path.join(dossier, 'controle.json'), 'w'), ensure_ascii=False, indent=1, default=str)
-    print(json.dumps(dict(ok=ok, problemes=pb, planche=res['planche'], glitchs_sortie=g.stdout[-1200:]), ensure_ascii=False, indent=1))
+    print(json.dumps(dict(ok=ok, problemes=pb, a_justifier=pb_montage, planche=res['planche'], glitchs_sortie=g.stdout[-1200:]), ensure_ascii=False, indent=1))
     sys.exit(1 if pb else 0)
 
 
