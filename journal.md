@@ -7,6 +7,7 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 ## 2026-10-22 · Story · Karim · Positionnement
 - **Hook** : « Tes meilleures vidéos dorment dans ta galerie. »
 - **Images** : `posts/2026-10-22-rushs-galerie/` (2 images)
+- **Hypothèse** : la story obtient des réponses « RUSH » en message (indicateur : IGST11 réponses / IGST10 portée).
 - **Analyse** : 3 posts depuis septembre, portée 8 à 11, aucune story mesurée. Le carrousel du 19/10 a déjà pris
   l'angle « test des 3 secondes » : écarté. Aucun concurrent suivi dans Metricool.
 - **Pourquoi ce choix** : parle à la douleur de Karim (« pas le temps de tourner ») avec notre vrai positionnement
