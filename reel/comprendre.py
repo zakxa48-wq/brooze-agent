@@ -17,7 +17,9 @@ from scipy import signal
 SR = 48000
 warnings.filterwarnings('ignore', message='Possible clipped samples')
 ICI = os.path.dirname(os.path.abspath(__file__))
-CACHE = os.path.expanduser('~/.cache/brooze/sherpa-onnx-whisper-small')
+# Whisper medium si présent (nettement plus juste en français : « Tu vois » au lieu de « Je vois »), sinon small
+_M = os.path.expanduser('~/.cache/brooze/sherpa-onnx-whisper-medium')
+CACHE, TAILLE = (_M, 'medium') if os.path.exists(f'{_M}/medium-encoder.int8.onnx') else (os.path.expanduser('~/.cache/brooze/sherpa-onnx-whisper-small'), 'small')
 
 
 def decoder(src, dst, filtres=None):
@@ -89,8 +91,8 @@ def segmenter(x, maxi=24.):
 def transcrire(x, segs):
     import sherpa_onnx
     rec = sherpa_onnx.OfflineRecognizer.from_whisper(
-        encoder=f'{CACHE}/small-encoder.int8.onnx', decoder=f'{CACHE}/small-decoder.int8.onnx',
-        tokens=f'{CACHE}/small-tokens.txt', language='fr', task='transcribe', num_threads=os.cpu_count() or 4)
+        encoder=f'{CACHE}/{TAILLE}-encoder.int8.onnx', decoder=f'{CACHE}/{TAILLE}-decoder.int8.onnx',
+        tokens=f'{CACHE}/{TAILLE}-tokens.txt', language='fr', task='transcribe', num_threads=os.cpu_count() or 4)
     x16 = signal.resample_poly(x, 1, 3).astype(np.float32)
     res = []
     for a, b in segs:
@@ -111,6 +113,35 @@ def nettoyer_texte(t):
     return re.sub(r'\s+', ' ', t).strip()
 
 
+def affiner(dossier, avant=.14, apres=.10):
+    """Recale le début de chaque mot sur l'attaque réelle de la voix (montée d'énergie ou entrée de fricative), quand
+    elle est nette et proche de l'estimation ; sinon le mot garde son temps. Corrige la dérive de 0,1–0,2 s du calage
+    syllabique au milieu des phrases (même méthode que attaques.py du skill, appliquée à tous les mots)."""
+    x, sr = sf.read(f'{dossier}/voix.wav'); n = int(.02 * sr)
+    fen = np.hanning(n); f = np.fft.rfftfreq(n, 1 / sr)
+    def trame(t):
+        a = max(0, int(t * sr)); s = x[a:a + n]
+        if len(s) < n: s = np.pad(s, (0, n - len(s)))
+        s = s * fen; S = np.abs(np.fft.rfft(s))
+        return 20 * np.log10(np.sqrt((s ** 2).mean()) + 1e-7), (S * f).sum() / (S.sum() + 1e-9)
+    mots = json.load(open(f'{dossier}/mots.json')); bouges = 0
+    for k, w in enumerate(mots):
+        T = np.arange(w['start'] - avant, w['start'] + apres, .01); F = [trame(t) for t in T]
+        e = np.array([a for a, _ in F]); c = np.array([b for _, b in F])
+        cand = [T[j] for j in range(3, len(T)) if (e[j] - e[j - 3] > 9 and e[j] > -36) or (c[j] > 3300 and c[j - 1] <= 3300 and e[j] > -42)]
+        if not cand: continue
+        t = float(min(cand, key=lambda t: abs(t - w['start']))) - .01      # l'attaque commence juste avant la montée
+        bas = mots[k - 1]['start'] + .06 if k else 0.0                      # jamais avant le mot précédent
+        haut = (mots[k + 1]['start'] - .06) if k + 1 < len(mots) else w['end']
+        t = min(max(t, bas), haut)
+        if abs(t - w['start']) >= .02:
+            w['avant_affinage'] = w['start']; w['start'] = round(t, 3); bouges += 1
+    for k, w in enumerate(mots[:-1]):                                       # fins cohérentes avec le mot suivant
+        w['end'] = round(min(max(w['end'], w['start'] + .06), mots[k + 1]['start'] + .25), 3)
+    json.dump(mots, open(f'{dossier}/mots.json', 'w'), ensure_ascii=False, indent=1)
+    return bouges
+
+
 def caler(dossier):
     # La ponctuation haute française (« toi ? ») est collée au mot pour le calage, sinon « ? » deviendrait un mot.
     segs = [[a, b, re.sub(r'\s+([?!:;»])', r'\1', re.sub(r'«\s+', '«', t))] for a, b, t in json.load(open(f'{dossier}/segs.json'))]
@@ -118,6 +149,7 @@ def caler(dossier):
     subprocess.run([sys.executable, f'{ICI}/.outils/mots.py', f'{dossier}/voix.wav', '--segs', f'{dossier}/_segs_calage.json',
                     f'{dossier}/mots.json'], check=True, stdout=subprocess.DEVNULL)
     os.remove(f'{dossier}/_segs_calage.json')
+    affiner(dossier)
     return json.load(open(f'{dossier}/mots.json'))
 
 

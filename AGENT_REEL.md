@@ -80,9 +80,19 @@ python3 reel/comprendre.py inbox/audio/<fichier> sorties/<AAAA-MM-JJ-slug>/
 ```
 Il produit `voix.wav` (nettoyée : passe-haut, débruitage léger, pauses > 0,55 s ramenées à 0,35 s, −16 LUFS),
 `segs.json` (phrases transcrites), `mots.json` (chaque mot calé), `rapport.json` (verdict de qualité).
-- **Relis la transcription mot à mot.** Corrige dans `segs.json` UNIQUEMENT les erreurs d'écoute évidentes d'après le
-  contexte (nom propre, mot impossible). La voix fait foi : ne reformule jamais, n'ajoute rien. Puis
-  `python3 reel/comprendre.py --recaler sorties/<id>/`. Nouveau nom mal entendu ? Ajoute-le à `reel/lexique.json`.
+- **Le texte à l'écran = exactement ce que Zak dit** (retour de Zak, 22/10 : l'agent avait écrit « Je vois la
+  différence. » au lieu de « Tu vois la différence ? »). La transcription utilise Whisper **medium** (installé par
+  `reel/setup.sh` ; small seulement en secours, il se trompe sur les pronoms et les questions). Relis-la mot à mot :
+  pronoms (je / tu / on / vous), questions (« ? » quand l'intonation monte : « tu vois… ? », « non ? »), négations,
+  citations (ce que pense le spectateur entre guillemets, ce que Zak dit au spectateur hors guillemets). Corrige dans
+  `segs.json` UNIQUEMENT ces erreurs d'écoute et les noms propres. La voix fait foi : ne reformule jamais, n'ajoute
+  rien, ne « corrige » pas le français parlé. En cas de doute sur un mot, retranscris le segment seul avec
+  `comprendre.transcrire` : si les deux lectures divergent, garde celle qui colle au contexte et note-le au journal.
+  Puis `python3 reel/comprendre.py --recaler sorties/<id>/` (recale et **affine** : chaque mot est recollé sur
+  l'attaque réelle de la voix). Nouveau nom mal entendu ? Ajoute-le à `reel/lexique.json`.
+- **Synchro** : les sous-titres révèlent chaque mot au moment où il est dit (jamais avant, jamais après) ; un titre
+  posé sur une image arrive avec son premier mot. Après `--controle`, vérifie 2 ou 3 images au milieu d'une phrase :
+  le dernier mot affiché doit être celui qu'on entend.
 - **Verdict `inutilisable`** (saturation, aucune parole, trop court), **propos flou** (pas d'idée claire en 45 s) ou
   **contenu risqué** (attaque nominative, promesse illégale, information privée de client, chiffre invérifiable
   présenté comme fait) : tu ne fabriques rien. Tu déplaces l'audio dans `inbox/traite/` et tu expliques pourquoi
@@ -118,6 +128,10 @@ caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet sig
      [{image PNG détourée, profondeur 1,5–2}] pour la parallaxe, `etalonnage` (chaud par défaut, le même partout),
      `main` (caméra à l'épaule, 1 par défaut), `mots` [a, b] pour un gros titre par-dessus (compte dans les 3).
    - `punch` : ["@12", …] coups de zoom sur 2 à 4 mots forts (avec un grave discret au son).
+   - `profondeur` (carte de profondeur, `reel/profondeur.py`) sur chaque plan tiré d'un rendu 3D : l'image prend un
+     relief 2,5D (la caméra tourne légèrement autour de l'objet au lieu de glisser sur une photo). Réglages :
+     `relief` (1 par défaut, 0,6–1,4), `orbite` [[x0, y0], [x1, y1]], `dolly`, `mise_au_point` (0–1). Rien de plus
+     fort : le relief doit se sentir, pas se voir. Voir `reel/MONTAGE.md` § 3 bis.
    - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
      fictives qui défile ; `arret` pour s'arrêter sur un post), `compteur` (anneau chrono), `duel` (A barré / B),
      `liste`, `son` (onde qui s'écrase à `t_coupe`), `montage` (rushs épars qui se rangent sur une timeline),

@@ -49,6 +49,17 @@ plein cadre).
 - **Couleur cohérente** : un seul `etalonnage` pour tout le Reel (sauf rupture voulue), grain et vignette du moteur
   par-dessus : c'est ce qui fait « un film » au lieu d'un collage.
 
+## 3 bis. Animé, pas agité (retour de Zak, 22/10 : « plus animé, pas extrême, moins d'image fixe »)
+- **Aucune image ne doit paraître figée** : chaque plan tiré d'un rendu 3D reçoit sa carte de profondeur et le moteur
+  lui donne un vrai relief (parallaxe par pixel, en WebGL). Coût : 2 à 5 s de calcul par carte.
+  - Scène écrite en code : `import profondeur` puis `profondeur.rendre('plan_prof.png')` juste après `B.rendre(...)`.
+  - Scène sauvegardée : `~/blender-env/bin/python reel/profondeur.py scene.blend plan_prof.png`.
+  - Photo réelle sans 3D : pas de carte inventée ; caméra à l'épaule + `cadre` suffisent.
+- **Amplitude** : `relief` 1 par défaut (≈ 1 % de l'image d'orbite) ; 1,4 au maximum pour le plan-signature, 0,6
+  pour un plan calme. Jamais d'orbite rapide, jamais deux plans de suite avec la même `orbite`.
+- Ce qui fait « pro » : beaucoup de petits mouvements cohérents (épaule + relief + coups de zoom sur 2–4 mots).
+  Ce qui fait « amateur » : un effet fort partout (zooms à chaque phrase, secousses, transitions variées).
+
 ## 4. L'impressionnant (sans effets gratuits)
 - **Un effet signature par Reel** (règle Brooze) : une parallaxe profonde sur un rendu, un match cut (même forme d'un
   plan à l'autre), un ralenti sur un geste, une coupe du son… pas tout à la fois.
@@ -58,9 +69,17 @@ plein cadre).
 - **Parallaxe** : rends l'objet détouré (PNG avec alpha, `B.rendre` avec film transparent) + le fond séparément ;
   `calques: [{"image": "objet.png", "profondeur": 1.8}]`. Le décalage de profondeur est ce qui « fait vrai ».
 
-## 5. Le son qui va avec
+## 5. Le son qui va avec (plus de bruitages, jamais trop)
 - Une ambiance discrète sous les plans réels (`airy`, `bourdon` très bas) : un plan réel sans air sonne faux.
-- Whoosh sur chaque `whip`, rien sur une coupe franche (le son de la coupe, c'est la voix).
+- Whoosh sur chaque `whip` ; sur une coupe franche, un souffle très court et très bas, une coupe sur deux au plus.
+- **Palette automatique** (`reel/son.py`) : aspiration du hook vers le premier coup de zoom, grave sous les coups de
+  zoom, snap à l'arrivée d'un titre posé sur une image, **sons contextuels sur les mots dits** (`LEXIQUE_SFX` :
+  « photo » → obturateur, « prix » → caisse, « liste » / « fiche » → papier, « message » → bip…). Complète le
+  lexique quand un mot revient ; `sfx_mots: {"mot": "son"}` dans reel.json pour un Reel précis.
+- **Limiteur de densité** : jamais deux bruitages à moins de 0,6 s, au plus 2 par fenêtre de 3 s, gardés par
+  priorité (manuels > structure > coups de zoom > contexte > coupes). Cible : un moment sonore toutes les 2 à 3 s,
+  sous la voix (le mixage la protège). Lis `partition.json` → `ecartes` : si un son important a sauté, déplace ou
+  retire un son moins utile plutôt que de forcer.
 - Musique sérieuse et tendue (retour de Zak sur le Reel 10), coupée sur 1 ou 2 moments forts.
 
 ## 6. Contrôle supplémentaire (en plus de `controle.py` et du sceptique)

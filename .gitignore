@@ -17,3 +17,4 @@ sorties/**/*.mp3
 *.blend
 *.blend1
 sorties/*/_reel_*.mp4
+__pycache__/

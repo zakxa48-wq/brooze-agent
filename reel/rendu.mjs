@@ -60,12 +60,13 @@ for (const [k, sc] of scenes.entries()) {
 // Images (photos, rendus photoréalistes, calques détourés) : chemins relatifs au dossier du Reel
 for (const sc of scenes.filter(s => s.type === 'plan')) {
   if (sc.image) sc.image = pathToFileURL(path.resolve(dossier, sc.image)).href;
+  if (sc.profondeur) sc.profondeur = pathToFileURL(path.resolve(dossier, sc.profondeur)).href;
   for (const c of sc.calques ?? []) c.image = pathToFileURL(path.resolve(dossier, c.image)).href;
 }
 // Coups de zoom sur les mots forts : "@i" → attaque du mot i (1 image avant)
 const punch = (reel.punch ?? []).map(v => typeof v === 'string' ? temps(v) + .12 - 1 / fps : v);
 
-const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--allow-file-access-from-files'] });
+const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--allow-file-access-from-files', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const echelle = opt('--brouillon') ? .5 : 1;
 const page = await navigateur.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: echelle });
 page.on('pageerror', e => { console.error('Erreur moteur :', e.message); process.exit(4); });

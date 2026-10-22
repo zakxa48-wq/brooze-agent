@@ -6,6 +6,7 @@ SKILL = [os.path.join(r, 'brooze-3d') for r in ['/root/.claude/skills/synced/' +
          if os.path.isdir(os.path.join(r, 'brooze-3d'))][0]
 sys.path.insert(0, os.path.join(SKILL, 'scripts')); import b3d as B; from b3d import M, mm
 from PIL import Image, ImageDraw, ImageFont
+sys.path.insert(0, '/home/user/brooze-agent/reel') if os.path.isdir('/home/user/brooze-agent/reel') else None; import profondeur
 ICI = os.path.dirname(os.path.abspath(__file__)); POL = os.path.join(SKILL, 'assets', 'polices') + '/'
 QUOI = sys.argv[1] if len(sys.argv) > 1 else 'tout'
 PCT = int(sys.argv[2]) if len(sys.argv) > 2 else 30; SPP = int(sys.argv[3]) if len(sys.argv) > 3 else 24
@@ -104,4 +105,5 @@ if __name__ == '__main__':
     for q in (['objectifs', 'fiche', 'ecran', 'dessus'] if QUOI == 'tout' else [QUOI]):
         for o in [o for o in bpy.data.objects if o.type in ('LIGHT', 'CAMERA')]: bpy.data.objects.remove(o, do_unlink=True)
         pose(q); B.reglages(spp=SPP, pct=PCT)
-        B.rendre(os.path.join(ICI, 'rendus', f'{q}.png'))
+        if '--profondeur-seule' not in sys.argv: B.rendre(os.path.join(ICI, 'rendus', f'{q}.png'))
+        profondeur.rendre(os.path.join(ICI, 'rendus', f'{q}_prof.png'))      # carte de profondeur pour le relief 2,5D

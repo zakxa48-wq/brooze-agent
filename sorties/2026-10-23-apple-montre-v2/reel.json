@@ -48,7 +48,8 @@
    ],
    "titre_y": 330,
    "taille": 170,
-   "main": 0.9
+   "main": 0.9,
+   "profondeur": "3d/rendus/objectifs_prof.png"
   },
   {
    "de": "@6",
@@ -66,7 +67,8 @@
      1.26
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/ecran_prof.png"
   },
   {
    "de": "@15",
@@ -84,7 +86,8 @@
      1.1
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/photos/steak/rendu_100_48_prof.png"
   },
   {
    "de": "@21",
@@ -102,7 +105,8 @@
      1.5
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/fiche_prof.png"
   },
   {
    "de": "@27",
@@ -120,7 +124,8 @@
      1.8
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/fiche_prof.png"
   },
   {
    "de": "@37",
@@ -138,7 +143,8 @@
      1.2
     ]
    ],
-   "transition": "whip"
+   "transition": "whip",
+   "profondeur": "3d/photos/ventilateur/rendu_100_48_prof.png"
   },
   {
    "de": "@42",
@@ -156,7 +162,8 @@
      1.18
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/photos/trousse/rendu_100_48_prof.png"
   },
   {
    "de": "@43",
@@ -174,7 +181,8 @@
      1.18
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/photos/steak/rendu_100_48_prof.png"
   },
   {
    "de": "@45",
@@ -192,7 +200,8 @@
      1.4
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/ecran_prof.png"
   },
   {
    "de": "@56",
@@ -210,7 +219,8 @@
      2.1
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/fiche_prof.png"
   },
   {
    "de": "@64",
@@ -228,7 +238,8 @@
      1.3
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/objectifs_prof.png"
   },
   {
    "de": "@68",
@@ -246,7 +257,8 @@
      1.18
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/photos/trousse/rendu_100_48_prof.png"
   },
   {
    "de": "@79",
@@ -270,7 +282,8 @@
     82
    ],
    "titre_y": 320,
-   "taille": 150
+   "taille": 150,
+   "profondeur": "3d/photos/ventilateur/rendu_100_48_prof.png"
   },
   {
    "de": "@83",
@@ -288,7 +301,8 @@
      1.6
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/fiche_prof.png"
   },
   {
    "de": "@92",
@@ -306,7 +320,8 @@
      1.3
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/photos/steak/rendu_100_48_prof.png"
   },
   {
    "de": "@98",
@@ -324,7 +339,8 @@
      1.2
     ]
    ],
-   "transition": "coupe"
+   "transition": "coupe",
+   "profondeur": "3d/rendus/dessus_prof.png"
   },
   {
    "de": "@105",

@@ -17,6 +17,12 @@ if [ ! -f "$cache/sherpa-onnx-whisper-small/small-encoder.int8.onnx" ]; then
   rm -f "$cache"/sherpa-onnx-whisper-small/small-{encoder,decoder}.onnx   # seules les versions int8 servent
 fi
 
+# Whisper medium (int8, ~1 Go une fois décompressé) : plus juste sur les petits mots (tu/je, de/le), utilisé en priorité
+if [ ! -f "$cache/sherpa-onnx-whisper-medium/medium-encoder.int8.onnx" ]; then
+  curl -sL https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-medium.tar.bz2 \
+    | tar xj -C "$cache" && rm -f "$cache"/sherpa-onnx-whisper-medium/medium-{encoder,decoder}.onnx || echo "Whisper medium indisponible : small utilisé"
+fi
+
 # Outils du skill brooze-direction (calage des mots, son, glitchs) : on les trouve sur place, on ne les copie pas
 # dans ce dépôt public.
 outils="$ici/.outils"
