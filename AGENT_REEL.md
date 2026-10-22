@@ -92,7 +92,8 @@ Il produit `voix.wav` (nettoyée : passe-haut, débruitage léger, pauses > 0,55
   l'attaque réelle de la voix). Nouveau nom mal entendu ? Ajoute-le à `reel/lexique.json`.
 - **Synchro** : les sous-titres révèlent chaque mot au moment où il est dit (jamais avant, jamais après) ; un titre
   posé sur une image arrive avec son premier mot. Après `--controle`, vérifie 2 ou 3 images au milieu d'une phrase :
-  le dernier mot affiché doit être celui qu'on entend.
+  le dernier mot affiché doit être celui qu'on entend. Les groupes de sous-titres ne finissent jamais sur un petit
+  mot (« Cet | appareil ») : `comprendre.py` les regroupe ; relis quand même la liste des groupes.
 - **Verdict `inutilisable`** (saturation, aucune parole, trop court), **propos flou** (pas d'idée claire en 45 s) ou
   **contenu risqué** (attaque nominative, promesse illégale, information privée de client, chiffre invérifiable
   présenté comme fait) : tu ne fabriques rien. Tu déplaces l'audio dans `inbox/traite/` et tu expliques pourquoi

@@ -142,6 +142,23 @@ def affiner(dossier, avant=.14, apres=.10):
     return bouges
 
 
+PETITS = set('le la les l un une des du de d au aux ce cet cette ces mon ma mes ton ta tes son sa ses notre votre nos vos leur leurs '
+              'je tu il elle on nous vous ils elles ne n qui que qu et ou mais à en y se s pour par sur avec dans très plus'.split())
+
+
+def regrouper(mots):
+    """Un sous-titre ne finit jamais sur un petit mot (« Cet | appareil », « la | marque ») ni sur un guillemet ouvrant :
+    le mot passe dans le groupe suivant. Les mots qui finissent une phrase ne bougent pas."""
+    for k in reversed(range(len(mots) - 1)):         # de la fin vers le début : « ne | se » suit « se » déplacé
+        w, n = mots[k], mots[k + 1]
+        if w['g'] == n['g'] or re.search(r'[.?!,;:…»"]$', w['w']): continue
+        nu = re.sub(r"[^\w']", '', w['w'].lower()).split("'")[0]
+        if nu in PETITS or w['w'].startswith(('"', '«')) and not w['w'].endswith(('"', '»')):
+            if sum(len(m['w']) + 1 for m in mots if m['g'] == n['g']) + len(w['w']) <= 26:
+                w['g'] = n['g']
+    return mots
+
+
 def caler(dossier):
     # La ponctuation haute française (« toi ? ») est collée au mot pour le calage, sinon « ? » deviendrait un mot.
     segs = [[a, b, re.sub(r'\s+([?!:;»])', r'\1', re.sub(r'«\s+', '«', t))] for a, b, t in json.load(open(f'{dossier}/segs.json'))]
@@ -150,7 +167,9 @@ def caler(dossier):
                     f'{dossier}/mots.json'], check=True, stdout=subprocess.DEVNULL)
     os.remove(f'{dossier}/_segs_calage.json')
     affiner(dossier)
-    return json.load(open(f'{dossier}/mots.json'))
+    mots = regrouper(json.load(open(f'{dossier}/mots.json')))
+    json.dump(mots, open(f'{dossier}/mots.json', 'w'), ensure_ascii=False, indent=1)
+    return mots
 
 
 def main(src, dossier, transcription=True):
