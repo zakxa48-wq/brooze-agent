@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-24T10:00:00+02:00",
+  "avatar": "Karim",
+  "pilier": "Méthode",
+  "hypothese": "Une micro-action à faire le jour même (« filme 10 secondes ce soir ») pour Karim obtient plus de réponses / portée qu'une story d'idée, parce qu'elle est faisable tout de suite.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Ce soir, pendant le service",
+      "titre": "Filme 10 secondes de ta *salle pleine*.",
+      "taille": "t-l",
+      "texte": "Pas pour la publier. Pour la garder. En décembre, ce sera ta meilleure matière.",
+      "swipe": false
+    }
+  ]
+}

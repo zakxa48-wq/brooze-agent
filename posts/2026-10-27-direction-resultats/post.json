@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-27T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Méthode",
+  "hypothese": "Une story sur la preuve à la direction pour Claire obtient plus de réponses / portée que nos stories pour Karim, parce que c'est sa pression principale.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Avant ta prochaine vidéo",
+      "titre": "Écris la seule *action* que tu attends.",
+      "taille": "t-l",
+      "texte": "Un message, une inscription, une visite. Une seule. C'est elle que tu montreras à ta direction, pas les likes.",
+      "swipe": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-10-26T18:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Méthode saisonnière",
+  "hypothese": "Un carrousel saisonnier (Noël) ancré dans « rien à tourner » obtient plus d'enregistrements / portée que notre carrousel du 19/10 (0 enregistrement), parce qu'il répond à un besoin daté et concret.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Commerçants · Noël",
+      "titre": "Ta vidéo de Noël est déjà dans ton *téléphone*.",
+      "texte": "3 étapes, sans rien tourner."
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Strasbourg, fin novembre",
+      "titre": "Le marché de Noël ouvre. Tes clients choisissent *avant*.",
+      "taille": "t-m",
+      "texte": "Ta vidéo doit être prête avant eux."
+    },
+    {
+      "layout": "point",
+      "numero": "01",
+      "label": "Fouille",
+      "titre": "Ouvre ta galerie à décembre dernier.",
+      "texte": "Vitrine, emballages, la file devant la porte, les mains qui servent. **Tout ce qui bouge compte.**"
+    },
+    {
+      "layout": "point",
+      "numero": "02",
+      "label": "Garde",
+      "titre": "Trois plans. Pas un de plus.",
+      "texte": "Un plan qui attire l'œil, un plan qui montre le produit, un plan avec des gens. **Le reste, poubelle.**"
+    },
+    {
+      "layout": "point",
+      "numero": "03",
+      "label": "Écris",
+      "titre": "Une phrase, pas un catalogue.",
+      "texte": "Ce que ton client gagne à venir chez toi en décembre. **Une seule chose.**"
+    },
+    {
+      "layout": "duel",
+      "titre": "Exemple, même boulangerie.",
+      "a": {
+        "label": "Ce qu'on voit partout",
+        "texte": "Joyeuses fêtes à tous nos clients !"
+      },
+      "b": {
+        "label": "Ce qui donne envie de venir",
+        "texte": "Les bûches du 24 se réservent dès le *1er*."
+      }
+    },
+    {
+      "layout": "liste",
+      "label": "À faire cette semaine",
+      "titre": "Ta checklist Noël.",
+      "items": [
+        "Fouiller décembre dernier.",
+        "Garder 3 plans qui bougent.",
+        {
+          "texte": "Écrire la phrase qui fait venir.",
+          "cle": true
+        }
+      ]
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Pas le temps de monter ?",
+      "texte": "On part de tes images et on en fait ta vidéo de Noël."
+    }
+  ],
+  "caption": "Ta vidéo de Noël est déjà dans ton téléphone.\n\nLe marché de Noël de Strasbourg ouvre fin novembre, et tes clients choisissent où aller avant. Fouille ta galerie de décembre dernier, garde 3 plans qui bougent, écris une seule phrase : ce que ton client gagne à venir chez toi.\n\nChez Brooze, on crée des vidéos à fort impact à partir de ce que tu as déjà.\nEnvoie-nous un message → @broozeproduction\n\nTa galerie de décembre dernier : pleine ou vide ? 👇\n\nEnvoie-le à un commerçant qui dit « je n'ai rien à montrer ».\n\n#commercestrasbourg #noel #videomarketing"
+}

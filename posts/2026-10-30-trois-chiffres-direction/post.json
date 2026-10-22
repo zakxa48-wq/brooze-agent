@@ -1,0 +1,77 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-10-30T18:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Preuve : convaincre en interne",
+  "hypothese": "Un carrousel « prouver à ta direction » pour Claire obtient plus de partages / portée que nos autres carrousels, parce qu'elle a quelqu'un à qui l'envoyer.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Responsables com'",
+      "titre": "3 chiffres à montrer à ta *direction*.",
+      "texte": "À la place des vues."
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Le piège",
+      "titre": "Les vues mesurent la *curiosité*. Pas l'intérêt.",
+      "taille": "t-m",
+      "texte": "Une direction veut savoir ce que la vidéo a fait bouger."
+    },
+    {
+      "layout": "point",
+      "numero": "01",
+      "label": "L'intention",
+      "titre": "Les enregistrements.",
+      "texte": "Quelqu'un garde ta vidéo pour plus tard. **C'est de l'intérêt, pas un réflexe.**"
+    },
+    {
+      "layout": "point",
+      "numero": "02",
+      "label": "La recommandation",
+      "titre": "Les partages.",
+      "texte": "Quelqu'un l'envoie à un proche. **Ta vidéo travaille sans toi.**"
+    },
+    {
+      "layout": "point",
+      "numero": "03",
+      "label": "L'action",
+      "titre": "Les messages reçus.",
+      "texte": "Demandes, inscriptions, questions. **Compte-les à la main s'il le faut.**"
+    },
+    {
+      "layout": "duel",
+      "titre": "Le même mois, deux comptes rendus.",
+      "a": {
+        "label": "Ce qu'on présente souvent",
+        "texte": "La vidéo a fait beaucoup de vues."
+      },
+      "b": {
+        "label": "Ce qui convainc",
+        "texte": "Enregistrée, partagée, et des *demandes*."
+      }
+    },
+    {
+      "layout": "liste",
+      "label": "Ton compte rendu",
+      "titre": "Sur une seule page.",
+      "items": [
+        "Enregistrements.",
+        "Partages.",
+        {
+          "texte": "Messages et demandes reçus.",
+          "cle": true
+        }
+      ]
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-le à ta direction.",
+      "texte": "Chez Brooze, chaque vidéo part d'une action attendue, pas d'un nombre de vues."
+    }
+  ],
+  "caption": "3 chiffres à montrer à ta direction, à la place des vues.\n\nLes vues mesurent la curiosité. Les enregistrements montrent l'intérêt, les partages montrent que ta vidéo travaille sans toi, les messages reçus montrent l'action. Trois lignes, une page, et ta réunion change de ton.\n\nChez Brooze, chaque vidéo part d'une action attendue, pas d'un nombre de vues.\nEnvoie-nous un message → @broozeproduction\n\nTon dernier compte rendu : avec les vues ou avec les messages ? 👇\n\nEnvoie-le à ta direction. Ou à la personne qui doit lui présenter les chiffres.\n\n#communication #marketingdigital #reseauxsociaux"
+}

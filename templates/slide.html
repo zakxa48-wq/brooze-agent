@@ -116,6 +116,8 @@ const md = s => esc(s)
   .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
   .replace(/\*(.+?)\*/g, '<span class="cuivre">$1</span>')
   .replace(/\n/g, '<br>')
+  // Typographie française : espace insécable avant ? ! : ; » et après «
+  .replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0')
   // Les mots à trait d'union (« bouge-t-elle ») ne se coupent jamais en fin de ligne
   .replace(/(^|[\s>])([^\s<>]*\w-[^\s<>]+)/g, '$1<span style="white-space:nowrap">$2</span>');
 
@@ -126,6 +128,9 @@ const GOUTTE = `<svg viewBox="0 0 92 120" aria-hidden="true">
   <path d="M46 2 C34 26 6 52 6 78 a40 40 0 0 0 40 40 L66 118 L66 30 C58 20 52 12 46 2 Z" fill="url(#g)"/>
   <path d="M30 70 c-4 10 -2 22 8 30" stroke="rgba(255,255,255,.45)" stroke-width="5" fill="none" stroke-linecap="round"/>
 </svg>`;
+
+// Les phrases longues d'un duel descendent d'une taille pour tenir dans leur carte
+const taillePhrase = t => String(t).length > 44 ? 'font-size:62px' : String(t).length > 30 ? 'font-size:70px' : '';
 
 const entete = () => `<div class="entete"><span>B R O O Z E</span>${S.compteur ? `<span class="compteur">${esc(S.compteur)}</span>` : ''}</div>`;
 
@@ -152,8 +157,8 @@ const L = {
   duel: () => `${entete()}
     ${S.titre ? `<div class="titre t-m" style="margin:48px 0 40px">${md(S.titre)}</div>` : '<div style="height:48px"></div>'}
     <div class="duel">
-      <div class="carte barre"><div class="label">${esc(S.a.label)}</div><div class="phrase">${md(S.a.texte)}</div></div>
-      <div class="carte sombre"><div class="label" style="color:var(--gris-ui)">${esc(S.b.label)}</div><div class="phrase">${md(S.b.texte)}</div></div>
+      <div class="carte barre"><div class="label">${esc(S.a.label)}</div><div class="phrase" style="${taillePhrase(S.a.texte)}">${md(S.a.texte)}</div></div>
+      <div class="carte sombre"><div class="label" style="color:var(--gris-ui)">${esc(S.b.label)}</div><div class="phrase" style="${taillePhrase(S.b.texte)}">${md(S.b.texte)}</div></div>
     </div>`,
 
   // Checklist

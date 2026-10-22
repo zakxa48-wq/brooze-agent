@@ -1,0 +1,24 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-29T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Mythe / réalité",
+  "hypothese": "Le format mythe/réalité (nouveau) en story fait moins de sorties / portée qu'une affirmation simple, parce que le mythe crée une attente de correction.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Mythe",
+      "titre": "« Il me faut une meilleure caméra. »",
+      "taille": "t-l"
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Réalité",
+      "titre": "Ton téléphone suffit. Ce qui manque, c'est le *montage*.",
+      "taille": "t-l",
+      "texte": "Le rythme, l'ordre des plans, la 1re phrase. Pas les pixels."
+    }
+  ]
+}

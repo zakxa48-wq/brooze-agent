@@ -1,0 +1,24 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-23T10:00:00+02:00",
+  "avatar": "Claire",
+  "pilier": "Diagnostic",
+  "hypothese": "Une accusation douce (« propre, c'est le problème ») pour Claire fait moins de sorties / portée qu'un conseil neutre, parce qu'elle touche sa douleur exacte : des contenus propres mais sans impact.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Pour les responsables com'",
+      "titre": "Ta vidéo est propre. C'est *le problème*.",
+      "taille": "t-l",
+      "swipe": "Pourquoi"
+    },
+    {
+      "layout": "phrase",
+      "titre": "Propre, ça rassure. Ça n'arrête personne.",
+      "taille": "t-l",
+      "texte": "Ce qui arrête le pouce : **une tension dès la 1re image**. Une question, un écart, un geste interrompu."
+    }
+  ]
+}

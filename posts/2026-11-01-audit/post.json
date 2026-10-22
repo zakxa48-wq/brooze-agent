@@ -1,0 +1,23 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-01T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Appel à l'action",
+  "hypothese": "Une story d'offre directe (le mot-clé AUDIT déjà utilisé dans notre carrousel du 19/10) obtient plus de messages / portée en fin de semaine thématique.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "titre": "Une vidéo n'a qu'un travail : donner une raison de venir *chez toi*.",
+      "taille": "t-l"
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-nous ta dernière vidéo.",
+      "taille": "t-l",
+      "texte": "On te dit ce qu'on changerait en premier.",
+      "bouton": "Réponds « AUDIT » en message"
+    }
+  ]
+}

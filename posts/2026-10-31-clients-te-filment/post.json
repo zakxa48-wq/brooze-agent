@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-31T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Positionnement : on crée à partir de l'existant",
+  "hypothese": "Montrer à Karim une matière qu'il a déjà sans le savoir (les stories de ses clients) obtient des réponses, parce que ça lève l'objection « je n'ai pas le temps de filmer ».",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Tu ne l'as pas vu venir",
+      "titre": "Tes clients te filment *déjà*.",
+      "taille": "t-xl",
+      "texte": "Les stories où ils te taguent, c'est de la matière. Garde-les, et demande-leur l'accord avant de t'en servir.",
+      "swipe": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-28T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Teaser",
+  "hypothese": "Le teaser « même vidéo, deux premières secondes » augmente la portée du carrousel avant/après du soir.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "duel",
+      "a": {
+        "label": "Avant",
+        "texte": "Découvrez notre formation."
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Ton CV dit « motivé ». Ton recruteur lit « *junior* »."
+      },
+      "titre": "Même vidéo. Autre 1re phrase."
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "titre": "Ce soir à 18 h : *5 accroches* réécrites.",
+      "taille": "t-l",
+      "texte": "Association, formation, boutique, salle, école. À copier pour ton secteur."
+    }
+  ]
+}

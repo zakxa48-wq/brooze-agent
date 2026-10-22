@@ -1,0 +1,96 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-10-28T18:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Méthode : avant / après",
+  "hypothese": "Le format « 5 accroches réécrites, avant / après » (nouveau) obtient plus d'enregistrements / portée que nos carrousels en étapes, parce qu'il donne des modèles réutilisables.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "5 secteurs · à copier",
+      "titre": "5 accroches *réécrites*.",
+      "texte": "Avant, après. La 1re phrase de ta vidéo décide si on reste."
+    },
+    {
+      "layout": "duel",
+      "titre": "Association",
+      "a": {
+        "label": "Avant",
+        "texte": "Venez nombreux à notre collecte !"
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Samedi, il nous manque *40* paires de bras."
+      }
+    },
+    {
+      "layout": "duel",
+      "titre": "Organisme de formation",
+      "a": {
+        "label": "Avant",
+        "texte": "Découvrez notre formation."
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Ton CV dit « motivé ». Ton recruteur lit « *junior* »."
+      }
+    },
+    {
+      "layout": "duel",
+      "titre": "Boutique",
+      "a": {
+        "label": "Avant",
+        "texte": "Nouvelle collection disponible !"
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Le pull que tout le monde t'a *demandé*."
+      }
+    },
+    {
+      "layout": "duel",
+      "titre": "Salle de sport",
+      "a": {
+        "label": "Avant",
+        "texte": "Inscriptions ouvertes !"
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Tu as payé janvier. Tu es venu *deux* fois."
+      }
+    },
+    {
+      "layout": "duel",
+      "titre": "École",
+      "a": {
+        "label": "Avant",
+        "texte": "Portes ouvertes le 14 mars."
+      },
+      "b": {
+        "label": "Après",
+        "texte": "Ton enfant choisira son école en *3* minutes de visite."
+      }
+    },
+    {
+      "layout": "liste",
+      "label": "La règle derrière",
+      "titre": "Une bonne accroche…",
+      "items": [
+        "parle à une seule personne,",
+        "dit sa situation, pas ton offre,",
+        {
+          "texte": "crée un petit malaise à résoudre.",
+          "cle": true
+        }
+      ]
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Enregistre-le pour ta prochaine vidéo.",
+      "texte": "Chez Brooze, on écrit l'accroche avant de toucher au montage."
+    }
+  ],
+  "caption": "5 accroches réécrites. Avant / après.\n\nAssociation, formation, boutique, salle de sport, école : la 1re phrase de ta vidéo décide si on reste. Une bonne accroche parle à une seule personne, décrit sa situation (pas ton offre) et crée un petit malaise à résoudre. Les exemples sont fictifs, la méthode marche partout.\n\nChez Brooze, on écrit l'accroche avant de toucher au montage.\nEnvoie-nous un message → @broozeproduction\n\nTon accroche actuelle : plutôt « avant » ou plutôt « après » ? 👇\n\nEnvoie-le à la personne qui écrit les posts de ta structure.\n\n#communication #reelsinstagram #copywriting"
+}

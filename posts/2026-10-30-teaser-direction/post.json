@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-30T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Teaser",
+  "hypothese": "Le teaser du carrousel « 3 chiffres pour ta direction » augmente sa portée.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Responsables com'",
+      "titre": "Les vues ne prouvent *rien* à ta direction.",
+      "taille": "t-l",
+      "texte": "Ce soir à 18 h : les 3 chiffres à lui montrer à la place.",
+      "swipe": "Ce soir, 18 h"
+    }
+  ]
+}

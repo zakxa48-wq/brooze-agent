@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-25T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Question directe",
+  "hypothese": "Une question binaire en story (nouveau format) obtient plus de réponses / portée que nos stories d'affirmation, parce que répondre demande un seul mot.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Question du dimanche",
+      "titre": "Tu publies le soir… ou entre deux *clients* ?",
+      "taille": "t-l",
+      "texte": "Réponds « SOIR » ou « JOURNÉE » en message. On te dit ce que ça change."
+    }
+  ]
+}

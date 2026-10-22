@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-26T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Teaser",
+  "hypothese": "Une story qui annonce le carrousel du soir augmente sa portée par rapport aux carrousels non annoncés, parce qu'elle crée un rendez-vous.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Commerçants de Strasbourg",
+      "titre": "Noël se joue *en novembre*.",
+      "taille": "t-xl",
+      "texte": "Ce soir à 18 h : ta vidéo de Noël, sans rien tourner.",
+      "swipe": "Ce soir, 18 h"
+    }
+  ]
+}
