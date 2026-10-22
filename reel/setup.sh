@@ -6,7 +6,8 @@ ici="$(cd "$(dirname "$0")" && pwd)"
 cache="$HOME/.cache/brooze"
 mkdir -p "$cache"
 
-pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy 2>&1 | grep -v -i warning || true
+# python3 -m pip : installe pour le python3 du PATH (le « pip » nu peut viser un autre Python)
+python3 -m pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy matplotlib 2>&1 | grep -v -i warning || true
 (cd "$ici/.." && npm install --silent >/dev/null)
 
 # Whisper small multilingue (ONNX int8), transcription 100 % locale. Hébergé sur GitHub (HuggingFace est bloqué ici).

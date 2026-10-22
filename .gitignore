@@ -8,3 +8,7 @@ sorties/*/reel_sceptique/
 sorties/*/*.wav
 sorties/*/*.flac
 sorties/*/brouillon.mp4
+sorties/_banque/
+# Jamais d audio brut dans ce dépôt public
+sorties/**/*.m4a
+sorties/**/*.mp3

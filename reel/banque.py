@@ -17,6 +17,8 @@ Usage (R = racine de la banque) :
 import sys, os, json, hashlib, argparse, subprocess, shutil, datetime, re
 
 ICI = os.path.dirname(os.path.abspath(__file__))
+# Dossier de travail HORS des dépôts : l'audio brut de Zak ne doit jamais finir dans brooze-agent (public)
+TRAVAIL = os.path.expanduser('~/.cache/brooze/travail')
 EXT = ('.m4a', '.mp3', '.wav', '.aac', '.ogg', '.opus', '.flac', '.mp4', '.mov')
 
 
@@ -67,7 +69,7 @@ def cmd_indexer(R):
             if not f.lower().endswith(EXT): continue
             chemin = os.path.join(racine, f); h = empreinte(chemin)
             if h in deja: continue
-            aid = ident(chemin); travail = os.path.join(ICI, '..', 'sorties', '_banque', aid)
+            aid = ident(chemin); travail = os.path.join(TRAVAIL, aid)
             subprocess.run([sys.executable, os.path.join(ICI, 'comprendre.py'), chemin, travail], check=True, stdout=subprocess.DEVNULL)
             dest = os.path.join(R, 'index', aid); os.makedirs(dest, exist_ok=True)
             for n in ('segs.json', 'mots.json', 'rapport.json'): shutil.copy(os.path.join(travail, n), dest)
@@ -137,7 +139,7 @@ def cmd_preparer(R, iid, dossier):
 
 
 def cmd_verifier(R, aid):
-    c = charger(R); a = c['audios'][aid]; travail = os.path.join(ICI, '..', 'sorties', '_banque', aid)
+    c = charger(R); a = c['audios'][aid]; travail = os.path.join(TRAVAIL, aid)
     subprocess.run([sys.executable, os.path.join(ICI, 'comprendre.py'), '--nettoyer', os.path.join(R, a['fichier']), travail], check=True)
     shutil.copy(os.path.join(R, 'index', aid, 'segs.json'), travail)
     subprocess.run([sys.executable, os.path.join(ICI, 'comprendre.py'), '--recaler', travail], check=True, stdout=subprocess.DEVNULL)

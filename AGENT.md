@@ -29,6 +29,14 @@ du lundi au dimanche qui suivent. Dans cette fenêtre :
 fenêtre et lis `journal.md`. Un jour qui a déjà sa story n'en reçoit pas une autre. Les carrousels déjà programmés
 dans la semaine comptent dans les 2 à 3. Tu complètes seulement les trous.
 
+## Git : toujours sur `main`
+Une session programmée démarre sur une branche de travail `claude/…`. Tout doit pourtant arriver sur **`main`** (les
+liens publics des images, la mémoire de la prochaine exécution, le catalogue de la banque) :
+`git fetch origin main && git rebase origin/main && git push origin HEAD:main`, pour **brooze-agent comme pour
+brooze-voix**, après chaque post ou Reel. Vérifie avec `git ls-remote origin main` que ton dernier commit y est. Les liens
+raw pointent toujours sur `main`. Avant chaque commit sur brooze-agent : `git status` ne doit lister aucun fichier audio
+(.wav, .m4a, .mp3, .flac) ; l'audio de Zak ne vit que dans brooze-voix.
+
 ## Les étapes (dans cet ordre, aucune n'est facultative)
 
 ### 0. Interrupteur

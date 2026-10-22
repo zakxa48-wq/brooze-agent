@@ -56,6 +56,14 @@ donc vraiment le sien : aucun clonage, aucune voix de synthèse.
 - Les phrases fortes de la banque (transcription vérifiée) peuvent aussi nourrir les stories et carrousels de la
   tâche du dimanche, **en citation exacte** et marquées comme telles dans le journal.
 
+## Git : toujours sur `main`
+Une session programmée démarre sur une branche de travail `claude/…`. Tout doit pourtant arriver sur **`main`** (les
+liens publics des images, la mémoire de la prochaine exécution, le catalogue de la banque) :
+`git fetch origin main && git rebase origin/main && git push origin HEAD:main`, pour **brooze-agent comme pour
+brooze-voix**, après chaque post ou Reel. Vérifie avec `git ls-remote origin main` que ton dernier commit y est. Les liens
+raw pointent toujours sur `main`. Avant chaque commit sur brooze-agent : `git status` ne doit lister aucun fichier audio
+(.wav, .m4a, .mp3, .flac) ; l'audio de Zak ne vit que dans brooze-voix.
+
 ## 0. Interrupteur et rien à faire
 - Fichier `PAUSE` à la racine : tu peux fabriquer et ranger dans `sorties/`, mais **rien n'est programmé**.
 - Rien à faire (aucun audio dans `urgent/` ni `inbox/audio/`, aucun nouvel audio dans la banque, et aucun jour libre
