@@ -77,6 +77,19 @@ def main(video, reel_json=None):
     sans_alerte = g.returncode == 0 and 'aucune alerte' in g.stdout
     critere(sans_alerte, 'glitchs : aucune alerte' if sans_alerte else 'glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes')
 
+    # Contrôles APPRIS (reel/controles/*.py) : un défaut revenu deux fois dans les débriefs devient un contrôle automatique.
+    # Chaque fichier définit verifier(video, reel, mots, dossier) -> liste de problèmes (vide si tout va bien).
+    import importlib.util, glob as _g
+    reel_d = json.load(open(reel_json)) if reel_json else {}
+    mots_d = json.load(open(os.path.join(dossier, reel_d.get('mots', 'mots.json')))) if reel_json else []
+    for f in sorted(_g.glob(os.path.join(ICI, 'controles', '*.py'))):
+        spec = importlib.util.spec_from_file_location(os.path.basename(f)[:-3], f); m = importlib.util.module_from_spec(spec)
+        try:
+            spec.loader.exec_module(m); res_c = m.verifier(video, reel_d, mots_d, dossier) or []
+        except Exception as e:
+            res_c = [f'contrôle {os.path.basename(f)} en erreur : {e}']
+        critere(not res_c, f"appris · {os.path.basename(f)[:-3]}" + (f" : {'; '.join(res_c)}" if res_c else ''))
+
     # Planche des images clés
     imgs = os.path.join(dossier, '_cles'); os.makedirs(imgs, exist_ok=True)
     for f in os.listdir(imgs): os.remove(os.path.join(imgs, f))

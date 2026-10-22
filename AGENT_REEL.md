@@ -19,6 +19,12 @@ reprendre le concept visuel, l'effet signature ou la structure d'un des **5 dern
 Reel explore **au moins une technique nouvelle** (jamais utilisée dans le registre, ou poussée nettement plus loin).
 Les garde-fous restent : qualité, charte Brooze, rien d'inventé.
 
+**Un cerveau qui apprend** (`CERVEAU.md`) : à chaque exécution, AVANT de produire, tu analyses ce que Zak a déposé
+dans `brooze-voix/data/` (références, ses vidéos, ses retours, ses documents) et tu mets à jour la mémoire
+(`data/cerveau/`). Avant chaque Reel tu y cherches les fiches et principes utiles ; après chaque Reel tu fais ton
+débrief ; quand il n'y a rien à produire, tu t'entraînes. Ce n'est pas un entraînement du modèle : c'est une mémoire
+écrite, et tu sépares toujours le mesuré du supposé.
+
 **Deux exécutions par jour (3 h 41 et 15 h 41), en avance, reprenables.** La durée d'une exécution est limitée et
 ne se règle pas : tu travailles **en avance** (programmation au plus tôt à J+2), tu découpes le travail en étapes
 dont l'état vit **dans le dépôt** (`sorties/<id>/etat.json`, poussé sur main après chaque étape), et la suivante
@@ -104,10 +110,15 @@ sautés à la reprise) → `controle` (controle.py + passes du sceptique, une pa
 - **Retard** : si le jour réservé est dans moins de 24 h et que le Reel n'a pas passé le contrôle, décale la réservation
   au jour libre suivant (`marquer … en_cours --jour …`) et note-le. Jamais de publication d'un Reel non contrôlé.
 
-## 0. Interrupteur et rien à faire
+## 0. Interrupteur, apprentissage, rien à faire
 - Fichier `PAUSE` à la racine : tu peux fabriquer et ranger dans `sorties/`, mais **rien n'est programmé**.
-- Rien à faire (aucun audio dans `urgent/` ni `inbox/audio/`, aucun nouvel audio dans la banque, et aucun jour libre
-  ou aucune idée disponible) : arrête-toi immédiatement, sans commit, sans récap, sans notification.
+- **Toujours d'abord** : `python3 reel/cerveau.py nouveaux /home/user/brooze-voix` et `CERVEAU.md` § 1 pour chaque
+  nouveau fichier de `data/` (analyse, planche regardée, fiche complétée, règles), puis push de brooze-voix.
+- Lis aussi `data/cerveau/veille.md` § Demandes (variante d'un format qui surperforme, sujet réclamé) : une demande
+  passe avant une idée ordinaire de la banque.
+- Rien à produire (aucun Reel en cours, aucun audio, aucun jour libre avec une idée) : **entraînement** (`CERVEAU.md`
+  § 4, 30 min maximum, rien n'est publié), débrief, push, puis un message final court, sans mail ni notification.
+  S'il ne reste vraiment rien à faire (ni donnée nouvelle, ni temps pour un exercice) : « Rien à faire aujourd'hui. ».
 
 ## 1. Préparer la session
 ```
@@ -147,7 +158,9 @@ Il produit `voix.wav` (nettoyée : passe-haut, débruitage léger, pauses > 0,55
 
 ## 3. Direction créative (avant tout rendu)
 **Lis `reel/MONTAGE.md` (principes) et `reel/OUTILS.md` (techniques) avant chaque storyboard, puis le registre des Reels
-de `journal.md`.** Écris d'abord, dans `sorties/<id>/intention.md` : le propos en une phrase, le **concept visuel**
+de `journal.md`, puis interroge le cerveau** : `python3 reel/cerveau.py chercher /home/user/brooze-voix "<propos,
+cible, ton>"` et `python3 reel/techniques.py liste`. Note dans `intention.md` et le journal les fiches et principes
+appliqués et pourquoi (inspiration, jamais copie : aucun plan, visuel, texte ou montage reconnaissable d'une référence). Écris d'abord, dans `sorties/<id>/intention.md` : le propos en une phrase, le **concept visuel**
 inventé pour CE propos (une règle de monde), l'**effet signature**, la **structure** (comment le Reel avance), la
 **technique nouvelle** explorée, et en quoi chacun diffère des 5 derniers Reels du registre. Si l'un des trois (concept,
 effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
@@ -221,7 +234,9 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
 2. **brooze-sceptique** : `python3 <skill brooze-sceptique>/scripts/inspecter.py reel.mp4 --mots mots.json` dans
    `sorties/<id>/`, puis regarde CHAQUE image produite (planche, bandes, interface simulée, début muet) et passe les
    4 regards. Écris le rapport et l'ordre de correction dans `sorties/<id>/sceptique_passeN.md`.
-3. Applique l'ordre (dans `reel.json` ou le moteur), refais le rendu, recontrôle. Publiable quand une passe ne trouve
+3. **Comparaison aux références** : `python3 reel/cerveau.py comparer /home/user/brooze-voix sorties/<id>/reel.mp4`
+   (rythme, lisibilité, finition contre les meilleures fiches). « EN DESSOUS » = une boucle de correction de plus.
+4. Applique l'ordre (dans `reel.json` ou le moteur), refais le rendu, recontrôle. Publiable quand une passe ne trouve
    plus ni P1 ni P2. Après 3 boucles encore insuffisantes : **ne publie pas**, garde le meilleur rendu dans
    `sorties/<id>/`, explique pourquoi dans le récap et le journal.
 
@@ -248,6 +263,9 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
    autres idées restent exploitables) ou de `inbox/audio/` vers `inbox/traite/`. Idée de banque : `banque.py marquer`.
 
 ## 7. Mémoire
+- **Débrief** (CERVEAU.md § 3) après chaque Reel, publié ou non : `cerveau.py pratique`, `techniques.py utilisee`
+  (+ `ajouter` pour la technique nouvelle du Reel, avec sa démo ; `decue` si elle a déçu), puis `cerveau.py
+  recurrents` : un défaut vu deux fois → règle dans `principes.md` + contrôle dans `reel/controles/`.
 - **Registre des Reels** (tableau en tête de `journal.md`) : une ligne par Reel programmé, ajoutée au moment de la
   programmation : date, id, concept visuel, effet signature, structure, techniques (la nouvelle en gras), outils.
   C'est lui qui interdit les redites : relis les 5 dernières lignes avant chaque concept.

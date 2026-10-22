@@ -7,13 +7,19 @@ cache="$HOME/.cache/brooze"
 mkdir -p "$cache"
 
 # Bibliothèques système de Manim (cairo, pango) : seulement si absentes
-if ! pkg-config --exists pangocairo 2>/dev/null; then
-  (apt-get update -qq && apt-get install -y -qq libpango1.0-dev libcairo2-dev pkg-config) >/dev/null 2>&1 || echo "apt indisponible : Manim sera absent"
+# + Tesseract (lecture du texte à l'écran des vidéos analysées par le cerveau) et pdftotext
+manque=""
+pkg-config --exists pangocairo 2>/dev/null || manque="$manque libpango1.0-dev libcairo2-dev pkg-config"
+command -v tesseract >/dev/null && tesseract --list-langs 2>/dev/null | grep -q fra || manque="$manque tesseract-ocr tesseract-ocr-fra"
+command -v pdftotext >/dev/null || manque="$manque poppler-utils"
+if [ -n "$manque" ]; then
+  (apt-get update -qq && apt-get install -y -qq $manque) >/dev/null 2>&1 || echo "apt indisponible : $manque absents"
 fi
 # python3 -m pip : installe pour le python3 du PATH (le « pip » nu peut viser un autre Python).
 # setuptools de Debian casse la compilation de certains paquets (« install_layout ») : on en installe un récent à côté.
 python3 -c "import manim" 2>/dev/null || python3 -m pip install --break-system-packages -q --ignore-installed setuptools wheel 2>&1 | grep -i error || true
 python3 -m pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy matplotlib opensimplex manim 2>&1 | grep -v -i warning || true
+python3 -c "import cv2" 2>/dev/null || python3 -m pip install --break-system-packages -q opencv-python-headless 2>&1 | grep -i error || true
 # three.js, p5, Remotion (+ React), simplex-noise, playwright-core : versions figées dans package.json
 (cd "$ici/.." && npm install --silent >/dev/null)
 

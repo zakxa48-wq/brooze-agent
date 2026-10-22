@@ -56,6 +56,16 @@ de `AGENT_REEL.md`). **Carrousels uniquement les `jours_carrousel` de `config.js
 pour que les deux tâches ne se marchent jamais dessus ; un jour de carrousel déjà pris par un Reel n'en reçoit pas. Les citations exactes de la banque peuvent servir aux stories. Les Reels de la semaine passée sont mesurés à l'étape 2
 (IGRE23 vues, IGRE24 durée moyenne regardée, IGRE28 vues > 3 s, IGRE21 partages, IGRE12 enregistrements).
 
+### 1 ter. Cerveau et objectif (voir `CERVEAU.md`)
+- **Objectif n°1 : les conversations qualifiées** (message suite à un post, mot-clé, demande de devis), pas les vues.
+- Clone la banque privée (`/home/user/brooze-voix`, add_repo si besoin) et lis `data/cerveau/principes.md`,
+  `marketing.md` (CTA en test, équilibre attirer / prouver / convertir), `decisions.md` (décision du mois en cours) et
+  `veille.md` (demandes, sujets réclamés). La semaine que tu programmes respecte la décision du mois, le CTA en test
+  (un seul changement à la fois) et l'équilibre visé ; chaque post est noté `attirer`, `prouver` ou `convertir` dans
+  son `post.json` (champ `role`) et dans le journal.
+- `python3 reel/cerveau.py chercher /home/user/brooze-voix "<angle du carrousel>"` avant chaque carrousel : principes et
+  fiches applicables, notés dans le journal (inspiration, jamais copie).
+
 ### 2. Mesurer la semaine passée
 Pour chaque post du journal publié depuis 2 jours ou plus et sans chiffres, relève avec `getAnalyticsDataByMetrics`
 (plage : depuis la date du post jusqu'à aujourd'hui) :

@@ -1,0 +1,120 @@
+[
+ {
+  "id": "relief-2-5d",
+  "nom": "Relief 2,5D par carte de profondeur",
+  "categorie": "mouvement de caméra",
+  "statut": "active",
+  "note": 8,
+  "note_pourquoi": "l'image fixe devient un plan qui tourne légèrement autour de l'objet ; invisible comme effet, sensible comme vie. Limite : bords étirés si relief > 1,4.",
+  "demo": "demos/relief-2-5d.mp4",
+  "code": [
+   "reel/profondeur.py",
+   "reel/moteur.html (relief, shader)"
+  ],
+  "reglages": "plan.profondeur, relief 0,6–1,4, orbite, dolly, mise_au_point",
+  "cout": "2–5 s par carte + rendu WebGL",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ },
+ {
+  "id": "whip-file",
+  "nom": "Panoramique filé (whip) avec flou directionnel",
+  "categorie": "transition",
+  "statut": "active",
+  "note": 7,
+  "note_pourquoi": "énergique et propre pour un changement d'idée ; devient « template » s'il revient plus de 2 fois.",
+  "demo": "demos/whip-file.mp4",
+  "code": [
+   "reel/moteur.html (TR.whip, flou)"
+  ],
+  "reglages": "transition: 'whip'",
+  "cout": "nul",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ },
+ {
+  "id": "punch-mot-fort",
+  "nom": "Coup de zoom sur un mot fort (+ grave)",
+  "categorie": "mouvement de caméra",
+  "statut": "active",
+  "note": 7,
+  "note_pourquoi": "remplace un gros texte ; au-delà de 4 par Reel, ça devient un tic.",
+  "demo": "demos/punch-mot-fort.mp4",
+  "code": [
+   "reel/moteur.html (R.punch)",
+   "reel/son.py (low_hit)"
+  ],
+  "reglages": "punch: [\"@i\", …] 2 à 4",
+  "cout": "nul",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ },
+ {
+  "id": "sous-titres-mot-a-mot",
+  "nom": "Sous-titres révélés au mot dit",
+  "categorie": "typo cinétique",
+  "statut": "active",
+  "note": 8,
+  "note_pourquoi": "synchro exacte voulue par Zak (22/10) ; groupes qui ne finissent jamais sur un petit mot.",
+  "demo": "demos/sous-titres-mot-a-mot.mp4",
+  "code": [
+   "reel/moteur.html (#st)",
+   "reel/comprendre.py (affiner, regrouper)"
+  ],
+  "reglages": "automatique",
+  "cout": "nul",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ },
+ {
+  "id": "titre-pose-sur-image",
+  "nom": "Titre posé sur une image réelle, arrivée au premier mot",
+  "categorie": "typo cinétique",
+  "statut": "active",
+  "note": 6,
+  "note_pourquoi": "lisible grâce au voile ; peut masquer le sujet de l'image si le titre dépasse 2 lignes.",
+  "demo": "demos/titre-pose-sur-image.mp4",
+  "code": [
+   "reel/moteur.html (.titre-plan, .voile.titre)",
+   "reel/son.py (snap)"
+  ],
+  "reglages": "plan.mots [a, b], titre_y, taille",
+  "cout": "nul",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ },
+ {
+  "id": "sfx-limiteur",
+  "nom": "Bruitages contextuels avec limiteur de densité",
+  "categorie": "sound design",
+  "statut": "active",
+  "note": 7,
+  "note_pourquoi": "plus de vie sonore sans surcharge (16 sons / 41 s) ; à valider à l'écoute par Zak.",
+  "demo": "demos/sfx-limiteur.mp4",
+  "code": [
+   "reel/son.py (LEXIQUE_SFX, limiter)"
+  ],
+  "reglages": "sfx_mots, sons",
+  "cout": "nul",
+  "apparu_dans": [
+   "2026-10-23-apple-montre"
+  ],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
+ }
+]
