@@ -1,0 +1,9 @@
+# Intention · Spotify Wrapped (24/10, Claire)
+- **Propos** : les gens partagent ce qui parle d'eux, pas de la marque : donne-leur une raison personnelle de partager.
+- **Hooks** (instagram-hook-engine) : (1) intrigante, mots exacts : « Spotify a réussi quelque chose d'assez extraordinaire en marketing. » (HSS 8, retenu : il est au début de l'audio, on ne réordonne pas) · (2) provocatrice : « Donne-leur une raison personnelle de le faire. » (fin d'audio, écartée) · (3) mixer : « Et pourquoi les gens partagent-ils autant ? » (34,5 s, écartée).
+- **Concept visuel (règle de monde)** : une seule carte « bilan » dans le noir ; dès que Zak dit « des millions de personnes partagent », elle se **duplique** : chaque clone est une personne. La caméra recule en un seul mouvement continu jusqu'à un champ de milliers de cartes. Sur « il parle d'eux », toutes les cartes se retournent d'une vague : au dos, un visage, pas un logo. La vidéo FAIT ce qu'elle dit : la carte est multipliée, puis retournée sur les gens.
+- **Effet signature** : le retournement en vague de milliers de cartes (instanciation GPU).
+- **Structure** : plan-séquence à caméra continue, accumulation exponentielle (1, 2, 4… des milliers) puis rupture (retournement) puis plongée sur une seule carte.
+- **Technique nouvelle** : **three.js, instanciation GPU de milliers d'objets** (InstancedMesh + shader maison, barres pilotées par l'enveloppe réelle de la voix). Jamais utilisée au registre.
+- **Différence avec les 5 derniers** : Apple v3 = opposition fiche/photos en relief 2,5D ; démo = fil Instagram + chrono + timeline. Ici : aucun relief photo, aucun fil, aucune opposition ; un seul mouvement de caméra sur un champ de cartes.
+- **Rien d'inventé** : aucune marque ni logo à l'écran (« Spotify » n'apparaît qu'en sous-titre, dans les mots de Zak) ; chiffres à l'écran : seulement « 620 millions » et « 2025 », dits par Zak. Les barres des cartes sont décoratives, sans valeur.
