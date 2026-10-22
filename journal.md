@@ -4,6 +4,22 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## Reel TEST · 2026-10-22 · audio de démonstration (voix de synthèse) · BROUILLON, non publié
+- **Source** : `inbox/traite/demo-premiere-seconde.m4a` (30,9 s, bruit de fond ajouté exprès). Compréhension : verdict
+  `ok`, parole/bruit 41 dB, 0 saturation ; 4 erreurs d'écoute de Whisper corrigées d'après le contexte (« raffimais »
+  → « as filmé », « Brose » → « Brooze »…), hallucination « [Bruit de » filtrée.
+- **Idée** : la première seconde décide ; pas besoin de refilmer, on remonte l'existant. **Cible** : Karim.
+- **Hooks** (instagram-hook-engine) : « Ta caméra n'est pas le problème. » (86) · « Filmé cent fois. Personne ne
+  s'arrête. » (84) · **retenu** : mots exacts « Tu as filmé ton restaurant cent fois. » sur un fil qui défile (90).
+- **Hypothèse** : un Reel qui FAIT ce qu'il dit (fil qui défile, chrono d'1 s, musique coupée sur « coupe le son »,
+  rushs qui se rangent sur une timeline) retient plus qu'un Reel explicatif.
+- **Choix créatifs** : 100 % 2D (pas de 3D : aucun objet ne la justifiait), 13 scènes, poussées plein cadre avec flou
+  de mouvement, silence total de 16,3 à 18,7 s, son synthétisé (−14 LUFS).
+- **Contrôle** : sceptique passe 1 → 6 corrections (sous-titres en double, hook muet, 2 idées sans visuel, fondu) ;
+  passe 2 → prête à publier. `controle.py` : 0 problème, 0 glitch. Rendu 32,4 s en 2 min 32.
+- **Metricool (draft)** : [Reel 24/10 18 h](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=6826725370241827805) ·
+  [teaser 18 h 30](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-6175005210685454902)
+
 ## Semaine du 23/10 au 01/11 · programmée le 22/10 (exécution test, en session)
 
 **Analyse** : 3 posts depuis septembre, portée 8 à 11, 0 enregistrement, 0 partage : audience trop petite pour conclure, on compare des taux. Aucun concurrent suivi dans Metricool ; la recherche web ne donne que des fiches d'agences (Auguste & Louise, freelances Malt), pas de comptes Instagram lisibles : rien d'exploitable cette semaine. Air du temps : le marché de Noël de Strasbourg ouvre fin novembre (le 27 selon la plupart des sources), les commerçants préparent leurs contenus maintenant. Instagram dit que les carrousels gagnent en élan (enregistrements, référence). Décision : semaine Noël + preuve à la direction, 3 nouveaux formats testés (question en story, teaser du carrousel, avant/après d'accroches).
