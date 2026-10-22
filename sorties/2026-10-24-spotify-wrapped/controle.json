@@ -1,0 +1,81 @@
+{
+ "video": "sorties/2026-10-24-spotify-wrapped/reel.mp4",
+ "ok": [
+  "format 1080×1920",
+  "30.00 i/s",
+  "vidéo h264 yuv420p",
+  "son aac",
+  "durée 50.6 s",
+  "poids 77.8 Mo",
+  "volume -14.0 LUFS (cible −14)",
+  "crête vraie -1.2 dBTP (max −1)",
+  "images réelles 95% du temps (objectif ≥ 60 %)",
+  "types de transition hors coupe : aucun (objectif ≤ 2)",
+  "appris · sous_titres_petit_mot"
+ ],
+ "problemes": [
+  "glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes"
+ ],
+ "montage": {
+  "part_images_reelles": 0.95,
+  "gros_textes": 4,
+  "transitions": []
+ },
+ "a_justifier": [
+  "4 moments de gros texte (objectif ≤ 3)"
+ ],
+ "glitchs": {
+  "fps": 30.0,
+  "coupes": [
+   12.8,
+   29.233,
+   32.767,
+   34.4,
+   34.533,
+   39.7,
+   40.233,
+   42.9,
+   47.967
+  ],
+  "rapides": [],
+  "alertes": [
+   [
+    "COUPE non déclarée",
+    34.533,
+    34.533
+   ],
+   [
+    "COUPE non déclarée",
+    40.233,
+    40.233
+   ]
+  ]
+ },
+ "images_cles": [
+  0.3,
+  12.73,
+  12.98,
+  13.38,
+  29.17,
+  29.42,
+  29.82,
+  32.69,
+  32.94,
+  33.34,
+  34.34,
+  34.59,
+  34.99,
+  39.65,
+  39.9,
+  40.3,
+  42.84,
+  43.09,
+  43.49,
+  47.89,
+  48.14,
+  48.54,
+  50.53
+ ],
+ "planche": "/home/user/brooze-agent/sorties/2026-10-24-spotify-wrapped/planche_cles.jpg",
+ "bandes": "/home/user/brooze-agent/sorties/2026-10-24-spotify-wrapped/_glitchs"
+}
