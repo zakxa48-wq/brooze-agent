@@ -17,7 +17,7 @@ import sys, json, subprocess
 import numpy as np
 
 
-def images(f, w=270):
+def images(f, w=540):
     info = json.loads(subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height,r_frame_rate',
                                       '-of', 'json', f], capture_output=True, text=True).stdout)['streams'][0]
     W, H = info['width'], info['height']; n, d = map(int, info['r_frame_rate'].split('/')); fps = n / d
@@ -46,10 +46,17 @@ def main(f, fond='auto', graphique=None):
         bg = np.array([int(fond[i:i + 2], 16) for i in (1, 3, 5)], np.float32)
     pos, taille, net = [], [], []
     for im in fr:
-        m = np.abs(im - bg).sum(axis=2) > 90
+        c = np.abs(im - bg).sum(axis=2)
+        m = c > 90
         ys, xs = np.nonzero(m)
         if len(xs) < 20: pos.append((np.nan, np.nan)); taille.append(np.nan); net.append(np.nan); continue
-        pos.append((xs.mean() * k, ys.mean() * k)); taille.append((np.percentile(ys, 98) - np.percentile(ys, 2)) * k)
+        # centre PONDÉRÉ par le contraste (sous-pixel) : un masque binaire fait sauter le centre d'une colonne entière
+        # quand un bord de lettre franchit un pixel (faux mouvement sur une poussée de caméra lente)
+        wgt = np.clip(c - 40, 0, 200); sw = wgt.sum()
+        gy, gx = np.mgrid[0:c.shape[0], 0:c.shape[1]]
+        pos.append(((wgt * gx).sum() / sw * k, (wgt * gy).sum() / sw * k))
+        prof = wgt.sum(axis=1); cum = np.cumsum(prof) / prof.sum()
+        ix = np.arange(len(cum)); taille.append((np.interp(.98, cum, ix) - np.interp(.02, cum, ix)) * k)   # sous-pixel aussi
         y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
         g = im[y0:y1, x0:x1].mean(axis=2)
         net.append(min(np.abs(np.diff(g, axis=1)).mean(), np.abs(np.diff(g, axis=0)).mean()) if g.shape[0] > 2 and g.shape[1] > 2 else np.nan)
