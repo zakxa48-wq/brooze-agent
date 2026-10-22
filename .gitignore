@@ -8,7 +8,8 @@ sorties/*/reel_sceptique/
 sorties/*/*.wav
 sorties/*/*.flac
 sorties/*/brouillon.mp4
+sorties/*/reel.mp4
 sorties/_banque/
-# Jamais d audio brut dans ce dépôt public
+# Jamais d'audio brut dans ce dépôt public : l'audio de Zak ne vit que dans brooze-voix (privé)
 sorties/**/*.m4a
 sorties/**/*.mp3

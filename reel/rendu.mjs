@@ -34,7 +34,7 @@ const temps = v => {
   return +(fin ? mots[i].end : mots[i].start - .12).toFixed(3);
 };
 const resoudre = o => Array.isArray(o) ? o.map(resoudre) : o && typeof o === 'object'
-  ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, ['mots', 'cuivre'].includes(k) ? (Array.isArray(v) ? v.map(x => x - idx0) : v - idx0) : k === 'mot' ? v - idx0 : resoudre(v)]))
+  ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, ['mots', 'cuivre', 'raye'].includes(k) ? (Array.isArray(v) ? v.map(x => x - idx0) : v - idx0) : k === 'mot' ? v - idx0 : resoudre(v)]))
   : temps(o);
 const scenes = resoudre(reel.scenes);
 

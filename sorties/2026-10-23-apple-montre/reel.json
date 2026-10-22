@@ -1,0 +1,355 @@
+{
+ "id": "2026-10-23-apple-montre",
+ "fps": 30,
+ "source": [
+  0.0,
+  38.78
+ ],
+ "fin": 2.4,
+ "banque": {
+  "idee": "memo-2026-10-22-1-e3e73a-0000",
+  "audio": "audio/2026-10/memo-2026-10-22-1.m4a"
+ },
+ "avatar": "Claire",
+ "idee": "Ne dis pas que ton produit est exceptionnel : montre-le (Shoot on iPhone)",
+ "hook": {
+  "choisi": "Apple a compris quelque chose que beaucoup de marques n'ont toujours pas compris en publicité.",
+  "ecartes": [
+   "Apple aurait pu nous présenter une liste interminable de caractéristiques techniques. Mais au lieu de ça… (mixer, HSS ~7, mais démarre à 6,6 s : coupe la fenêtre en deux)",
+   "Arrêtez simplement de dire que votre produit est exceptionnel. (provocatrice, HSS ~9, mais en dernière phrase : on ne réordonne pas la voix, elle sert de chute et de fin)"
+  ],
+  "hss": {
+   "choisi": 8,
+   "intrigante": "curiosité + écart de connaissance (« quelque chose que beaucoup de marques n'ont pas compris »), parle à la marque de Claire"
+  }
+ },
+ "hypothese": "Un Reel qui FAIT ce qu'il dit (une fiche technique interminable coupée net, puis des photographies qui arrivent, puis le mot « exceptionnel » barré) retient mieux qu'un conseil dit en typo seule : Claire voit la différence entre dire et montrer.",
+ "scenes": [
+  {
+   "de": 0,
+   "type": "slam",
+   "theme": "encre",
+   "label": "Publicité",
+   "mots": [
+    0,
+    2
+   ],
+   "transition": "coupe",
+   "taille": 230,
+   "poussee": 0.03
+  },
+  {
+   "de": "@3",
+   "type": "texte",
+   "theme": "encre",
+   "mots": [
+    3,
+    14
+   ],
+   "cuivre": [
+    12
+   ],
+   "transition": "coupe",
+   "taille": 150
+  },
+  {
+   "de": "@15",
+   "type": "texte",
+   "theme": "papier",
+   "label": "Sa campagne",
+   "mots": [
+    15,
+    20
+   ],
+   "cuivre": [
+    20
+   ],
+   "transition": "glisse",
+   "taille": 150
+  },
+  {
+   "de": "@21",
+   "type": "specs",
+   "theme": "papier",
+   "mots": [
+    21,
+    31
+   ],
+   "transition": "volet",
+   "taille": 120,
+   "hauteur": 520,
+   "vitesse": 1600
+  },
+  {
+   "de": "@32",
+   "type": "slam",
+   "theme": "encre",
+   "mots": [
+    32,
+    36
+   ],
+   "transition": "coupe",
+   "taille": 170
+  },
+  {
+   "de": "@37",
+   "type": "galerie",
+   "theme": "papier",
+   "mots": [
+    41,
+    47
+   ],
+   "taille": 120,
+   "hauteur": 420,
+   "transition": "glisse",
+   "photos": [
+    {
+     "scene": 0,
+     "x": 10,
+     "y": 20,
+     "w": 410,
+     "h": 520,
+     "rot": -5,
+     "t": "@37"
+    },
+    {
+     "scene": 1,
+     "x": 460,
+     "y": 80,
+     "w": 410,
+     "h": 520,
+     "rot": 4,
+     "t": "@40"
+    },
+    {
+     "scene": 2,
+     "x": 215,
+     "y": 480,
+     "w": 450,
+     "h": 400,
+     "rot": -2,
+     "t": "@41"
+    }
+   ],
+   "hauteur_photos": 900
+  },
+  {
+   "de": "@48",
+   "type": "texte",
+   "theme": "encre",
+   "mots": [
+    48,
+    55
+   ],
+   "cuivre": [
+    55
+   ],
+   "transition": "glisse"
+  },
+  {
+   "de": "@56",
+   "type": "duel",
+   "theme": "papier",
+   "titre": "Le spectateur ne se dit plus simplement",
+   "mots": [
+    56,
+    78
+   ],
+   "ta": "@61",
+   "tb": "@71",
+   "transition": "glisse",
+   "cA": {
+    "label": "Il ne se dit plus",
+    "texte": "si l'appareil photo est performant"
+   },
+   "cB": {
+    "label": "Il se dit",
+    "texte": "Attends, je pourrais faire *ça* avec mon téléphone ?"
+   }
+  },
+  {
+   "de": "@79",
+   "type": "slam",
+   "theme": "encre",
+   "mots": [
+    79,
+    82
+   ],
+   "transition": "glisse",
+   "taille": 200
+  },
+  {
+   "de": "@83",
+   "type": "barre",
+   "theme": "papier",
+   "mots": [
+    83,
+    91
+   ],
+   "raye": [
+    89,
+    91
+   ],
+   "t_raye": 29.72,
+   "transition": "glisse"
+  },
+  {
+   "de": "@92",
+   "type": "galerie",
+   "theme": "encre",
+   "mots": [
+    92,
+    97
+   ],
+   "cuivre": [
+    96
+   ],
+   "taille": 100,
+   "hauteur": 340,
+   "transition": "coupe",
+   "iris": true,
+   "t_impact": "@96",
+   "photos": [
+    {
+     "scene": 0,
+     "x": 44,
+     "y": 20,
+     "w": 800,
+     "h": 980,
+     "rot": 0,
+     "t": "@96"
+    }
+   ]
+  },
+  {
+   "de": "@98",
+   "type": "texte",
+   "theme": "papier",
+   "mots": [
+    98,
+    104
+   ],
+   "cuivre": [
+    101,
+    102
+   ],
+   "transition": "glisse"
+  },
+  {
+   "de": "@105",
+   "type": "barre",
+   "theme": "encre",
+   "mots": [
+    105,
+    113
+   ],
+   "raye": [
+    113
+   ],
+   "t_raye": 36.6,
+   "transition": "glisse"
+  },
+  {
+   "de": "@114",
+   "type": "fin",
+   "theme": "encre",
+   "mots": [
+    114,
+    117
+   ],
+   "t_logo": "@117>",
+   "transition": "volet"
+  }
+ ],
+ "musique": {
+  "bpm": 96,
+  "tonalite": "la",
+  "sections": [
+   [
+    0.2,
+    "@32",
+    "intro"
+   ],
+   [
+    "@32",
+    "@48",
+    "suspens"
+   ],
+   [
+    "@48",
+    "@83",
+    "tension"
+   ],
+   [
+    "@83",
+    "@105",
+    "calme"
+   ],
+   [
+    "@105",
+    "@114",
+    "suspens"
+   ],
+   [
+    "@114",
+    41.0,
+    "resolution"
+   ]
+  ],
+  "accord_final": "@114"
+ },
+ "silences": [
+  [
+   "@113",
+   "@114"
+  ]
+ ],
+ "couverture": {
+  "theme": "encre",
+  "label": "Publicité",
+  "titre": "Arrête de dire. *Montre.*"
+ },
+ "sons": [
+  {
+   "t": "@37",
+   "son": "snap",
+   "g": 0.45
+  },
+  {
+   "t": "@40",
+   "son": "snap",
+   "g": 0.45
+  },
+  {
+   "t": "@41",
+   "son": "snap",
+   "g": 0.45
+  },
+  {
+   "t": 29.72,
+   "son": "snap",
+   "g": 0.55
+  },
+  {
+   "t": "@96",
+   "son": "low_hit",
+   "g": 0.8
+  },
+  {
+   "t": "@96",
+   "son": "shimmer",
+   "g": 0.4,
+   "args": {
+    "d": 0.6
+   }
+  },
+  {
+   "t": "@21",
+   "son": "glisse_tel",
+   "g": 0.4,
+   "args": {
+    "d": 3.6
+   }
+  }
+ ]
+}

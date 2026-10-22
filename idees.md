@@ -21,3 +21,4 @@
 | 2026-10-31 | Story | Positionnement : on crée à partir de l'existant | « Tes clients te filment déjà. » |
 | 2026-11-01 | Story | Appel à l'action | « Une vidéo n'a qu'un travail : donner une raison de venir chez toi. » |
 | (test, brouillon) | Reel | La première seconde décide, on remonte l'existant | « Tu as filmé ton restaurant cent fois. » |
+| 2026-10-23 | Reel | Montrer plutôt que dire (Shoot on iPhone, voix de Zak) | « Apple a compris quelque chose que beaucoup de marques n'ont toujours pas compris en publicité. » |

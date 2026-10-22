@@ -4,6 +4,17 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## Reel · 2026-10-23 · 13:30 · Claire · « Apple a compris… » (banque de voix, mémo du 22/10)
+- **Source** : brooze-voix `audio/2026-10/memo-2026-10-22-1.m4a` (38,5 s). Verdict `ok`. Une erreur d'écoute corrigée d'après le contexte : « il se base » → « il se passe ». À relire par Zak : « Je vois la différence » (pourrait être « Tu vois la différence »).
+- **Idée** : ne dis pas que ton produit est exceptionnel, montre-le (campagne « Shoot on iPhone », citée par Zak ; aucun chiffre, aucun logo).
+- **Hooks** : retenu « Apple a compris quelque chose que beaucoup de marques n'ont toujours pas compris en publicité. » (intrigante, HSS 8) · écartés : « Apple aurait pu nous présenter une liste interminable… Mais au lieu de ça… » (démarre à 6,6 s) · « Arrêtez simplement de dire que votre produit est exceptionnel. » (provocatrice, en fin d'audio : on ne réordonne pas).
+- **Hypothèse** : un Reel qui FAIT ce qu'il dit (fiche technique interminable coupée net, photographies qui arrivent, « exceptionnel » barré) retient plus qu'un conseil en typo seule.
+- **Choix créatifs** : 100 % 2D ; 3 nouvelles scènes du moteur (`specs`, `galerie`, `barre`), duel A/B corrigé ; photographies = paysages dessinés en code ; silence de musique sur « exceptionnel » barré ; 41,2 s, rendu 3 min 50.
+- **Sceptique** : passe 1 → 3 corrections (hook sans action, scène vide 0,9 s, duel vide) ; passe 2 → prête. `controle.py` : 0 problème, 0 glitch.
+- **Metricool** : [Reel 23/10 13 h 30](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-4757902081379974094) · [teaser 14 h](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7464285017798757392)
+
+---
+
 ## Reel TEST · 2026-10-22 · audio de démonstration (voix de synthèse) · BROUILLON, non publié
 - **Source** : `inbox/traite/demo-premiere-seconde.m4a` (30,9 s, bruit de fond ajouté exprès). Compréhension : verdict
   `ok`, parole/bruit 41 dB, 0 saturation ; 4 erreurs d'écoute de Whisper corrigées d'après le contexte (« raffimais »
