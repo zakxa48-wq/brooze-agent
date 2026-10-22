@@ -143,4 +143,5 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 - **Publication** : programmée automatiquement à 18 h 00 et 18 h 01 (meilleur créneau restant du jeudi).
   [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=1423513364291535869) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-4833918069163342851)
 - **Contrôle** : charte OK, lisibilité OK, logo goutte retiré (vrai fichier absent).
+- **Vérification 18 h 13** : les 2 images ne sont plus dans la file Metricool (traitées à l'heure prévue) ; les statistiques de stories ne remontent pas encore, publication à confirmer au relevé J+2.
 - **Chiffres J+2** : à relever.
