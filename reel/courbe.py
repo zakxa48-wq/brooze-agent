@@ -6,6 +6,7 @@ Mesure, image par image, l'élément qui se distingue du fond (masque de contras
   - position (centre), taille (hauteur de la boîte), vitesse en px/image (à l'échelle 1080×1920)
   - arret_s        : instant où l'élément s'immobilise pour de bon (vitesse < 1 px/image jusqu'à la fin)
   - impact_s       : instant où la vitesse retombe sous 20 % de son pic (fin du geste principal)
+  - duree_geste_s  : durée du geste principal (vitesse au-dessus de 20 % du pic) : court = vif, long = mou
   - depassement    : dépassement de la position finale le long de l'axe du mouvement, en % de la course
   - oscillations   : nombre d'inversions de sens visibles (> 2 px) après l'impact (rebond)
   - lineaire       : vrai si la vitesse est quasi constante pendant le mouvement (mouvement mécanique)
@@ -69,6 +70,7 @@ def main(f, fond='auto', graphique=None):
         if vit[i] >= 1.0: arret = min(n - 1, i + 1); break
     else: arret = 0
     impact = next((i for i in range(pic, n) if vit[i] < .2 * vit[pic]), arret)
+    debut_geste = next((i for i in range(pic, -1, -1) if vit[i] < .2 * vit[pic]), 0)   # le geste = vitesse > 20 % du pic
     fin = P[-1]; depart = P[np.argmax(~np.isnan(P[:, 0]))]
     axe = fin - depart; course = float(np.hypot(*axe))
     if course > 5:
@@ -86,7 +88,7 @@ def main(f, fond='auto', graphique=None):
     flou = float(np.nanmean(N[rapide]) / np.nanmean(N[arret:])) if rapide.any() and arret < n else None
     att = attaque(f)
     res = dict(images=n, ips=round(fps, 2), duree_s=round(n / fps, 2), pic_vitesse_px=round(float(vit[pic]), 1), pic_s=round(pic / fps, 3),
-               impact_s=round(impact / fps, 3), arret_s=round(arret / fps, 3), tenue_s=round((n - 1 - arret) / fps, 2),
+               impact_s=round(impact / fps, 3), duree_geste_s=round((impact - debut_geste) / fps, 3), arret_s=round(arret / fps, 3), tenue_s=round((n - 1 - arret) / fps, 2),
                course_px=round(course, 1), depassement_pct=round(depassement, 1), oscillations=oscillations, lineaire=lineaire,
                flou_pendant=round(flou, 2) if flou is not None else None, taille_finale_px=round(float(T[-1]), 0) if not np.isnan(T[-1]) else None,
                son_attaque_s=att, ecart_son_image_images=round((att - impact / fps) * fps, 1) if att is not None else None)
