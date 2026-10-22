@@ -1,0 +1,113 @@
+{
+ "video": "sorties/2026-10-23-apple-montre-v2/reel.mp4",
+ "ok": [
+  "format 1080×1920",
+  "30.00 i/s",
+  "vidéo h264 yuv420p",
+  "son aac",
+  "durée 41.2 s",
+  "poids 69.2 Mo",
+  "volume -14.0 LUFS (cible −14)",
+  "crête vraie -1.1 dBTP (max −1)",
+  "images réelles 83% du temps (objectif ≥ 60 %)",
+  "3 moments de gros texte (objectif ≤ 3)",
+  "types de transition hors coupe : whip (objectif ≤ 2)",
+  "glitchs : aucune alerte"
+ ],
+ "problemes": [],
+ "montage": {
+  "part_images_reelles": 0.83,
+  "gros_textes": 3,
+  "transitions": [
+   "whip"
+  ]
+ },
+ "a_justifier": [],
+ "glitchs": {
+  "fps": 30.0,
+  "coupes": [
+   1.5,
+   4.533,
+   6.5,
+   8.2,
+   13.5,
+   14.167,
+   14.933,
+   18.5,
+   20.7,
+   22.333,
+   25.967,
+   27.367,
+   30.133,
+   32.1,
+   36.9
+  ],
+  "rapides": [
+   [
+    11.6,
+    11.867
+   ],
+   [
+    34.233,
+    34.433
+   ]
+  ],
+  "alertes": []
+ },
+ "images_cles": [
+  0.3,
+  1.44,
+  1.69,
+  2.09,
+  4.46,
+  4.71,
+  5.11,
+  6.42,
+  6.67,
+  7.07,
+  8.15,
+  8.4,
+  8.8,
+  11.55,
+  11.8,
+  12.21,
+  13.44,
+  13.69,
+  14.09,
+  14.34,
+  14.74,
+  14.88,
+  15.12,
+  15.53,
+  18.45,
+  18.7,
+  19.1,
+  20.64,
+  20.89,
+  21.3,
+  22.27,
+  22.52,
+  22.93,
+  25.9,
+  26.15,
+  26.55,
+  27.3,
+  27.55,
+  27.96,
+  30.07,
+  30.32,
+  30.73,
+  32.04,
+  32.29,
+  32.69,
+  34.2,
+  34.45,
+  34.85,
+  36.84,
+  37.09,
+  37.49,
+  41.07
+ ],
+ "planche": "/home/user/brooze-agent/sorties/2026-10-23-apple-montre-v2/planche_cles.jpg",
+ "bandes": "/home/user/brooze-agent/sorties/2026-10-23-apple-montre-v2/_glitchs"
+}

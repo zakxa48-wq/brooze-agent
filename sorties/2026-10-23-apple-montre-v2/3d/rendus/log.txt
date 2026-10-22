@@ -1,0 +1,3 @@
+RENDU /home/user/brooze-agent/sorties/2026-10-23-apple-montre-v2/3d/rendus/objectifs.png : 219.6 s
+RENDU /home/user/brooze-agent/sorties/2026-10-23-apple-montre-v2/3d/rendus/fiche.png : 187.4 s
+RENDU /home/user/brooze-agent/sorties/2026-10-23-apple-montre-v2/3d/rendus/ecran.png : 188.1 s
