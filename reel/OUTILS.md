@@ -8,6 +8,7 @@ ajoute caméra, sous-titres, transitions ; `son.py` le son. Teste toujours petit
 | Outil | Pour quoi | Coût indicatif | Point d'entrée |
 |---|---|---|---|
 | Moteur HTML (`reel/moteur.html`) | typo cinétique, plans image + caméra, relief 2,5D, transitions | 40 s ≈ 12 min | `node reel/rendu.mjs` |
+| **Atelier** (`reel/atelier`, maison) | compositing de calques à la After Effects : typo cinétique par lettre/mot calée sur la voix, images clés et courbes de vitesse, caméra 2,5D, flou de mouvement, caches, masques, effets, gestes validés | ~0,1–0,3 s / image sur 4 cœurs | `python3 reel/atelier scene.py --sortie plan.mp4` (voir `reel/atelier/LISEZMOI.md`) |
 | three.js + shaders GLSL | 3D temps réel stylisée, matières en shader, particules, déformations, post-traitements | quelques s par image en 1080×1920 | page HTML déterministe (temps = image / fps), capture Playwright comme `rendu.mjs` |
 | Remotion (React) | mise en page animée complexe, data, interfaces, compositions multicouches | ~0,3 s par image | `node reel/remotion.mjs entree.jsx Id sortie.mp4` |
 | Manim | raisonnement visuel : schémas qui se construisent, transformations de formes, équations, graphes | 1–2 s pour 1 s en `-qh` | `manim -qh --fps 30 -r 1080,1920 scene.py Classe` |

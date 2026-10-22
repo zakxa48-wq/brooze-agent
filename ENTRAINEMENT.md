@@ -17,11 +17,14 @@ Dossier de séance : `brooze-voix/data/cerveau/entrainement/<AAAA-MM-JJ>-<savoir
 3. Pour chaque essai N, dans `essai-N/` : `essai.mp4` (1080×1920, 30 i/s, ≈ 3 s ; on le versionne, c'est court),
    `planche.jpg` (une image toutes les 0,1 s pendant le geste, puis la tenue), `courbe.json` + `courbe.png`
    (`python3 reel/courbe.py essai.mp4 --graphique courbe.png`), `notes.md` (ce qu'il a changé depuis l'essai
-   précédent et pourquoi), le code source (`source/`). Il pousse sur main et **attend** le verdict.
+   précédent et pourquoi), le code source (`source/`). L'Atelier (`reel/atelier`) est le choix par défaut pour ces
+   exercices courts ; s'il lui manque une fonction, l'ajouter fait partie de l'exercice (démo, tests, VERSIONS.md). Il pousse sur main et **attend** le verdict.
 4. Le coach écrit `essai-N/verdict.md` : critère par critère (chiffre mesuré → OK / à reprendre), ce qu'il voit à
    l'œil, et l'**ordre de correction** précis. Verdict : `VALIDÉ` ou `À REPRENDRE`.
 5. À chaque essai repris, l'élève ne corrige QUE ce que le verdict demande (un essai = une hypothèse), et explique.
 6. **Après VALIDÉ** (et seulement là), l'élève range ce qu'il a appris :
+   - si le geste se généralise : une fonction dans `reel/atelier/gestes.py` (valeurs animées, pas de visuel) + sa
+     démo dans `reel/atelier/demos/` + `tests.py --complet` ;
    - `techniques.py ajouter` : la technique validée (démo = l'essai validé en 540 px, code dans
      `reel/techniques/code/<id>/`, réglages exacts, note donnée par le coach) ;
    - `principes.md` : une règle par erreur corrigée pendant la séance (type `pratique`, preuve = essais et chiffres,

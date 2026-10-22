@@ -18,3 +18,6 @@ sorties/**/*.mp3
 *.blend1
 sorties/*/_reel_*.mp4
 __pycache__/
+_atelier_cache/
+reel/atelier/demos/*.png
+reel/atelier/demos/*.mp4

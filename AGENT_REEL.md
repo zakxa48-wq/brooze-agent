@@ -190,7 +190,11 @@ effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
      relief 2,5D (la caméra tourne légèrement autour de l'objet au lieu de glisser sur une photo). Réglages :
      `relief` (1 par défaut, 0,6–1,4), `orbite` [[x0, y0], [x1, y1]], `dolly`, `mise_au_point` (0–1). Rien de plus
      fort : le relief doit se sentir, pas se voir. Voir `reel/MONTAGE.md` § 3 bis.
-   - Plans venus d'un autre outil (three.js, Remotion, Manim, p5, Blender animé, simulation, ffmpeg) : rends-les en
+   - **Atelier** (`reel/atelier/LISEZMOI.md`) : l'outil maison « à la After Effects », à mobiliser quand un geste
+     doit être réglé à l'image près (typo par lettre ou par mot calée sur la voix, chute, choc, caches, caméra 2,5D,
+     flou de mouvement). Ses `gestes.py` contiennent les techniques validées. S'il lui manque une fonction pour ce
+     Reel, ajoute-la selon ses règles (démo, tests, version) et note-le au débrief.
+   - Plans venus d'un autre outil (Atelier, three.js, Remotion, Manim, p5, Blender animé, simulation, ffmpeg) : rends-les en
      vidéo 1080×1920 30 i/s et place-les en `plan` avec `video` (ou `clip`) ; le moteur ajoute caméra, sous-titres et
      transitions. Un nouveau type de scène réutilisable va dans `reel/moteur.html` ou `reel/creations/`.
    - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
