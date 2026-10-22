@@ -116,5 +116,24 @@
   ],
   "deceptions": [],
   "cree_le": "2026-10-22"
+ },
+ {
+  "id": "mot-qui-tombe",
+  "nom": "Mot qui tombe avec du poids (chute en profondeur, ombre qui se pose, choc)",
+  "categorie": "typo cinétique",
+  "note": 7,
+  "note_pourquoi": "note du coach (séance du 22/10, essai 3 validé) : lisible dès la 1re image, tombe tard et vite (t³), ombre qui porte la hauteur, flou + choc au contact, tenue vivante sans bouger le mot. Pas plus de 7 : l échelle ne varie que de 9 %, la profondeur repose surtout sur l ombre.",
+  "demo": "demos/mot-qui-tombe.mp4",
+  "code": [
+   "reel/techniques/code/mot-qui-tombe/rendu.py",
+   "reel/techniques/code/mot-qui-tombe/LISEZMOI.md"
+  ],
+  "reglages": "échelle 1,093→1 en t³ (CHUTE 0,557), contact entre deux obturateurs, obturateur 270° + traînée verticale 26 px, ombre 20 %→38 % qui se resserre, choc 11 px critique τ 35 ms, poussée 1,8 % smoothstep, son à 16,5/30 s",
+  "cout": "~1 min de rendu pour 3 s (Python + Pillow)",
+  "source": "entraînement 2026-10-22-mot-qui-tombe-avec-poids (3 essais)",
+  "statut": "active",
+  "apparu_dans": [],
+  "deceptions": [],
+  "cree_le": "2026-10-22"
  }
 ]

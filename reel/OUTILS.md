@@ -42,3 +42,5 @@ suivante.
 
 ## Appris (techniques validées, à réutiliser comme savoir-faire, jamais comme plan)
 - Relief 2,5D par carte de profondeur Blender + parallaxe WebGL par pixel (Reel Apple v3, 22/10).
+- Mot qui tombe avec du poids : chute en profondeur en t³, contact entre deux obturateurs, ombre qui se pose, choc 11 px
+  amorti critique, poussée de tenue 1,8 % (entraînement du 22/10, 7/10 ; `reel/techniques/code/mot-qui-tombe/`).
