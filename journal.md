@@ -11,7 +11,7 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 - **Hypothèse** : un Reel qui FAIT ce qu'il dit (fiche technique interminable coupée net, photographies qui arrivent, « exceptionnel » barré) retient plus qu'un conseil en typo seule.
 - **Choix créatifs** : 100 % 2D ; 3 nouvelles scènes du moteur (`specs`, `galerie`, `barre`), duel A/B corrigé ; photographies = paysages dessinés en code ; silence de musique sur « exceptionnel » barré ; 41,2 s, rendu 3 min 50.
 - **Sceptique** : passe 1 → 3 corrections (hook sans action, scène vide 0,9 s, duel vide) ; passe 2 → prête. `controle.py` : 0 problème, 0 glitch.
-- **Teaser** story 14:00.
+- **Metricool** : [Reel 23/10 13 h 30](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-4757902081379974094) · [teaser 14 h](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7464285017798757392)
 
 ---
 
