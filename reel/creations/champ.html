@@ -78,8 +78,8 @@ const mat = new THREE.ShaderMaterial({
       if(bx>0.&&bx<1.){
         float fx=fract(bx*8.); int ki=int(clamp(k,0.,7.)); float hv=uHist[ki];
         float h=.1+.62*clamp(hv*(.55+.6*hash(vSeed*50.+k)),0.,1.);
-        float inBar=step(.14,fx)*step(fx,.86)*step(p.y,-.02+0.0)*step(-.02-h*.9,p.y);
-        vec3 bc=ink; if(vHero>.5&&k==5.) bc=cu;
+        float inBar=step(.14,fx)*step(fx,.86)*step(-.36,p.y)*step(p.y,-.36+h*.8);
+        vec3 bc=mix(ink,soft,vHero>.5?0.:.4); if(vHero>.5&&k==5.) bc=cu;
         col=mix(col,bc,inBar);
       }
       // lignes de texte abstraites

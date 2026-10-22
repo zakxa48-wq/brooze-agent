@@ -186,13 +186,9 @@
    "main": 0.5
   },
   {
-   "de": "@145",
+   "de": "@147>",
    "type": "fin",
    "theme": "encre",
-   "mots": [
-    145,
-    147
-   ],
    "t_logo": "@147>",
    "transition": "coupe"
   }
