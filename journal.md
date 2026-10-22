@@ -11,5 +11,7 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
   l'angle « test des 3 secondes » : écarté. Aucun concurrent suivi dans Metricool.
 - **Pourquoi ce choix** : parle à la douleur de Karim (« pas le temps de tourner ») avec notre vrai positionnement
   (on crée à partir de l'existant). Appel à l'action simple : répondre « RUSH ».
+- **Publication** : programmée automatiquement à 18 h 00 et 18 h 01 (meilleur créneau restant du jeudi).
+  [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=1423513364291535869) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-4833918069163342851)
 - **Contrôle** : charte OK, lisibilité OK, logo goutte retiré (vrai fichier absent).
 - **Chiffres J+2** : à relever.
