@@ -1,0 +1,12 @@
+{
+ "source": "/home/user/brooze-voix/audio/2026-10/memo-2026-10-22-1.m4a",
+ "duree_brut": 40.22,
+ "duree_voix": 38.48,
+ "rapport_parole_bruit_db": 46.3,
+ "saturation": 0.0,
+ "mots": 118,
+ "debit_mots_s": 3.07,
+ "transcription": "Apple a compris quelque chose que beaucoup de marques n'ont toujours pas compris en publicité. Avec sa campagne \"Shoot on iPhone\" Apple aurait pu nous présenter une liste interminable de caractéristiques techniques. Mais au lieu de ça... Ils ont montré des photographies incroyables prises avec leur propre téléphone. Et là, il se base quelque chose d'intéressant. Le spectateur ne se dit plus simplement si l'appareil photo est performant. Il se dit \"Attends, je pourrais faire ça avec mon téléphone?\" Je vois la différence. Apple ne se contente pas de promettre une qualité. La marque nous la montre directement. et c'est une leçon fondamentale en publicité. Arrêtez simplement de dire que votre produit est exceptionnel. Montrez-nous pourquoi il est.",
+ "verdict": "ok",
+ "raisons": []
+}

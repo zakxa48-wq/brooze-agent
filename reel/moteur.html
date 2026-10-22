@@ -78,6 +78,19 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 .fin .pseudo { font-family:Grotesk; font-weight:700; font-size:42px; letter-spacing:.06em; color:var(--gris-ui); margin-top:40px; }
 .clip img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 
+
+/* Fiche technique interminable, photographies dessinées, mot barré */
+.specs-zone { position:relative; height:640px; margin-top:50px; overflow:hidden; border-radius:40px; background:rgba(247,246,242,.85); box-shadow:0 30px 70px -30px rgba(16,14,13,.3); border:2px solid rgba(138,135,128,.25);
+  -webkit-mask-image:linear-gradient(transparent 0, #000 12%, #000 88%, transparent 100%); mask-image:linear-gradient(transparent 0, #000 12%, #000 88%, transparent 100%); }
+.specs-fil { position:absolute; left:0; right:0; top:0; will-change:transform; }
+.specs-fil .ligne-spec { display:flex; align-items:center; justify-content:space-between; gap:40px; height:104px; padding:0 54px; border-bottom:2px solid rgba(138,135,128,.22); font-family:Grotesk; font-weight:700; font-size:40px; letter-spacing:.08em; text-transform:uppercase; color:var(--encre-douce); }
+.specs-fil .ligne-spec i { display:block; height:18px; border-radius:9px; background:rgba(107,103,95,.35); }
+.photos { position:relative; height:1000px; margin-top:40px; }
+.photo { position:absolute; border-radius:34px; overflow:hidden; border:10px solid #F7F6F2; box-shadow:0 50px 90px -30px rgba(0,0,0,.7); will-change:transform; }
+.photo svg { display:block; width:100%; height:100%; }
+.mot .trait { position:absolute; left:0; right:0; top:54%; height:.085em; background:var(--encre); transform-origin:0 50%; transform:scaleX(0); border-radius:.05em; }
+.encre .mot .trait { background:var(--papier); }
+
 #grain { position:absolute; z-index:11; inset:-64px; pointer-events:none; opacity:.075; mix-blend-mode:overlay; }
 #vignette { position:absolute; z-index:12; inset:0; pointer-events:none; background:radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.22) 100%); }
 </style>
@@ -212,8 +225,8 @@ T.telephone = {
 T.duel = {
   construire(sc) {
     return (sc.titre ? `<div class="bloc" style="font-size:96px;margin-bottom:56px">${md(sc.titre)}</div>` : '') + `<div class="cartes">
-      <div class="carte barre a"><div class="label">${esc(sc.a.label)}</div><div class="txt">${md(sc.a.texte)}</div></div>
-      <div class="carte sombre b"><div class="label" style="color:var(--gris-ui)">${esc(sc.b.label)}</div><div class="txt">${md(sc.b.texte)}</div></div></div>`;
+      <div class="carte barre a"><div class="label">${esc(sc.cA.label)}</div><div class="txt">${md(sc.cA.texte)}</div></div>
+      <div class="carte sombre b"><div class="label" style="color:var(--gris-ui)">${esc(sc.cB.label)}</div><div class="txt">${md(sc.cB.texte)}</div></div></div>`;
   },
   animer(el, sc, t) {
     [['.a', sc.ta ?? sc.de + .1], ['.b', sc.tb ?? sc.de + .9]].forEach(([q, t0]) => {
@@ -222,6 +235,7 @@ T.duel = {
     });
   },
   impact: sc => sc.tb ?? sc.de + .9,
+  montre: sc => range(sc.mots),
 };
 
 // Anneau de progression (chrono) : se remplit de `de_val` à `a_val`, le cuivre seulement quand c'est gagné
@@ -341,6 +355,69 @@ T.montage = {
     const tl = t0 + n * .09 + .45, q = E.doux(prog(t, tl, (sc.a - .2) - tl));
     const tete = el.querySelector('.tete'); tete.style.left = `${8 + q * (n * 176 - 4)}px`; tete.style.opacity = t > tl ? 1 : 0;
   },
+  montre: sc => range(sc.mots),
+};
+
+
+// Fiche technique : une liste de caractéristiques qui défile sans jamais finir (sans aucun chiffre)
+T.specs = {
+  construire(sc) {
+    const noms = sc.lignes ?? ['Capteur', 'Ouverture', 'Stabilisation', 'Zoom optique', 'Processeur', 'Autonomie', 'Mémoire', 'Écran', 'Résolution', 'Fréquence', 'Objectif', 'Obturateur'];
+    const larg = [260, 180, 330, 220, 290, 200, 340, 240, 190, 310, 230, 270];
+    let fil = '';
+    for (let k = 0; k < 8; k++) noms.forEach((n, j) => { fil += `<div class="ligne-spec"><span>${esc(n)}</span><i style="width:${larg[(j * 5 + k * 3) % larg.length]}px"></i></div>`; });
+    return (sc.label ? `<div class="label">${esc(sc.label)}</div>` : '') + blocMots(sc) + `<div class="specs-zone"><div class="specs-fil">${fil}</div></div>`;
+  },
+  apres(el, sc) { ajusterBloc(el.querySelector('.bloc'), sc.taille ?? 118, sc.hauteur ?? 420); },
+  animer(el, sc, t) {
+    animerMots(el, t);
+    const v = sc.vitesse ?? 1500, dt = Math.max(0, t - sc.de), fil = el.querySelector('.specs-fil');
+    fil.style.transform = `translateY(${-(v * dt) % (12 * 104)}px)`;
+    flou(fil, `spec${sc.k}`, Math.min(14, v / 170));
+  },
+  montre: sc => range(sc.mots),
+};
+
+// Photographies dessinées en code (jamais une vraie photo, jamais une vraie marque) qui arrivent une à une
+const PAYSAGES = [
+  `<svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E78A6"/><stop offset=".55" stop-color="#F0A86E"/><stop offset="1" stop-color="#F7D9A8"/></linearGradient></defs><rect width="400" height="520" fill="url(#g0)"/><circle cx="270" cy="300" r="62" fill="#FBE6B8"/><path d="M0 360 L90 250 L170 340 L250 230 L340 330 L400 290 V520 H0Z" fill="#46506E"/><path d="M0 430 L120 340 L210 420 L310 330 L400 400 V520 H0Z" fill="#2A3048"/></svg>`,
+  `<svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141A33"/><stop offset="1" stop-color="#3C3A63"/></linearGradient></defs><rect width="400" height="520" fill="url(#g1)"/><circle cx="90" cy="110" r="34" fill="#F1E9D6"/><g fill="#0E1124"><rect x="20" y="300" width="70" height="220"/><rect x="100" y="250" width="60" height="270"/><rect x="170" y="330" width="80" height="190"/><rect x="260" y="230" width="62" height="290"/><rect x="330" y="310" width="70" height="210"/></g><g fill="#F3C879"><rect x="112" y="272" width="10" height="14"/><rect x="132" y="300" width="10" height="14"/><rect x="274" y="256" width="10" height="14"/><rect x="296" y="290" width="10" height="14"/><rect x="190" y="360" width="10" height="14"/><rect x="40" y="330" width="10" height="14"/><rect x="348" y="340" width="10" height="14"/></g></svg>`,
+  `<svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9C9A0"/><stop offset=".5" stop-color="#F1E4CF"/><stop offset=".5" stop-color="#5C8DA0"/><stop offset="1" stop-color="#1F4D64"/></linearGradient></defs><rect width="400" height="520" fill="url(#g2)"/><ellipse cx="200" cy="260" rx="46" ry="46" fill="#F7B67C"/><g stroke="#EAF3F2" stroke-width="5" stroke-linecap="round" fill="none" opacity=".75"><path d="M30 330 q40 -16 80 0 t80 0 t80 0 t80 0"/><path d="M-10 390 q50 -20 100 0 t100 0 t100 0 t100 0"/><path d="M20 455 q60 -24 120 0 t120 0 t120 0"/></g></svg>`,
+];
+T.galerie = {
+  construire(sc) {
+    const cartes = (sc.photos ?? []).map((p, k) => `<div class="photo" data-k="${k}" style="left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px">${PAYSAGES[p.scene % PAYSAGES.length].replace(/id="g(\d)"/, `id="g$1_${sc.k}_${k}"`).replace(/url\(#g(\d)\)/, `url(#g$1_${sc.k}_${k})`)}</div>`).join('');
+    return (sc.label ? `<div class="label">${esc(sc.label)}</div>` : '') + blocMots(sc) + `<div class="photos" style="height:${sc.hauteur_photos ?? 1000}px">${cartes}</div>`;
+  },
+  apres(el, sc) { ajusterBloc(el.querySelector('.bloc'), sc.taille ?? 118, sc.hauteur ?? 330); },
+  animer(el, sc, t) {
+    animerMots(el, t);
+    el.querySelectorAll('.photo').forEach(c => {
+      const p = sc.photos[+c.dataset.k], t0 = p.t ?? sc.de + .3 + c.dataset.k * .35, q = E.expo(prog(t, t0, .6)), derive = prog(t, t0, 3);
+      c.style.opacity = q > 0 ? 1 : 0;
+      c.style.transform = `translateY(${(1 - q) * 900 - derive * 22}px) rotate(${(p.rot ?? 0) * (.6 + .4 * q)}deg) scale(${1 + .03 * derive})`;
+      if (sc.iris) c.style.clipPath = `circle(${q * 150}% at 50% 50%)`;
+    });
+  },
+  montre: sc => range(sc.mots),
+  impact: sc => sc.t_impact,
+};
+
+// Mot barré : le texte de la voix, et un trait d'encre qui raye les mots `raye` au temps `t_raye`
+T.barre = {
+  construire(sc) {
+    let h = (sc.label ? `<div class="label">${esc(sc.label)}</div>` : '') + blocMots(sc);
+    (sc.raye ?? []).forEach(i => { h = h.replace(`data-i="${i}">`, `data-i="${i}" style="position:relative">`).replace(new RegExp(`(data-i="${i}"[^>]*><span>[^<]*</span>)`), '$1<i class="trait"></i>'); });
+    return h + (sc.sous ? `<div class="sous">${md(sc.sous)}</div>` : '');
+  },
+  apres(el, sc) { ajusterBloc(el.querySelector('.bloc'), sc.taille ?? 150, sc.hauteur ?? 1000); },
+  animer(el, sc, t) {
+    animerMots(el, t);
+    const p = E.expo(prog(t, sc.t_raye, .28));
+    el.querySelectorAll('.trait').forEach(x => { x.style.transform = `scaleX(${p})`; });
+    el.querySelectorAll('.mot').forEach(m => { if ((sc.raye ?? []).includes(+m.dataset.i)) m.style.opacity = 1 - .55 * p; });
+  },
+  impact: sc => sc.t_raye,
   montre: sc => range(sc.mots),
 };
 

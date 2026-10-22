@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-23T14:00:00+02:00",
+  "avatar": "Claire",
+  "pilier": "Teaser du Reel",
+  "hypothese": "Une story qui annonce le Reel augmente sa portée les premières heures.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Nouveau Reel",
+      "titre": "Apple a compris quelque chose que *beaucoup de marques* n'ont pas compris.",
+      "taille": "t-l",
+      "texte": "40 secondes pour voir la différence entre dire et montrer. Il est sur notre profil.",
+      "swipe": "Voir le Reel"
+    }
+  ]
+}
