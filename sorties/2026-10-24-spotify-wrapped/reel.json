@@ -1,0 +1,32 @@
+{
+  "id": "2026-10-24-spotify-wrapped",
+  "fps": 30,
+  "source": [
+    0.0,
+    48.24
+  ],
+  "fin": 2.4,
+  "banque": {
+    "idee": "memo-2026-10-22-2-d22dd1-0000",
+    "audio": "audio/2026-10/memo-2026-10-22-2.m4a"
+  },
+  "avatar": "Claire",
+  "idee": "Spotify Wrapped : les gens partagent ce qui parle d'eux, donne-leur une raison personnelle de partager",
+  "hook": {
+    "choisi": "Spotify a réussi quelque chose d'assez extraordinaire en marketing.",
+    "ecartes": []
+  },
+  "hypothese": "",
+  "scenes": [],
+  "musique": {
+    "bpm": 96,
+    "tonalite": "la",
+    "sections": []
+  },
+  "silences": [],
+  "couverture": {
+    "theme": "encre",
+    "label": "",
+    "titre": ""
+  }
+}

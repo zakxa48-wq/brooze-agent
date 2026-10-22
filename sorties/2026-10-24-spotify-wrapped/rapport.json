@@ -1,0 +1,12 @@
+{
+ "source": "/home/user/brooze-voix/audio/2026-10/memo-2026-10-22-2.m4a",
+ "duree_brut": 55.12,
+ "duree_voix": 53.37,
+ "rapport_parole_bruit_db": 48.8,
+ "saturation": 0.0,
+ "mots": 165,
+ "debit_mots_s": 3.09,
+ "transcription": "Spotify a réussi quelque chose d'assez extraordinaire en marketing. faire en sorte que des millions de personnes partagent du contenu à propos de leur application, et ceux de leur propre initiative. Et tout ça grâce à une idée. Spotify Rapid. Chaque année, Spotify te montre les artistes que tu as le plus écoutés, tes musiques préférées, et tes habitudes d'écoute, mais réfléchis à ce qui se passe ensuite. Les utilisateurs commencent à publier leurs résultats sur Instagram. à les envoyer à leurs amis et à comparer leurs goûts musicaux. Pour l'édition 2025, Spotify a même annoncé plus de 620 millions de partages. Et pourquoi les gens partagent-ils autant ? Parce que ce contenu ne parle pas simplement de Spotify, il parle d'eux et c'est une énorme leçon de marketing. Si tu veux créer du contenu que les gens ont envie de partager, donne-leur une raison personnelle de le faire. Parfois, la meilleure publicité pour une marque, c'est celle que ses propres utilisateurs ont envie de diffuser.",
+ "verdict": "ok",
+ "raisons": []
+}
