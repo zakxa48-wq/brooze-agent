@@ -11,7 +11,8 @@ Usage (R = racine de la banque) :
   python3 reel/banque.py ajouter  R <audio> <t0> <t1> --idee "…" --cible Karim --hook "…" --score 8 [--perime AAAA-MM-JJ]
   python3 reel/banque.py etat     R                 idées disponibles (meilleur score d'abord), utilisées, refusées
   python3 reel/banque.py preparer R <idee> sorties/<id>/   voix.wav + segs/mots de l'audio + brouillon de reel.json
-  python3 reel/banque.py marquer  R <idee> utilise|refuse [--post posts/<id>] [--raison "…"]
+  python3 reel/banque.py marquer  R <idee> en_cours|utilise|refuse|dispo [--post sorties/<id>|posts/<id>] [--jour AAAA-MM-JJ] [--raison "…"]
+                    en_cours = Reel commencé, réservé pour --jour (une exécution suivante le reprend, personne ne le refait)
   python3 reel/banque.py verifier R <audio>         après correction de index/<audio>/segs.json : recale les mots, marque vérifié
 """
 import sys, os, json, hashlib, argparse, subprocess, shutil, datetime, re
@@ -112,6 +113,8 @@ def cmd_etat(R):
     dispo = [i for i in c['idees'] if i['statut'] == 'dispo' and not (i.get('perime') and i['perime'] < auj)]
     print(f"{len(c['audios'])} audios · {len(c['idees'])} idées : {len(dispo)} disponibles, "
           f"{sum(i['statut'] == 'utilise' for i in c['idees'])} utilisées, {sum(i['statut'] == 'refuse' for i in c['idees'])} refusées")
+    for i in [i for i in c['idees'] if i['statut'] == 'en_cours']:
+        print(f"  EN COURS (à reprendre d'abord) · {i['id']} · {i.get('post', '?')} · jour réservé {i.get('jour', '?')}")
     non_verifies = [k for k, a in c['audios'].items() if not a.get('transcription_verifiee')]
     if non_verifies: print('transcriptions à vérifier :', ', '.join(non_verifies))
     sans_idee = [k for k, a in c['audios'].items() if a['verdict'] != 'inutilisable' and not any(i['audio'] == k for i in c['idees'])]
@@ -126,7 +129,9 @@ def cmd_preparer(R, iid, dossier):
     if not i: sys.exit(f'idée inconnue : {iid}')
     a = c['audios'][i['audio']]; os.makedirs(dossier, exist_ok=True)
     subprocess.run([sys.executable, os.path.join(ICI, 'comprendre.py'), '--nettoyer', os.path.join(R, a['fichier']), dossier], check=True)
-    for n in ('segs.json', 'mots.json', 'rapport.json'): shutil.copy(os.path.join(R, 'index', i['audio'], n), dossier)
+    # reprise d'un Reel en cours : voix.wav (non versionnée) est recréée, la transcription corrigée du Reel est gardée
+    for n in ('segs.json', 'mots.json', 'rapport.json'):
+        if not os.path.exists(os.path.join(dossier, n)): shutil.copy(os.path.join(R, 'index', i['audio'], n), dossier)
     mots = json.load(open(os.path.join(dossier, 'mots.json')))
     dedans = [k for k, m in enumerate(mots) if m['start'] >= i['source'][0] - .02 and m['end'] <= i['source'][1] + .05]
     brouillon = dict(id=os.path.basename(dossier.rstrip('/')), fps=30, source=i['source'], fin=2.4, banque=dict(idee=iid, audio=a['fichier']),
@@ -147,10 +152,10 @@ def cmd_verifier(R, aid):
     a['transcription_verifiee'] = True; sauver(R, c); print(f'{aid} : mots recalés, transcription vérifiée')
 
 
-def cmd_marquer(R, iid, statut, post, raison):
+def cmd_marquer(R, iid, statut, post, raison, jour=None):
     c = charger(R); i = next((x for x in c['idees'] if x['id'] == iid), None)
     if not i: sys.exit(f'idée inconnue : {iid}')
-    i.update(statut=statut, date=str(datetime.date.today()), **({'post': post} if post else {}), **({'raison': raison} if raison else {}))
+    i.update(statut=statut, date=str(datetime.date.today()), **({'post': post} if post else {}), **({'raison': raison} if raison else {}), **({'jour': jour} if jour else {}))
     sauver(R, c); print(f'{iid} → {statut}')
 
 
@@ -163,10 +168,10 @@ if __name__ == '__main__':
     for o in ('--idee', '--cible', '--hook'): x.add_argument(o, required=True)
     x.add_argument('--score', type=float, required=True); x.add_argument('--perime')
     x = sp.add_parser('preparer'); x.add_argument('R'); x.add_argument('idee'); x.add_argument('dossier')
-    x = sp.add_parser('marquer'); x.add_argument('R'); x.add_argument('idee'); x.add_argument('statut', choices=['utilise', 'refuse', 'dispo'])
+    x = sp.add_parser('marquer'); x.add_argument('R'); x.add_argument('idee'); x.add_argument('statut', choices=['en_cours', 'utilise', 'refuse', 'dispo']); x.add_argument('--jour')
     x.add_argument('--post'); x.add_argument('--raison')
     x = sp.add_parser('verifier'); x.add_argument('R'); x.add_argument('audio')
     a = ap.parse_args()
     {'indexer': lambda: cmd_indexer(a.R), 'etat': lambda: cmd_etat(a.R), 'fenetres': lambda: cmd_fenetres(a.R, a.audio),
      'ajouter': lambda: cmd_ajouter(a.R, a), 'preparer': lambda: cmd_preparer(a.R, a.idee, a.dossier),
-     'marquer': lambda: cmd_marquer(a.R, a.idee, a.statut, a.post, a.raison), 'verifier': lambda: cmd_verifier(a.R, a.audio)}[a.cmd]()
+     'marquer': lambda: cmd_marquer(a.R, a.idee, a.statut, a.post, a.raison, a.jour), 'verifier': lambda: cmd_verifier(a.R, a.audio)}[a.cmd]()

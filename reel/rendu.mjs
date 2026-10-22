@@ -4,6 +4,10 @@
 //   node reel/rendu.mjs sorties/<id>/reel.json --brouillon             vidéo demi-définition, sans son, pour vérifier le mouvement
 //   node reel/rendu.mjs sorties/<id>/reel.json                         final 1080×1920 avec mix.flac → reel.mp4
 //   node reel/rendu.mjs sorties/<id>/reel.json --couverture            couverture.jpg (scène reel.couverture)
+//   node reel/rendu.mjs sorties/<id>/reel.json --morceaux [--budget 20] rendu REPRENABLE : morceaux de 8 s dans
+//        sorties/<id>/morceaux/ (déjà faits = sautés) ; s'arrête proprement quand le budget (minutes) est dépassé
+//        (code de sortie 10 = « à reprendre » : committer morceaux/ et relancer à l'exécution suivante) ; quand tout
+//        est rendu, assemble reel.mp4 avec mix.flac et supprime morceaux/.
 // reel.json : { fps, source: [t0, t1] (fenêtre de voix.wav), fin (durée après la voix), scenes: [...], couverture: {...} }
 // Les temps des scènes sont relatifs au début du Reel ; "@12" = début du mot 12 moins 0,12 s, "@12>" = fin du mot 12.
 import { chromium } from 'playwright-core';
@@ -102,6 +106,45 @@ if (opt('--controle')) {
 
 // Vidéo : images JPEG envoyées à ffmpeg par un tube
 const N = Math.round(duree * fps);
+const encodage = lent => ['-c:v', 'libx264', '-preset', lent ? 'slow' : 'veryfast', '-crf', lent ? '18' : '23', '-maxrate', '14M', '-bufsize', '28M',
+  '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-r', String(fps)];
+async function images(f0, f1, ff) {
+  for (let f = f0; f < f1; f++) {
+    const t = f / fps;
+    await page.evaluate(t => window.rendre(t), t);
+    if (f % 6 === 0) noter(t, await page.evaluate(() => window.audit()));
+    const img = await page.screenshot({ type: 'jpeg', quality: 94 });
+    if (!ff.stdin.write(img)) await new Promise(r => ff.stdin.once('drain', r));
+  }
+  ff.stdin.end(); return new Promise(r => ff.on('close', r));
+}
+if (opt('--morceaux')) {
+  const mix = path.join(dossier, 'mix.flac');
+  if (!fs.existsSync(mix)) { console.error('mix.flac absent : lancer d\'abord python3 reel/son.py'); process.exit(2); }
+  const dir = path.join(dossier, 'morceaux'); fs.mkdirSync(dir, { recursive: true });
+  const pas = Math.round((reel.morceau_s ?? 8) * fps), budget = Number(opt('--budget') || 1e9) * 60e3, debut = Date.now();
+  const liste = [];
+  for (let f0 = 0, k = 0; f0 < N; f0 += pas, k++) {
+    const nom = path.join(dir, `${String(k).padStart(3, '0')}.mp4`); liste.push(nom);
+    if (fs.existsSync(nom)) continue;
+    if (Date.now() - debut > budget) {
+      console.log(JSON.stringify({ a_reprendre: true, faits: fs.readdirSync(dir).filter(f => f.endsWith('.mp4')).length, total: Math.ceil(N / pas) }));
+      await navigateur.close(); process.exit(10);
+    }
+    const tmp = nom.replace('.mp4', '.tmp.mp4');
+    const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', ...encodage(true), '-f', 'mp4', tmp], { stdio: ['pipe', 'inherit', 'inherit'] });
+    await images(f0, Math.min(N, f0 + pas), ff); fs.renameSync(tmp, nom);
+    process.stderr.write(`  morceau ${k} fait (${((Date.now() - debut) / 1000).toFixed(0)} s écoulées)\n`);
+  }
+  await navigateur.close();
+  fs.writeFileSync(path.join(dir, 'liste.txt'), liste.map(f => `file '${f}'`).join('\n'));
+  const sortie = path.join(dossier, 'reel.mp4');
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', path.join(dir, 'liste.txt'), '-i', mix, '-map', '0:v', '-map', '1:a',
+    '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-shortest', '-movflags', '+faststart', sortie]);
+  fs.rmSync(dir, { recursive: true });
+  console.log(JSON.stringify({ video: sortie, images: N, duree, assemble: liste.length, audit: [...audits].map(([p, t]) => `${t}s ${p}`) }, null, 1));
+  process.exit(0);
+}
 const brouillon = !!opt('--brouillon');
 const sortie = path.join(dossier, brouillon ? 'brouillon.mp4' : 'reel.mp4');
 const mix = path.join(dossier, 'mix.flac');

@@ -9,9 +9,21 @@ programmes seul. **Aucune question à Zak** : tu décides, tu prouves, tu notes.
 `direction-artistique.md`, `synchro.md`), `instagram-hook-engine` et `brooze-sceptique`. `brooze-anim` et `brooze-3d`
 seulement si un plan 3D apporte vraiment quelque chose (voir étape 4).
 
-**Économe, jamais au rabais.** Le moteur 2D (`reel/moteur.html`) suffit à la plupart des Reels. La 3D coûte cher :
-on la garde pour un objet, un produit ou une métaphore visuelle qui ne passe pas en 2D. La qualité du rendu ne
-baisse jamais pour gagner du temps.
+**Économe, jamais au rabais.** Choisis l'outil qui sert le propos au meilleur coût (`reel/OUTILS.md` : moteur HTML,
+three.js et shaders, Remotion, Manim, p5, procédural, Blender et geometry nodes, ffmpeg avancé, polices variables).
+La qualité du rendu ne baisse jamais pour gagner du temps.
+
+**Original à chaque fois.** Chaque Reel est une création pensée pour son propos, pas un recyclage : lis
+`reel/MONTAGE.md` (des principes, pas un modèle) et le **registre des Reels** en tête de `journal.md`. Interdit de
+reprendre le concept visuel, l'effet signature ou la structure d'un des **5 derniers Reels** du registre, et chaque
+Reel explore **au moins une technique nouvelle** (jamais utilisée dans le registre, ou poussée nettement plus loin).
+Les garde-fous restent : qualité, charte Brooze, rien d'inventé.
+
+**Deux exécutions par jour (3 h 41 et 15 h 41), en avance, reprenables.** La durée d'une exécution est limitée et
+ne se règle pas : tu travailles **en avance** (programmation au plus tôt à J+2), tu découpes le travail en étapes
+dont l'état vit **dans le dépôt** (`sorties/<id>/etat.json`, poussé sur main après chaque étape), et la suivante
+reprend exactement là où tu t'es arrêté. Jamais de qualité sacrifiée pour tenir un horaire : un Reel en retard
+passe au jour libre suivant, il n'est jamais bâclé.
 
 ## La banque de voix (production régulière)
 Zak ne dépose pas seulement des audios « à publier » : il **stocke** ses enregistrements (mémos, réflexions, extraits
@@ -39,30 +51,58 @@ donc vraiment le sien : aucun clonage, aucune voix de synthèse.
   - Jours de carrousel : `jours_carrousel` de `config.json` (lundi, mercredi, vendredi). Un de ces jours redevient
     libre pour un Reel si la semaine est déjà planifiée (après la tâche du dimanche) et qu'aucun carrousel n'y est
     programmé.
-  - À chaque exécution : liste les **jours libres** des `horizon_jours` (14) prochains jours, du plus proche au plus
-    lointain (jour libre = pas un jour de carrousel, et aucun Reel déjà programmé ce jour-là dans Metricool). Puis
+  - À chaque exécution : liste les **jours libres** de **J+2** à J+`horizon_jours` (14), du plus proche au plus
+    lointain (jour libre = pas un jour de carrousel, aucun Reel déjà programmé ce jour-là dans Metricool, et aucun
+    jour **réservé** par un Reel en cours : `banque.py etat` les affiche). J+1 seulement pour un audio urgent ou un
+    Reel déjà entièrement contrôlé dont le jour libre le plus proche est demain. Puis
     fabrique **autant de Reels qu'il y a d'idées disponibles et de jours libres** : 5 idées → 5 Reels, 10 → 10, un par
     jour libre, dans l'ordre. Pas assez d'idées : on s'arrête là, sans remplissage (un jour sans Reel vaut mieux
     qu'un Reel moyen).
   - Heure : le meilleur créneau du jour (`getBestTimeToPostByNetwork`), à au moins 3 h de la story du jour, 18 h par
     défaut. Teaser : la story du jour peut annoncer le Reel si elle n'est pas déjà programmée ; sinon, pas de teaser.
-  - Temps d'exécution : chaque Reel passe le contrôle qualité complet, quoi qu'il arrive. Si l'exécution approche de
-    sa limite, termine proprement le Reel en cours (rendu, contrôle, programmation, catalogue, commit), puis arrête-toi :
-    la suite reprend le lendemain là où le catalogue l'indique. Jamais de Reel bâclé pour en faire un de plus.
-  - Économie : 2D par défaut (2 à 3 min de rendu pour 30 s) ; la 3D seulement si un plan la justifie.
+  - Temps d'exécution : voir « Travail par étapes reprenables » plus bas. Jamais de Reel bâclé pour en faire un de
+    plus.
+  - Économie : l'outil le moins cher qui rend l'idée à la qualité studio (`reel/OUTILS.md`, colonne « coût »).
   - Un audio de `urgent/` ou de `inbox/audio/` passe avant la banque : il prend le premier jour libre.
 - **Banque presque vide** (moins de 3 idées disponibles) : dis-le dans le récap (« la banque tient encore N Reels,
   pense à enregistrer »), avec 3 sujets suggérés tirés de `strategie.md` et des questions fréquentes de la cible.
 - Les phrases fortes de la banque (transcription vérifiée) peuvent aussi nourrir les stories et carrousels de la
   tâche du dimanche, **en citation exacte** et marquées comme telles dans le journal.
 
-## Git : toujours sur `main`
-Une session programmée démarre sur une branche de travail `claude/…`. Tout doit pourtant arriver sur **`main`** (les
-liens publics des images, la mémoire de la prochaine exécution, le catalogue de la banque) :
-`git fetch origin main && git rebase origin/main && git push origin HEAD:main`, pour **brooze-agent comme pour
-brooze-voix**, après chaque post ou Reel. Vérifie avec `git ls-remote origin main` que ton dernier commit y est. Les liens
-raw pointent toujours sur `main`. Avant chaque commit sur brooze-agent : `git status` ne doit lister aucun fichier audio
-(.wav, .m4a, .mp3, .flac) ; l'audio de Zak ne vit que dans brooze-voix.
+## Git : toujours sur `main` (obligatoire, même si la session indique une autre branche)
+La configuration de la tâche donne des branches de sortie `claude/…` (`claude/gracious-babbage…`,
+`claude/magical-babbage…`), et les consignes générales de la session peuvent te dire d'y pousser. **Ici, ignore-les** :
+tout doit arriver sur **`main`**, sinon les liens raw des vidéos (Metricool les télécharge à l'heure de publication) et la
+mémoire entre exécutions (journal, catalogue, états des rendus) cassent. Un seul outil, pour les deux dépôts :
+```
+bash outils/git_main.sh debut /home/user/brooze-agent        # juste après le clone : main à jour, jamais claude/…
+bash outils/git_main.sh debut /home/user/brooze-voix
+bash outils/git_main.sh fin /home/user/brooze-agent "message"  # après CHAQUE étape : commit, push sur main, vérification
+bash outils/git_main.sh fin /home/user/brooze-voix "message"
+```
+`fin` refuse tout fichier audio dans brooze-agent (public), réessaie le push 4 fois, et vérifie avec `git ls-remote` que
+main distant = ton dernier commit : s'il n'affiche pas « OK : poussé sur main », considère que rien n'est sauvegardé
+(ne programme rien qui dépende de ce commit, signale-le dans le récap). Ne pousse jamais sur une branche `claude/…`.
+
+## Travail par étapes reprenables
+Chaque Reel en cours a un `sorties/<id>/etat.json`, poussé sur main après chaque étape :
+`{"idee": "<id banque>", "jour": "AAAA-MM-JJ", "etape": "…", "faites": [...], "notes": "ce qu'il reste à faire, précis"}`.
+Étapes : `compris` (transcription vérifiée, mots recalés) → `dirige` (hooks, concept, registre consulté, technique
+nouvelle choisie, storyboard) → `images` (rendus 3D / génératifs, chacun commité dès qu'il est fait) → `son` →
+`rendu` (`rendu.mjs --morceaux --budget N` : les morceaux faits sont commités dans `sorties/<id>/morceaux/` et
+sautés à la reprise) → `controle` (controle.py + passes du sceptique, une passe = une étape) → `publie`.
+- **Au début de chaque exécution** : `banque.py etat` + les `etat.json` dont l'étape n'est pas `publie` : reprends
+  **d'abord** ces Reels, dans l'ordre de leur jour réservé, puis seulement de nouveaux Reels.
+- **Reprise** : `voix.wav` et `mix.flac` ne sont pas versionnés (audio). Recrée-les : `banque.py preparer R <idee>
+  sorties/<id>/` (garde la transcription et le storyboard déjà là) puis `python3 reel/son.py` (déterministe).
+- **Réserve** le jour dès le début d'un Reel : `banque.py marquer R <idee> en_cours --post sorties/<id> --jour <jour>`
+  (poussé sur brooze-voix), pour qu'aucune exécution ne prenne le même jour ni la même idée.
+- **Budget** : note l'heure de début (`date +%s`). Une étape longue (rendu 3D, rendu vidéo) n'est lancée que si tu
+  peux la finir ou la reprendre : rendus Blender image par image (chaque image commitée), vidéo par `--morceaux` avec
+  `--budget` (minutes restantes estimées moins 10). Après ~45 min, ne commence plus d'étape longue : pousse l'état,
+  écris le récap et arrête-toi.
+- **Retard** : si le jour réservé est dans moins de 24 h et que le Reel n'a pas passé le contrôle, décale la réservation
+  au jour libre suivant (`marquer … en_cours --jour …`) et note-le. Jamais de publication d'un Reel non contrôlé.
 
 ## 0. Interrupteur et rien à faire
 - Fichier `PAUSE` à la racine : tu peux fabriquer et ranger dans `sorties/`, mais **rien n'est programmé**.
@@ -71,7 +111,8 @@ raw pointent toujours sur `main`. Avant chaque commit sur brooze-agent : `git st
 
 ## 1. Préparer la session
 ```
-bash reel/setup.sh          # dépendances, Whisper local (ONNX), outils du skill ; ~1 min la première fois
+bash outils/git_main.sh debut /home/user/brooze-agent && bash outils/git_main.sh debut /home/user/brooze-voix
+bash reel/setup.sh          # dépendances, Whisper local, three.js, Remotion, Manim, polices… (~3 min la 1re fois)
 ```
 
 ## 2. Comprendre l'audio
@@ -105,8 +146,11 @@ Il produit `voix.wav` (nettoyée : passe-haut, débruitage léger, pauses > 0,55
   vers les mêmes `voix.wav` et `mots.json` (copie-les).
 
 ## 3. Direction créative (avant tout rendu)
-**Lis `reel/MONTAGE.md` avant chaque storyboard** : images réelles au moins 60 % du temps, 3 gros textes maximum,
-caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet signature, budget de calcul.
+**Lis `reel/MONTAGE.md` (principes) et `reel/OUTILS.md` (techniques) avant chaque storyboard, puis le registre des Reels
+de `journal.md`.** Écris d'abord, dans `sorties/<id>/intention.md` : le propos en une phrase, le **concept visuel**
+inventé pour CE propos (une règle de monde), l'**effet signature**, la **structure** (comment le Reel avance), la
+**technique nouvelle** explorée, et en quoi chacun diffère des 5 derniers Reels du registre. Si l'un des trois (concept,
+effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
 
 0. **Les images d'abord** : `python3 reel/rushs.py liste /home/user/brooze-voix` (rushs et photos de Zak, à décrire
    s'ils sont nouveaux : `rushs.py indexer`, puis regarde chaque planche `index/rushs/<id>.jpg` et remplis
@@ -119,8 +163,8 @@ caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet sig
    Zak ce qu'il n'a pas dit).
 2. **Concept** avec `brooze-direction` : une règle de monde unique, et la vidéo FAIT ce qu'elle dit dès que possible
    (le son se coupe quand il dit « coupe le son », le chrono dure vraiment une seconde…).
-3. **Storyboard** : `sorties/<id>/reel.json` (exemple de référence en images réelles :
-   `sorties/2026-10-23-apple-montre-v2/reel.json` ; en typo : `sorties/demo-premiere-seconde/reel.json`). Chaque idée
+3. **Storyboard** : `sorties/<id>/reel.json` (les Reels passés montrent la SYNTAXE des champs, jamais un plan à
+   reproduire : pas de reprise de leur découpage, de leurs objets ni de leurs mouvements). Chaque idée
    de la voix a une image qui la MONTRE. Plans de 1,2 à 2,5 s en moyenne, un moment nerveux de coupes courtes.
    - Temps : `"@12"` = début du mot 12 (index de `mots.json`) moins 0,12 s, `"@12>"` = fin du mot 12.
    - **Scène principale `plan`** : une image réelle plein cadre. `image` (photo, rendu) ou `video` (rush ; `debut`,
@@ -133,6 +177,9 @@ caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet sig
      relief 2,5D (la caméra tourne légèrement autour de l'objet au lieu de glisser sur une photo). Réglages :
      `relief` (1 par défaut, 0,6–1,4), `orbite` [[x0, y0], [x1, y1]], `dolly`, `mise_au_point` (0–1). Rien de plus
      fort : le relief doit se sentir, pas se voir. Voir `reel/MONTAGE.md` § 3 bis.
+   - Plans venus d'un autre outil (three.js, Remotion, Manim, p5, Blender animé, simulation, ffmpeg) : rends-les en
+     vidéo 1080×1920 30 i/s et place-les en `plan` avec `video` (ou `clip`) ; le moteur ajoute caméra, sous-titres et
+     transitions. Un nouveau type de scène réutilisable va dans `reel/moteur.html` ou `reel/creations/`.
    - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
      fictives qui défile ; `arret` pour s'arrêter sur un post), `compteur` (anneau chrono), `duel` (A barré / B),
      `liste`, `son` (onde qui s'écrase à `t_coupe`), `montage` (rushs épars qui se rangent sur une timeline),
@@ -151,16 +198,17 @@ caméra vivante, coupes sur la voix, 2 types de transition maximum, un effet sig
    l'effet ; rendus de 30 s à 3 min par image en 1080×1920, `spp` 48–64 avec débruitage). 3D animée : un objet ou une
    métaphore que rien d'autre ne rend. Rendu avec `monde3d` du skill
    `brooze-direction` (ou `brooze-3d` / `brooze-anim` pour Blender), puis scène `clip` avec `"video": "plan3d.mp4"`.
-   Toujours `--controle`, puis brouillon en `--echelle 0.5`, puis final. Si le rendu ne tient pas dans le temps
-   d'exécution : simplifie la scène, ou rends-la par morceaux sur plusieurs exécutions (`render.py --range` si
-   disponible, sinon plans séparés) et note l'avancement dans `journal.md` (« Reel <id> : plans 1–2 rendus, reste 3 »).
-   Ne bâcle jamais pour finir à temps.
+   Toujours `--controle`, puis brouillon en `--echelle 0.5`, puis final. Un rendu qui ne tient pas dans une
+   exécution se fait par morceaux (images numérotées, chacune commitée ; reprise à la première manquante) et
+   `etat.json` dit précisément ce qui reste. Ne bâcle jamais pour finir à temps.
 
 ## 4. Fabriquer
 ```
 node reel/rendu.mjs sorties/<id>/reel.json --controle 0.3,2.1,…   # images clés + planche + audit (zone sûre, ≥ 34 px)
 python3 reel/son.py sorties/<id>/reel.json                        # voix + bruitages + musique synthétisés → mix.flac
-node reel/rendu.mjs sorties/<id>/reel.json                        # final 1080×1920 30 i/s H.264 + AAC (~2,5 min pour 30 s)
+node reel/rendu.mjs sorties/<id>/reel.json --morceaux --budget 25  # final reprenable (code 10 = à reprendre ;
+                                                                  #   commit morceaux/ et etat.json, la suite au prochain run)
+node reel/rendu.mjs sorties/<id>/reel.json                        # final d'un seul tenant (~12 min pour 40 s en relief)
 node reel/rendu.mjs sorties/<id>/reel.json --couverture           # couverture.jpg
 ```
 Regarde **toujours** la planche de contrôle avant le final : texte coupé, chevauchements, cuivre en double, vide.
@@ -200,7 +248,10 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
    autres idées restent exploitables) ou de `inbox/audio/` vers `inbox/traite/`. Idée de banque : `banque.py marquer`.
 
 ## 7. Mémoire
-- `journal.md` (en haut) : source audio, verdict de compréhension, idée, cible, hooks (choisi + écartés, HSS),
+- **Registre des Reels** (tableau en tête de `journal.md`) : une ligne par Reel programmé, ajoutée au moment de la
+  programmation : date, id, concept visuel, effet signature, structure, techniques (la nouvelle en gras), outils.
+  C'est lui qui interdit les redites : relis les 5 dernières lignes avant chaque concept.
+- `journal.md` (sous le registre) : source audio, verdict de compréhension, idée, cible, hooks (choisi + écartés, HSS),
   hypothèse, choix créatifs (scènes, DA, 2D ou 3D et pourquoi), passes du sceptique, lien Metricool.
 - `idees.md` : l'angle et le hook. Pas de doublon d'idée avec un post existant.
 - La semaine suivante (tâche du dimanche) : relève IGRE23 vues, IGRE11 portée, IGRE24 durée moyenne regardée,

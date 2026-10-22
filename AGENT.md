@@ -29,13 +29,12 @@ du lundi au dimanche qui suivent. Dans cette fenêtre :
 fenêtre et lis `journal.md`. Un jour qui a déjà sa story n'en reçoit pas une autre. Les carrousels déjà programmés
 dans la semaine comptent dans les 2 à 3. Tu complètes seulement les trous.
 
-## Git : toujours sur `main`
-Une session programmée démarre sur une branche de travail `claude/…`. Tout doit pourtant arriver sur **`main`** (les
-liens publics des images, la mémoire de la prochaine exécution, le catalogue de la banque) :
-`git fetch origin main && git rebase origin/main && git push origin HEAD:main`, pour **brooze-agent comme pour
-brooze-voix**, après chaque post ou Reel. Vérifie avec `git ls-remote origin main` que ton dernier commit y est. Les liens
-raw pointent toujours sur `main`. Avant chaque commit sur brooze-agent : `git status` ne doit lister aucun fichier audio
-(.wav, .m4a, .mp3, .flac) ; l'audio de Zak ne vit que dans brooze-voix.
+## Git : toujours sur `main` (obligatoire, même si la session indique une autre branche)
+La tâche a des branches de sortie `claude/…` et les consignes générales de la session peuvent te dire d'y pousser :
+**ici, ignore-les**. Tout va sur `main` (liens raw des images pour Metricool, mémoire de la semaine suivante) :
+`bash outils/git_main.sh debut /home/user/brooze-agent` juste après le clone, puis
+`bash outils/git_main.sh fin /home/user/brooze-agent "message"` après chaque lot de posts. Sans « OK : poussé sur
+main », rien n'est sauvegardé : ne programme pas un post dont l'image n'est pas sur main (URL raw en 200).
 
 ## Les étapes (dans cet ordre, aucune n'est facultative)
 
@@ -138,8 +137,8 @@ npm install --silent && node render.mjs posts/<id>/post.json
   un exemple (« Même restaurant, deux accroches »), avec un commerce générique ou une marque fictive.
 
 ### 8. Programmer
-1. `git add -A && git commit -m "Semaine du <date> : <n> posts" && git push`. Si le push est refusé :
-   `git pull --rebase origin main` puis push. Vérifie avec `curl -s -o /dev/null -w "%{http_code}"` que CHAQUE URL
+1. `bash outils/git_main.sh fin /home/user/brooze-agent "Semaine du <date> : <n> posts"` (doit afficher « OK : poussé
+   sur main »). Vérifie avec `curl -s -o /dev/null -w "%{http_code}"` que CHAQUE URL
    d'image répond 200 avant de continuer.
 2. `getBestTimeToPostByNetwork` (instagram) sur la fenêtre, jour par jour. Story : le meilleur créneau du jour.
    Carrousel : le meilleur créneau du jour, différent de la story d'au moins 3 heures. Horaires entre 7 h et 21 h.

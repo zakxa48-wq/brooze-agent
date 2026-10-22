@@ -4,6 +4,16 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## Registre des Reels (anti-redite : relire les 5 dernières lignes avant chaque concept)
+Une ligne par Reel programmé, la plus récente en bas. Interdit de reprendre le **concept visuel**, l'**effet
+signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moins une **technique nouvelle** (en gras).
+
+| Date | Id | Concept visuel | Effet signature | Structure | Techniques (nouvelle en gras) | Outils |
+|---|---|---|---|---|---|---|
+| 23/10 | 2026-10-23-apple-montre (v3 publiée) | « dire vs montrer » : une fiche technique imprimée sans fin (ce qu'on dit) contre des photos d'objets du quotidien sublimés (ce qu'on montre), autour d'un téléphone générique | **relief 2,5D** des rendus photoréalistes (parallaxe par pixel) | opposition qui bascule : la fiche domine, puis les photos prennent toute la place, titre-question, fin sur fond noir | photoréalisme fixe animé, **carte de profondeur + WebGL**, coups de zoom sur 4 mots, whip | Blender, moteur HTML |
+
+---
+
 ## Reel · 2026-10-23 · 13:30 · Claire · « Apple a compris… » (banque de voix, mémo du 22/10)
 - **Source** : brooze-voix `audio/2026-10/memo-2026-10-22-1.m4a` (38,5 s). Verdict `ok`. Une erreur d'écoute corrigée d'après le contexte : « il se base » → « il se passe ». À relire par Zak : « Je vois la différence » (pourrait être « Tu vois la différence »).
 - **Idée** : ne dis pas que ton produit est exceptionnel, montre-le (campagne « Shoot on iPhone », citée par Zak ; aucun chiffre, aucun logo).

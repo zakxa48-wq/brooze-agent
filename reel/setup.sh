@@ -6,9 +6,26 @@ ici="$(cd "$(dirname "$0")" && pwd)"
 cache="$HOME/.cache/brooze"
 mkdir -p "$cache"
 
-# python3 -m pip : installe pour le python3 du PATH (le « pip » nu peut viser un autre Python)
-python3 -m pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy matplotlib 2>&1 | grep -v -i warning || true
+# Bibliothèques système de Manim (cairo, pango) : seulement si absentes
+if ! pkg-config --exists pangocairo 2>/dev/null; then
+  (apt-get update -qq && apt-get install -y -qq libpango1.0-dev libcairo2-dev pkg-config) >/dev/null 2>&1 || echo "apt indisponible : Manim sera absent"
+fi
+# python3 -m pip : installe pour le python3 du PATH (le « pip » nu peut viser un autre Python).
+# setuptools de Debian casse la compilation de certains paquets (« install_layout ») : on en installe un récent à côté.
+python3 -c "import manim" 2>/dev/null || python3 -m pip install --break-system-packages -q --ignore-installed setuptools wheel 2>&1 | grep -i error || true
+python3 -m pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy matplotlib opensimplex manim 2>&1 | grep -v -i warning || true
+# three.js, p5, Remotion (+ React), simplex-noise, playwright-core : versions figées dans package.json
 (cd "$ici/.." && npm install --silent >/dev/null)
+
+# Polices variables libres (OFL, dépôt GitHub google/fonts) pour la typographie animée
+pol="$cache/polices"; mkdir -p "$pol"
+for f in "ofl/inter/Inter%5Bopsz,wght%5D.ttf" "ofl/fraunces/Fraunces%5BSOFT,WONK,opsz,wght%5D.ttf" \
+         "ofl/recursive/Recursive%5BCASL,CRSV,MONO,slnt,wght%5D.ttf" "ofl/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf" \
+         "ofl/bricolagegrotesque/BricolageGrotesque%5Bopsz,wdth,wght%5D.ttf" "ofl/instrumentserif/InstrumentSerif-Regular.ttf" \
+         "ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf"; do
+  n="$(basename "$f" | sed 's/%5B.*//;s/-Regular//;s/\.ttf//')"
+  [ -s "$pol/$n.ttf" ] || curl -sfL "https://raw.githubusercontent.com/google/fonts/main/$f" -o "$pol/$n.ttf" || echo "police $n indisponible"
+done
 
 # Whisper small multilingue (ONNX int8), transcription 100 % locale. Hébergé sur GitHub (HuggingFace est bloqué ici).
 if [ ! -f "$cache/sherpa-onnx-whisper-small/small-encoder.int8.onnx" ]; then
@@ -32,4 +49,5 @@ if [ ! -f "$outils/son_brooze.py" ]; then
   mkdir -p "$outils"
   for f in mots.py attaques.py son_brooze.py glitchs.py; do ln -sf "$(dirname "$src")/$f" "$outils/$f"; done
 fi
-echo "OK : modèles dans $cache, outils dans $outils"
+python3 -c "import manim" 2>/dev/null && m=manim || m="SANS manim"
+echo "OK : modèles et polices dans $cache, outils dans $outils, $m, three.js/Remotion/p5 dans node_modules"
