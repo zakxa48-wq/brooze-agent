@@ -37,10 +37,12 @@ Lis `journal.md`, `strategie.md` (hypothèses en cours, ce qui marche, ce qu'on 
 hooks déjà utilisés), `concurrents.md` et `inbox/` (`inbox/notes.md`, photos, captures de Zak). Une vraie matière de
 Zak passe TOUJOURS avant une idée inventée. Ce que tu utilises, déplace-le dans `inbox/utilise/`.
 
-### 1 bis. Audios en attente (jamais oubliés)
-Si `inbox/audio/` contient un audio (hors `.gitkeep`) : traite-le d'abord en suivant **`AGENT_REEL.md`** de bout en
+### 1 bis. Audios en attente et banque de voix (jamais oubliés)
+Si `inbox/audio/` ou `urgent/` de la banque privée contient un audio : traite-le d'abord en suivant **`AGENT_REEL.md`** de bout en
 bout (un ou plusieurs Reels + story teaser), avant de programmer la semaine. Les Reels programmés occupent leurs
-créneaux : la semaine se construit autour, sans doublon. Les Reels de la semaine passée sont mesurés à l'étape 2
+créneaux : la semaine se construit autour, sans doublon. Indexe aussi la banque (`reel/banque.py indexer`) et, si le
+quota `reels_par_semaine` de la semaine à venir n'est pas atteint, fabrique un Reel depuis la meilleure idée disponible
+(section « La banque de voix » de `AGENT_REEL.md`). Les citations exactes de la banque peuvent servir aux stories. Les Reels de la semaine passée sont mesurés à l'étape 2
 (IGRE23 vues, IGRE24 durée moyenne regardée, IGRE28 vues > 3 s, IGRE21 partages, IGRE12 enregistrements).
 
 ### 2. Mesurer la semaine passée

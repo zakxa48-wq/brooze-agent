@@ -2,5 +2,10 @@
   "depot": "zakxa48-wq/brooze-agent",
   "brandId": "7268093",
   "fuseau": "Europe/Paris",
-  "validation": false
+  "validation": false,
+  "banque": {
+    "depot": "zakxa48-wq/brooze-voix",
+    "dossier_local": "/home/user/brooze-voix",
+    "reels_par_semaine": 2
+  }
 }

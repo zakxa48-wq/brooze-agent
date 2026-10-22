@@ -2,6 +2,7 @@
 
 Usage : python3 reel/comprendre.py inbox/audio/memo.m4a sorties/<id>/
         python3 reel/comprendre.py --recaler sorties/<id>/   (après correction à la main de segs.json : recale mots.json)
+        python3 reel/comprendre.py --nettoyer audio sorties/<id>/  (voix.wav seulement : la transcription existe déjà)
 Écrit dans le dossier :
   brut.wav     l'audio d'origine, décodé (48 kHz, mono, float)
   voix.wav     la voix nettoyée : passe-haut, débruitage léger, pauses > 0,55 s ramenées à 0,35 s, −16 LUFS
@@ -120,7 +121,7 @@ def caler(dossier):
     return json.load(open(f'{dossier}/mots.json'))
 
 
-def main(src, dossier):
+def main(src, dossier, transcription=True):
     os.makedirs(dossier, exist_ok=True)
     brut, voix = f'{dossier}/brut.wav', f'{dossier}/voix.wav'
     decoder(src, brut)
@@ -145,6 +146,7 @@ def main(src, dossier):
     if pic > .89: y = y * .89 / pic          # crête ≤ −1 dB
     sf.write(voix, y.astype(np.float32), SR, subtype='FLOAT')
 
+    if not transcription: return     # nettoyage déterministe : les temps de segs.json / mots.json déjà calés restent valables
     segs = transcrire(y, segmenter(y))
     segs = [s for s in segs if s[2]]
     with open(f'{dossier}/segs.json', 'w') as f: json.dump(segs, f, ensure_ascii=False, indent=1)
@@ -175,6 +177,8 @@ if __name__ == '__main__':
     if len(sys.argv) == 3 and sys.argv[1] == '--recaler':
         d = sys.argv[2].rstrip('/'); m = caler(d)
         print(f'{len(m)} mots recalés : ' + ' '.join(f"{i}:{w['w']}" for i, w in enumerate(m)))
+    elif len(sys.argv) == 4 and sys.argv[1] == '--nettoyer':
+        main(sys.argv[2], sys.argv[3].rstrip('/'), transcription=False)
     elif len(sys.argv) == 3:
         main(sys.argv[1], sys.argv[2].rstrip('/'))
     else:

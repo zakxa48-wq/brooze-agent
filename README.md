@@ -9,6 +9,8 @@ de l'idée à la mise en ligne, avec la charte Brooze.
 - `inbox/` : dépose ici photos, captures et notes (`notes.md`). L'agent les utilise en priorité.
 - `inbox/audio/` : dépose un audio (+ un `.txt` facultatif : contexte, cible, idée) → l'agent en fait un Reel motion
   design et le programme seul (`AGENT_REEL.md`, chaîne `reel/`). Traité → `inbox/traite/`.
+- **Banque de voix** (dépôt privé `zakxa48-wq/brooze-voix`) : `audio/` = ton stock d'enregistrements, l'agent y puise
+  2 Reels par semaine avec ta vraie voix ; `urgent/` = à publier vite. Gérée par `reel/banque.py`.
 - `assets/logo.png` ou `assets/logo.svg` : le vrai logo (absent = wordmark seul).
 - Créer un fichier `PAUSE` à la racine arrête toute publication.
 

@@ -1,7 +1,8 @@
 # Agent Brooze — d'un audio à un Reel publié
 
-Zak dépose un audio (voix, mémo vocal, extrait de podcast : .m4a, .mp3, .wav…) dans `inbox/audio/`, parfois avec un
-`.txt` du même nom (contexte, cible, idée). Tu en fais un Reel motion design de qualité studio, 100 % en code, et tu le
+Zak dépose un audio (voix, mémo vocal, extrait de podcast : .m4a, .mp3, .wav…) à publier vite dans `urgent/` de la
+banque privée (ou `inbox/audio/` ici), parfois avec un `.txt` du même nom (contexte, cible, idée), ou le **stocke** dans
+la banque, où tu puises régulièrement. Tu en fais un Reel motion design de qualité studio, 100 % en code, et tu le
 programmes seul. **Aucune question à Zak** : tu décides, tu prouves, tu notes.
 
 **Avant tout** : charge les skills `brooze-direction` (lis `identite.md`, `concevoir.md`, `attention.md`, `ecrire.md`,
@@ -12,9 +13,41 @@ seulement si un plan 3D apporte vraiment quelque chose (voir étape 4).
 on la garde pour un objet, un produit ou une métaphore visuelle qui ne passe pas en 2D. La qualité du rendu ne
 baisse jamais pour gagner du temps.
 
+## La banque de voix (production régulière)
+Zak ne dépose pas seulement des audios « à publier » : il **stocke** ses enregistrements (mémos, réflexions, extraits
+de podcast, réponses à des questions de clients) dans une banque, et tu y puises régulièrement. Chaque mot publié est
+donc vraiment le sien : aucun clonage, aucune voix de synthèse.
+
+- **Où** : le dépôt **privé** `zakxa48-wq/brooze-voix` (voir `config.json` → `banque`), jamais ce dépôt public :
+  `audio/` (le stock, sous-dossiers libres), `urgent/` (à publier dès que possible), `index/` et `catalogue.json`
+  (tenus par toi). Clone-le dans `/home/user/brooze-voix` (`add_repo` en accès push si besoin). Introuvable ou
+  inaccessible : saute la banque et signale-le une fois dans le récap.
+- **Indexer** (à chaque exécution, c'est rapide) : `python3 reel/banque.py indexer /home/user/brooze-voix`.
+  Pour chaque nouvel audio : relis la transcription, corrige les erreurs d'écoute évidentes dans
+  `index/<audio>/segs.json`, puis `banque.py verifier R <audio>`. Ensuite `banque.py fenetres R <audio>` et repère
+  **toutes** les idées publiables (une idée = une fenêtre de 20 à 45 s autonome, avec son hook dans les mots de Zak) :
+  `banque.py ajouter R <audio> <t0> <t1> --idee … --cible Karim|Claire --hook « mots exacts » --score 1–10 [--perime
+  AAAA-MM-JJ si c'est lié à une date]`. Un passage inutilisable (son, propos flou, risqué, privé) n'est pas ajouté :
+  note-le dans le catalogue (`raisons`) au lieu de le publier.
+- **Puiser** : `banque.py etat R` liste les idées disponibles, meilleur score d'abord. Choisis la mieux notée qui :
+  n'est pas périmée, alterne la cible avec le dernier Reel, ne reprend pas un angle de `idees.md` (4 dernières
+  semaines), et colle à la stratégie (`strategie.md`). Puis `banque.py preparer R <idee> sorties/<id>/` (recrée
+  `voix.wav` à partir de l'audio d'origine et pose un brouillon de `reel.json` avec la fenêtre) et enchaîne à
+  l'étape 3. Une fois programmé : `banque.py marquer R <idee> utilise --post posts/<id>` ; refusé au contrôle :
+  `marquer … refuse --raison "…"`. Commit et push la banque (`catalogue.json`, `index/`).
+- **Cadence** : `reels_par_semaine` (2 par défaut) dans les 7 jours qui viennent. À chaque exécution quotidienne,
+  si moins de Reels sont programmés sur les 7 prochains jours que ce quota et qu'une idée est disponible, fabrique
+  **un** Reel (un seul par exécution : on préfère la qualité). Un audio de `urgent/` ou de `inbox/audio/` passe
+  toujours avant la banque, quel que soit le quota.
+- **Banque presque vide** (moins de 3 idées disponibles) : dis-le dans le récap (« la banque tient encore N Reels,
+  pense à enregistrer »), avec 3 sujets suggérés tirés de `strategie.md` et des questions fréquentes de la cible.
+- Les phrases fortes de la banque (transcription vérifiée) peuvent aussi nourrir les stories et carrousels de la
+  tâche du dimanche, **en citation exacte** et marquées comme telles dans le journal.
+
 ## 0. Interrupteur et rien à faire
 - Fichier `PAUSE` à la racine : tu peux fabriquer et ranger dans `sorties/`, mais **rien n'est programmé**.
-- `inbox/audio/` vide (hors `.gitkeep`) : arrête-toi immédiatement, sans commit, sans récap, sans notification.
+- Rien à faire (aucun audio dans `urgent/` ni `inbox/audio/`, aucun nouvel audio dans la banque, et quota de Reels
+  déjà atteint ou aucune idée disponible) : arrête-toi immédiatement, sans commit, sans récap, sans notification.
 
 ## 1. Préparer la session
 ```
@@ -108,7 +141,8 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
    - teaser : `instagramData.type: "STORY"`, sans texte.
    Si `config.json` contient `"validation": true` : `createScheduledPostForReview`. Un test : `draft: true`.
 7. Vérifie avec `getScheduledPosts` que le Reel et le teaser sont là, une seule fois, à la bonne heure.
-8. Déplace l'audio (et son `.txt`) de `inbox/audio/` vers `inbox/traite/`.
+8. Audio urgent : déplace-le (et son `.txt`) de `urgent/` vers `audio/` dans la banque (il devient du stock indexé, ses
+   autres idées restent exploitables) ou de `inbox/audio/` vers `inbox/traite/`. Idée de banque : `banque.py marquer`.
 
 ## 7. Mémoire
 - `journal.md` (en haut) : source audio, verdict de compréhension, idée, cible, hooks (choisi + écartés, HSS),
