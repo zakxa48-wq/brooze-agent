@@ -39,7 +39,7 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 #st .ligne { font-weight:800; font-size:62px; letter-spacing:-.025em; white-space:nowrap; padding:14px 30px; border-radius:22px; }
 #st.clair .ligne { color:var(--encre); background:rgba(247,246,242,.82); box-shadow:0 10px 40px rgba(16,14,13,.12); }
 #st.sombre .ligne { color:var(--papier); background:rgba(16,14,13,.55); box-shadow:0 10px 40px rgba(0,0,0,.35); }
-#st .w { opacity:.42; }
+#st .w { opacity:.42; display:inline-block; margin:0 .13em; }
 #st .w.on { opacity:1; }
 
 /* Téléphone dessiné (marques fictives) */
@@ -103,7 +103,7 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 .plan .titre-plan .bloc { color:var(--papier); text-shadow:0 6px 30px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.35); }
 #st.image .ligne { color:#F7F6F2; background:none; box-shadow:none; padding:0; font-size:66px;
   text-shadow:0 4px 22px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.6); }
-#st.image .w { opacity:.78; display:inline-block; }
+#st.image .w { opacity:.78; display:inline-block; margin:0 .13em; }
 #st.image .w.on { opacity:1; }
 #grain { position:absolute; z-index:11; inset:-64px; pointer-events:none; opacity:.075; mix-blend-mode:overlay; }
 #vignette { position:absolute; z-index:12; inset:0; pointer-events:none; background:radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.22) 100%); }

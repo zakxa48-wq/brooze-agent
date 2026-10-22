@@ -69,3 +69,18 @@ plein cadre).
 - Regarde la planche en vignettes : si on voit surtout du texte, c'est raté, même si chaque image est jolie.
 - Chasse au mécanique : deux plans de suite avec le même mouvement de caméra, des mots qui tombent tous pareil,
   une transition répétée 4 fois → corriger.
+
+## 7. Leçons de fabrication (Reel Apple v2, 22/10)
+- **Variété** : 6 images pour 41 s, c'était trop peu (le sceptique : « ça tourne en rond »). Viser une image distincte
+  toutes les 4 à 5 s, et jamais la même image 5 s d'affilée sous deux cadrages proches. Un angle de caméra de plus
+  sur une scène 3D déjà construite coûte ~3 min : c'est le moyen le moins cher d'ajouter de la variété.
+- **Une idée de monde aide le montage** : ici, le papier = ce qu'on DIT (fiche technique), la photo = ce qu'on MONTRE.
+  Chaque retour d'une image a alors un sens au lieu d'être une répétition.
+- **Écran 3D** : vérifier l'orientation de l'image affichée avec une mire (« HAUT » + un coin coloré) en 4 s de rendu
+  avant tout rendu final ; une rotation du téléphone de 180° change le sens de lecture pour la caméra. Les panneaux
+  de lumière se reflètent en rectangles blancs sur un écran brillant : verre « antireflet » (Coat ~0,2, Specular
+  ~0,12) pour le plan concerné, en gardant un reflet discret.
+- **Poids** : grain + caméra à l'épaule + images détaillées = débit énorme à qualité constante (240 Mo pour 41 s) ;
+  le rendu plafonne maintenant à 14 Mb/s (~70 Mo).
+- **Temps réels mesurés** (4 cœurs, sans carte graphique) : image photoréaliste 1080×1920 à 48–64 spp : 2 à 4 min ;
+  test à 25 % et 16 spp : 4 s (toujours tester avant) ; rendu du Reel de 41 s en images réelles : ~7 min.
