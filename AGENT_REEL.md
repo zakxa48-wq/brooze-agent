@@ -120,6 +120,19 @@ sautés à la reprise) → `controle` (controle.py + passes du sceptique, une pa
   § 4, 30 min maximum, rien n'est publié), débrief, push, puis un message final court, sans mail ni notification.
   S'il ne reste vraiment rien à faire (ni donnée nouvelle, ni temps pour un exercice) : « Rien à faire aujourd'hui. ».
 
+## 0 bis. Filet de sécurité des stories (à CHAQUE exécution, avant les Reels, ~5 min)
+Une story doit partir **chaque jour sans exception**. À chaque passage :
+1. `getScheduledPosts` de maintenant à J+3 : chaque jour (aujourd'hui compris s'il reste un créneau ≥ 1 h plus tard)
+   a-t-il au moins une story (`instagramData.type = STORY`) ? Une story au statut d'erreur compte comme manquante.
+2. Pour chaque jour sans story : prends une story de la réserve (`posts/_reserve-stories/`, règles dans son
+   LISEZMOI), vérifie ses URL raw (200), programme-la au meilleur créneau de ce jour (≥ 3 h d'un Reel ou d'un
+   carrousel, entre 7 h et 21 h ; s'il est déjà tard, le prochain créneau ≥ 1 h plus tard), marque-la utilisée dans
+   `reserve.json`, ajoute son angle à `idees.md`, note-le au journal (« filet : story de réserve R-NNN le … »).
+3. Réserve sous 4 : fabrique des stories de réserve jusqu'à 7 (AGENT.md § 6–7 : création, rendu `render.mjs`, contrôle
+   ≥ 8) **avant** les Reels, pousse sur main.
+4. Si Metricool est indisponible : rien ne peut être programmé ; PushNotification immédiate à Zak (« stories non
+   assurées : connecteur Metricool »).
+
 ## 1. Préparer la session
 ```
 bash outils/git_main.sh debut /home/user/brooze-agent && bash outils/git_main.sh debut /home/user/brooze-voix

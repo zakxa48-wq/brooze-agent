@@ -66,6 +66,11 @@ pour que les deux tâches ne se marchent jamais dessus ; un jour de carrousel d�
 - `python3 reel/cerveau.py chercher /home/user/brooze-voix "<angle du carrousel>"` avant chaque carrousel : principes et
   fiches applicables, notés dans le journal (inspiration, jamais copie).
 
+### 1 quater. Réserve de stories (jamais un jour sans story)
+Lis `posts/_reserve-stories/LISEZMOI.md`. Après avoir programmé la semaine, **remplis la réserve jusqu'à 7 stories
+disponibles** (mêmes règles de création et de contrôle que les stories de la semaine, sans date), pousse-les sur main
+et vérifie leurs URL raw. Dans le récap : « réserve : N stories ».
+
 ### 2. Mesurer la semaine passée
 Pour chaque post du journal publié depuis 2 jours ou plus et sans chiffres, relève avec `getAnalyticsDataByMetrics`
 (plage : depuis la date du post jusqu'à aujourd'hui) :
@@ -140,8 +145,8 @@ npm install --silent && node render.mjs posts/<id>/post.json
   téléphone, charte (couleurs, typo, un seul cuivre, zone sûre), vérité, cible précise, « ne fait pas IA
   générique », orthographe et typographie françaises (espace avant « ? ! : »).
 - Sous 8 sur un critère : corrige et refais le rendu, 3 tours maximum. Toujours sous 8 : **ne programme pas ce post**,
-  écris pourquoi dans le journal (section « Refusés ») et dans le récap. Un jour sans story vaut mieux qu'une story
-  ratée.
+  écris pourquoi dans le journal (section « Refusés ») et dans le récap. Une story ratée ne part jamais : ce jour-là,
+  c'est une story de la **réserve** qui part (`posts/_reserve-stories/`, déjà contrôlée). Un jour sans story n'arrive pas.
 - Vérité : aucun chiffre, client, témoignage ou résultat inventé. Les seuls chiffres permis sont ceux de
   `attention.md`, du journal (nos vraies stats) ou d'une source publique citée. Un exemple fictif est présenté comme
   un exemple (« Même restaurant, deux accroches »), avec un commerce générique ou une marque fictive.
