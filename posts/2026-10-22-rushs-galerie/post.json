@@ -1,0 +1,9 @@
+{
+  "type": "story",
+  "pilier": "Positionnement : on crée à partir de l'existant",
+  "avatar": "Karim",
+  "slides": [
+    { "layout": "cover", "theme": "encre", "label": "Pour les commerçants", "titre": "Tes meilleures vidéos dorment dans ta *galerie*.", "taille": "t-l", "texte": "Le plat filmé vite fait. La salle pleine un samedi soir. Le stock qui arrive.", "swipe": "La suite" },
+    { "layout": "cta", "titre": "On en fait des vidéos qui ramènent des clients.", "taille": "t-l", "texte": "Tu n'as **rien à tourner**. On part de ce que tu as déjà.", "bouton": "Réponds « RUSH » en message" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "carrousel",
+  "pilier": "La méthode",
+  "avatar": "Claire",
+  "angle": "« 3 questions avant de… »",
+  "slides": [
+    { "layout": "cover", "label": "Méthode · 1 minute", "titre": "Ta vidéo se joue avant la *3e* seconde.", "texte": "3 questions à te poser avant de publier." },
+    { "layout": "phrase", "theme": "encre", "label": "Sur nos propres vidéos", "titre": "30 à 60 % des gens partent avant *3 s*.", "taille": "t-l", "texte": "Ce qui vient après ne compte que s'ils restent." },
+    { "layout": "point", "numero": "01", "label": "L'image", "titre": "La 1re image bouge-t-elle déjà ?", "texte": "Un logo, un écran noir, une belle image qui s'installe : le pouce est déjà passé. **Démarre en plein mouvement.**" },
+    { "layout": "point", "numero": "02", "label": "Le muet", "titre": "On comprend sans le son ?", "texte": "Beaucoup regardent en silence. **Ton accroche doit tenir en 8 mots à l'écran.**" },
+    { "layout": "point", "numero": "03", "label": "La phrase", "titre": "Ton client s'y reconnaît ?", "texte": "Pas « découvrez notre offre ». **Sa douleur, avec ses mots à lui.**" },
+    { "layout": "duel", "titre": "Même restaurant, deux accroches.", "a": { "label": "Ce qu'on voit partout", "texte": "Découvrez notre nouvelle carte d'automne." }, "b": { "label": "Ce qui arrête le pouce", "texte": "12 h 04. Plus que *3 tables*." } },
+    { "layout": "liste", "label": "Avant de publier", "titre": "Ta checklist.", "items": ["Ça bouge dès la 1re image.", "Ça se comprend en muet.", { "texte": "Ton client se dit : « c'est moi ».", "cle": true }] },
+    { "layout": "cta", "theme": "encre", "titre": "Enregistre-le pour ta prochaine vidéo.", "texte": "Chez Brooze, on fabrique des vidéos qui retiennent dès la première image." }
+  ],
+  "caption": "Ta vidéo se joue avant la 3e seconde.\n\nSur nos propres vidéos, 30 à 60 % des gens partent avant 3 secondes. Trois questions suffisent pour savoir si la tienne passe le cap : ça bouge dès la 1re image ? Ça se comprend en muet ? Ton client s'y reconnaît ?\n\nChez Brooze, on fabrique des vidéos qui retiennent dès la première image.\nEnvoie-nous un message → @broozeproduction\n\nTa dernière vidéo : elle passe les 3 questions, oui ou non ? 👇\n\nEnvoie-le à la personne qui gère les réseaux de ta boîte.\n\n#marketingvideo #reelsinstagram #communication"
+}

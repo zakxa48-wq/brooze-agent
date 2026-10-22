@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: Inter; font-weight: 700; src: url(../fonts/inter-latin-700-normal.woff2); }
+@font-face { font-family: Inter; font-weight: 800; src: url(../fonts/inter-latin-800-normal.woff2); }
+@font-face { font-family: Grotesk; font-weight: 700; src: url(../fonts/space-grotesk-latin-700-normal.woff2); }
+
+/* Charte Brooze — ne jamais modifier ces valeurs */
+:root {
+  --papier: #EDEBE7; --carte: #F7F6F2; --studio: #D7D6D3;
+  --encre: #100E0D; --encre-douce: #6B675F; --gris-ui: #8A8780;
+  --cuivre: #C8834A; --cuivre-profond: #A16A38;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: var(--w); height: var(--h); overflow: hidden; }
+body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+
+.page { position: relative; width: var(--w); height: var(--h); overflow: hidden;
+  background: radial-gradient(120% 90% at 30% 20%, var(--carte) 0%, var(--papier) 55%, #E3E0DA 100%);
+  color: var(--encre); }
+.page.encre { color: var(--papier);
+  background: radial-gradient(90% 70% at 70% 15%, #2A2521 0%, #17130F 45%, #0B0908 100%); }
+.page.studio { background: radial-gradient(110% 80% at 50% 10%, #E4E3E0 0%, var(--studio) 60%, #C9C8C4 100%); }
+
+/* Grain léger pour éviter l'aplat numérique */
+.grain { position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: multiply; }
+.encre .grain { mix-blend-mode: screen; opacity: .05; }
+
+/* Faisceau de lumière sur fond encre */
+.faisceau { position: absolute; width: 900px; height: 1400px; top: -300px; right: -200px;
+  background: radial-gradient(closest-side, rgba(237,235,231,.10), rgba(237,235,231,0));
+  transform: rotate(-18deg); pointer-events: none; }
+
+.marge { position: absolute; inset: var(--top) 96px var(--bottom) 96px; display: flex; flex-direction: column; }
+
+.entete { display: flex; justify-content: space-between; align-items: center;
+  font-family: Grotesk; font-weight: 700; font-size: 34px; letter-spacing: .32em; color: var(--encre-douce); }
+.encre .entete { color: var(--gris-ui); }
+.compteur { letter-spacing: .12em; }
+
+.label { font-family: Grotesk; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+  font-size: 34px; color: var(--encre-douce); }
+.encre .label { color: var(--gris-ui); }
+
+.titre { font-weight: 800; letter-spacing: -0.045em; line-height: .98; text-wrap: balance; hyphens: none; }
+.t-xl { font-size: 150px; } .t-l { font-size: 118px; } .t-m { font-size: 96px; letter-spacing: -0.04em; line-height: 1.02; }
+.texte { text-wrap: pretty; font-weight: 700; font-size: 48px; line-height: 1.28; letter-spacing: -0.012em; color: var(--encre-douce); }
+.encre .texte { color: #B9B4AC; }
+.texte b { color: var(--encre); font-weight: 800; }
+.encre .texte b { color: var(--papier); }
+
+.cuivre { color: var(--cuivre); }
+.page:not(.encre) .cuivre { color: var(--cuivre-profond); }
+
+.filet { height: 2px; background: var(--gris-ui); opacity: .35; width: 100%; }
+
+.numero { font-weight: 800; font-size: 300px; letter-spacing: -0.06em; line-height: .8;
+  color: transparent; -webkit-text-stroke: 3px var(--gris-ui); opacity: .55; }
+
+.liste { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.liste li { padding: 44px 0; border-top: 2px solid rgba(138,135,128,.3); }
+.liste li { display: flex; gap: 34px; align-items: flex-start; font-weight: 800; font-size: 60px; letter-spacing: -0.03em; line-height: 1.22; letter-spacing: -0.015em; }
+.liste .puce { flex: 0 0 auto; width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--gris-ui);
+  font-family: Grotesk; font-size: 34px; display: grid; place-items: center; color: var(--encre-douce); margin-top: 2px; }
+.encre .liste .puce { color: var(--gris-ui); }
+.liste li.cle .puce { border-color: var(--cuivre); background: var(--cuivre); color: var(--encre); }
+
+.duel { display: grid; grid-template-rows: 1fr 1fr; gap: 28px; flex: 1; }
+.carte { border-radius: 36px; padding: 56px 60px; display: flex; flex-direction: column; justify-content: center; gap: 28px;
+  background: var(--carte); box-shadow: 0 30px 60px -30px rgba(16,14,13,.28), 0 2px 0 rgba(255,255,255,.7) inset; }
+.carte.sombre { background: linear-gradient(160deg, #221D19, #0F0C0A); color: var(--papier);
+  box-shadow: 0 40px 70px -30px rgba(16,14,13,.55); }
+.carte .label { font-size: 34px; }
+.carte .phrase { text-wrap: balance; font-weight: 800; font-size: 80px; letter-spacing: -0.035em; line-height: 1.06; }
+.carte.barre .phrase { color: var(--gris-ui); text-decoration: line-through; text-decoration-thickness: 5px; text-decoration-color: rgba(138,135,128,.7); }
+
+.swipe { display: flex; align-items: center; gap: 18px; font-family: Grotesk; font-weight: 700; font-size: 34px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--encre-douce); }
+.swipe .fleche { width: 90px; height: 2px; background: currentColor; position: relative; }
+.swipe .fleche::after { content: ""; position: absolute; right: 0; top: -7px; width: 14px; height: 14px;
+  border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); }
+
+.logo { display: flex; align-items: center; gap: 30px; }
+.logo svg { width: 92px; height: 120px; filter: drop-shadow(0 18px 24px rgba(126,78,37,.35)); }
+.wordmark { font-family: Grotesk; font-weight: 700; font-size: 52px; letter-spacing: .5em; line-height: 1; }
+.wordmark small { display: block; font-size: 34px; letter-spacing: .4em; letter-spacing: .62em; color: var(--gris-ui); margin-top: 14px; }
+.bouton { display: inline-flex; align-items: center; gap: 22px; align-self: flex-start;
+  padding: 30px 46px; border-radius: 999px; background: var(--encre); color: var(--papier);
+  font-weight: 800; font-size: 44px; letter-spacing: -0.02em; }
+.encre .bouton { background: var(--papier); color: var(--encre); }
+.pseudo { font-family: Grotesk; font-weight: 700; font-size: 34px; letter-spacing: .06em; color: var(--encre-douce); }
+.encre .pseudo { color: var(--gris-ui); }
+
+.flex1 { flex: 1; }
+.col { display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+<div id="racine"></div>
+<script>
+// Rend une diapo Brooze à partir de window.SLIDE (injecté par render.mjs).
+// Balisage du texte : *mot* = accent cuivre (UN seul par diapo), **mot** = gras encre.
+const S = window.SLIDE;
+const W = S.format === 'story' ? 1080 : 1080;
+const H = S.format === 'story' ? 1920 : 1350;
+document.documentElement.style.setProperty('--w', W + 'px');
+document.documentElement.style.setProperty('--h', H + 'px');
+// Zone sûre story : y 220–1700. Carrousel : marges confortables pour le recadrage 3:4 de la grille.
+document.documentElement.style.setProperty('--top', (S.format === 'story' ? 220 : 96) + 'px');
+document.documentElement.style.setProperty('--bottom', (S.format === 'story' ? 1920 - 1700 : 96) + 'px');
+
+const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const md = s => esc(s)
+  .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+  .replace(/\*(.+?)\*/g, '<span class="cuivre">$1</span>')
+  .replace(/\n/g, '<br>')
+  // Les mots à trait d'union (« bouge-t-elle ») ne se coupent jamais en fin de ligne
+  .replace(/(^|[\s>])([^\s<>]*\w-[^\s<>]+)/g, '$1<span style="white-space:nowrap">$2</span>');
+
+const GOUTTE = `<svg viewBox="0 0 92 120" aria-hidden="true">
+  <defs><linearGradient id="g" x1="0" y1="0" x2=".35" y2="1">
+    <stop offset="0" stop-color="#E8A66A"/><stop offset=".55" stop-color="#C8834A"/><stop offset="1" stop-color="#7E4E25"/>
+  </linearGradient></defs>
+  <path d="M46 2 C34 26 6 52 6 78 a40 40 0 0 0 40 40 L66 118 L66 30 C58 20 52 12 46 2 Z" fill="url(#g)"/>
+  <path d="M30 70 c-4 10 -2 22 8 30" stroke="rgba(255,255,255,.45)" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>`;
+
+const entete = () => `<div class="entete"><span>B R O O Z E</span>${S.compteur ? `<span class="compteur">${esc(S.compteur)}</span>` : ''}</div>`;
+
+const L = {
+  // Couverture de carrousel / story d'accroche
+  cover: () => `${entete()}
+    <div class="flex1"></div>
+    ${S.label ? `<div class="label" style="margin-bottom:40px">${esc(S.label)}</div>` : ''}
+    <div class="titre ${S.taille || 't-xl'}">${md(S.titre)}</div>
+    ${S.texte ? `<div class="texte" style="margin-top:44px;max-width:820px">${md(S.texte)}</div>` : ''}
+    <div class="flex1"></div>
+    ${S.swipe === false ? '' : `<div class="swipe">${esc(S.swipe || 'Glisse')}<span class="fleche"></span></div>`}`,
+
+  // Un point de méthode numéroté
+  point: () => `${entete()}
+    <div class="numero" style="margin-top:56px">${esc(S.numero)}</div>
+    <div class="flex1"></div>
+    ${S.label ? `<div class="label" style="margin-bottom:30px">${esc(S.label)}</div>` : ''}
+    <div class="titre ${S.taille || 't-l'}">${md(S.titre)}</div>
+    <div class="filet" style="margin:56px 0 48px"></div>
+    <div class="texte">${md(S.texte)}</div>`,
+
+  // Avant / après, mauvais / bon
+  duel: () => `${entete()}
+    ${S.titre ? `<div class="titre t-m" style="margin:48px 0 40px">${md(S.titre)}</div>` : '<div style="height:48px"></div>'}
+    <div class="duel">
+      <div class="carte barre"><div class="label">${esc(S.a.label)}</div><div class="phrase">${md(S.a.texte)}</div></div>
+      <div class="carte sombre"><div class="label" style="color:var(--gris-ui)">${esc(S.b.label)}</div><div class="phrase">${md(S.b.texte)}</div></div>
+    </div>`,
+
+  // Checklist
+  liste: () => `${entete()}
+    <div class="flex1"></div>
+    ${S.label ? `<div class="label">${esc(S.label)}</div>` : ''}
+    <div class="titre ${S.taille || 't-l'}" style="margin:28px 0 56px">${md(S.titre)}</div>
+    <ul class="liste">${S.items.map((it, i) => {
+      const cle = typeof it === 'object' && it.cle;
+      const t = typeof it === 'object' ? it.texte : it;
+      return `<li class="${cle ? 'cle' : ''}"><span class="puce">${i + 1}</span><span>${md(t)}</span></li>`;
+    }).join('')}</ul>
+    <div class="flex1"></div>`,
+
+  // Une phrase forte, plein cadre
+  phrase: () => `${entete()}
+    <div class="flex1"></div>
+    ${S.label ? `<div class="label" style="margin-bottom:40px">${esc(S.label)}</div>` : ''}
+    <div class="titre ${S.taille || 't-l'}">${md(S.titre)}</div>
+    ${S.texte ? `<div class="texte" style="margin-top:48px">${md(S.texte)}</div>` : ''}
+    <div class="flex1"></div>`,
+
+  // Fin : logo + appel à l'action
+  cta: () => `${entete()}
+    <div class="flex1"></div>
+    <div class="titre ${S.taille || 't-m'}">${md(S.titre)}</div>
+    ${S.texte ? `<div class="texte" style="margin-top:36px">${md(S.texte)}</div>` : ''}
+    <div class="bouton" style="margin-top:64px">${esc(S.bouton || 'Envoie-nous un message')} →</div>
+    <div class="flex1"></div>
+    <div class="logo">${S.logo ? `<img src="${S.logo}" style="height:120px">` : ''}<div class="wordmark">BROOZE<small>PRODUCTION</small></div></div>
+    <div class="pseudo" style="margin-top:28px">@broozeproduction</div>`,
+};
+
+if (!L[S.layout]) throw new Error('Layout inconnu : ' + S.layout);
+const theme = S.theme || 'papier';
+document.getElementById('racine').innerHTML = `
+  <div class="page ${theme}">
+    ${theme === 'encre' ? '<div class="faisceau"></div>' : ''}
+    <svg class="grain" width="100%" height="100%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+    <div class="marge">${L[S.layout]()}</div>
+  </div>`;
+</script>
+</body>
+</html>
