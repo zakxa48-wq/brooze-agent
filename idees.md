@@ -7,3 +7,16 @@
 | 2026-10-19 | Carrousel | Test des 3 secondes : qu'est-ce qu'on vend, pour qui, pourquoi | « Ta pub est belle. Mais est-ce qu'on comprend ce que tu vends ? » |
 | 2026-10-22 | Story | Tes rushs dorment dans ta galerie, on en fait des vidéos | « Tes meilleures vidéos dorment dans ta galerie. » |
 | (exemple interne) | Carrousel | 3 questions avant de publier (1re image, muet, client) | « Ta vidéo se joue avant la 3e seconde. » — jamais publié, angle trop proche du 19/10 |
+| 2026-10-23 | Story | Diagnostic | « Ta vidéo est propre. C'est le problème. » |
+| 2026-10-24 | Story | Méthode | « Filme 10 secondes de ta salle pleine. » |
+| 2026-10-25 | Story | Question directe | « Tu publies le soir… ou entre deux clients ? » |
+| 2026-10-26 | Story | Teaser | « Noël se joue en novembre. » |
+| 2026-10-26 | Carrousel | Méthode saisonnière | « Ta vidéo de Noël est déjà dans ton téléphone. » |
+| 2026-10-27 | Story | Méthode | « Écris la seule action que tu attends. » |
+| 2026-10-28 | Story | Teaser | « Même vidéo. Autre 1re phrase. » |
+| 2026-10-28 | Carrousel | Méthode : avant / après | « 5 accroches réécrites. » |
+| 2026-10-29 | Story | Mythe / réalité | « « Il me faut une meilleure caméra. » » |
+| 2026-10-30 | Story | Teaser | « Les vues ne prouvent rien à ta direction. » |
+| 2026-10-30 | Carrousel | Preuve : convaincre en interne | « 3 chiffres à montrer à ta direction. » |
+| 2026-10-31 | Story | Positionnement : on crée à partir de l'existant | « Tes clients te filment déjà. » |
+| 2026-11-01 | Story | Appel à l'action | « Une vidéo n'a qu'un travail : donner une raison de venir chez toi. » |

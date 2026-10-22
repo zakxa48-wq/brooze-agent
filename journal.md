@@ -4,6 +4,107 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## Semaine du 23/10 au 01/11 · programmée le 22/10 (exécution test, en session)
+
+**Analyse** : 3 posts depuis septembre, portée 8 à 11, 0 enregistrement, 0 partage : audience trop petite pour conclure, on compare des taux. Aucun concurrent suivi dans Metricool ; la recherche web ne donne que des fiches d'agences (Auguste & Louise, freelances Malt), pas de comptes Instagram lisibles : rien d'exploitable cette semaine. Air du temps : le marché de Noël de Strasbourg ouvre fin novembre (le 27 selon la plupart des sources), les commerçants préparent leurs contenus maintenant. Instagram dit que les carrousels gagnent en élan (enregistrements, référence). Décision : semaine Noël + preuve à la direction, 3 nouveaux formats testés (question en story, teaser du carrousel, avant/après d'accroches).
+
+### 2026-10-23 · 10:00 · Story · Claire · Diagnostic
+- **Hook** : « Ta vidéo est propre. C'est le problème. »
+- **Hypothèse** : Une accusation douce (« propre, c'est le problème ») pour Claire fait moins de sorties / portée qu'un conseil neutre, parce qu'elle touche sa douleur exacte : des contenus propres mais sans impact.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-23-propre-pas-impact/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-7469041722787412187) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-2893102338234890709)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-24 · 10:00 · Story · Karim · Méthode
+- **Hook** : « Filme 10 secondes de ta salle pleine. »
+- **Hypothèse** : Une micro-action à faire le jour même (« filme 10 secondes ce soir ») pour Karim obtient plus de réponses / portée qu'une story d'idée, parce qu'elle est faisable tout de suite.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-24-filme-ce-soir/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-1455375601961188571)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-25 · 10:00 · Story · Karim · Question directe
+- **Hook** : « Tu publies le soir… ou entre deux clients ? »
+- **Hypothèse** : Une question binaire en story (nouveau format) obtient plus de réponses / portée que nos stories d'affirmation, parce que répondre demande un seul mot.
+- **Nouveau format** : oui · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-25-question-soir-journee/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-645618301177674576)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-26 · 10:00 · Story · Karim · Teaser
+- **Hook** : « Noël se joue en novembre. »
+- **Hypothèse** : Une story qui annonce le carrousel du soir augmente sa portée par rapport aux carrousels non annoncés, parce qu'elle crée un rendez-vous.
+- **Nouveau format** : oui · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-26-teaser-noel/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=6052599164177106086)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-26 · 18:00 · Carrousel · Karim · Méthode saisonnière
+- **Hook** : « Ta vidéo de Noël est déjà dans ton téléphone. »
+- **Hypothèse** : Un carrousel saisonnier (Noël) ancré dans « rien à tourner » obtient plus d'enregistrements / portée que notre carrousel du 19/10 (0 enregistrement), parce qu'il répond à un besoin daté et concret.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-26-noel-dans-ta-galerie/` · **Metricool** : [carrousel](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-7240985071627909766)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-27 · 10:00 · Story · Claire · Méthode
+- **Hook** : « Écris la seule action que tu attends. »
+- **Hypothèse** : Une story sur la preuve à la direction pour Claire obtient plus de réponses / portée que nos stories pour Karim, parce que c'est sa pression principale.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-27-direction-resultats/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7732706882180893246)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-28 · 10:00 · Story · Claire · Teaser
+- **Hook** : « Même vidéo. Autre 1re phrase. »
+- **Hypothèse** : Le teaser « même vidéo, deux premières secondes » augmente la portée du carrousel avant/après du soir.
+- **Nouveau format** : oui · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-28-teaser-accroches/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7003585979674739409) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-1018742560818246430)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-28 · 18:00 · Carrousel · Claire · Méthode : avant / après
+- **Hook** : « 5 accroches réécrites. »
+- **Hypothèse** : Le format « 5 accroches réécrites, avant / après » (nouveau) obtient plus d'enregistrements / portée que nos carrousels en étapes, parce qu'il donne des modèles réutilisables.
+- **Nouveau format** : oui · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-28-accroches-avant-apres/` · **Metricool** : [carrousel](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-8344913388609778851)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-29 · 10:00 · Story · Karim · Mythe / réalité
+- **Hook** : « « Il me faut une meilleure caméra. » »
+- **Hypothèse** : Le format mythe/réalité (nouveau) en story fait moins de sorties / portée qu'une affirmation simple, parce que le mythe crée une attente de correction.
+- **Nouveau format** : oui · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-29-mythe-camera/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=5294463350788801172) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-7483241007448569454)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-30 · 10:00 · Story · Claire · Teaser
+- **Hook** : « Les vues ne prouvent rien à ta direction. »
+- **Hypothèse** : Le teaser du carrousel « 3 chiffres pour ta direction » augmente sa portée.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-30-teaser-direction/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-526030731838731933)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-30 · 18:00 · Carrousel · Claire · Preuve : convaincre en interne
+- **Hook** : « 3 chiffres à montrer à ta direction. »
+- **Hypothèse** : Un carrousel « prouver à ta direction » pour Claire obtient plus de partages / portée que nos autres carrousels, parce qu'elle a quelqu'un à qui l'envoyer.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-30-trois-chiffres-direction/` · **Metricool** : [carrousel](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-1796033734287801014)
+- **Chiffres J+2** : à relever.
+
+### 2026-10-31 · 10:00 · Story · Karim · Positionnement : on crée à partir de l'existant
+- **Hook** : « Tes clients te filment déjà. »
+- **Hypothèse** : Montrer à Karim une matière qu'il a déjà sans le savoir (les stories de ses clients) obtient des réponses, parce que ça lève l'objection « je n'ai pas le temps de filmer ».
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-10-31-clients-te-filment/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=4941621310454974340)
+- **Chiffres J+2** : à relever.
+
+### 2026-11-01 · 10:00 · Story · Karim · Appel à l'action
+- **Hook** : « Une vidéo n'a qu'un travail : donner une raison de venir chez toi. »
+- **Hypothèse** : Une story d'offre directe (le mot-clé AUDIT déjà utilisé dans notre carrousel du 19/10) obtient plus de messages / portée en fin de semaine thématique.
+- **Nouveau format** : non · **Contrôle** : charte OK, aucun débordement, relu.
+- **Visuels** : `posts/2026-11-01-audit/` · **Metricool** : [image 1](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-9000582887005142205) · [image 2](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-3995574561896708644)
+- **Chiffres J+2** : à relever.
+
+### Refusés
+- Carrousel « Ta vidéo se joue avant la 3e seconde » (posts/_exemple-carrousel) : angle trop proche du carrousel du 19/10.
+- Diapo « 4 demandes en message » : chiffre d'exemple retiré par prudence (vérité).
+
+---
+
 ## 2026-10-22 · Story · Karim · Positionnement
 - **Hook** : « Tes meilleures vidéos dorment dans ta galerie. »
 - **Images** : `posts/2026-10-22-rushs-galerie/` (2 images)
