@@ -6,6 +6,16 @@
   "banque": {
     "depot": "zakxa48-wq/brooze-voix",
     "dossier_local": "/home/user/brooze-voix",
-    "reels_par_semaine": 2
+    "horizon_jours": 14
+  },
+  "jours_carrousel": [
+    "lundi",
+    "mercredi",
+    "vendredi"
+  ],
+  "reel": {
+    "par_jour": 1,
+    "heure_cible": "18:00",
+    "ecart_min_story_h": 3
   }
 }

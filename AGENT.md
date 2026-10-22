@@ -19,8 +19,11 @@ suit. Si le skill est introuvable, `charte.md` dans ce dépôt en contient l'ess
 De **demain** jusqu'au **dimanche de la semaine suivante** (semaines du lundi au dimanche). Un dimanche, c'est donc
 du lundi au dimanche qui suivent. Dans cette fenêtre :
 - **1 story par jour** (1 ou 2 images 1080×1920) ;
-- **2 à 3 carrousels** par semaine complète du lundi au dimanche (6 à 8 diapos 1080×1350), jamais deux jours de suite,
-  jamais le même jour qu'un autre carrousel. Sur des jours isolés hors semaine complète : stories seulement.
+- **2 à 3 carrousels** par semaine complète du lundi au dimanche (6 à 8 diapos 1080×1350), uniquement les
+  `jours_carrousel` de `config.json` (lundi, mercredi, vendredi), jamais un jour où un Reel est déjà programmé.
+  Sur des jours isolés hors semaine complète : stories seulement.
+- **Les Reels** (un par jour hors carrousel) sont fabriqués par la tâche quotidienne à partir de la banque de voix :
+  tu n'en crées pas, mais tu en tiens compte (créneaux, story teaser du jour, pas de doublon d'angle).
 
 **Jamais de doublon de programmation.** Avant de créer quoi que ce soit, appelle `getScheduledPosts` sur toute la
 fenêtre et lis `journal.md`. Un jour qui a déjà sa story n'en reçoit pas une autre. Les carrousels déjà programmés
@@ -40,9 +43,10 @@ Zak passe TOUJOURS avant une idée inventée. Ce que tu utilises, déplace-le da
 ### 1 bis. Audios en attente et banque de voix (jamais oubliés)
 Si `inbox/audio/` ou `urgent/` de la banque privée contient un audio : traite-le d'abord en suivant **`AGENT_REEL.md`** de bout en
 bout (un ou plusieurs Reels + story teaser), avant de programmer la semaine. Les Reels programmés occupent leurs
-créneaux : la semaine se construit autour, sans doublon. Indexe aussi la banque (`reel/banque.py indexer`) et, si le
-quota `reels_par_semaine` de la semaine à venir n'est pas atteint, fabrique un Reel depuis la meilleure idée disponible
-(section « La banque de voix » de `AGENT_REEL.md`). Les citations exactes de la banque peuvent servir aux stories. Les Reels de la semaine passée sont mesurés à l'étape 2
+créneaux : la semaine se construit autour, sans doublon. Indexe aussi la banque (`reel/banque.py indexer`) ; la tâche
+quotidienne « Brooze montage inbox » se charge de remplir chaque jour libre avec un Reel (section « La banque de voix »
+de `AGENT_REEL.md`). **Carrousels uniquement les `jours_carrousel` de `config.json`** (lundi, mercredi, vendredi),
+pour que les deux tâches ne se marchent jamais dessus ; un jour de carrousel déjà pris par un Reel n'en reçoit pas. Les citations exactes de la banque peuvent servir aux stories. Les Reels de la semaine passée sont mesurés à l'étape 2
 (IGRE23 vues, IGRE24 durée moyenne regardée, IGRE28 vues > 3 s, IGRE21 partages, IGRE12 enregistrements).
 
 ### 2. Mesurer la semaine passée

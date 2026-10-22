@@ -35,10 +35,22 @@ donc vraiment le sien : aucun clonage, aucune voix de synthèse.
   `voix.wav` à partir de l'audio d'origine et pose un brouillon de `reel.json` avec la fenêtre) et enchaîne à
   l'étape 3. Une fois programmé : `banque.py marquer R <idee> utilise --post posts/<id>` ; refusé au contrôle :
   `marquer … refuse --raison "…"`. Commit et push la banque (`catalogue.json`, `index/`).
-- **Cadence** : `reels_par_semaine` (2 par défaut) dans les 7 jours qui viennent. À chaque exécution quotidienne,
-  si moins de Reels sont programmés sur les 7 prochains jours que ce quota et qu'une idée est disponible, fabrique
-  **un** Reel (un seul par exécution : on préfère la qualité). Un audio de `urgent/` ou de `inbox/audio/` passe
-  toujours avant la banque, quel que soit le quota.
+- **Cadence : un Reel de qualité par jour, sauf les jours de carrousel**, tant que la banque le permet.
+  - Jours de carrousel : `jours_carrousel` de `config.json` (lundi, mercredi, vendredi). Un de ces jours redevient
+    libre pour un Reel si la semaine est déjà planifiée (après la tâche du dimanche) et qu'aucun carrousel n'y est
+    programmé.
+  - À chaque exécution : liste les **jours libres** des `horizon_jours` (14) prochains jours, du plus proche au plus
+    lointain (jour libre = pas un jour de carrousel, et aucun Reel déjà programmé ce jour-là dans Metricool). Puis
+    fabrique **autant de Reels qu'il y a d'idées disponibles et de jours libres** : 5 idées → 5 Reels, 10 → 10, un par
+    jour libre, dans l'ordre. Pas assez d'idées : on s'arrête là, sans remplissage (un jour sans Reel vaut mieux
+    qu'un Reel moyen).
+  - Heure : le meilleur créneau du jour (`getBestTimeToPostByNetwork`), à au moins 3 h de la story du jour, 18 h par
+    défaut. Teaser : la story du jour peut annoncer le Reel si elle n'est pas déjà programmée ; sinon, pas de teaser.
+  - Temps d'exécution : chaque Reel passe le contrôle qualité complet, quoi qu'il arrive. Si l'exécution approche de
+    sa limite, termine proprement le Reel en cours (rendu, contrôle, programmation, catalogue, commit), puis arrête-toi :
+    la suite reprend le lendemain là où le catalogue l'indique. Jamais de Reel bâclé pour en faire un de plus.
+  - Économie : 2D par défaut (2 à 3 min de rendu pour 30 s) ; la 3D seulement si un plan la justifie.
+  - Un audio de `urgent/` ou de `inbox/audio/` passe avant la banque : il prend le premier jour libre.
 - **Banque presque vide** (moins de 3 idées disponibles) : dis-le dans le récap (« la banque tient encore N Reels,
   pense à enregistrer »), avec 3 sujets suggérés tirés de `strategie.md` et des questions fréquentes de la cible.
 - Les phrases fortes de la banque (transcription vérifiée) peuvent aussi nourrir les stories et carrousels de la
@@ -46,8 +58,8 @@ donc vraiment le sien : aucun clonage, aucune voix de synthèse.
 
 ## 0. Interrupteur et rien à faire
 - Fichier `PAUSE` à la racine : tu peux fabriquer et ranger dans `sorties/`, mais **rien n'est programmé**.
-- Rien à faire (aucun audio dans `urgent/` ni `inbox/audio/`, aucun nouvel audio dans la banque, et quota de Reels
-  déjà atteint ou aucune idée disponible) : arrête-toi immédiatement, sans commit, sans récap, sans notification.
+- Rien à faire (aucun audio dans `urgent/` ni `inbox/audio/`, aucun nouvel audio dans la banque, et aucun jour libre
+  ou aucune idée disponible) : arrête-toi immédiatement, sans commit, sans récap, sans notification.
 
 ## 1. Préparer la session
 ```
