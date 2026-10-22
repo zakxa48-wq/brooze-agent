@@ -145,3 +145,11 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 - **Contrôle** : charte OK, lisibilité OK, logo goutte retiré (vrai fichier absent).
 - **Vérification 18 h 13** : les 2 images ne sont plus dans la file Metricool (traitées à l'heure prévue) ; les statistiques de stories ne remontent pas encore, publication à confirmer au relevé J+2.
 - **Chiffres J+2** : à relever.
+
+## 22/10 soir — Reel Apple remplacé par la v3 (demande de Zak)
+- Le Reel du 23/10 à 13 h 30 (Metricool, uuid −4757902081379974094, nouvel id 403394583) porte maintenant la v3 :
+  images photoréalistes en relief 2,5D, texte corrigé d'après Whisper medium (« Tu vois la différence ? »,
+  « Cet appareil photo est performant », « pourquoi il l'est »), sous-titres révélés mot par mot à l'instant dit,
+  16 bruitages sous limiteur de densité (obturateur sur « Shoot » et « photo », grave sur les coups de zoom…).
+  Légende, date et teaser de 14 h inchangés.
+- Leçon : small se trompe sur les pronoms et les questions → medium par défaut ; relire pronoms, « ? » et guillemets.
