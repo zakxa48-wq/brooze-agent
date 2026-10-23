@@ -109,9 +109,9 @@
   ],
   "boucle": {
    "ecart_image": 16.8,
-   "ecart_couleur": 0.16,
+   "ecart_couleur": 0.15,
    "mouvement_fin": 15.27,
-   "mouvement_debut": 1.09,
+   "mouvement_debut": 1.1,
    "son": {
     "debut_db": -15.9,
     "fin_db": -21.4,
