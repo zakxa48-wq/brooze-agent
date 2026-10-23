@@ -6,7 +6,7 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 50.6 s",
-  "poids 77.8 Mo",
+  "poids 74.3 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.2 dBTP (max −1)",
   "images réelles 95% du temps (objectif ≥ 60 %)",
@@ -14,7 +14,8 @@
   "appris · sous_titres_petit_mot"
  ],
  "problemes": [
-  "glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes"
+  "glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes",
+  "appris · bord_decouvert : bord gauche vide (noir) de 11.57 s à 11.73 s : prolonger l'image hors champ (miroir, marge)"
  ],
  "montage": {
   "part_images_reelles": 0.95,
@@ -29,11 +30,10 @@
   "coupes": [
    12.8,
    29.233,
+   29.467,
    32.767,
    34.4,
-   34.533,
    39.7,
-   40.233,
    42.9,
    47.967
   ],
@@ -41,13 +41,8 @@
   "alertes": [
    [
     "COUPE non déclarée",
-    34.533,
-    34.533
-   ],
-   [
-    "COUPE non déclarée",
-    40.233,
-    40.233
+    29.467,
+    29.467
    ]
   ]
  },

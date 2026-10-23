@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "2026-10-25T18:30:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Teaser Reel",
+  "hypothese": "Teaser du Reel du soir.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Nouveau Reel",
+      "titre": "Pourquoi le Wrapped *se partage* tout seul.",
+      "taille": "t-xl",
+      "texte": "Disponible maintenant sur le profil.",
+      "swipe": false
+    }
+  ]
+}
