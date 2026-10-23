@@ -2,7 +2,9 @@
 Défaut vu à l'entraînement « mot qui tombe avec poids » (22/10, essai 2 en fabrication) : un choc de 11 px décalait
 l'image sans papier hors champ → bande noire en haut du cadre pendant 5 images (et une mesure de courbe.py faussée).
 Le contrôle cherche une bande quasi noire et uniforme sur un bord, PASSAGÈRE (absente de la plupart des images) :
-un fond noir voulu, une scène sombre ou un letterbox constant ne sont pas signalés."""
+un fond noir voulu, une scène sombre ou un letterbox constant ne sont pas signalés. Corrigé le 23/10 : la bande doit
+trancher avec l'intérieur sur ≥ 80 % de la longueur du bord (sinon un objet clair près du bord d'une scène sombre
+déclenchait une fausse alerte)."""
 import subprocess, json
 import numpy as np
 
@@ -19,7 +21,13 @@ def bandes(video, w=270):
         im = np.frombuffer(b, np.uint8).reshape(h, w).astype(np.float32)
         # (bande du bord, image juste à l'intérieur) : un bord découvert est noir, uniforme, et tranche avec l'intérieur
         bords = {'haut': (im[:2], im[4:10]), 'bas': (im[-2:], im[-10:-4]), 'gauche': (im[:, :2], im[:, 4:10]), 'droite': (im[:, -2:], im[:, -10:-4])}
-        res.append({k: bool(v.mean() < 12 and v.std() < 6 and dedans.mean() - v.mean() > 25) for k, (v, dedans) in bords.items()})
+        # un vrai bord découvert est sombre sur PRESQUE TOUTE la longueur du bord (≥ 80 % des lignes) ; une carte claire
+        # qui passe près du bord d'une scène sombre ne l'est que sur une partie (fausse alerte vue sur Spotify, 23/10)
+        def decouvert(v, dedans):
+            axe = 0 if v.shape[0] <= 2 else 1
+            ecart = dedans.mean(axis=axe) - v.mean(axis=axe)
+            return bool(v.mean() < 12 and v.std() < 6 and (ecart > 25).mean() > .8)
+        res.append({k: decouvert(v, dedans) for k, (v, dedans) in bords.items()})
     p.wait()
     return res, fps
 

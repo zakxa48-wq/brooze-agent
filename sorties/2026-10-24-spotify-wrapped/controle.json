@@ -6,19 +6,18 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 48.8 s",
-  "poids 71.7 Mo",
+  "poids 72.1 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.2 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
   "types de transition hors coupe : aucun (objectif ≤ 2)",
   "glitchs : aucune alerte",
+  "appris · bord_decouvert",
   "appris · marque_reelle",
   "appris · sous_titres_petit_mot",
   "engagement : aucune zone morte, ouverture vivante, relance max 3.3 s"
  ],
- "problemes": [
-  "appris · bord_decouvert : bord haut vide (noir) de 23.03 s à 23.10 s : prolonger l'image hors champ (miroir, marge); bord gauche vide (noir) de 8.03 s à 8.07 s : prolonger l'image hors champ (miroir, marge); bord gauche vide (noir) de 8.50 s à 8.53 s : prolonger l'image hors champ (miroir, marge); bord gauche vide (noir) de 47.20 s à 47.23 s : prolonger l'image hors champ (miroir, marge); bord gauche vide (noir) de 47.60 s à 47.67 s : prolonger l'image hors champ (miroir, marge)"
- ],
+ "problemes": [],
  "montage": {
   "part_images_reelles": 1.0,
   "gros_textes": 4,
@@ -27,7 +26,7 @@
  "engagement": {
   "duree_s": 48.8,
   "ouverture": {
-   "luma_image_1": 71.4,
+   "luma_image_1": 72.2,
    "fondu_depuis_noir": false,
    "mouvement_premiere_demi_seconde": true
   },
@@ -46,12 +45,12 @@
    8.8,
    9.5,
    10.9,
+   11.3,
    12.4,
    13.1,
    13.9,
    14.9,
    15.7,
-   16.5,
    17.5,
    19.2,
    19.7,
@@ -70,6 +69,7 @@
    32.8,
    33.2,
    34.0,
+   34.7,
    35.4,
    37.4,
    38.0,
@@ -108,9 +108,9 @@
    42.9
   ],
   "boucle": {
-   "ecart_image": 28.3,
-   "ecart_couleur": 0.16,
-   "mouvement_fin": 4.68,
+   "ecart_image": 29.8,
+   "ecart_couleur": 0.15,
+   "mouvement_fin": 4.89,
    "mouvement_debut": 1.09,
    "son": {
     "debut_db": -15.9,
@@ -183,10 +183,6 @@
    [
     30.0,
     30.267
-   ],
-   [
-    35.367,
-    35.567
    ],
    [
     37.933,

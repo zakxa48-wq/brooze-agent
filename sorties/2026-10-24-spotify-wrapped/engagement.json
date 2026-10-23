@@ -1,7 +1,7 @@
 {
  "duree_s": 48.8,
  "ouverture": {
-  "luma_image_1": 71.4,
+  "luma_image_1": 72.2,
   "fondu_depuis_noir": false,
   "mouvement_premiere_demi_seconde": true
  },
@@ -20,12 +20,12 @@
   8.8,
   9.5,
   10.9,
+  11.3,
   12.4,
   13.1,
   13.9,
   14.9,
   15.7,
-  16.5,
   17.5,
   19.2,
   19.7,
@@ -44,6 +44,7 @@
   32.8,
   33.2,
   34.0,
+  34.7,
   35.4,
   37.4,
   38.0,
@@ -82,9 +83,9 @@
   42.9
  ],
  "boucle": {
-  "ecart_image": 28.3,
-  "ecart_couleur": 0.16,
-  "mouvement_fin": 4.68,
+  "ecart_image": 29.8,
+  "ecart_couleur": 0.15,
+  "mouvement_fin": 4.89,
   "mouvement_debut": 1.09,
   "son": {
    "debut_db": -15.9,

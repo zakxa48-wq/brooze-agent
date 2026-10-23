@@ -12,7 +12,7 @@ canvas{position:absolute;inset:0}
 // Déterministe : tout dépend de t. Paramètres (window.CHAMP, posés par le script de rendu) : nmax, tb (début des naissances),
 // tfin (fin des naissances), tflip (début du retournement), tplonge (début de la plongée), env (enveloppe de voix, 30/s).
 import * as THREE from 'three';
-const P = Object.assign({ nmax: 2400, tb: 4.9, tfin: 34.0, tflip: 40.0, tplonge: 42.5, tvague: 22.5, env: [], beats: [], pulses: [], tunflip: 1e9, tsolo: 1e9, dfin: 3.1 }, window.CHAMP || {});
+const P = Object.assign({ tboucle: 0, nmax: 2400, tb: 4.9, tfin: 34.0, tflip: 40.0, tplonge: 42.5, tvague: 22.5, env: [], beats: [], pulses: [], tunflip: 1e9, tsolo: 1e9, dfin: 3.1 }, window.CHAMP || {});
 const N = P.nmax, S = 1.0, K = Math.log(N) / (P.tfin - P.tb);
 const R = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, alpha: true, preserveDrawingBuffer: true });
 R.setPixelRatio(1); R.setSize(1080, 1920, false); R.setClearColor(0, 0);
@@ -30,12 +30,12 @@ g.setAttribute('iSeed', new THREE.InstancedBufferAttribute(seed, 1)); g.setAttri
 const hist = new Array(12).fill(0);
 const pul = new Array(12).fill(0).map((_, k) => { const q = P.pulses[k]; return new THREE.Vector3(q ? q.x : 0, q ? q.y : 0, q ? q.t : -99); });
 const U = { uT: { value: 0 }, uHist: { value: hist }, uFlip: { value: P.tflip }, uVague: { value: P.tvague }, uPulse: { value: pul },
-            uUnflip: { value: P.tunflip }, uSolo: { value: 0 } };
+            uUnflip: { value: P.tunflip }, uSolo: { value: 0 }, uTf: { value: 0 } };
 const mat = new THREE.ShaderMaterial({
   side: THREE.DoubleSide, uniforms: U,
   vertexShader: `
   attribute vec3 iPos; attribute float iBirth, iSeed, iRad;
-  uniform float uT, uFlip, uVague, uUnflip, uSolo; uniform vec3 uPulse[12];
+  uniform float uT, uFlip, uVague, uUnflip, uSolo, uTf; uniform vec3 uPulse[12];
   varying vec2 vUv; varying float vSeed, vHero, vShade, vGlow, vDepth, vF;
   float ease(float x){x=clamp(x,0.,1.);return 1.-pow(1.-x,3.);}
   float sm(float x){x=clamp(x,0.,1.);return x*x*(3.-2.*x);}
@@ -45,7 +45,7 @@ const mat = new THREE.ShaderMaterial({
     float e=ease(age);
     vec3 target=iPos*e; target.z+=sin(clamp(age,0.,1.)*3.14159)*1.6;
     // petit flottement propre à chaque carte
-    target.z+=.08*sin(uT*.9+iSeed*40.)*e; target.xy+=.05*vec2(sin(uT*.7+iSeed*17.),cos(uT*.6+iSeed*23.))*e;
+    target.z+=.08*sin(uTf*.9+iSeed*40.)*e; target.xy+=.05*vec2(sin(uTf*.7+iSeed*17.),cos(uTf*.6+iSeed*23.))*e;   // uTf : temps de boucle
     // anneau de partage qui traverse le champ
     float ring=0.; if(uT>uVague){float ph=(uT-uVague); float rr=mod(ph*7.5,26.); ring=exp(-pow((iRad-rr)*.38,2.))*step(ph,12.)*e;}
     // vagues sur les mots clés : un groupe de cartes se soulève et s'éclaire autour d'un point, puis se repose
@@ -140,14 +140,17 @@ function render(t) {
   // distance : suit la taille du champ, plafonnée pour garder des cartes lisibles
   let d = Math.min(31, Math.max(3.1, (S * Math.sqrt(nn - .99) * 1.12 + .72) / .205));
   d *= 1 - .1 * sm(t / P.tb);
+  // boucle : dans la dernière seconde, le tremblé rejoint celui du tout début (t − tboucle → 0) : la dernière image = la première
+  const jit = u => [.035 * Math.sin(u * 1.3) + .02 * Math.sin(u * 2.9), .03 * Math.sin(u * 1.1 + 1) + .015 * Math.sin(u * 3.3), .02 * Math.sin(u * .5), .012 * Math.sin(u * .4)];
+  const wB = P.tboucle ? sm((t - (P.tboucle - 1.2)) / 1.2) : 0, j1 = jit(t), j0 = jit(t - P.tboucle), J = j1.map((v, k) => v * (1 - wB) + j0[k] * wB);
+  const hx = J[0], hy = J[1];
   const plonge = sm((t - P.tplonge) / 5.4), B = beats(t), lib = 1 - plonge;
   d *= Math.exp(B.d * lib); d = Math.exp(Math.log(d) * (1 - plonge) + Math.log(P.dfin) * plonge);
-  const el = (.46 * sm((t - 6) / 24) + B.el) * lib + .02 * Math.sin(t * .5);
+  const el = (.46 * sm((t - 6) / 24) + B.el) * lib + J[2];
   const az = (.3 * sm((t - 8) / 22) * Math.sin(t * .11 + .6) + B.az) * lib;
-  U.uSolo.value = sm((t - P.tsolo) / 1.4); UP.uT.value = t; UP.uA.value = 1 - .7 * U.uSolo.value;
-  const hx = .035 * Math.sin(t * 1.3) + .02 * Math.sin(t * 2.9), hy = .03 * Math.sin(t * 1.1 + 1) + .015 * Math.sin(t * 3.3);
+  U.uTf.value = t * (1 - wB) + (t - P.tboucle) * wB; U.uSolo.value = sm((t - P.tsolo) / 1.4); UP.uT.value = t; UP.uA.value = 1 - .7 * U.uSolo.value;
   cam.position.set(Math.sin(az) * Math.cos(el) * d + hx * d * .1, Math.sin(el) * d + hy * d * .1, Math.cos(az) * Math.cos(el) * d);
-  cam.up.set(0, 1, 0); cam.lookAt(B.tx * lib, B.ty * lib, 0); cam.rotation.z += .012 * Math.sin(t * .4) + B.roll * lib;
+  cam.up.set(0, 1, 0); cam.lookAt(B.tx * lib, B.ty * lib, 0); cam.rotation.z += J[3] + B.roll * lib;
   R.render(scene, cam);
 }
 window.renderAt = t => { render(t); return true; }; window.pret = true;
