@@ -1,14 +1,14 @@
 {
  "duree_s": 48.8,
  "ouverture": {
-  "luma_image_1": 69.4,
+  "luma_image_1": 71.4,
   "fondu_depuis_noir": false,
   "mouvement_premiere_demi_seconde": true
  },
  "zones_mortes": [],
  "relances": [
   0.9,
-  2.5,
+  2.2,
   3.0,
   3.5,
   4.0,
@@ -21,7 +21,7 @@
   9.5,
   10.9,
   12.4,
-  13.2,
+  13.1,
   13.9,
   14.9,
   15.7,
@@ -43,7 +43,7 @@
   31.9,
   32.8,
   33.2,
-  33.9,
+  34.0,
   35.4,
   37.4,
   38.0,
@@ -82,12 +82,12 @@
   42.9
  ],
  "boucle": {
-  "ecart_image": 27.2,
+  "ecart_image": 28.3,
   "ecart_couleur": 0.16,
-  "mouvement_fin": 4.51,
-  "mouvement_debut": 1.06,
+  "mouvement_fin": 4.68,
+  "mouvement_debut": 1.09,
   "son": {
-   "debut_db": -15.8,
+   "debut_db": -15.9,
    "fin_db": -21.4,
    "fin_derniers_80ms_db": -21.5,
    "moyenne_db": -16.3

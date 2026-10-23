@@ -628,7 +628,9 @@ window.rendre = async (t) => {
     const hr = main * .22 * bruit(t * .4, 5);
     // coup de zoom sur les mots forts (reel.punch) : arrive en ~60 ms, se relâche en ~0,5 s
     let pz = 0; for (const tp of R.punch ?? []) { const u = t - tp; if (u >= 0 && u < 1.2) pz += .055 * (1 - Math.exp(-u / .03)) * Math.exp(-u / .32); }
-    cam.style.transform = `translate(${sx + hx}px, ${sy + hy - 18 * E.doux(p)}px) rotate(${hr}deg) scale(${1 + (sc.poussee ?? .045) * E.doux(p) + pz})`;
+    // jamais de bord découvert (P-033) : le zoom couvre toujours le décalage et la rotation de la caméra
+    const dx = sx + hx, dy = sy + hy - 18 * E.doux(p), couvre = 1 + 2 * Math.max(Math.abs(dx) / 1080, Math.abs(dy) / 1920) + Math.abs(hr) * .035 + .002;
+    cam.style.transform = `translate(${dx}px, ${dy}px) rotate(${hr}deg) scale(${(1 + (sc.poussee ?? .045) * E.doux(p) + pz) * couvre})`;
     T[sc.type].animer(el, sc, t, ctx);
   });
   // clips : attendre que l'image du moment soit décodée
