@@ -11,7 +11,7 @@ canvas{position:absolute;inset:0}
 // tfin (fin des naissances), tflip (début du retournement), tplonge (début de la plongée), env (enveloppe de voix, 30/s).
 import * as THREE from 'three';
 const P = Object.assign({ nmax: 2400, tb: 4.9, tfin: 34.0, tflip: 40.0, tplonge: 42.5, tvague: 22.5, env: [] }, window.CHAMP || {});
-const N = P.nmax, S = 0.85, K = Math.log(N) / (P.tfin - P.tb);
+const N = P.nmax, S = 1.0, K = Math.log(N) / (P.tfin - P.tb);
 const R = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, alpha: true, preserveDrawingBuffer: true });
 R.setPixelRatio(1); R.setSize(1080, 1920, false); R.setClearColor(0, 0);
 const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(40, 1080 / 1920, .1, 600);
@@ -97,7 +97,7 @@ const mat = new THREE.ShaderMaterial({
     // reflet qui glisse + éclat de l'anneau
     float sheen=smoothstep(.07,0.,abs(p.x*.8+p.y*.6-.55*sin(uT*.35+vS*6.)));
     col+=sheen*.06; col+=vGlow*vec3(.1,.08,.05);
-    col*=vShade*exp(-vDepth*.0065);
+    col*=vShade*(.82+.3*hash(vS*3.7+1.))*exp(-vDepth*.0065);
     col=mix(col,col*.55,smoothstep(-.012,0.,d)*.6);
     gl_FragColor=vec4(col,1.);
   }`
@@ -111,7 +111,7 @@ function render(t) {
   for (let k = 0; k < 12; k++) { const i = Math.max(0, Math.round((t - k * .07) * 30)); hist[k] = P.env[i] ?? 0; }
   U.uT.value = t;
   // distance : suit la taille du champ, plafonnée pour garder des cartes lisibles
-  let d = Math.min(44, Math.max(3.5, (S * Math.sqrt(nn - .99) * 1.12 + .72) / .205));
+  let d = Math.min(31, Math.max(3.1, (S * Math.sqrt(nn - .99) * 1.12 + .72) / .205));
   d *= 1 - .1 * sm(t / P.tb);
   const plonge = sm((t - P.tplonge) / 5.4); d = Math.exp(Math.log(d) * (1 - plonge) + Math.log(3.6) * plonge);
   const el = (.46 * sm((t - 6) / 24)) * (1 - plonge) + .02 * Math.sin(t * .5);
