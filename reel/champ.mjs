@@ -1,5 +1,5 @@
 // Rend le champ de cartes (reel/creations/champ.html) en vidéo 1080×1920 30 i/s, par morceaux reprenables.
-// Usage : node reel/champ.mjs <dossier sortie> <env.json> [--t0 0] [--t1 48.3] [--test 12.5,40.5,...]
+// Usage : node reel/champ.mjs <dossier sortie> <env.json> [--t0 0] [--t1 48.3] [--test 12.5,40.5,...] [--page champ_v2.html] [--params '{...}']
 import { chromium } from 'playwright-core';
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -14,7 +14,7 @@ const nav = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1
 const page = await nav.newPage({ viewport: { width: 1080, height: 1920 } });
 await page.addInitScript(p => { window.CHAMP = p; }, { ...params, env });
 page.on('pageerror', e => console.error('ERR', e.message));
-await page.goto('file://' + path.join(ici, 'creations/champ.html'));
+await page.goto('file://' + path.join(ici, 'creations', opt('--page', 'champ.html')));
 await page.waitForFunction(() => window.pret, null, { timeout: 60000 });
 fs.mkdirSync(dossier, { recursive: true });
 const test = opt('--test', null);

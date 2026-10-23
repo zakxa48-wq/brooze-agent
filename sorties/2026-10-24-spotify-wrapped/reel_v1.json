@@ -1,0 +1,239 @@
+{
+ "id": "2026-10-24-spotify-wrapped",
+ "fps": 30,
+ "source": [
+  0.0,
+  48.24
+ ],
+ "fin": 2.4,
+ "banque": {
+  "idee": "memo-2026-10-22-2-d22dd1-0000",
+  "audio": "audio/2026-10/memo-2026-10-22-2.m4a"
+ },
+ "avatar": "Claire",
+ "idee": "Spotify Wrapped : les gens partagent ce qui parle d'eux, donne-leur une raison personnelle de partager",
+ "hook": {
+  "choisi": "Spotify a réussi quelque chose d'assez extraordinaire en marketing.",
+  "ecartes": [
+   "Donne-leur une raison personnelle de le faire.",
+   "Et pourquoi les gens partagent-ils autant ?"
+  ]
+ },
+ "hypothese": "Un Reel qui multiplie vraiment une carte jusqu'à un champ de milliers puis les retourne sur des visages retient mieux (durée moyenne regardée) et se partage plus qu'un conseil en typo : il montre le mécanisme de partage au lieu de le décrire.",
+ "scenes": [
+  {
+   "de": "@0",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 0,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5,
+   "mots": [
+    6,
+    8
+   ],
+   "titre_y": 330,
+   "taille": 128
+  },
+  {
+   "de": "@38",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 12.785,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5,
+   "mots": [
+    38,
+    39
+   ],
+   "titre_y": 330,
+   "taille": 150
+  },
+  {
+   "de": "@89",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 29.225,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
+  },
+  {
+   "de": "@98",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 32.74,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5,
+   "mots": [
+    98,
+    99
+   ],
+   "titre_y": 330,
+   "taille": 170
+  },
+  {
+   "de": "@102",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 34.385,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
+  },
+  {
+   "de": "@118",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 39.7,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5,
+   "mots": [
+    118,
+    120
+   ],
+   "titre_y": 330,
+   "taille": 150
+  },
+  {
+   "de": "@128",
+   "type": "plan",
+   "video": "champ/champ.mp4",
+   "debut": 42.885,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
+  },
+  {
+   "de": "@147>",
+   "type": "fin",
+   "theme": "encre",
+   "t_logo": "@147>",
+   "transition": "coupe"
+  }
+ ],
+ "musique": {
+  "bpm": 88,
+  "tonalite": "la",
+  "sections": [
+   [
+    0.2,
+    "@38",
+    "intro"
+   ],
+   [
+    "@38",
+    "@98",
+    "tension"
+   ],
+   [
+    "@98",
+    "@118",
+    "suspens"
+   ],
+   [
+    "@118",
+    48.0,
+    "resolution"
+   ]
+  ],
+  "accord_final": "@147"
+ },
+ "silences": [
+  [
+   39.55,
+   40.12
+  ]
+ ],
+ "couverture": {
+  "theme": "encre",
+  "label": "Marketing",
+  "titre": "620 millions de *partages*."
+ },
+ "punch": [
+  "@6",
+  "@98",
+  "@120"
+ ]
+}

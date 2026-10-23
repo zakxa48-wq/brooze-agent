@@ -5,7 +5,7 @@
   0.0,
   48.24
  ],
- "fin": 2.4,
+ "fin": 0.6,
  "banque": {
   "idee": "memo-2026-10-22-2-d22dd1-0000",
   "audio": "audio/2026-10/memo-2026-10-22-2.m4a"
@@ -24,7 +24,7 @@
   {
    "de": "@0",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 0,
    "cadre": [
     [
@@ -44,13 +44,33 @@
     6,
     8
    ],
-   "titre_y": 330,
-   "taille": 128
+   "titre_y": 190,
+   "taille": 112
+  },
+  {
+   "de": "@9",
+   "type": "plan",
+   "video": "champ_v2/champ.mp4",
+   "debut": 3.99,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
   },
   {
    "de": "@38",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 12.785,
    "cadre": [
     [
@@ -74,9 +94,29 @@
    "taille": 150
   },
   {
+   "de": "@40",
+   "type": "plan",
+   "video": "champ_v2/champ.mp4",
+   "debut": 13.87,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
+  },
+  {
    "de": "@89",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 29.225,
    "cadre": [
     [
@@ -96,7 +136,7 @@
   {
    "de": "@98",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 32.74,
    "cadre": [
     [
@@ -120,9 +160,29 @@
    "taille": 170
   },
   {
+   "de": "@101",
+   "type": "plan",
+   "video": "champ_v2/champ.mp4",
+   "debut": 33.85,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
+  },
+  {
    "de": "@102",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 34.385,
    "cadre": [
     [
@@ -142,7 +202,7 @@
   {
    "de": "@118",
    "type": "plan",
-   "video": "champ/champ.mp4",
+   "video": "champ_v2/champ.mp4",
    "debut": 39.7,
    "cadre": [
     [
@@ -166,10 +226,10 @@
    "taille": 150
   },
   {
-   "de": "@128",
+   "de": "@123",
    "type": "plan",
-   "video": "champ/champ.mp4",
-   "debut": 42.885,
+   "video": "champ_v2/champ.mp4",
+   "debut": 41.025,
    "cadre": [
     [
      0.5,
@@ -186,11 +246,24 @@
    "main": 0.5
   },
   {
-   "de": "@147>",
-   "type": "fin",
-   "theme": "encre",
-   "t_logo": "@147>",
-   "transition": "coupe"
+   "de": "@128",
+   "type": "plan",
+   "video": "champ_v2/champ.mp4",
+   "debut": 42.885,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.5
   }
  ],
  "musique": {
@@ -214,11 +287,10 @@
    ],
    [
     "@118",
-    48.0,
+    49.5,
     "resolution"
    ]
-  ],
-  "accord_final": "@147"
+  ]
  },
  "silences": [
   [
@@ -232,8 +304,262 @@
   "titre": "620 millions de *partages*."
  },
  "punch": [
-  "@6",
   "@98",
   "@120"
+ ],
+ "version": 2,
+ "boucle": true,
+ "cta": {
+  "de": "@128",
+  "a": "@147>",
+  "texte": "Envoie-nous un message"
+ },
+ "clins_d_oeil": [
+  {
+   "t": 0.0,
+   "quoi": "la carte du début et celle de la fin sont la même : la seule barre cuivre, la carte « héros » ; on ne remarque qu'au 2e tour que la boucle se referme sur elle"
+  },
+  {
+   "t": 12.9,
+   "quoi": "les barres d'égaliseur de toutes les cartes dansent sur la vraie voix de Zak (enveloppe mesurée), pas sur une musique"
+  }
+ ],
+ "relances_note": "22 relances de caméra calées sur les attaques des mots forts (champ_v2_params.json : pousse, pan, tilt, vise, recule, roulis en alternance) + 6 vagues de cartes sur partagent / publier / envoyer / comparer / partages / partagent-ils + retournement + plongée et effacement final.",
+ "sons": [
+  {
+   "t": 2.37,
+   "son": "whoosh",
+   "g": 0.28,
+   "args": {
+    "d": 0.36,
+    "pan": [
+     -0.2,
+     0.2
+    ],
+    "peak": 0.55
+   }
+  },
+  {
+   "t": 5.93,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 7.492,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 7.74,
+   "son": "glisse_douce",
+   "g": 0.3,
+   "args": {
+    "d": 0.4
+   }
+  },
+  {
+   "t": 10.083,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 12.675,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 12.775,
+   "son": "whoosh",
+   "g": 0.28,
+   "args": {
+    "d": 0.36,
+    "pan": [
+     -0.2,
+     0.2
+    ],
+    "peak": 0.55
+   }
+  },
+  {
+   "t": 15.266,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 15.49,
+   "son": "whoosh",
+   "g": 0.26,
+   "args": {
+    "d": 0.42,
+    "pan": [
+     0.6,
+     -0.6
+    ]
+   }
+  },
+  {
+   "t": 17.858,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 19.075,
+   "son": "glisse_douce",
+   "g": 0.3,
+   "args": {
+    "d": 0.4
+   }
+  },
+  {
+   "t": 20.449,
+   "son": "tick",
+   "g": 0.18
+  },
+  {
+   "t": 21.82,
+   "son": "whoosh",
+   "g": 0.28,
+   "args": {
+    "d": 0.36,
+    "pan": [
+     -0.2,
+     0.2
+    ],
+    "peak": 0.55
+   }
+  },
+  {
+   "t": 24.31,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 25.405,
+   "son": "whoosh",
+   "g": 0.28,
+   "args": {
+    "d": 0.36,
+    "pan": [
+     -0.2,
+     0.2
+    ],
+    "peak": 0.55
+   }
+  },
+  {
+   "t": 26.41,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 27.83,
+   "son": "glisse_douce",
+   "g": 0.3,
+   "args": {
+    "d": 0.4
+   }
+  },
+  {
+   "t": 27.91,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 31.715,
+   "son": "whoosh",
+   "g": 0.28,
+   "args": {
+    "d": 0.36,
+    "pan": [
+     -0.2,
+     0.2
+    ],
+    "peak": 0.55
+   }
+  },
+  {
+   "t": 33.92,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 34.51,
+   "son": "whoosh",
+   "g": 0.26,
+   "args": {
+    "d": 0.42,
+    "pan": [
+     0.6,
+     -0.6
+    ]
+   }
+  },
+  {
+   "t": 35.355,
+   "son": "envol",
+   "g": 0.32,
+   "args": {
+    "n": 8,
+    "d": 0.8
+   }
+  },
+  {
+   "t": 37.85,
+   "son": "glisse_douce",
+   "g": 0.3,
+   "args": {
+    "d": 0.4
+   }
+  },
+  {
+   "t": 39.95,
+   "son": "envol",
+   "g": 0.42,
+   "args": {
+    "n": 26,
+    "d": 1.4
+   }
+  },
+  {
+   "t": 40.1,
+   "son": "shimmer",
+   "g": 0.25,
+   "args": {
+    "d": 0.8
+   }
+  },
+  {
+   "t": 44.6,
+   "son": "riser",
+   "g": 0.22,
+   "args": {
+    "d": 2.9
+   }
+  },
+  {
+   "t": 47.55,
+   "son": "papier",
+   "g": 0.4
+  }
  ]
 }
