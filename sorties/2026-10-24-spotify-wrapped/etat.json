@@ -1,7 +1,7 @@
 {
  "idee": "memo-2026-10-22-2-d22dd1-0000",
  "jour": "2026-10-25",
- "etape": "reprise-engagement",
+ "etape": "reprise-par-session-zak",
  "faites": [
   "indexe",
   "compris",
@@ -16,5 +16,6 @@
  "programme": {
   "date": "2026-10-25 18:00",
   "note": "déjà programmé dans Metricool (version 1, contrôlée) avec son teaser à 18 h 30"
- }
+ },
+ "verrou": "Reprise faite le 23/10 au soir par la session de Zak (demande directe). L'agent programmé NE touche PAS à ce Reel tant que ce verrou existe."
 }
