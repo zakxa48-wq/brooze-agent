@@ -30,12 +30,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -44,8 +44,8 @@
     6,
     8
    ],
-   "titre_y": 190,
-   "taille": 112
+   "titre_y": 262,
+   "taille": 104
   },
   {
    "de": "@9",
@@ -56,12 +56,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -76,12 +76,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -102,12 +102,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -122,12 +122,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -142,12 +142,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -168,12 +168,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -188,12 +188,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -208,12 +208,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -234,12 +234,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -254,12 +254,12 @@
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ],
     [
      0.5,
      0.5,
-     1.04
+     1.06
     ]
    ],
    "transition": "coupe",
@@ -305,7 +305,8 @@
  },
  "punch": [
   "@98",
-  "@120"
+  "@120",
+  "@136"
  ],
  "version": 2,
  "boucle": true,
@@ -561,5 +562,14 @@
    "son": "papier",
    "g": 0.4
   }
- ]
+ ],
+ "coupes_internes": [
+  5.93,
+  34.53
+ ],
+ "justifications": {
+  "gros_textes": "4 titres très courts (2–3 mots chacun, 1 à 1,6 s) sur les 4 temps de l'idée : le hook, le nom du dispositif, le chiffre dit par Zak, la bascule « il parle d'eux ».",
+  "duree": "48,8 s : propos complet de Zak ; aucune coupe interne ne garde le sens exact (chaque phrase porte un maillon : quoi, comment, combien, pourquoi, leçon).",
+  "coupes_internes": "5,93 s et 34,53 s : relances de caméra rapides voulues (poussée, visée), pas des sauts."
+ }
 }

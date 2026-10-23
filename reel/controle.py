@@ -65,7 +65,7 @@ def main(video, reel_json=None):
         (ok if part >= .6 else pb_montage).append(f'images réelles {part:.0%} du temps (objectif ≥ 60 %)')
         (ok if gros <= 3 else pb_montage).append(f'{gros} moments de gros texte (objectif ≤ 3)')
         (ok if len(types_tr) <= 2 else pb_montage).append(f"types de transition hors coupe : {', '.join(sorted(types_tr)) or 'aucun'} (objectif ≤ 2)")
-        coupes = [round(d, 2) for d in debuts]
+        coupes = [round(d, 2) for d in debuts] + [float(x) for x in reel.get('coupes_internes', [])]   # relances de caméra très rapides voulues
         for d in debuts: cles += [d - .05, d + .2, d + .6]
     cles.append(duree - .1)
     sortie_g = os.path.join(dossier, '_glitchs')
