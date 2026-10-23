@@ -31,6 +31,8 @@ ajoute caméra, sous-titres, transitions ; `son.py` le son. Teste toujours petit
 - Déterministe : même `t` → même image (graines fixes pour le hasard). Sinon les rendus par morceaux ne se raccordent pas.
 - Charte Brooze : palette, typographies et ton de `brooze-direction` ; une technique nouvelle ne change pas l'identité.
 - Rien d'inventé à l'écran : pas de faux chiffres dans un graphe Manim, pas de faux logos dans une interface Remotion.
+  Logo d'une vraie marque : seulement dans une vidéo d'analyse de cette marque, fichier officiel posé tel quel
+  (`charte.md` § Marques réelles) ; jamais recréé dans un outil.
 - Libre de droits : polices OFL (Google Fonts), aucune image ni son téléchargés sans licence notée.
 
 ## Banques d'images libres (réseau à ouvrir par Zak)

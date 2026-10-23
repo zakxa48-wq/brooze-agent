@@ -12,6 +12,13 @@ forme à partir de son propos. Si un Reel ressemble à un précédent, c'est rat
 4. **Impressionnant** : un moment qu'on a envie de montrer à quelqu'un.
 5. **Économe** : le moyen le moins cher qui atteint 1 à 4, jamais au prix de la qualité.
 
+## 0 bis. Analyser une vraie marque (décryptage)
+Une vidéo qui décrypte la stratégie d'une vraie marque peut montrer son nom et son logo officiel (`charte.md` §
+Marques réelles, décision de Zak du 23/10). Principe de montage : la marque est un **sujet d'étude**, pas une
+signature. Son logo apparaît comme une pièce à conviction (posé, cité, tel quel, sur le passage qui en parle), jamais
+comme l'habillage de la vidéo ; on montre la mécanique de sa stratégie avec le langage visuel Brooze, sans imiter sa
+direction artistique, ses pubs ni ses images. Rien qui fasse croire à une vidéo officielle ou sponsorisée.
+
 ## 1. Partir du propos, pas d'un format
 - Résume le propos en une phrase. Cherche **la règle de monde** qui le rend visible : quelle matière, quel lieu,
   quel geste, quelle loi physique le raconte mieux que des mots ? (« dire vs montrer » → un papier qu'on lit / une

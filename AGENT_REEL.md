@@ -210,6 +210,9 @@ effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
    - Plans venus d'un autre outil (Atelier, three.js, Remotion, Manim, p5, Blender animé, simulation, ffmpeg) : rends-les en
      vidéo 1080×1920 30 i/s et place-les en `plan` avec `video` (ou `clip`) ; le moteur ajoute caméra, sous-titres et
      transitions. Un nouveau type de scène réutilisable va dans `reel/moteur.html` ou `reel/creations/`.
+   - **Vidéo d'analyse d'une vraie marque** (`"analyse_marque": "Red Bull"` dans reel.json) : le logo officiel est
+     un `plan` ou un calque de l'Atelier `Image_` posé tel quel (échelle uniforme, ni recoloré, ni déformé, ni
+     filtré), seulement sur le passage qui parle de la marque ; jamais en fin de vidéo à côté du logo Brooze.
    - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
      fictives qui défile ; `arret` pour s'arrêter sur un post), `compteur` (anneau chrono), `duel` (A barré / B),
      `liste`, `son` (onde qui s'écrase à `t_coupe`), `montage` (rushs épars qui se rangent sur une timeline),
@@ -295,7 +298,10 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
 
 ## 8. Garde-fous
 - Jamais de chiffre, client, témoignage ou propos que Zak n'a pas tenus dans l'audio. Les exemples à l'écran sont
-  des marques fictives.
+  des marques fictives, **sauf dans une vidéo d'analyse ou de décryptage d'une vraie marque** (son `.txt` ou son
+  propos le dit) : nom et logo officiel de la marque analysée autorisés aux conditions de `charte.md` § Marques
+  réelles (fichier officiel jamais retouché, aucun air de partenariat ou de vidéo officielle, « analyse
+  indépendante » si utile, Brooze dominant, rien d'invérifiable). Logo officiel absent : le nom seul, en typo Brooze.
 - Jamais de musique protégée : tout le son vient de `son_brooze.py` (synthétisé).
 - Aucun message privé, commentaire, suppression ou dépense.
 - **Récap en fin d'exécution** (mail à zakxa48@gmail.com avec Gmail `send_message` + notification `PushNotification`,

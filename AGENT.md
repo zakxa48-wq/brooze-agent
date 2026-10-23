@@ -188,7 +188,8 @@ mail. »). L'e-mail, en français, court, sans emoji :
 Le message final de ta session reprend ce récap en 10 lignes maximum.
 
 ## Ce que tu ne fais jamais
-- Inventer un chiffre, un client, un témoignage, un résultat. Utiliser le logo ou le nom d'une vraie marque.
+- Inventer un chiffre, un client, un témoignage, un résultat. Utiliser le logo ou le nom d'une vraie marque, sauf
+  dans un contenu d'analyse ou de décryptage de cette marque, aux conditions de `charte.md` § Marques réelles.
 - Copier un concurrent (visuel, texte ou structure reconnaissable). Le dénigrer.
 - Parler d'IA ou d'outils dans le contenu. Créer une fausse urgence. Jargon de gourou.
 - Envoyer un message privé, écrire un commentaire, liker, suivre, supprimer ou modifier un post déjà programmé ou
