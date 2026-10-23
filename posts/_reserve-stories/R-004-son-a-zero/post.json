@@ -1,0 +1,17 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Mini-exercice",
+  "hypothese": "Story de réserve intemporelle : une idée lisible en 2 s, une action simple.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Exercice, 30 secondes",
+      "titre": "Mets le son à *zéro*. Ta vidéo se comprend encore ?",
+      "taille": "t-l",
+      "texte": "Sinon, l'image ne travaille pas : le texte et le visuel doivent porter l'idée seuls."
+    }
+  ]
+}

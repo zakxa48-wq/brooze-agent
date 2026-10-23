@@ -163,3 +163,6 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
   16 bruitages sous limiteur de densité (obturateur sur « Shoot » et « photo », grave sur les coups de zoom…).
   Légende, date et teaser de 14 h inchangés.
 - Leçon : small se trompe sur les pronoms et les questions → medium par défaut ; relire pronoms, « ? » et guillemets.
+
+## Filet 2026-10-23 (3 h 41) : réserve de stories reconstituée
+Réserve vide à l'ouverture → 7 stories R-001 à R-007 (intemporelles, sans chiffre, rendu vérifié à l'œil, charte respectée). Stories programmées sur J..J+9 : toutes présentes, aucune réserve consommée.

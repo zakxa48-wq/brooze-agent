@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Méthode",
+  "hypothese": "Story de réserve intemporelle : une idée lisible en 2 s, une action simple.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Avant de publier",
+      "titre": "Coupe le *début*.",
+      "taille": "t-xl",
+      "texte": "Le 1er plan est souvent un plan d'échauffement. Supprime-le et regarde si ta vidéo démarre mieux.",
+      "swipe": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Question directe",
+  "hypothese": "Story de réserve intemporelle : une idée lisible en 2 s, une action simple.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Question directe",
+      "titre": "Ta dernière vidéo : tu la regardes en *client* ou en patron ?",
+      "taille": "t-l",
+      "texte": "Réponds « CLIENT » ou « PATRON » en message. On te dit ce que ça change."
+    }
+  ]
+}

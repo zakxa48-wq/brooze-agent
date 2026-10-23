@@ -1,0 +1,25 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Appel à l'action",
+  "hypothese": "Story de réserve intemporelle : une idée lisible en 2 s, une action simple.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Pour les commerçants et les associations",
+      "titre": "Une vidéo qui n'a pas *marché* ?",
+      "taille": "t-l",
+      "texte": "On la regarde ensemble, avec les yeux de ton client."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-la nous.",
+      "taille": "t-l",
+      "texte": "On te dit ce qu'on changerait en premier.",
+      "bouton": "Réponds « VIDÉO » en message"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Principe d'attention",
+  "hypothese": "Story de réserve intemporelle : une idée lisible en 2 s, une action simple.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Notre règle",
+      "titre": "Une vidéo. Une *idée*.",
+      "taille": "t-xl",
+      "texte": "Si tu ne peux pas la dire en une phrase avant de filmer, le spectateur ne la retiendra pas après.",
+      "swipe": false
+    }
+  ]
+}

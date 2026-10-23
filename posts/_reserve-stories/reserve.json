@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "R-001-avant-apres-carte",
+    "angle": "Méthode : avant / après",
+    "pilier": "Méthode : avant / après",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-002-client-ou-patron",
+    "angle": "Question directe",
+    "pilier": "Question directe",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-003-coupe-le-debut",
+    "angle": "Méthode",
+    "pilier": "Méthode",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-004-son-a-zero",
+    "angle": "Mini-exercice",
+    "pilier": "Mini-exercice",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-005-une-idee",
+    "angle": "Principe d'attention",
+    "pilier": "Principe d'attention",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-006-mythe-quotidien",
+    "angle": "Mythe / réalité",
+    "pilier": "Mythe / réalité",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-007-envoie-une-video",
+    "angle": "Appel à l'action",
+    "pilier": "Appel à l'action",
+    "role": "attirer",
+    "cree_le": "2026-10-23",
+    "utilisee_le": null
+  }
+]
