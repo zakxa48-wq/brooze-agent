@@ -26,3 +26,4 @@
 
 ## Demandés par l'audience (ajoutés par la veille quotidienne, avec la source)
 (aucun pour l'instant)
+| 2026-10-25 | Reel | Spotify Wrapped : le contenu parle d'eux, donc il se partage (voix de Zak) | « Spotify a réussi quelque chose d'assez extraordinaire en marketing. » |

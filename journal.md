@@ -11,6 +11,7 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
 | Date | Id | Concept visuel | Effet signature | Structure | Techniques (nouvelle en gras) | Outils |
 |---|---|---|---|---|---|---|
 | 23/10 | 2026-10-23-apple-montre (v3 publiée) | « dire vs montrer » : une fiche technique imprimée sans fin (ce qu'on dit) contre des photos d'objets du quotidien sublimés (ce qu'on montre), autour d'un téléphone générique | **relief 2,5D** des rendus photoréalistes (parallaxe par pixel) | opposition qui bascule : la fiche domine, puis les photos prennent toute la place, titre-question, fin sur fond noir | photoréalisme fixe animé, **carte de profondeur + WebGL**, coups de zoom sur 4 mots, whip | Blender, moteur HTML |
+| 25/10 | 2026-10-24-spotify-wrapped | une carte « bilan » qui se duplique en champ de milliers, puis se retourne sur des visages | **retournement en vague de cartes (instanciation GPU)** | plan-séquence à caméra continue : accumulation exponentielle, rupture, plongée | **three.js InstancedMesh + shader, barres pilotées par la voix**, titres sur vidéo continue | three.js, moteur HTML |
 
 ---
 
@@ -166,3 +167,9 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
 
 ## Filet 2026-10-23 (3 h 41) : réserve de stories reconstituée
 Réserve vide à l'ouverture → 7 stories R-001 à R-007 (intemporelles, sans chiffre, rendu vérifié à l'œil, charte respectée). Stories programmées sur J..J+9 : toutes présentes, aucune réserve consommée.
+
+## Reel · 2026-10-25 · 18:00 · Claire · « Spotify a réussi… » (banque, mémo du 22/10)
+- Hook retenu (mots exacts de Zak) ; chiffre à l'écran : « 620 millions », dit par Zak. Aucune marque/logo à l'écran.
+- Sceptique passe 1 : mur de cartes en moiré (P1) → champ.html corrigé (distance max 31, espacement 1,0, teinte par carte), re-rendu. Passe 2 : plus de moiré, cartes lisibles. Restes : début un peu sobre (0–12 s), 1 coupe de titre non déclarée à 29,5 s (changement de titre sur vidéo continue), bord noir 0,16 s à 11,6 s.
+- `cerveau.py comparer` : « EN DESSOUS » sur rythme et finition, mais contre une SEULE référence (Reel Apple v3, 2,6 s/plan) alors que ce Reel est un plan-séquence voulu : mesure peu comparable (supposé, non prouvé). Publié quand même ; à surveiller en durée moyenne regardée.
+- Metricool : [Reel 25/10 18 h](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=108377246694589694) · [teaser 18 h 30](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-4281141811443580516)
