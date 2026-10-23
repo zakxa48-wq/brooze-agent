@@ -35,6 +35,10 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 .encre .sous { color:#BDB8B0; }
 
 /* Sous-titres : zone basse sûre (y 1350–1700), une ligne, mot actif plein */
+/* appel à l'action en surimpression (la vidéo boucle : pas de carton de fin) */
+#cta { position:absolute; z-index:11; left:0; right:0; top:1230px; display:none; flex-direction:column; align-items:center; gap:14px; pointer-events:none; }
+#cta .pilule { padding:26px 44px; border-radius:999px; background:var(--papier); color:var(--encre); font-weight:800; font-size:48px; letter-spacing:-.02em; box-shadow:0 14px 50px rgba(16,14,13,.25); }
+#cta .pseudo { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; letter-spacing:.12em; color:var(--papier); text-shadow:0 2px 12px rgba(0,0,0,.5); }
 #st { position:absolute; z-index:10; left:80px; right:80px; top:1430px; height:180px; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 #st .ligne { font-weight:800; font-size:62px; letter-spacing:-.025em; white-space:nowrap; padding:14px 30px; border-radius:22px; }
 #st.clair .ligne { color:var(--encre); background:rgba(247,246,242,.82); box-shadow:0 10px 40px rgba(16,14,13,.12); }
@@ -112,6 +116,7 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 <body>
 <div id="cadre"></div>
 <div id="st"><div class="ligne"></div></div>
+<div id="cta"><div class="pilule"></div><div class="pseudo">@broozeproduction</div></div>
 <canvas id="grain" width="1208" height="2048"></canvas>
 <div id="vignette"></div>
 <svg id="filtres" width="0" height="0" style="position:absolute"></svg>
@@ -629,8 +634,20 @@ window.rendre = async (t) => {
   // clips : attendre que l'image du moment soit décodée
   for (const sc of R.scenes) if (sc.el.style.display === 'block' && T[sc.type].charger) await T[sc.type].charger(sc.el, sc, t);
   sousTitres(t, R.scenes[k]);
+  appelAction(t);
   const f = Math.floor(t * R.fps); grain.style.transform = `translate(${-(f * 37 % 64)}px, ${-(f * 53 % 64)}px)`;
 };
+
+// CTA en surimpression : arrive doucement, reste lisible, repart avant la fin pour que la boucle reste propre
+function appelAction(t) {
+  const el = document.getElementById('cta'), c = R.cta;
+  if (!c) { el.style.display = 'none'; return; }
+  const a = c.de, b = c.a ?? Math.min(R.duree - .4, a + 2.4);
+  if (t < a || t > b) { el.style.display = 'none'; return; }
+  const u = Math.min(E.expo(prog(t, a, .45)), 1 - E.doux(prog(t, b - .35, .35)));
+  el.style.display = 'flex'; el.style.opacity = u; el.style.transform = `translateY(${(1 - u) * 30}px)`;
+  el.querySelector('.pilule').textContent = (c.texte ?? 'Envoie-nous un message') + ' →';
+}
 
 function sousTitres(t, sc) {
   const st = document.getElementById('st'), l = st.firstChild;

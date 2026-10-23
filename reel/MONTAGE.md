@@ -67,6 +67,34 @@ direction artistique, ses pubs ni ses images. Rien qui fasse croire à une vidé
   voulu vaut un bruitage. Musique synthétisée, sérieuse, coupée sur 1 ou 2 moments forts.
 - Ce que le son doit éviter : un whoosh à chaque coupe, un impact à chaque phrase, une musique qui couvre la voix.
 
+## 5 bis. Engager et boucler (objectif de Zak du 23/10 : qu'on la regarde en boucle sans jamais s'ennuyer)
+Sans changer le style ni la charte Brooze. Mesuré par `reel/engagement.py` (appelé par controle.py) : graphique
+`engagement.png` (énergie de mouvement image par image) et `jonction.jpg` (fin → début) à regarder à chaque contrôle.
+1. **Première demi-seconde** : un mouvement ou un changement visuel dès l'image 1. Jamais d'ouverture statique, jamais
+   de fondu depuis le noir. *(bloquant)*
+2. **Relances** : un changement visuel significatif toutes les 1,5 à 3 s (cadrage, échelle, couleur, mouvement, couche
+   nouvelle), en variant le TYPE de relance ; **aucune zone morte de plus de 2 s** *(bloquant)* ; plus de 3 s sans
+   relance = à justifier.
+3. **Rythme vivant** : alterner plans courts et respirations voulues, accélérer vers le moment clé ; jamais la même
+   cadence plus de 5 s (3 plans de même durée de suite = à justifier).
+4. **Profondeur** : 2 à 3 couches à l'écran (un fond qui vit, le sujet, un détail), micro-animations discrètes, sans
+   surcharge ni perte de lisibilité (l'Atelier et le relief 2,5D sont faits pour ça).
+5. **Récompenser le revisionnage** : 1 ou 2 détails qu'on ne remarque qu'au 2e visionnage, liés au propos, jamais
+   gratuits ; déclarés dans `reel.json` : `"clins_d_oeil": [{"t": 12.4, "quoi": "…"}]`.
+6. **Boucle parfaite** : la dernière image et le dernier son s'enchaînent avec la première image (raccord de cadrage,
+   de couleur et de mouvement ; `"boucle": true` → la musique déborde et se prolonge dans le début, sans fondu final),
+   et la fin relance la question du début. **Pas de carton de fin** (scène `fin`) *(bloquant)* : le CTA arrive avant
+   la fin, en surimpression (`"cta": {"de": "@40", "a": "@44>", "texte": "Envoie-nous un message"}`), et repart avant
+   la dernière image.
+7. **Durée** : la plus courte possible pour l'idée (souvent 15 à 30 s) : choisir la fenêtre de voix la plus dense et
+   couper ce qui ne sert pas (sans jamais réordonner ni changer les mots de Zak). Au-delà de 30 s = à justifier.
+8. **Lecture** : chaque gros texte reste au moins 0,25 s par mot + 0,4 s, jamais au-delà de 2,5 × ce temps + 1 s.
+9. **Passe « ennui » du sceptique** : la vidéo regardée 3 fois d'affilée (planche de la boucle + `engagement.png` +
+   `jonction.jpg`), chaque moment où l'attention baisse noté avec son temps, puis corrigé.
+10. **Mesure** : la durée moyenne regardée rapportée à la durée (IGRE24 / durée : au-dessus de 1 = revisionnages), la
+   rétention (IGRE27) et les vues > 3 s (IGRE28) sont suivies par Reel ; ce qui augmente vraiment le revisionnage
+   sur le compte de Zak va dans `principes.md` (CERVEAU.md § 6), distingué des intuitions.
+
 ## 6. Contrôle (en plus de `controle.py` et du sceptique)
 - `controle.py` signale les déséquilibres (part d'images réelles, gros textes, variété de transitions) : ce sont
   des alertes à justifier dans le journal, pas des règles de forme.

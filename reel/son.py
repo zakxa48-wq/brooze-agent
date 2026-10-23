@@ -127,13 +127,25 @@ def main(fichier):
     musique = json.loads(json.dumps(musique))
     musique['sections'] = [[temps(a), temps(b), typ] for a, b, typ in musique['sections']]
     if 'accord_final' in musique: musique['accord_final'] = temps(musique['accord_final'])
-    partition = dict(duree=duree, voix='voix_reel.wav', evenements=sorted(ev, key=lambda e: e['t']), musique=musique,
-                     silences=[[temps(a), temps(b)] for a, b in reel.get('silences', [])], fin=round(duree - .1, 3), ecartes=ecartes)
+    # boucle parfaite : la musique et l'ambiance continuent 0,6 s après la fin ; ce débordement est mixé au début
+    # (pas de fondu final) → la dernière seconde s'enchaîne sans couture avec la première
+    boucle = bool(reel.get('boucle')); duree_mix = round(duree + .6, 3) if boucle else duree
+    partition = dict(duree=duree_mix, voix='voix_reel.wav', evenements=sorted(ev, key=lambda e: e['t']), musique=musique,
+                     silences=[[temps(a), temps(b)] for a, b in reel.get('silences', [])], fin=round(duree_mix - .1 if not boucle else duree_mix, 3), ecartes=ecartes)
     json.dump(partition, open(os.path.join(dossier, 'partition.json'), 'w'), ensure_ascii=False, indent=1)
     r = subprocess.run([sys.executable, os.path.join(ICI, '.outils', 'son_brooze.py'), 'partition.json', 'mix.flac'],
                        cwd=dossier, capture_output=True, text=True)
     print(r.stdout[-1500:], r.stderr[-1500:])
     if r.returncode: sys.exit(r.returncode)
+    if boucle:
+        y, sr = sf.read(os.path.join(dossier, 'mix.flac')); N = int(round(duree * sr)); m = len(y) - N
+        if m > 0:
+            f = np.linspace(1, 0, m) ** 1.5
+            y[:m] += (y[N:N + m].T * f).T if y.ndim > 1 else y[N:N + m] * f
+            y = y[:N]; pic = np.abs(y).max()
+            if pic > .89: y *= .89 / pic                         # crête ≤ −1 dB après le report
+            sf.write(os.path.join(dossier, 'mix.flac'), y, sr)
+            print(f'boucle : {m / sr:.2f} s de débordement reportés au début')
 
 
 def limiter(ev, ecart=.6, fenetre=3., maxi=2):

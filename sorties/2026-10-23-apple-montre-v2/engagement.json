@@ -1,0 +1,118 @@
+{
+ "duree_s": 41.2,
+ "ouverture": {
+  "luma_image_1": 90.1,
+  "fondu_depuis_noir": false,
+  "mouvement_premiere_demi_seconde": true
+ },
+ "zones_mortes": [],
+ "relances": [
+  1.1,
+  1.9,
+  3.4,
+  4.5,
+  6.0,
+  6.5,
+  6.9,
+  8.1,
+  8.5,
+  10.2,
+  11.6,
+  13.1,
+  13.5,
+  14.2,
+  14.9,
+  15.3,
+  17.2,
+  18.5,
+  20.7,
+  22.3,
+  24.6,
+  26.0,
+  26.9,
+  27.4,
+  27.8,
+  30.2,
+  31.5,
+  32.1,
+  33.5,
+  34.3,
+  35.9,
+  36.9,
+  39.1
+ ],
+ "ecart_max_relances_s": 2.4,
+ "coupes_s": [
+  1.5,
+  4.5,
+  6.5,
+  8.1,
+  11.6,
+  11.7,
+  11.8,
+  13.5,
+  14.2,
+  14.9,
+  18.5,
+  20.7,
+  22.3,
+  26.0,
+  27.4,
+  30.2,
+  32.1,
+  34.3,
+  34.4,
+  36.9,
+  39.1
+ ],
+ "boucle": {
+  "ecart_image": 64.6,
+  "ecart_couleur": 0.52,
+  "mouvement_fin": 0.17,
+  "mouvement_debut": 1.36,
+  "son": {
+   "debut_db": -15.2,
+   "fin_db": -30.4,
+   "fin_derniers_80ms_db": -72.0,
+   "moyenne_db": -16.0
+  }
+ },
+ "lecture": [
+  {
+   "t": 0,
+   "mots": 3,
+   "affiche_s": 1.49,
+   "besoin_s": 1.15
+  },
+  {
+   "t": 26.0,
+   "mots": 4,
+   "affiche_s": 1.4,
+   "besoin_s": 1.4
+  },
+  {
+   "t": 34.2,
+   "mots": 9,
+   "affiche_s": 2.64,
+   "besoin_s": 2.65
+  },
+  {
+   "t": 36.9,
+   "mots": 4,
+   "affiche_s": 4.31,
+   "besoin_s": 1.4
+  }
+ ],
+ "bloquants": [
+  "boucle : carton de fin (scène « fin ») : il casse la boucle → CTA avant la fin ou en surimpression, dernière image raccord avec la première"
+ ],
+ "a_justifier": [
+  "cadence monotone 34.4–41.2 s (3 plans de ~2.3 s) : alterner courts et respirations",
+  "boucle : couleurs de la dernière et de la première image trop différentes (0.52)",
+  "boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
+  "boucle : le son s'éteint à la fin (fondu) → le prolonger dans le début (reel.json \"boucle\": true)",
+  "durée 41.2 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+  "lecture : texte de 9 mots à 34.2 s affiché 2.6 s (il faut 2.6 s)",
+  "revisionnage : aucun clin d'œil déclaré (reel.json \"clins_d_oeil\": [{\"t\": …, \"quoi\": …}]), en glisser 1 ou 2 liés au propos"
+ ]
+}

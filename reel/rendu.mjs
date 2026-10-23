@@ -86,7 +86,9 @@ if (opt('--couverture')) {
   await navigateur.close(); process.exit(0);
 }
 
-await page.evaluate(d => window.init(d), { fps, duree, mots, scenes, punch, sansSousTitres: reel.sous_titres === false });
+// CTA en surimpression ("cta": {de, a, texte}) : remplace le carton de fin, la vidéo boucle
+const cta = reel.cta ? resoudre(reel.cta) : null;
+await page.evaluate(d => window.init(d), { fps, duree, mots, scenes, punch, cta, sansSousTitres: reel.sous_titres === false });
 
 const audits = new Map();
 const noter = (t, pb) => pb.forEach(p => { if (!audits.has(p)) audits.set(p, t.toFixed(2)); });

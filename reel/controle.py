@@ -90,6 +90,14 @@ def main(video, reel_json=None):
             res_c = [f'contrôle {os.path.basename(f)} en erreur : {e}']
         critere(not res_c, f"appris · {os.path.basename(f)[:-3]}" + (f" : {'; '.join(res_c)}" if res_c else ''))
 
+    # Engagement et boucle (MONTAGE.md § 8) : zones mortes, ouverture, carton de fin = BLOQUANT ; relances, cadence,
+    # raccord de boucle, durée, lecture, clins d'œil = à justifier. Graphique engagement.png et jonction.jpg à regarder.
+    sys.path.insert(0, ICI); import engagement
+    eng = engagement.analyser(video, reel_d or None, mots_d or None, dossier)
+    for x in eng['bloquants']: critere(False, 'engagement · ' + x)
+    if not eng['bloquants']: ok.append(f"engagement : aucune zone morte, ouverture vivante, relance max {eng['ecart_max_relances_s']} s")
+    pb_montage += ['engagement · ' + x for x in eng['a_justifier']]
+
     # Planche des images clés
     imgs = os.path.join(dossier, '_cles'); os.makedirs(imgs, exist_ok=True)
     for f in os.listdir(imgs): os.remove(os.path.join(imgs, f))
@@ -101,7 +109,7 @@ def main(video, reel_json=None):
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', os.path.join(imgs, '%03d.jpg'), '-vf',
                     f'tile={cols}x{(len(cles) + cols - 1) // cols}:padding=6:color=0x222222', '-frames:v', '1',
                     os.path.join(dossier, 'planche_cles.jpg')], check=True)
-    res = dict(video=video, ok=ok, problemes=pb, montage=montage, a_justifier=pb_montage, glitchs=rapport_g or g.stdout[-800:], images_cles=cles,
+    res = dict(video=video, ok=ok, problemes=pb, montage=montage, engagement=eng, a_justifier=pb_montage, glitchs=rapport_g or g.stdout[-800:], images_cles=cles,
                planche=os.path.join(dossier, 'planche_cles.jpg'), bandes=sortie_g)
     json.dump(res, open(os.path.join(dossier, 'controle.json'), 'w'), ensure_ascii=False, indent=1, default=str)
     print(json.dumps(dict(ok=ok, problemes=pb, a_justifier=pb_montage, planche=res['planche'], glitchs_sortie=g.stdout[-1200:]), ensure_ascii=False, indent=1))

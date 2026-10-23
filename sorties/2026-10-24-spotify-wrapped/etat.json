@@ -1,1 +1,20 @@
-{"idee": "memo-2026-10-22-2-d22dd1-0000", "jour": "2026-10-25", "etape": "publie", "faites": ["indexe", "compris", "dirige", "images (champ.mp4)", "son", "rendu final reel.mp4 (50.6 s, 77.8 Mo) copie dans brooze-voix/rendus/2026-10-24-spotify-wrapped/", "controle.py: format/son OK, 2 'coupes non declarees' = changements de titre sur video continue (inoffensifs, a justifier), 4 gros textes (a justifier)", "passe sceptique 1 : mur de cartes 28-40 s en moire (P1) -> champ.html corrige (distance max 31, espacement 1.0, teinte par carte), champ re-rendu OK, mix.flac refait, rendu final relance"], "notes": "programmé 25/10 18h + teaser 18h30"}
+{
+ "idee": "memo-2026-10-22-2-d22dd1-0000",
+ "jour": "2026-10-25",
+ "etape": "reprise-engagement",
+ "faites": [
+  "indexe",
+  "compris",
+  "dirige",
+  "images (champ.mp4)",
+  "son",
+  "rendu final reel.mp4 (50.6 s, 77.8 Mo) copie dans brooze-voix/rendus/2026-10-24-spotify-wrapped/",
+  "controle.py: format/son OK, 2 'coupes non declarees' = changements de titre sur video continue (inoffensifs, a justifier), 4 gros textes (a justifier)",
+  "passe sceptique 1 : mur de cartes 28-40 s en moire (P1) -> champ.html corrige (distance max 31, espacement 1.0, teinte par carte), champ re-rendu OK, mix.flac refait, rendu final relance"
+ ],
+ "notes": "REPRISE ENGAGEMENT (objectif de Zak du 23/10, MONTAGE.md § 5 bis). engagement.py sur la version programmée : BLOQUANT carton de fin (scène fin à @147>) ; à justifier : 4,4 s sans relance (40,6–45 s), fin immobile, son éteint (−180 dB), couleurs fin/début éloignées (0,69), 50,6 s, aucun clin d'œil. ORDRE : (1) supprimer la scène fin : la vidéo se termine sur la plongée vers UNE seule carte dans le noir, cadrée et éclairée comme l'image 1 (raccord de cadrage, de couleur et de mouvement : la caméra est encore en mouvement à la dernière image) ; (2) \"cta\": {\"de\": \"@128\", \"a\": \"@147>\", \"texte\": \"Envoie-nous un message\"} en surimpression ; (3) \"boucle\": true et la dernière section de musique jusqu'à la fin ; (4) une relance entre 40,6 et 45 s (couche nouvelle ou changement d'échelle, pas un punch de plus) ; (5) 1 ou 2 clins d'œil déclarés (ex. : une seule carte cuivre dans le champ, la même qu'à l'image 1, que l'on retrouve à la fin) ; (6) durée : viser ≤ 35 s si une coupe sur une pause garde le sens exact (jamais réordonner ni changer les mots), sinon justifier au journal. Puis rendu par morceaux, controle.py (engagement sans bloquant), sceptique avec passe « ennui », cerveau.py comparer. SI VALIDÉ avant le passage du 25/10 à 15 h 41 : pousser la nouvelle vidéo et la couverture sous de nouveaux noms dans posts/2026-10-24-spotify-wrapped/, vérifier les URL raw (200), updateScheduledPost du Reel (même date, même légende, nouveau media et videoThumbnailUrl), vérifier avec getScheduledPosts, journal. SINON : la version 1 déjà programmée part telle quelle (elle a passé le contrôle d'avant le 23/10), remettre etape = publie et noter au journal ce qui n'a pas pu être repris.",
+ "programme": {
+  "date": "2026-10-25 18:00",
+  "note": "déjà programmé dans Metricool (version 1, contrôlée) avec son teaser à 18 h 30"
+ }
+}

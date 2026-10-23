@@ -216,7 +216,9 @@ effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
    - Scènes graphiques (ponctuation) : `texte` (typo cinétique au mot), `slam` (mot frappé + secousse), `telephone` (fil Instagram de marques
      fictives qui défile ; `arret` pour s'arrêter sur un post), `compteur` (anneau chrono), `duel` (A barré / B),
      `liste`, `son` (onde qui s'écrase à `t_coupe`), `montage` (rushs épars qui se rangent sur une timeline),
-     `clip` (séquence précalculée, ex. 3D), `fin` (wordmark + « Envoie-nous un message » + @broozeproduction).
+     `clip` (séquence précalculée, ex. 3D). **Plus de scène `fin` en dernière scène** (carton qui casse la boucle) :
+     `"cta": {de, a, texte}` en surimpression avant la fin, `"boucle": true`, `"clins_d_oeil": [...]`, et la dernière
+     image raccorde avec la première (MONTAGE.md § 5 bis).
    - Champs utiles : `mots` [a, b], `cuivre` [indices] (un seul élément cuivre par image), `label`, `theme`
      (`papier` / `encre` / `studio`), `transition` (`coupe` par défaut entre images réelles, `whip` panoramique filé,
      `fondu`, `glisse` poussée plein cadre, `volet`, `zoom` ; 2 types maximum hors coupe), `taille`.
@@ -249,11 +251,16 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
 ## 5. Contrôle qualité obligatoire (3 boucles maximum)
 1. `python3 reel/controle.py sorties/<id>/reel.mp4 sorties/<id>/reel.json` : format, i/s, codecs, durée < 90 s,
    poids < 95 Mo, −14 LUFS ±1, crête ≤ −1 dBTP, glitchs (flash, saut, noir). Code de sortie 1 = bloquant.
+   Il mesure aussi l'**engagement** (`reel/engagement.py`, MONTAGE.md § 5 bis) : ouverture vivante, zones mortes > 2 s,
+   carton de fin = bloquants ; relances, cadence, boucle, durée, lecture, clins d'œil = à justifier.
    Il affiche aussi `a_justifier` (images réelles < 60 %, plus de 3 gros textes, plus de 2 types de transition) :
    corrige, ou justifie dans le journal pourquoi ce Reel fait exception.
 2. **brooze-sceptique** : `python3 <skill brooze-sceptique>/scripts/inspecter.py reel.mp4 --mots mots.json` dans
    `sorties/<id>/`, puis regarde CHAQUE image produite (planche, bandes, interface simulée, début muet) et passe les
-   4 regards. Écris le rapport et l'ordre de correction dans `sorties/<id>/sceptique_passeN.md`.
+   4 regards, puis la **passe « ennui »** : regarde la vidéo comme 3 visionnages d'affilée (planche des images clés
+   lue trois fois avec `jonction.jpg` entre chaque, `engagement.png`), note CHAQUE moment où l'attention baisse
+   (temps exact, pourquoi : rien ne change, texte qui traîne, même cadence, raccord de boucle visible) et l'ordre de
+   correction. Écris le rapport dans `sorties/<id>/sceptique_passeN.md` (section « Ennui »).
 3. **Comparaison aux références** : `python3 reel/cerveau.py comparer /home/user/brooze-voix sorties/<id>/reel.mp4`
    (rythme, lisibilité, finition contre les meilleures fiches). « EN DESSOUS » = une boucle de correction de plus.
 4. Applique l'ordre (dans `reel.json` ou le moteur), refais le rendu, recontrôle. Publiable quand une passe ne trouve

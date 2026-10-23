@@ -104,6 +104,10 @@ Les vidéos d'exercice ne sont pas versionnées.
    conversations de `marketing.md`) à ses choix (registre de `journal.md` : hook, concept, structure, technique,
    durée des plans de sa fiche). Écris le constat dans `principes.md` comme `mesuré` seulement à partir de **5 Reels
    comparables** ; avant, une ligne « piste » avec les chiffres.
+   **Revisionnage** (objectif de Zak du 23/10) : pour chaque Reel, `revisionnage = IGRE24 / durée` (au-dessus de 1 :
+   des gens le regardent plus d'une fois), rétention IGRE27, vues > 3 s IGRE28, croisés avec ses mesures
+   d'engagement (`engagement.json` : écart max entre relances, raccord de boucle, durée, clins d'œil) ; ce qui fait
+   vraiment monter le revisionnage sur le compte → `principes.md` (`mesuré` à partir de 5 Reels comparables).
 2. **Consolidation de principes.md** : fusionner les doublons ; renforcer (et dater « Vérifié le ») les règles
    confirmées par la pratique ou les chiffres ; baisser d'un cran la confiance de celles jamais vérifiées depuis 4
    semaines ; retirer celles que les faits contredisent (section « Retirées », avec la preuve).
