@@ -1,3 +1,12 @@
-{"idee": "memo-2026-10-23-redbull-5a40aa-0000", "jour": "2026-10-27", "etape": "images",
- "faites": ["indexe", "compris (Red Bull, taurine, Ils dépensent, ne vends/vends, Brooze Production corrigés ; fenêtre 0-45,62 s)", "dirige (intention.md, reel.json)", "scene Atelier atelier/scene.py (planches vérifiées)"],
- "notes": "plan.mp4 (Atelier, ~47 s) en rendu ; ensuite : rendu.mjs --controle, son.py, rendu final, controle.py, sceptique, comparer, couverture, post + teaser, programmation 27/10 18 h (Reel) / story teaser 18 h 30, registre + journal."}
+{
+ "idee": "memo-2026-10-23-redbull-5a40aa-0000",
+ "jour": "2026-10-27",
+ "etape": "images",
+ "faites": [
+  "indexe",
+  "compris (Red Bull, taurine, Ils dépensent, ne vends/vends, Brooze Production corrigés ; fenêtre 0-45,62 s)",
+  "dirige (intention.md, reel.json)",
+  "images : plan.mp4 rendu par l'Atelier (1407 images, 15 min ; NON versionné : trop lourd pour le dépôt public, à re-rendre)"
+ ],
+ "notes": "Reprise : (0) re-rendre plan.mp4 : python3 reel/atelier sorties/2026-10-27-redbull-media/atelier/scene.py --sortie sorties/2026-10-27-redbull-media/plan.mp4 (15 min, en tâche de fond) ; (1) banque.py preparer pour recréer voix.wav (garde reel.json) ; (2) node reel/rendu.mjs reel.json --controle 0.3,2,7.6,12,19,21,30,33,38,42,44 et REGARDER la planche (titres [6,7] [45,47] [105,107] à y=300, sous-titres, cuivre unique) ; (3) python3 reel/son.py ; (4) rendu final --morceaux --budget ; (5) controle.py, sceptique (passe ennui), cerveau.py comparer ; (6) couverture, posts/2026-10-27-reel-redbull + teaser, programmer 27/10 18 h, teaser 18 h 30, légende avec « analyse indépendante, aucun lien avec la marque » ; (7) registre + journal + débrief. Réservé le 27/10 : si pas contrôlé le 26/10 15 h, décaler au jour libre suivant. Points à surveiller : fenêtre MÉDIAS lisible, zooms d'écran 18,6–21,5 s un peu vides."
+}
