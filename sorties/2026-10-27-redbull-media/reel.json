@@ -1,0 +1,268 @@
+{
+ "id": "2026-10-27-redbull-media",
+ "fps": 30,
+ "source": [
+  0.0,
+  45.62
+ ],
+ "fin": 1.2,
+ "banque": {
+  "idee": "memo-2026-10-23-redbull-5a40aa-0000",
+  "audio": "audio/2026-10/memo-2026-10-23-redbull.m4a"
+ },
+ "avatar": "Karim",
+ "idee": "Red Bull est une entreprise de médias : analyse indépendante, on ne vend pas un produit mais une émotion, qui passe par l'image",
+ "hook": {
+  "choisi": "Red Bull ne vend pas de boissons énergisantes et tu t'es fait avoir depuis le début.",
+  "ecartes": [
+   "La canette que tu achètes au supermarché, c'est juste le produit dérivé de leurs vidéos. (en milieu d'audio : on ne réordonne pas)",
+   "La leçon : ne vends pas un produit, vends une émotion. (idem)"
+  ]
+ },
+ "hypothese": "Un Reel où la canette rapetisse vraiment devant le mur de contenus (puis sort du cadre) montre le décryptage au lieu de le dire : on attend de voir où elle atterrit (durée moyenne regardée, partages).",
+ "scenes": [
+  {
+   "de": "@0",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 0,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@6",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 1.145,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4,
+   "mots": [
+    6,
+    7
+   ],
+   "titre_y": 300,
+   "taille": 130
+  },
+  {
+   "de": "@8",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 2.395,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@45",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 14.22,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4,
+   "mots": [
+    45,
+    47
+   ],
+   "titre_y": 300,
+   "taille": 130
+  },
+  {
+   "de": "@48",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 15.35,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@105",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 36.23,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4,
+   "mots": [
+    105,
+    107
+   ],
+   "titre_y": 300,
+   "taille": 130
+  },
+  {
+   "de": "@108",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 37.715,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  }
+ ],
+ "musique": {
+  "bpm": 96,
+  "tonalite": "la",
+  "sections": [
+   [
+    0.2,
+    "@16",
+    "intro"
+   ],
+   [
+    "@16",
+    "@83",
+    "tension"
+   ],
+   [
+    "@83",
+    "@107",
+    "suspens"
+   ],
+   [
+    "@107",
+    46.8,
+    "resolution"
+   ]
+  ]
+ },
+ "silences": [
+  [
+   10.4,
+   10.96
+  ]
+ ],
+ "couverture": {
+  "theme": "encre",
+  "label": "Analyse indépendante",
+  "titre": "Red Bull est un *média*."
+ },
+ "analyse_marque": "Red Bull",
+ "punch": [
+  "@7",
+  "@24",
+  "@84",
+  "@107"
+ ],
+ "boucle": true,
+ "cta": {
+  "de": "@122",
+  "a": "@128>",
+  "texte": "Envoie-nous un message"
+ },
+ "clins_d_oeil": [
+  {
+   "t": 0.0,
+   "quoi": "la canette du début et celle de la fin sont la même, au pixel : la vidéo se referme sur le produit que la voix vient de rabaisser au rang de produit dérivé"
+  },
+  {
+   "t": 32.1,
+   "quoi": "quand Zak dit « dérivé », la canette rapetisse vraiment et une étiquette de prix lui est accrochée"
+  }
+ ],
+ "sons": [
+  {
+   "t": 7.365,
+   "son": "low_hit",
+   "g": 0.5
+  },
+  {
+   "t": 10.405,
+   "son": "glisse_douce",
+   "g": 0.3,
+   "args": {
+    "d": 0.5
+   }
+  },
+  {
+   "t": 32.1,
+   "son": "pop",
+   "g": 0.4
+  },
+  {
+   "t": 36.96,
+   "son": "low_hit",
+   "g": 0.45
+  }
+ ]
+}
