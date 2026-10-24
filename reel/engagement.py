@@ -119,6 +119,8 @@ def analyser(video, reel=None, mots=None, dossier=None, ips=10):
             lecture.append(dict(t=round(deb[kk], 1), mots=nb, affiche_s=round(dur, 2), besoin_s=round(besoin, 2)))
             if dur < besoin: a_justifier.append(f'lecture : texte de {nb} mots à {deb[kk]:.1f} s affiché {dur:.2f} s (il faut {besoin:.2f} s)')
             elif dur > besoin * 2.5 + 1 and not x.get('video'): a_justifier.append(f'lecture : texte à {deb[kk]:.1f} s tenu {dur:.1f} s pour {nb} mots (trop long, il s\'use)')
+    if reel is not None and not reel.get('plans_3d'):
+        a_justifier.append('3D : aucun moment 3D déclaré (reel.json "plans_3d") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)')
     if reel is not None and not reel.get('clins_d_oeil'):
         a_justifier.append('revisionnage : aucun clin d\'œil déclaré (reel.json "clins_d_oeil": [{"t": …, "quoi": …}]), en glisser 1 ou 2 liés au propos')
 

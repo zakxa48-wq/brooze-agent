@@ -39,6 +39,16 @@ direction artistique, ses pubs ni ses images. Rien qui fasse croire à une vidé
   → banques libres (si le réseau est ouvert, `stock.py`, crédits notés) → génératif en code (shaders, p5,
   procédural) → images photoréalistes fixes animées en relief → 3D animée. Les coûts réels sont dans `OUTILS.md`.
 
+## 2 bis. La 3D, par moments, magnifique (demande de Zak du 24/10)
+- Chaque Reel contient **1 ou 2 moments 3D** de 2 à 5 s, jamais toute la vidéo. Ils tombent sur ce qui compte
+  (l'image du hook, le pivot, la révélation) : la 3D est un **événement**, pas un décor.
+- Le moment 3D doit être **le plus beau plan du Reel** : lumière sculptée, matières vraies, profondeur de champ, flou de
+  mouvement, caméra qui a du poids. S'il n'atteint pas ce niveau, il ne part pas (on améliore, on ne remplace pas par
+  du plat).
+- Il raccorde avec le reste (même étalonnage, même grain, même lumière dominante) : on doit sentir un seul film.
+- Il sert le propos : un objet, une matière ou une métaphore que la voix de Zak appelle, jamais une démonstration
+  gratuite. Inventé pour CE Reel (registre : pas le même objet ni le même mouvement 3D que les 5 derniers).
+
 ## 3. Le naturel (ce qui enlève l'effet « mécanique »)
 - **Rien n'est figé** : toute image vit (caméra à l'épaule, relief 2,5D, matière qui respire, lumière qui bouge),
   mais **rien n'est agité** : beaucoup de petits mouvements cohérents, pas un gros effet partout. Retour de Zak :

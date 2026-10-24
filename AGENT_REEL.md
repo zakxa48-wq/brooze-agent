@@ -229,13 +229,25 @@ effet, structure) ressemble à l'un d'eux : change-le avant de fabriquer.
    - `musique` (sections `intro`, `tension`, `calme`, `suspens`, `resolution`…), `silences` (un silence voulu est un
      instrument), `sons` en plus des sons automatiques.
    - `couverture` : titre fort lisible en vignette (2–3 lignes), même DA.
-4. **3D animée seulement si elle sert** (sinon : image fixe photoréaliste + `plan`, ~5 % du coût pour ~90 % de
-   l'effet ; rendus de 30 s à 3 min par image en 1080×1920, `spp` 48–64 avec débruitage). 3D animée : un objet ou une
-   métaphore que rien d'autre ne rend. Rendu avec `monde3d` du skill
-   `brooze-direction` (ou `brooze-3d` / `brooze-anim` pour Blender), puis scène `clip` avec `"video": "plan3d.mp4"`.
-   Toujours `--controle`, puis brouillon en `--echelle 0.5`, puis final. Un rendu qui ne tient pas dans une
-   exécution se fait par morceaux (images numérotées, chacune commitée ; reprise à la première manquante) et
-   `etat.json` dit précisément ce qui reste. Ne bâcle jamais pour finir à temps.
+4. **De la 3D magnifique dans chaque Reel, par moments** (demande de Zak du 24/10 ; MONTAGE.md § 2 bis) : 1 ou 2
+   moments 3D de 2 à 5 s (environ 15 à 30 % de la vidéo, jamais tout le Reel), placés là où l'idée culmine (hook,
+   pivot, révélation), au service du propos. Déclare-les dans `reel.json` : `"plans_3d": [{"de": "@12", "a": "@20>",
+   "moteur": "blender" | "threejs", "sujet": "…"}]`.
+   - **Méthode** : skill `brooze-anim` (intention, feuille de temps calée sur la voix, moteur par plan, `mouv`,
+     brouillon → `fluidite.py` → final) et `brooze-3d` pour la modélisation, les matières, la lumière et sa boucle de
+     contrôle obligatoire. Leurs scripts et références sont dans `brooze-kit` (ajoute-le avec add_repo si besoin).
+   - **Moteur** : Blender Cycles pour le réaliste (macro, matière, verre, métal, liquide, chute) ; three.js pour le
+     volume, beaucoup d'objets, le motion design 3D. Règle « Cycles = le mouvement seulement » : rendre en Cycles les
+     secondes qui bougent, prolonger par une image fixe en relief 2,5D.
+   - **Barre de qualité** : lumière dessinée (clé, contre, rebond), vraies matières (rugosité, imperfections), profondeur
+     de champ et flou de mouvement réels, caméra avec du poids, résolution 1080×1920 avant les échantillons (débruitage
+     ensuite). Rien de « plastique », rien d'éclairé à plat, aucune forme ni logo de vraie marque (sauf vidéo d'analyse,
+     charte.md). Le sceptique juge chaque plan 3D image par image ; un plan 3D moyen ne part pas.
+   - **Budget et temps** : coût annoncé avant le rendu (brooze-anim : brouillon ~25 s, final ~65–100 s par image sur
+     2 cœurs) ; un plan 3D se rend image par image, chaque lot commité, reprise à la première image manquante
+     (`etat.json`), sur plusieurs exécutions si besoin : c'est pour ça qu'on programme à J+2 ou plus. Les images
+     fixes en relief et l'Atelier restent pour le reste du Reel.
+   Toujours `--controle`, puis brouillon, puis final. Ne bâcle jamais pour finir à temps.
 
 ## 4. Fabriquer
 ```
