@@ -15,6 +15,8 @@ import { spawn, execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { readdirSync as _rd, existsSync as _ex } from 'node:fs';
+const cheminChrome = () => _rd('/opt/pw-browsers').filter(d => /^chromium-\d+$/.test(d)).flatMap(d => ['chrome-linux64', 'chrome-linux'].map(s => `/opt/pw-browsers/${d}/${s}/chrome`)).find(p => _ex(p));
 
 const ici = path.dirname(fileURLToPath(import.meta.url));
 const [fichier, ...opts] = process.argv.slice(2);
@@ -70,7 +72,7 @@ for (const sc of scenes.filter(s => s.type === 'plan')) {
 // Coups de zoom sur les mots forts : "@i" → attaque du mot i (1 image avant)
 const punch = (reel.punch ?? []).map(v => typeof v === 'string' ? temps(v) + .12 - 1 / fps : v);
 
-const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--allow-file-access-from-files', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const navigateur = await chromium.launch({ executablePath: cheminChrome(), args: ['--allow-file-access-from-files', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const echelle = opt('--brouillon') ? .5 : 1;
 const page = await navigateur.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: echelle });
 page.on('pageerror', e => { console.error('Erreur moteur :', e.message); process.exit(4); });

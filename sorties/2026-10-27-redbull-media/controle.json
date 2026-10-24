@@ -1,0 +1,153 @@
+{
+ "video": "sorties/2026-10-27-redbull-media/reel.mp4",
+ "ok": [
+  "format 1080×1920",
+  "30.00 i/s",
+  "vidéo h264 yuv420p",
+  "son aac",
+  "durée 46.8 s",
+  "poids 90.6 Mo",
+  "volume -14.0 LUFS (cible −14)",
+  "crête vraie -1.4 dBTP (max −1)",
+  "images réelles 100% du temps (objectif ≥ 60 %)",
+  "3 moments de gros texte (objectif ≤ 3)",
+  "types de transition hors coupe : aucun (objectif ≤ 2)",
+  "glitchs : aucune alerte",
+  "appris · bord_decouvert",
+  "appris · sous_titres_petit_mot",
+  "engagement : aucune zone morte, ouverture vivante, relance max 4.9 s"
+ ],
+ "problemes": [
+  "appris · marque_reelle : « analyse indépendante » absente de la légende et de l'écran : l'ajouter (ou noter mention_independante_a_l_ecran)"
+ ],
+ "montage": {
+  "part_images_reelles": 1.0,
+  "gros_textes": 3,
+  "transitions": []
+ },
+ "engagement": {
+  "duree_s": 46.8,
+  "ouverture": {
+   "luma_image_1": 16.0,
+   "fondu_depuis_noir": false,
+   "mouvement_premiere_demi_seconde": true
+  },
+  "zones_mortes": [],
+  "relances": [
+   2.1,
+   2.8,
+   5.2,
+   7.8,
+   8.8,
+   9.9,
+   14.8,
+   15.7,
+   18.5,
+   19.6,
+   20.8,
+   21.4,
+   23.1,
+   26.3,
+   27.5,
+   29.3,
+   34.0,
+   37.3,
+   38.1,
+   38.8,
+   40.6,
+   41.2,
+   42.4,
+   43.0,
+   45.5
+  ],
+  "ecart_max_relances_s": 4.9,
+  "coupes_s": [
+   2.4
+  ],
+  "boucle": {
+   "ecart_image": 2.7,
+   "ecart_couleur": 0.33,
+   "mouvement_fin": 0.27,
+   "mouvement_debut": 0.64,
+   "son": {
+    "debut_db": -16.0,
+    "fin_db": -17.6,
+    "fin_derniers_80ms_db": -23.6,
+    "moyenne_db": -16.2
+   }
+  },
+  "lecture": [
+   {
+    "t": 1.1,
+    "mots": 2,
+    "affiche_s": 1.25,
+    "besoin_s": 0.9
+   },
+   {
+    "t": 14.2,
+    "mots": 3,
+    "affiche_s": 1.13,
+    "besoin_s": 1.15
+   },
+   {
+    "t": 36.2,
+    "mots": 3,
+    "affiche_s": 1.48,
+    "besoin_s": 1.15
+   }
+  ],
+  "bloquants": [],
+  "a_justifier": [
+   "pas de relance pendant 4.9 s (9.9–14.8 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 3.2 s (23.1–26.3 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 4.7 s (29.3–34.0 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 3.3 s (34.0–37.3 s) : viser une relance toutes les 1,5 à 3 s",
+   "boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
+   "durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+   "lecture : texte de 3 mots à 14.2 s affiché 1.13 s (il faut 1.15 s)",
+   "3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)"
+  ]
+ },
+ "a_justifier": [
+  "engagement · pas de relance pendant 4.9 s (9.9–14.8 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 3.2 s (23.1–26.3 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 4.7 s (29.3–34.0 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 3.3 s (34.0–37.3 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
+  "engagement · durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+  "engagement · lecture : texte de 3 mots à 14.2 s affiché 1.13 s (il faut 1.15 s)",
+  "engagement · 3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)"
+ ],
+ "glitchs": {
+  "fps": 30.0,
+  "coupes": [
+   37.733
+  ],
+  "rapides": [],
+  "alertes": []
+ },
+ "images_cles": [
+  0.3,
+  1.09,
+  1.34,
+  1.75,
+  2.35,
+  2.6,
+  3.0,
+  14.17,
+  14.42,
+  14.82,
+  15.3,
+  15.55,
+  15.95,
+  36.18,
+  36.43,
+  36.83,
+  37.67,
+  37.92,
+  38.32,
+  46.72
+ ],
+ "planche": "/home/user/brooze-agent/sorties/2026-10-27-redbull-media/planche_cles.jpg",
+ "bandes": "/home/user/brooze-agent/sorties/2026-10-27-redbull-media/_glitchs"
+}
