@@ -15,6 +15,13 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
 
 ---
 
+## 24/10 — Reel Spotify v2 programmé à la place de la v1 (demande de Zak)
+- Même créneau : 25/10 à 18 h (Metricool id 404840123, uuid 108377246694589694), teaser de 18 h 30 inchangé, aucun doublon.
+- Ce qui change : champ 3D v2 avec 22 relances de caméra calées sur les attaques des mots forts (pousse, pan, tilt, visée, recul, roulis), 6 vagues de cartes sur « partagent / publier / envoyer / comparer / partages / partagent-ils », poussières au premier plan, plus de carton de fin : la carte du début revient au pixel près (boucle parfaite), CTA en surimpression, son en boucle, 27 bruitages calés, titres effacés après leur temps de lecture.
+- Mesures (engagement.py) : 0 zone morte (v1 : fin morte), relance max 3,3 s (v1 : 4,4 s), raccord couleur fin/début 0,16 (v1 : 0,69), son de fin −21,5 dB (v1 : −180). controle.py : 0 problème. Sceptique : sceptique_v2.md (passe ennui), publiable.
+- Appris : le moteur découvrait des bords pendant le tremblé (corrigé pour tous les Reels) ; le contrôle bord_decouvert donnait une fausse alerte sur scène sombre (corrigé).
+
+
 ## Reel · 2026-10-23 · 13:30 · Claire · « Apple a compris… » (banque de voix, mémo du 22/10)
 - **Source** : brooze-voix `audio/2026-10/memo-2026-10-22-1.m4a` (38,5 s). Verdict `ok`. Une erreur d'écoute corrigée d'après le contexte : « il se base » → « il se passe ». À relire par Zak : « Je vois la différence » (pourrait être « Tu vois la différence »).
 - **Idée** : ne dis pas que ton produit est exceptionnel, montre-le (campagne « Shoot on iPhone », citée par Zak ; aucun chiffre, aucun logo).
