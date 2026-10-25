@@ -104,13 +104,13 @@ can = comp.ajouter(Nul(position=lambda t: (cx_can(t), CAN_Y + 20 * math.sin(2 * 
 # fantôme laissé par la canette (« sous-traitent »)
 comp.ajouter(Forme(rect(210, 640, 34), remplissage=None, trait=PAPER, epaisseur=3, parent=monde, position=(0, CAN_Y),
                    opacite=lambda t: val(K((T(34), 0, lin), (T(34) + .5, .55, lin), (T(83) - .3, .55, lin), (T(83) + .25, 0)), t)))
-corps = '#34312E'
+corps = '#121110'
 comp.ajouter(Forme(rect(210, 560, 34), remplissage=corps, parent=can, position=(0, 0),
                    effets=[OmbrePortee(distance=30, angle=90, flou=40, opacite=.5, couleur='#000000')]))
-comp.ajouter(Forme(rect(26, 500, 13), remplissage='#F2EEE8', parent=can, position=(-66, 0), opacite=.42, effets=[FlouGaussien(rayon=6)]))
-comp.ajouter(Forme(rect(50, 540, 24), remplissage='#050403', parent=can, position=(78, 0), opacite=.55, effets=[FlouGaussien(rayon=12)]))
+comp.ajouter(Forme(rect(26, 500, 13), remplissage='#F2EEE8', parent=can, position=(-66, 0), opacite=.62, effets=[FlouGaussien(rayon=6)]))
+comp.ajouter(Forme(rect(50, 540, 24), remplissage='#1B2A55', parent=can, position=(52, 0), opacite=.45, effets=[FlouGaussien(rayon=12)]))
 comp.ajouter(Forme(rect(210, 40, 0), remplissage=CU, parent=can, position=(0, 40)))
-comp.ajouter(Forme(points([(-84, -270), (84, -270), (62, -320), (-62, -320)], True), remplissage='#262421', parent=can))
+comp.ajouter(Forme(points([(-84, -270), (84, -270), (62, -320), (-62, -320)], True), remplissage='#0F0E0D', parent=can))
 comp.ajouter(Forme(ellipse(124, 26), remplissage='#B9B3AA', parent=can, position=(0, -326)))
 comp.ajouter(Forme(ellipse(78, 12), remplissage='#4C4842', parent=can, position=(0, -326)))
 comp.ajouter(Forme(rect(210, 16, 8), remplissage='#1A1814', parent=can, position=(0, 272)))

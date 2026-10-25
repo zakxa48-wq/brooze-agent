@@ -108,6 +108,46 @@
    "main": 0.4
   },
   {
+   "de": "@35",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 11.005,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.46,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@41",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 12.845,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.1
+    ],
+    [
+     0.5,
+     0.54,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
    "de": "@45",
    "type": "plan",
    "video": "plan.mp4",
@@ -148,6 +188,106 @@
      0.5,
      0.5,
      1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@72",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 24.435,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.5,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@87",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 29.605,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.1
+    ],
+    [
+     0.5,
+     0.46,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@92",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 31.575,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.54,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@97",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 33.07,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.1
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@101",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 34.595,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.48,
+     1.05
     ]
    ],
    "transition": "coupe",
@@ -292,5 +432,6 @@
    "moteur": "threejs",
    "sujet": "canette générique (graphite, bande cuivre, buée) : contre-plongée qui se redresse en vue de face, balayage de lumière ; raccord sur la canette 2D"
   }
- ]
+ ],
+ "mention_independante_a_l_ecran": true
 }
