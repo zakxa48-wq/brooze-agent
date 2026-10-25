@@ -11,9 +11,12 @@ n'annonce jamais un succès sur les vues seules.
   `reel/techniques.py` (bibliothèque de techniques), `reel/controles/` (contrôles appris).
 - **Qui fait quoi** :
   - **Brooze montage inbox** (3 h 41 et 15 h 41) : apprendre (§ 1), utiliser (§ 2), débriefer (§ 3), s'entraîner (§ 4).
-  - **Brooze relevé stats** (tous les jours, 8 h 57) : veille du compte (§ 5), révision du dimanche (§ 6), bilan du 1er
-    du mois (§ 7). Les chiffres bruts restent dans brooze-kit (`data/`, `tools/analytics.py`, règles d'honnêteté de
-    `docs/analyse-donnees.md`) : une seule source de vérité, pas de doublon de relevé.
+  - **Brooze relevé stats** (tous les jours, 8 h 57) : le relevé brut dans brooze-kit (`data/`, `tools/analytics.py`)
+    et l'alerte immédiate si quelque chose est grave. Elle n'a pas accès aux dépôts de l'agent.
+  - **Brooze montage inbox, passage de 15 h 41** : la veille du compte (§ 5), la révision du dimanche (§ 6) et le bilan
+    du 1er du mois (§ 7), directement avec Metricool (getAnalyticsDataByMetrics, getScheduledPosts), et en relisant
+    les relevés de brooze-kit s'il est accessible (sinon Metricool suffit). Une seule source de vérité pour les
+    chiffres bruts : les réponses Metricool enregistrées dans `brooze-voix/data/cerveau/releves/AAAA-MM-JJ.json`.
 
 ## 1. Apprendre (chaque exécution de montage, AVANT de produire)
 1. `python3 reel/cerveau.py nouveaux R` liste ce que Zak a déposé depuis la dernière fois.
@@ -72,7 +75,7 @@ Range l'exercice dans `data/cerveau/entrainement/AAAA-MM-JJ-<sujet>/exercice.md`
 planche), débrief `pratique` avec `"exercice": "<sujet>"`. Ce qui est meilleur rejoint la bibliothèque de techniques.
 Les vidéos d'exercice ne sont pas versionnées.
 
-## 5. Veille quotidienne du compte (Brooze relevé stats, chaque jour)
+## 5. Veille quotidienne du compte (passage de 15 h 41 de Brooze montage inbox, chaque jour)
 1. Relevé brooze-kit habituel (`docs/analyse-donnees.md` § 1 : reels + compte, `ingest`, `check`), puis en plus :
    `getAnalyticsDataByMetrics` connecteur `posts` (carrousels) et `stories` sur 7 jours, et `getScheduledPosts` sur
    les 3 derniers jours (statut de chaque publication programmée).
@@ -99,7 +102,7 @@ Les vidéos d'exercice ne sont pas versionnées.
    chute forte (abonnés ou vues ≤ 0,4× sur 3 jours), échec de publication, commentaire ou message signalé qui demande
    une réponse humaine. Sinon : rien.
 
-## 6. Révision du dimanche (dans le relevé du dimanche)
+## 6. Révision du dimanche (passage de 15 h 41 du dimanche)
 1. **Résultats × choix** : pour chaque Reel de plus de 7 jours, relie ses stats (IGRE24, IGRE28, IGRE12, IGRE21, et
    conversations de `marketing.md`) à ses choix (registre de `journal.md` : hook, concept, structure, technique,
    durée des plans de sa fiche). Écris le constat dans `principes.md` comme `mesuré` seulement à partir de **5 Reels
@@ -116,7 +119,7 @@ Les vidéos d'exercice ne sont pas versionnées.
    dans les débriefs, écris un diagnostic dans `progression.md` et change de méthode (autre ordre d'étapes, autre
    outil, plus de références, plus d'entraînement) — puis vérifie l'effet deux semaines plus tard.
 
-## 7. Bilan du 1er du mois (dans le relevé du 1er)
+## 7. Bilan du 1er du mois (passage de 15 h 41 du 1er)
 1. **Entonnoir** du mois écoulé dans `marketing.md` : vues → taps du lien en bio (IGAC12 avec contactButtonType) →
    conversations (déclarées par Zak) → qualifiées → rendez-vous (déclarés dans `retours/`). Le **point de blocage** est
    l'étape où le taux chute le plus par rapport au mois précédent (ou, sans historique, par rapport à l'étape d'avant).
