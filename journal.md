@@ -4,6 +4,12 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 25/10 (15 h 41) — veille du dimanche, Red Bull repris, Koulechov indexé
+- **Filet stories** : 26/10 → 01/11 couvert, aucune story en erreur, réserve 7 (aucune utilisée).
+- **Veille** : 2 Reels sortent du lot (Sound design ×10 et Apple ×7 la médiane de 160 vues), n = 2, J+2 pour Apple : à confirmer (voir data/cerveau/veille.md).
+- **Red Bull (jour réservé 27/10)** : raccord 3D/2D (canette 2D assombrie), mention « analyse indépendante » sur le plan 3D, 7 relances ajoutées, plan.mp4 + rendu final 46,8 s, controle.py 0 problème. Non publié : le corps de la canette 2D devenu trop sombre disparaît (P2), correctif préparé, re-rendu à faire le 26/10 (voir etat.json). Rien programmé.
+- **Koulechov** (storyboard de Zak) : indexé, erreurs d'écoute notées (index/…/compris.md) ; la phrase « l'ordre dans lequel tu [le montres] » est coupée dans l'audio. Jour proposé 29/10.
+
 ## 25/10 — Exécution hebdomadaire : rien à ajouter
 - Fenêtre 26/10 → 01/11 déjà complète dans Metricool (7 jours de stories, carrousels lundi 26, mercredi 28, vendredi 30 à 18 h). Aucun doublon créé, aucun post ajouté. Réserve de stories : 7 disponibles. Mesures J+2 : non relevées dans cette exécution (portée trop faible pour conclure de toute façon).
 
