@@ -1,0 +1,19 @@
+{
+  "type": "story",
+  "date_prevue": "A_FIXER",
+  "avatar": "Karim",
+  "pilier": "Teaser Reel",
+  "hypothese": "Teaser du Reel du jour.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "cover",
+      "theme": "encre",
+      "label": "Nouveau Reel",
+      "titre": "Red Bull ne vend pas *une boisson*.",
+      "taille": "t-xl",
+      "texte": "Disponible maintenant sur le profil.",
+      "swipe": false
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
  "idee": "memo-2026-10-23-redbull-5a40aa-0000",
  "jour": "2026-10-27",
- "etape": "images",
+ "etape": "controle",
  "faites": [
   "indexe",
   "compris (Red Bull, taurine, Ils dépensent, ne vends/vends, Brooze Production corrigés ; fenêtre 0-45,62 s)",
@@ -11,7 +11,8 @@
   "rendu : reel.mp4 final 46,8 s, 90,6 Mo (non versionné) ; controle.py automatique 24/10 : 1 problème bloquant",
   "24/10-25/10 : scene.py corrigé (mention « analyse indépendante » à l'écran, fin animée), plan3d can3d.html (three.js) créé et déclaré (plans_3d, scènes 0-3 de reel.json pointent sur 3d/champ_0_3.4.mp4)",
   "25/10 : plan.mp4 re-rendu (46,9 s, avec mention), 3d/champ_0_3.4.mp4 rendu, son.py OK, planche de contrôle 0,5/2/3,2/3,6 s regardée",
-  "25/10 15 h : canette 2D assombrie (scene.py) pour raccorder la 3D noire ; mention « analyse indépendante » incrustée sur le plan 3D (ffmpeg drawtext) + mention_independante_a_l_ecran ; 7 scènes de relance (coups de zoom sur mots) ajoutées dans reel.json pour combler 9,9–14,8 / 23,1–26,3 / 29,3–37,3 ; plan.mp4 relancé (atelier)"
+  "25/10 15 h : canette 2D assombrie (scene.py) pour raccorder la 3D noire ; mention « analyse indépendante » incrustée sur le plan 3D (ffmpeg drawtext) + mention_independante_a_l_ecran ; 7 scènes de relance (coups de zoom sur mots) ajoutées dans reel.json pour combler 9,9–14,8 / 23,1–26,3 / 29,3–37,3 ; plan.mp4 relancé (atelier)",
+  "25/10 15 h 20 : plan.mp4 re-rendu (19 min) + rendu final 46,8 s par morceaux (11 min, 4 cœurs libres) ; controle.py : 0 problème bloquant, 6 à justifier (relances 3,2/3,3 s, boucle couleur 0,56 et fin immobile, durée 46,7 s, texte 3 mots 14,2 s). Planche regardée : le corps de la canette 2D (graphite #121110) disparaît sur le fond entre 3,4 et 14 s et à la fin (reflets et bande flottent) = P2 vu par l'agent. Sceptique pas encore passé. Correctif préparé dans scene.py (corps #27241F + liseré #4A443C), PAS re-rendu faute de temps (45 min)."
  ],
- "notes": "Reste : attendre plan.mp4 (atelier/, copier à la racine du dossier), rendu.mjs --controle puis final, controle.py, sceptique, comparer, couverture, post+teaser, programmation. "
+ "notes": "PROCHAIN PASSAGE (26/10 03 h 41, avant 15 h 41 pour tenir le 27/10) : 1) cd atelier && python3 ../../../reel/atelier scene.py --sortie plan.mp4 (~19 min machine libre, ne rien lancer d'autre) puis cp plan.mp4 .. ; 2) banque.py preparer + son.py (mix.flac) ; 3) rendu.mjs reel.json --controle 3.5,6,30,45 puis REGARDER que la canette 2D garde un corps lisible et que le raccord 3D→2D tient ; 4) rendu.mjs --morceaux (~11 min) ; 5) controle.py ; sceptique (ennui + jugement du plan 3D), cerveau.py comparer ; boucle : la fin (viseur/pouls) revient sur la canette 2D, ecart_couleur 0,56 à réduire (fondu sur la dernière demi-seconde vers l'image 1 ou fin sur la canette 3D) ; 6) couverture, post (posts/2026-10-27-reel-redbull-media/ déjà préparé : post.json + teaser, date_prevue A_FIXER), programmation 28/10 ou jour libre. Si non contrôlé le 26/10 15 h : décaler le jour réservé. Rien n'est programmé."
 }
