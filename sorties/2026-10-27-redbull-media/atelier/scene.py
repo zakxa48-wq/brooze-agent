@@ -19,7 +19,7 @@ t_recul0, t_recul1 = T(16), T(17) + .7
 S = cle((0, 1.50, lin), (T(16), 1.58, doux), (T(17) + 1.6, .62, sortie(3)), (T(38), .66, doux), (T(52), .78, doux),
         (T(55) - .2, .78, expo(7)), (T(55) + .05, 1.7, tenir), (T(58) - .22, 1.7, expo(7)), (T(58) + .05, 1.7, tenir),
         (T(61) + .05, 1.7, expo(7)), (T(62) + .5, 1.7, tenir), (T(63) - .1, 1.7, doux), (T(72) - .3, .95, doux), (T(83), .95, doux),
-        (T(83) + 1.4, .62, sortie(3)), (T(98), .62, doux), (T(108), .9, doux), (T(121) + .25, .9, lin), (T(121) + .4, 1.5, tenir), (D, 1.5))
+        (T(83) + 1.4, .62, sortie(3)), (T(98), .62, doux), (T(108), .9, doux), (T(121) + .25, .9, lin), (T(121) + .4, 1.5, tenir), (D, 1.56, doux))
 CX = cle((0, 0, lin), (T(17) + 1.6, 0, doux), (T(55) - .2, 0, expo(7)), (T(55) + .05, -350, tenir), (T(58) - .22, -350, expo(7)), (T(58) + .05, 0, tenir),
          (T(61) + .05, 0, expo(7)), (T(62) + .5, 350, tenir), (T(63) - .1, 350, doux), (T(72), 0, doux), (D, 0))
 CY = cle((0, CAN_Y, lin), (T(16), CAN_Y, doux), (T(17) + 1.6, 520, sortie(3)), (T(38), 560, doux), (T(52), -250, doux),
@@ -151,4 +151,7 @@ comp.ajouter(Forme(ellipse(26, 26), remplissage='#D8492F', position=(150, 330),
 # ---------- extinction de l'écran puis retour au noir (la boucle raccorde avec la première image)
 comp.ajouter(Forme(rect(1400, 8), remplissage=PAPER, position=(540, 1000), opacite=lambda t: val(K((T(121) - .05, 0, lin), (T(121) + .02, 1, lin), (T(121) + .17, 0)), t)))
 comp.ajouter(Solide(INK, opacite=lambda t: val(K((T(121) + .1, 0, lin), (T(121) + .3, 1, lin), (T(122) + .1, 1, lin), (T(122) + .6, 0)), t)))
+# mention de charte (marque réelle analysée) : discrète, en haut, toute la durée
+comp.ajouter(Texte('analyse indépendante · aucun lien avec la marque', police='Inter', taille=30, graisse=500, interlettrage=.04,
+                   couleur_=PAPER, position=(540, 150), opacite=lambda t: .62 * (0 if (t > T(121) + .1 and t < T(121) + .9) else 1)))
 comp.ajouter(Reglage(effets=[Grain(intensite=.035), Vignette(force=.28)]))

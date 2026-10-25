@@ -24,7 +24,7 @@
   {
    "de": "@0",
    "type": "plan",
-   "video": "plan.mp4",
+   "video": "3d/champ_0_3.4.mp4",
    "debut": 0,
    "cadre": [
     [
@@ -44,7 +44,7 @@
   {
    "de": "@6",
    "type": "plan",
-   "video": "plan.mp4",
+   "video": "3d/champ_0_3.4.mp4",
    "debut": 1.145,
    "cadre": [
     [
@@ -70,8 +70,28 @@
   {
    "de": "@8",
    "type": "plan",
-   "video": "plan.mp4",
+   "video": "3d/champ_0_3.4.mp4",
    "debut": 2.395,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": 3.4,
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 3.4,
    "cadre": [
     [
      0.5,
@@ -263,6 +283,14 @@
    "t": 36.96,
    "son": "low_hit",
    "g": 0.45
+  }
+ ],
+ "plans_3d": [
+  {
+   "de": "@0",
+   "a": 3.4,
+   "moteur": "threejs",
+   "sujet": "canette générique (graphite, bande cuivre, buée) : contre-plongée qui se redresse en vue de face, balayage de lumière ; raccord sur la canette 2D"
   }
  ]
 }
