@@ -4,6 +4,11 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 25/10 — Exécution hebdomadaire : rien à ajouter
+- Fenêtre 26/10 → 01/11 déjà complète dans Metricool (7 jours de stories, carrousels lundi 26, mercredi 28, vendredi 30 à 18 h). Aucun doublon créé, aucun post ajouté. Réserve de stories : 7 disponibles. Mesures J+2 : non relevées dans cette exécution (portée trop faible pour conclure de toute façon).
+
+---
+
 ## Registre des Reels (anti-redite : relire les 5 dernières lignes avant chaque concept)
 Une ligne par Reel programmé, la plus récente en bas. Interdit de reprendre le **concept visuel**, l'**effet
 signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moins une **technique nouvelle** (en gras).
