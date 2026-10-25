@@ -77,12 +77,18 @@ def cmd_indexer(R):
             rap = json.load(open(os.path.join(dest, 'rapport.json')))
             c['audios'][aid] = dict(fichier=os.path.relpath(chemin, R), sha1=h, duree=rap['duree_voix'], verdict=rap['verdict'],
                                     raisons=rap['raisons'], indexe_le=str(datetime.date.today()), transcription_verifiee=False)
+            # fichiers de Zak posés à côté de l'audio : contexte (.txt) et storyboard (.storyboard.md, à respecter au maximum)
+            base = os.path.splitext(chemin)[0]
+            for cle, ext in (('contexte', '.txt'), ('storyboard', '.storyboard.md')):
+                if os.path.exists(base + ext): c['audios'][aid][cle] = os.path.relpath(base + ext, R)
             nouveaux.append(aid); deja.add(h)
     sauver(R, c)
     for aid in nouveaux:
         a = c['audios'][aid]
         print(f"\n=== {aid} · {a['duree']} s · verdict {a['verdict']} {a['raisons'] or ''}")
         print(json.load(open(os.path.join(R, 'index', aid, 'rapport.json')))['transcription'])
+        if a.get('contexte'): print(f"contexte de Zak : {a['contexte']}")
+        if a.get('storyboard'): print(f"STORYBOARD DE ZAK : {a['storyboard']} → un seul Reel qui le suit au maximum (AGENT_REEL.md § Storyboard)")
         print(f"→ vérifie la transcription (index/{aid}/segs.json), puis : banque.py fenetres R {aid}")
     if not nouveaux: print('Aucun nouvel audio.')
 
@@ -137,6 +143,9 @@ def cmd_preparer(R, iid, dossier):
     brouillon = dict(id=os.path.basename(dossier.rstrip('/')), fps=30, source=i['source'], fin=2.4, banque=dict(idee=iid, audio=a['fichier']),
                      avatar=i['cible'], idee=i['idee'], hook=dict(choisi=i['hook'], ecartes=[]), hypothese='', scenes=[],
                      musique=dict(bpm=96, tonalite='la', sections=[]), silences=[], couverture=dict(theme='encre', label='', titre=''))
+    if a.get('storyboard'):                                    # storyboard de Zak : copié dans le Reel, à suivre au maximum
+        shutil.copy(os.path.join(R, a['storyboard']), os.path.join(dossier, 'storyboard_zak.md')); brouillon['storyboard_zak'] = 'storyboard_zak.md'
+        print('storyboard de Zak copié : storyboard_zak.md (à respecter au maximum)')
     p = os.path.join(dossier, 'reel.json')
     if not os.path.exists(p): json.dump(brouillon, open(p, 'w'), ensure_ascii=False, indent=2)
     print(f"prêt : {dossier} · mots {dedans[0]}–{dedans[-1]} de la fenêtre :")

@@ -139,6 +139,28 @@ bash outils/git_main.sh debut /home/user/brooze-agent && bash outils/git_main.sh
 bash reel/setup.sh          # dépendances, Whisper local, three.js, Remotion, Manim, polices… (~3 min la 1re fois)
 ```
 
+## Storyboard fourni par Zak (à respecter au maximum)
+Zak peut déposer à côté d'un audio un **storyboard écrit** : `<audio>.storyboard.md` (temps, texte, visuel, son), avec
+souvent un `.txt` de contexte. `banque.py indexer` le signale et `banque.py preparer` le copie dans
+`sorties/<id>/storyboard_zak.md`. Dans ce cas :
+- **Un seul Reel, l'audio entier** (sauf indication contraire du storyboard) : l'idée et la fenêtre sont celles de Zak ;
+  pas de recherche d'autres fenêtres dans cet audio.
+- **Le storyboard passe avant tes propres choix créatifs** : son découpage, ses visuels, son style (ex. illustration
+  vectorielle 2D), ses bruitages et sa fin sont suivis au plus près. Tu n'inventes pas un autre concept ; tu apportes
+  le savoir-faire (mouvement, rythme, finition, synchro, son) qui rend SA vision magnifique.
+- **Ordre de priorité** : 1) garde-fous absolus (rien d'inventé, texte = voix exacte, aucun logo de vraie marque :
+  une « timeline Premiere / After Effects » devient une timeline générique, sans logo ni interface reconnaissable ;
+  aucune copie d'œuvre) ; 2) charte Brooze (le logo Brooze est le vrai fichier) ; 3) **le storyboard de Zak** ; 4) les
+  règles générales (MONTAGE.md : relances, boucle, 3D par moments, durée…), appliquées seulement là où elles ne
+  contredisent pas le storyboard (ex. si Zak demande une fin « tampon + abonne-toi », on la garde ; la boucle se fait
+  en raccordant le tampon final avec l'image 1, pas en supprimant sa fin ; la 3D n'est ajoutée que si elle sert son
+  style).
+- **Temps** : les temps du storyboard sont ceux du script ; recale chaque ligne sur les mots réellement dits
+  (`mots.json`). Le texte à l'écran reste celui de l'audio, mot pour mot, même s'il diffère un peu du script.
+- **Écarts** : tout écart (garde-fou, contrainte technique) est écrit dans `intention.md` (« storyboard : ligne N,
+  écart, pourquoi ») et dans le récap à Zak. `controle.py` + sceptique vérifient en plus, ligne par ligne, que chaque
+  ligne du storyboard est bien à l'écran au bon moment (rapport `storyboard_suivi.md`).
+
 ## 2. Comprendre l'audio
 ```
 python3 reel/comprendre.py inbox/audio/<fichier> sorties/<AAAA-MM-JJ-slug>/
