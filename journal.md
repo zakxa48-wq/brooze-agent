@@ -4,6 +4,10 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 26/10 (15 h 41) — Red Bull : boucle et relances corrigées, non programmé
+- Filet stories : 27→30/10 couvert (10 h), aucune en erreur, réserve 7. Veille : non faite ce passage (temps pris par le rendu).
+- Red Bull : scène finale en fondu vers la canette 3D du début (boucle), 5 relances sur 4,8–10,2 s ; rendu 46,8 s ; controle.py 0 bloquant. `cerveau.py comparer` = EN DESSOUS (netteté 86 contre 133), sceptique pas passé : rien programmé. Jour décalé au 29/10. Teaser story prêt. Correctif : render.mjs pointe maintenant sur /opt/pw-browsers/chromium.
+
 ## 26/10 (3 h 41) — Red Bull : rendu final refait, controle.py OK
 - Filet stories : 26→29/10 couvert, aucune en erreur, réserve 7 (aucune utilisée). Veille : non (passage de 15 h 41).
 - Red Bull (jour réservé 27/10) : canette 2D corrigée, rendu 46,8 s, controle.py 0 bloquant. Reste : boucle (couleur/fin immobile), sceptique, comparer, couverture, programmation au passage de 15 h 41. Rien n'est programmé.

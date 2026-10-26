@@ -24,7 +24,7 @@ post.slides.forEach((s, i) => {
 if (format === 'carrousel' && (post.slides.length < 2 || post.slides.length > 10)) erreurs.push('un carrousel a 2 à 10 diapos');
 if (erreurs.length) { console.error('Charte non respectée :\n- ' + erreurs.join('\n- ')); process.exit(2); }
 
-const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+const navigateur = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const page = await navigateur.newPage({ viewport: { width: 1080, height: H }, deviceScaleFactor: 1 });
 const sorties = [];
 const alertes = [];

@@ -1,5 +1,5 @@
 {
- "duree_s": 46.8,
+ "duree_s": 46.7,
  "ouverture": {
   "luma_image_1": 18.9,
   "fondu_depuis_noir": false,
@@ -11,12 +11,12 @@
   1.8,
   2.4,
   3.4,
-  5.2,
+  5.4,
   7.8,
-  8.5,
-  9.3,
+  8.6,
   9.9,
-  11.2,
+  10.9,
+  11.4,
   12.4,
   13.4,
   14.8,
@@ -36,27 +36,28 @@
   34.0,
   37.3,
   38.1,
-  38.7,
+  38.8,
   40.6,
   41.2,
   42.4,
   43.0,
-  45.5
+  46.2
  ],
  "ecart_max_relances_s": 3.3,
  "coupes_s": [
   2.4,
-  3.4
+  3.4,
+  8.6
  ],
  "boucle": {
-  "ecart_image": 11.7,
-  "ecart_couleur": 0.67,
-  "mouvement_fin": 0.25,
+  "ecart_image": 6.3,
+  "ecart_couleur": 0.05,
+  "mouvement_fin": 1.5,
   "mouvement_debut": 1.25,
   "son": {
-   "debut_db": -16.1,
-   "fin_db": -17.6,
-   "fin_derniers_80ms_db": -23.6,
+   "debut_db": -16.0,
+   "fin_db": -17.7,
+   "fin_derniers_80ms_db": -23.7,
    "moyenne_db": -16.2
   }
  },
@@ -84,9 +85,8 @@
  "a_justifier": [
   "pas de relance pendant 3.2 s (23.1–26.3 s) : viser une relance toutes les 1,5 à 3 s",
   "pas de relance pendant 3.3 s (34.0–37.3 s) : viser une relance toutes les 1,5 à 3 s",
-  "boucle : couleurs de la dernière et de la première image trop différentes (0.67)",
-  "boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
-  "durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+  "pas de relance pendant 3.2 s (43.0–46.2 s) : viser une relance toutes les 1,5 à 3 s",
+  "durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
   "lecture : texte de 3 mots à 14.2 s affiché 1.13 s (il faut 1.15 s)"
  ]
 }

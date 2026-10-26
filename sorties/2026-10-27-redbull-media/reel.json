@@ -108,6 +108,106 @@
    "main": 0.4
   },
   {
+   "de": "@16",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 4.68,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.46,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@20",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 5.94,
+   "cadre": [
+    [
+     0.5,
+     0.52,
+     1.08
+    ],
+    [
+     0.46,
+     0.5,
+     1.14
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@25",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 7.61,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.14
+    ],
+    [
+     0.5,
+     0.55,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@28",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 8.585,
+   "cadre": [
+    [
+     0.5,
+     0.48,
+     1.05
+    ],
+    [
+     0.54,
+     0.5,
+     1.12
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@33",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 10.045,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.1
+    ],
+    [
+     0.5,
+     0.47,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
    "de": "@35",
    "type": "plan",
    "video": "plan.mp4",
@@ -337,6 +437,26 @@
     ]
    ],
    "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": 45.8,
+   "type": "plan",
+   "video": "3d/champ_0_3.4.mp4",
+   "debut": 0,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.04
+    ],
+    [
+     0.5,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "fondu",
    "main": 0.4
   }
  ],

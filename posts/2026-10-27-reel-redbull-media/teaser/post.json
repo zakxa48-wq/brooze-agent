@@ -1,19 +1,19 @@
 {
-  "type": "story",
-  "date_prevue": "A_FIXER",
-  "avatar": "Karim",
-  "pilier": "Teaser Reel",
-  "hypothese": "Teaser du Reel du jour.",
-  "nouveau_format": false,
-  "slides": [
-    {
-      "layout": "cover",
-      "theme": "encre",
-      "label": "Nouveau Reel",
-      "titre": "Red Bull ne vend pas *une boisson*.",
-      "taille": "t-xl",
-      "texte": "Disponible maintenant sur le profil.",
-      "swipe": false
-    }
-  ]
+ "type": "story",
+ "date_prevue": "2026-10-27T18:30:00+01:00",
+ "avatar": "Karim",
+ "pilier": "Teaser du Reel",
+ "hypothese": "Une story qui annonce le Reel augmente sa portée les premières heures.",
+ "nouveau_format": false,
+ "slides": [
+  {
+   "layout": "cover",
+   "theme": "encre",
+   "label": "Nouveau Reel",
+   "titre": "Red Bull ne vend pas de *boissons*.",
+   "taille": "t-l",
+   "texte": "Analyse indépendante : ce qu'elle vend vraiment. Il est sur notre profil.",
+   "swipe": "Voir le Reel"
+  }
+ ]
 }
