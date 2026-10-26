@@ -4,6 +4,10 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 26/10 (3 h 41) — Red Bull : rendu final refait, controle.py OK
+- Filet stories : 26→29/10 couvert, aucune en erreur, réserve 7 (aucune utilisée). Veille : non (passage de 15 h 41).
+- Red Bull (jour réservé 27/10) : canette 2D corrigée, rendu 46,8 s, controle.py 0 bloquant. Reste : boucle (couleur/fin immobile), sceptique, comparer, couverture, programmation au passage de 15 h 41. Rien n'est programmé.
+
 ## 25/10 (15 h 41) — veille du dimanche, Red Bull repris, Koulechov indexé
 - **Filet stories** : 26/10 → 01/11 couvert, aucune story en erreur, réserve 7 (aucune utilisée).
 - **Veille** : 2 Reels sortent du lot (Sound design ×10 et Apple ×7 la médiane de 160 vues), n = 2, J+2 pour Apple : à confirmer (voir data/cerveau/veille.md).

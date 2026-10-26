@@ -6,7 +6,7 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 46.8 s",
-  "poids 86.5 Mo",
+  "poids 87.0 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.4 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
@@ -25,7 +25,7 @@
   "transitions": []
  },
  "engagement": {
-  "duree_s": 46.7,
+  "duree_s": 46.8,
   "ouverture": {
    "luma_image_1": 18.9,
    "fondu_depuis_noir": false,
@@ -57,12 +57,12 @@
    27.5,
    29.3,
    31.6,
-   32.8,
+   32.4,
    33.3,
    34.0,
    37.3,
    38.1,
-   38.8,
+   38.7,
    40.6,
    41.2,
    42.4,
@@ -75,9 +75,9 @@
    3.4
   ],
   "boucle": {
-   "ecart_image": 11.2,
-   "ecart_couleur": 0.56,
-   "mouvement_fin": 0.23,
+   "ecart_image": 11.7,
+   "ecart_couleur": 0.67,
+   "mouvement_fin": 0.25,
    "mouvement_debut": 1.25,
    "son": {
     "debut_db": -16.1,
@@ -110,18 +110,18 @@
   "a_justifier": [
    "pas de relance pendant 3.2 s (23.1–26.3 s) : viser une relance toutes les 1,5 à 3 s",
    "pas de relance pendant 3.3 s (34.0–37.3 s) : viser une relance toutes les 1,5 à 3 s",
-   "boucle : couleurs de la dernière et de la première image trop différentes (0.56)",
+   "boucle : couleurs de la dernière et de la première image trop différentes (0.67)",
    "boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
-   "durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+   "durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
    "lecture : texte de 3 mots à 14.2 s affiché 1.13 s (il faut 1.15 s)"
   ]
  },
  "a_justifier": [
   "engagement · pas de relance pendant 3.2 s (23.1–26.3 s) : viser une relance toutes les 1,5 à 3 s",
   "engagement · pas de relance pendant 3.3 s (34.0–37.3 s) : viser une relance toutes les 1,5 à 3 s",
-  "engagement · boucle : couleurs de la dernière et de la première image trop différentes (0.56)",
+  "engagement · boucle : couleurs de la dernière et de la première image trop différentes (0.67)",
   "engagement · boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
-  "engagement · durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
+  "engagement · durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas",
   "engagement · lecture : texte de 3 mots à 14.2 s affiché 1.13 s (il faut 1.15 s)"
  ],
  "glitchs": {
