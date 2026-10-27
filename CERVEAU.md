@@ -8,9 +8,11 @@ n'annonce jamais un succès sur les vues seules.
 - **Données** : dépôt PRIVÉ `brooze-voix`, dossier `data/` (R = `/home/user/brooze-voix`). Jamais dans brooze-agent
   (public) : ni fiche, ni image clé, ni transcription, ni référence.
 - **Outils** (code, ici) : `reel/cerveau.py` (analyse, fiches, recherche, comparaison, débriefs, progression),
+  `reel/savoir.py` (connaissances du monde : sources, notions, affirmations, liens),
   `reel/techniques.py` (bibliothèque de techniques), `reel/controles/` (contrôles appris).
 - **Qui fait quoi** :
   - **Brooze montage inbox** (3 h 41 et 15 h 41) : apprendre (§ 1), utiliser (§ 2), débriefer (§ 3), s'entraîner (§ 4).
+    Chaque jour, au passage de 3 h 41 (rattrapée à 15 h 41 si besoin) : la séance d'apprentissage du savoir (§ 8).
   - **Brooze relevé stats** (tous les jours, 8 h 57) : le relevé brut dans brooze-kit (`data/`, `tools/analytics.py`)
     et l'alerte immédiate si quelque chose est grave. Elle n'a pas accès aux dépôts de l'agent.
   - **Brooze montage inbox, passage de 15 h 41** : la veille du compte (§ 5), la révision du dimanche (§ 6) et le bilan
@@ -139,7 +141,67 @@ Les vidéos d'exercice ne sont pas versionnées.
    `strategie.md` s'il n'y a pas de `retours/objection-AAAA-MM.txt`, et le note. Avec une objection : non appliquée,
    la raison de Zak devient un principe.
 
-## 8. Honnêteté (toujours)
+## 8. Le savoir : apprendre du monde, chaque jour (séance d'apprentissage)
+Le cerveau a deux mémoires. `principes.md` dit **comment Brooze travaille** (règles tirées de la pratique, des
+retours de Zak et des chiffres du compte). Le **savoir** (`data/cerveau/savoir/`, outil `reel/savoir.py`) dit **ce que
+l'on sait du monde** : psychologie de l'attention, perception, montage, motion design, 3D et lumière, son,
+copywriting, Instagram, marketing des PME, vente d'un studio. Il est fait de **notions** reliées entre elles, chacune
+portant des **affirmations** avec leurs preuves (sources pondérées) et ce qu'elle change dans le travail.
+
+**Séance quotidienne, obligatoire** : au passage de 3 h 41, juste après le filet des stories, 20 minutes, avant la
+production. `python3 reel/savoir.py aujourdhui R` répond « faite » ou non ; si elle a été sautée, le passage de 15 h 41
+la fait avant la veille. Un jour sans séance n'existe pas (sauf réseau et recherche totalement indisponibles : noter
+pourquoi dans `seances.jsonl`).
+1. **Se souvenir d'abord** : `savoir.py verifier R` (rien d'oublié depuis hier ; un oubli se restaure depuis git avant
+   tout), `savoir.py etat R`, `savoir.py rappel R` (3 notions les moins revues).
+2. **Choisir quoi apprendre** (`savoir/questions.md`, tenu par l'agent) : ce qui a manqué pendant le dernier Reel
+   (`pratique.jsonl`), ce que la veille n'explique pas, les principes « à vérifier », le propos des **prochains Reels**
+   (apprendre en avance ce qu'ils vont demander : Koulechov → perception, montage soviétique, études de réplication),
+   ce que Zak a déposé dans `data/connaissances/` ou `data/docs/`. Une ou deux questions par séance, approfondies
+   plutôt que survolées ; varier les domaines d'une semaine à l'autre.
+3. **Chercher partout, puis lire** : WebSearch (études : Google Scholar, PubMed, arXiv, revues ; vidéos YouTube de
+   praticiens reconnus ; livres ; documentation officielle des plateformes ; cours ; articles d'experts), plusieurs
+   sources de natures différentes par question, en français et en anglais. Lire vraiment quand le réseau le permet :
+   WebFetch pour une page, `yt-dlp --skip-download --write-auto-subs --sub-langs "fr.*,en.*" --sub-format vtt <url>`
+   pour les sous-titres d'une vidéo, `pypdf` pour un PDF. Le champ `lu` dit honnêtement ce qui a été lu : `complet`,
+   `extrait`, ou `resume` (seulement le résumé du moteur de recherche, poids divisé par deux).
+4. **Juger la source** avant de la croire (`type`) : `meta-analyse` > `etude` (évaluée par des pairs : taille de
+   l'échantillon, réplication) > `mesure-compte` (les chiffres du compte de Zak, qui pèsent lourd) > `livre`,
+   `doc-plateforme` > `praticien`, `cours` > `video`, `article` > `vendeur` (chiffres d'un outil qui vend quelque
+   chose, souvent sans données) > `opinion`. Un chiffre sans source traçable n'est jamais une preuve.
+5. **Relier à ce qu'on sait déjà, puis intégrer** :
+   - `savoir.py chercher R "<sujet>"` d'abord : on rattache à une notion existante plutôt que d'en ouvrir une nouvelle ;
+   - `savoir.py source R '{"titre","type","lu","url"|"fichier","auteurs","annee","resume"}'` ;
+   - `savoir.py affirmer R '{"id": "A-…", "source", "sens": 1|-1, "note"}'` : de préférence une **preuve de plus**
+     (pour ou contre) sur une affirmation connue. Nouvelle affirmation seulement si elle dit vraiment autre chose
+     (l'outil montre les affirmations proches et refuse le doublon) ;
+   - une nouvelle notion (`savoir.py notion`) reçoit au moins un lien (`savoir.py lier`) vers ce qu'on savait :
+     une connaissance isolée ne sert pas ;
+   - réécrire la page de la notion **en précisant**, jamais de zéro : « Ce que j'en comprends » (synthèse dans ses mots,
+     nuances, conditions où ça marche ou pas) et « Ce que ça change dans mon travail » (la compétence : quand, comment,
+     sur quel moment d'un Reel, d'une story, d'un CTA). C'est là que le savoir devient compétence.
+6. **La confiance s'affine, elle ne bascule pas** (calculée par l'outil) : `à vérifier` → `probable` → `solide` (au
+   moins 2 sources indépendantes dont une étude ou une mesure du compte). Une nouvelle preuve déplace le niveau d'un
+   seul cran ; une contradiction sérieuse marque l'affirmation `contestée` et se garde (avec ses deux côtés) jusqu'à
+   ce que de nouvelles preuves tranchent. On ne change jamais tout parce qu'une source le dit.
+7. **Consolider** : relire les 3 notions du rappel, les relier à ce qui a été appris depuis, préciser leur synthèse,
+   `savoir.py revu R <notion> "ce qui a été consolidé"`. Une affirmation devenue `probable` ou `solide` qui change la
+   pratique entre dans `principes.md` (type `document`, avec l'id `A-…`), et la règle devient vérifiable sur le compte.
+8. **Clore** : `savoir.py carte R`, `savoir.py verifier R`, `savoir.py seance R '{…}'` (requêtes, sources, notions,
+   affirmations, liens, revues, ce que ça change, questions ouvertes, limites), questions nouvelles dans
+   `questions.md`, push de brooze-voix.
+
+**Comment le savoir se voit** : pas en parlant de soi. L'agent n'écrit jamais qu'il « réfléchit », « ressent » ou
+« mémorise » ; il ne joue pas un rôle. Le savoir se voit dans ses **choix** : `cerveau.py chercher` affiche aussi le
+savoir lié au propos, et l'intention d'un Reel cite les affirmations qui la fondent (« ouverture sans visage pendant
+1,2 s, A-0007 probable : … »). Le récap dit en une ou deux lignes ce qui a été appris, d'où ça vient et ce que ça change,
+ou « rien de neuf qui change la pratique » quand c'est le cas.
+
+**Ce que Zak dépose** (`data/connaissances/` : études, PDF, liens, vidéos YouTube, méthodes, notes) passe par la même
+intégration, avec `"origine": "zak"` : lu en entier, relié, jamais pris pour vérité absolue (son avis sur sa propre
+pratique, lui, va dans `principes.md` comme retour de Zak).
+
+## 9. Honnêteté (toujours)
 - « Mesuré » = chiffre ou fichier cité ; « supposé » = tout le reste, et c'est écrit.
 - Jamais de succès annoncé sur les vues ; l'objectif est la conversation qualifiée.
 - Pas de conclusion forte sous 5 Reels comparables (8 posts par groupe pour les comparaisons de brooze-kit).

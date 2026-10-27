@@ -20,6 +20,7 @@ fi
 python3 -c "import manim" 2>/dev/null || python3 -m pip install --break-system-packages -q --ignore-installed setuptools wheel 2>&1 | grep -i error || true
 python3 -m pip install --break-system-packages -q sherpa-onnx soundfile scipy pyloudnorm pillow numpy matplotlib opensimplex manim 2>&1 | grep -v -i warning || true
 python3 -c "import cv2" 2>/dev/null || python3 -m pip install --break-system-packages -q opencv-python-headless 2>&1 | grep -i error || true
+command -v yt-dlp >/dev/null || python3 -m pip install --break-system-packages -q yt-dlp trafilatura 2>&1 | grep -i error || true   # savoir : sous-titres YouTube, texte des pages (si le réseau les ouvre)
 # three.js, p5, Remotion (+ React), simplex-noise, playwright-core : versions figées dans package.json
 (cd "$ici/.." && npm install --silent >/dev/null)
 

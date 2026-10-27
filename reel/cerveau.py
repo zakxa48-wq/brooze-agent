@@ -1,7 +1,7 @@
 """Cerveau de l'agent Brooze : une MÉMOIRE structurée qui grandit avec les données de Zak (pas un entraînement du modèle).
 
 Les données vivent dans le dépôt PRIVÉ brooze-voix (R = /home/user/brooze-voix), jamais ici :
-  R/data/references/  R/data/mes-videos/  R/data/retours/  R/data/docs/      ce que Zak dépose
+  R/data/references/  R/data/mes-videos/  R/data/retours/  R/data/docs/  R/data/connaissances/   ce que Zak dépose
   R/data/cerveau/     fiches.jsonl (une fiche par fichier analysé), principes.md, pratique.jsonl, progression.md,
                       index.json, images/ (planches à REGARDER), textes/ (transcriptions, textes extraits), entrainement/
 
@@ -25,7 +25,7 @@ import sys, os, json, re, hashlib, subprocess, math, datetime, glob, tempfile, s
 import numpy as np
 
 ICI = os.path.dirname(os.path.abspath(__file__))
-CATEGORIES = ['references', 'mes-videos', 'retours', 'docs']
+CATEGORIES = ['references', 'mes-videos', 'retours', 'docs', 'connaissances']
 EXT_VIDEO = ('.mp4', '.mov', '.m4v', '.webm', '.mkv', '.avi')
 EXT_IMAGE = ('.jpg', '.jpeg', '.png', '.webp', '.heic')
 EXT_AUDIO = ('.m4a', '.mp3', '.wav', '.aac', '.ogg', '.opus', '.flac')
@@ -456,6 +456,11 @@ def cmd_chercher(R, requete, n=5):
     for p in principes(R):
         if 'Confiance** : forte' in p['corps']: print(f"- {p['titre']}")
     if not fiches_top: print('(aucune fiche : la base est vide, rien à appliquer)')
+    try:   # le savoir (connaissances du monde, reel/savoir.py) répond au même propos
+        sys.path.insert(0, ICI); import savoir
+        l = savoir.chercher(R, requete)
+        print('\n## Savoir (connaissances reliées, savoir.py)'); print('\n'.join(l) if l else '(rien de connu : question à ajouter à savoir/questions.md)')
+    except Exception as e: print(f'\n(savoir indisponible : {e})')
 
 
 # ---------------------------------------------------------------- comparaison aux références (contrôle qualité)
