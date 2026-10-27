@@ -169,6 +169,20 @@ pourquoi dans `seances.jsonl`).
    recoupée par une étude ou par les chiffres du compte avant de monter à `solide`. Sans accès au réseau, les
    transcriptions sont impossibles : noter les vidéos trouvées par WebSearch (`lu: resume`) dans `questions.md`
    (« à transcrire ») pour les reprendre dès que le réseau est ouvert.
+   **Lire une vidéo YouTube** (règle de Zak du 27/10), dans cet ordre :
+   1. le **connecteur vidIQ** d'abord (`vidiq_video_transcript`, chargé avec ToolSearch ; il passe par son API, pas
+      par le réseau de l'environnement) → transcription complète, `lu: complet` ;
+   2. en secours, `yt-dlp` (sous-titres) puis la page elle-même ;
+   3. si tout échoue : `lu: resume`, la vidéo reste dans la file `savoir.py a-lire`.
+   **Réseau** : le mode est « Limité » ; domaines ouverts le 27/10 : youtube.com et sous-domaines, ytimg.com,
+   googlevideo.com, wikipedia.org, wikimedia.org, arxiv.org, openalex.org, doi.org, ncbi.nlm.nih.gov, plos.org,
+   frontiersin.org, academic.oup.com, researchgate.net, nature.com, springer.com, sciencedirect.com, tandfonline.com,
+   sagepub.com, apa.org. Un domaine utile refusé se **signale** (récap + `questions.md`, avec le domaine exact), il ne
+   se contourne jamais (pas de miroir, pas de proxy, pas de copie tierce d'un article payant).
+   **File de lecture** : chaque séance commence par `savoir.py a-lire` (sources lues seulement en résumé) : en relire
+   au moins 2 en entier, mettre à jour la source (`source` avec le même lien et `lu: complet`), corriger les notes des
+   preuves si la lecture complète dit autre chose (sens compris), puis `savoir.py recalculer`. Une affirmation ne
+   reste jamais durablement fondée sur des résumés.
    **Puis compléter ailleurs** : WebSearch (études : Google Scholar, PubMed, arXiv, revues ; vidéos YouTube de
    praticiens reconnus ; livres ; documentation officielle des plateformes ; cours ; articles d'experts), plusieurs
    sources de natures différentes par question, en français et en anglais. Lire vraiment quand le réseau le permet :

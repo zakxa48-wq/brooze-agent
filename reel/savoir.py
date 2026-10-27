@@ -26,6 +26,8 @@ Commandes (python3 reel/savoir.py <commande> R …) :
   revu       R <notion> ["ce qui a été consolidé"]
   seance     R '<json>'                 enregistre la séance d'apprentissage du jour
   carte      R                          régénère les blocs automatiques des notions et carte.md
+  recalculer R                          repondère chaque preuve selon ce qui a VRAIMENT été lu de sa source (après une relecture)
+  a-lire     R                          sources lues seulement en résumé ou en extrait (file de lecture, plus anciennes d'abord)
   verifier   R                          rien d'oublié (toutes les ids d'hier existent), cohérence ; met à jour memoire.json
 """
 import sys, os, json, re, datetime, math, hashlib
@@ -255,6 +257,26 @@ def cmd_carte(R):
     open(os.path.join(D(R), 'carte.md'), 'w', encoding='utf-8').write('\n'.join(c) + '\n'); print('\n'.join(c[:3]))
 
 
+def cmd_recalculer(R):
+    srcs = {s['id']: s for s in lire(R, 'sources.jsonl')}; affs = lire(R, 'affirmations.jsonl'); n = 0
+    for a in affs:
+        change = False
+        for p in a['preuves']:
+            w = poids(srcs[p['source']])
+            if w != p['poids']: p['poids'] = w; change = True
+        if change:
+            avant = a['niveau']; a['pour'], a['contre'], a['niveau'], a['contestee'] = evaluer(a, srcs); n += 1
+            a['historique'].append(dict(date=aujourd(), niveau=a['niveau'], cause='relecture des sources (poids recalculés)'))
+            print(f"{a['id']} {avant} → {a['niveau']} (pour {a['pour']} / contre {a['contre']}) {a['enonce'][:80]}")
+    ecrire(R, 'affirmations.jsonl', affs); print(f'{n} affirmation(s) recalculée(s)')
+
+
+def cmd_a_lire(R):
+    xs = sorted([s for s in lire(R, 'sources.jsonl') if s.get('lu') != 'complet'], key=lambda s: s.get('ajoute', ''))
+    for s in xs: print(f"{s['id']} [{s['lu']}] {s['type']} · {s['titre'][:90]} · {s.get('url') or s.get('fichier') or '(sans lien : retrouver la source)'}")
+    if not xs: print('file vide : toutes les sources ont été lues en entier')
+
+
 def empreinte(R):
     return dict(sources=sorted(s['id'] for s in lire(R, 'sources.jsonl')), affirmations=sorted(a['id'] for a in lire(R, 'affirmations.jsonl')),
                 notions=notions(R), liens=sorted(f"{l['a']}|{l['relation']}|{l['b']}" for l in lire(R, 'liens.jsonl')))
@@ -302,4 +324,6 @@ if __name__ == '__main__':
     elif cmd == 'seance': cmd_seance(R, r[0])
     elif cmd == 'carte': cmd_carte(R)
     elif cmd == 'verifier': cmd_verifier(R)
+    elif cmd == 'recalculer': cmd_recalculer(R)
+    elif cmd == 'a-lire': cmd_a_lire(R)
     else: sys.exit(__doc__)
