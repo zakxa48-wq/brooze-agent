@@ -1,7 +1,7 @@
 {
  "idee": "memo-2026-10-23-redbull-5a40aa-0000",
  "jour": "2026-10-31",
- "etape": "bloque_qualite",
+ "etape": "controle",
  "faites": [
   "indexe",
   "compris (Red Bull, taurine, Ils dépensent, ne vends/vends, Brooze Production corrigés ; fenêtre 0-45,62 s)",
@@ -16,7 +16,8 @@
   "26/10 03h41-04h : setup ok, filet stories OK (26-29 couverts, reserve 7), voix+mix.flac recrees, plan.mp4 (scene.py corrige) en re-rendu",
   "26/10 03h-03h25 : plan.mp4 re-rendu (canette 2D lisible, vu en planche 3.5/6/12/30/45 s), rendu final par morceaux 46,8 s 87 Mo, controle.py : 0 bloquant, a_justifier = 2 relances 3,2 s, boucle (couleur 0,67 + fin immobile), duree 46,8 s, texte 3 mots 1,13 s",
   "26/10 15h-15h30 : plan.mp4 (version 03h25) réutilisé via lien `ln -s atelier/plan.mp4 plan.mp4` dans le dossier (à recréer) ; boucle : scène finale fondu vers la 3D à 45,8 s (fin sur la canette 3D du début) ; 5 relances ajoutées 4,8–10,2 s (zone morte 3,4–11,2 s corrigée) ; rendu final 46,8 s ; controle.py 0 bloquant, à justifier : relances 3,2–3,3 s (23,1 / 34,0 / 43,0), durée 46,7 s. cerveau.py comparer : EN DESSOUS (netteté 86 contre 133 pour la référence, coupes sur attaque 0,5 contre 0,33). Sceptique PAS passé. Teaser story rendu (posts/2026-10-27-reel-redbull-media/teaser). Jour décalé au 29/10 (règle du retard).",
-  "27/10 03h : plan.mp4/mix recréés, rendu par morceaux COMPLET 46,8 s (un premier rendu avait été coupé à 43 s), controle.py 0 bloquant. comparer = EN DESSOUS (netteté 86 contre 133). Sceptique (planche lue) : P2 ennui 12-36 s (grille de cartes sombres quasi identiques, 24-35 s), palette très sombre hors charte (70 % clair), texte vide 6,5-7,5 s, mention indépendante minuscule. Boucles de correction épuisées : NON PUBLIÉ."
+  "27/10 03h : plan.mp4/mix recréés, rendu par morceaux COMPLET 46,8 s (un premier rendu avait été coupé à 43 s), controle.py 0 bloquant. comparer = EN DESSOUS (netteté 86 contre 133). Sceptique (planche lue) : P2 ennui 12-36 s (grille de cartes sombres quasi identiques, 24-35 s), palette très sombre hors charte (70 % clair), texte vide 6,5-7,5 s, mention indépendante minuscule. Boucles de correction épuisées : NON PUBLIÉ.",
+  "27/10 (session de Zak) : refus repris en verdict explicite, tentative 1 = À REPRENDRE (verdict_1.md : 9 conditions, dont 4 de l'évaluation et 5 points de controle.py à corriger ou justifier). L'ancienne explication « comparer EN DESSOUS (netteté 86 contre 133) » était inexacte : 86 dépasse le seuil (60 % de 133 = 80) et la comparaison ne reposait que sur 1 référence de qualité 6, donc non probante."
  ],
- "notes": "NON PUBLIABLE en l'état (3 boucles passées). Pour le relancer il faut refaire la partie 12-36 s (grille) : cadrage plus clair, plans plus variés (relances visuelles, plus de lumière/clair charte). Aucune programmation. Jour libéré pour Koulechov (29/10)."
+ "notes": "REPRENDRE AVANT TOUTE NOUVELLE PRODUCTION (AGENT_REEL.md § 5.6) : remplir TOUTES les conditions de verdict_1.md (python3 reel/verdict.py etat sorties/2026-10-27-redbull-media), refaire le rendu, controle.py + comparer, puis évaluation indépendante par sous-agent (evaluation_2.json, qui vérifie d'abord chaque condition V1-…) et verdict.py evaluer. Jour réservé 31/10, glisse si besoin."
 }

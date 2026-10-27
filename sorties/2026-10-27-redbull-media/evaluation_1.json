@@ -1,0 +1,21 @@
+{
+ "evaluateur": "session de Zak (27/10), reconstitué à partir de la passe sceptique du 27/10 03 h (etat.json) et de planche_controle.jpg ; comparer.json absent (reel.mp4 non versionné, non recalculable)",
+ "defauts": [
+  {"priorite": "P2", "de": 12.0, "a": 36.0, "quoi": "grille de 9 cartes sombres presque identiques : on regarde la même image pendant 24 s, l'attention tombe",
+   "preuve": "planche_controle.jpg, images à 12 s et 30 s : même grille, mêmes pictogrammes, seul le texte change",
+   "condition": "entre 12 et 36 s, au moins 6 images visuellement différentes (cadrage, échelle ou sujet), aucune ne restant plus de 4 s, et chaque idée dite par Zak (dépenser, ne pas vendre, vendre) a son image propre",
+   "piste": "remplacer la grille par une suite de plans : zoom sur UNE carte à la fois, puis un plan large ; ou refaire le passage en 3D"},
+  {"priorite": "P2", "de": 0.0, "a": 46.8, "quoi": "palette presque noire tout le long, loin de la charte (≈ 70 % clair, 25 % encre, 5 % cuivre)",
+   "preuve": "planche_controle.jpg : les 5 images sont sur fond noir",
+   "condition": "au moins un tiers de la durée sur fond clair (papier de la charte), OU une justification de direction artistique dans reel.json « justifications » (« palette ») acceptée par l'évaluation suivante",
+   "piste": "alterner : 3D sombre au hook et à la révélation, analyse sur papier clair"},
+  {"priorite": "P2", "de": 6.5, "a": 7.5, "quoi": "écran presque vide (canette minuscule en bas, rien d'autre) pendant une seconde",
+   "preuve": "planche_controle.jpg, image à 6 s",
+   "condition": "entre 6 et 8 s, un sujet occupe au moins un quart de l'écran"},
+  {"priorite": "P2", "de": 0.0, "a": 46.8, "quoi": "mention « analyse indépendante · aucun lien avec la marque » trop petite pour être lue sur un téléphone",
+   "preuve": "planche_controle.jpg, haut de chaque image : texte d'environ 11 px",
+   "condition": "mention lisible : au moins 28 px de haut, contraste suffisant, visible au moins 3 s (charte § Marques réelles)"}
+ ],
+ "conditions_precedentes": {},
+ "justifications": {}
+}

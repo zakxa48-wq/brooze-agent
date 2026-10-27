@@ -96,7 +96,7 @@ Chaque Reel en cours a un `sorties/<id>/etat.json`, poussé sur main après chaq
 Étapes : `compris` (transcription vérifiée, mots recalés) → `dirige` (hooks, concept, registre consulté, technique
 nouvelle choisie, storyboard) → `images` (rendus 3D / génératifs, chacun commité dès qu'il est fait) → `son` →
 `rendu` (`rendu.mjs --morceaux --budget N` : les morceaux faits sont commités dans `sorties/<id>/morceaux/` et
-sautés à la reprise) → `controle` (controle.py + passes du sceptique, une passe = une étape) → `publie`.
+sautés à la reprise) → `controle` (controle.py, comparer, évaluation indépendante, `verdict.py` ; une tentative = une étape) → `publie`.
 - **Au début de chaque exécution** : `banque.py etat` + les `etat.json` dont l'étape n'est pas `publie` : reprends
   **d'abord** ces Reels, dans l'ordre de leur jour réservé, puis seulement de nouveaux Reels.
 - **Reprise** : `voix.wav` et `mix.flac` ne sont pas versionnés (audio). Recrée-les : `banque.py preparer R <idee>
@@ -282,7 +282,7 @@ node reel/rendu.mjs sorties/<id>/reel.json --couverture           # couverture.j
 ```
 Regarde **toujours** la planche de contrôle avant le final : texte coupé, chevauchements, cuivre en double, vide.
 
-## 5. Contrôle qualité obligatoire (3 boucles maximum)
+## 5. Contrôle qualité obligatoire : verdict expliqué, tentatives jusqu'à ce que ça passe
 1. `python3 reel/controle.py sorties/<id>/reel.mp4 sorties/<id>/reel.json` : format, i/s, codecs, durée < 90 s,
    poids < 95 Mo, −14 LUFS ±1, crête ≤ −1 dBTP, glitchs (flash, saut, noir). Code de sortie 1 = bloquant.
    Il mesure aussi l'**engagement** (`reel/engagement.py`, MONTAGE.md § 5 bis) : ouverture vivante, zones mortes > 2 s,
@@ -294,12 +294,33 @@ Regarde **toujours** la planche de contrôle avant le final : texte coupé, chev
    4 regards, puis la **passe « ennui »** : regarde la vidéo comme 3 visionnages d'affilée (planche des images clés
    lue trois fois avec `jonction.jpg` entre chaque, `engagement.png`), note CHAQUE moment où l'attention baisse
    (temps exact, pourquoi : rien ne change, texte qui traîne, même cadence, raccord de boucle visible) et l'ordre de
-   correction. Écris le rapport dans `sorties/<id>/sceptique_passeN.md` (section « Ennui »).
+   correction. Cette passe est faite par l'évaluateur indépendant (point 4) : rapport `sorties/<id>/sceptique_passeN.md`
+   (section « Ennui ») et défauts dans `evaluation_N.json`.
 3. **Comparaison aux références** : `python3 reel/cerveau.py comparer /home/user/brooze-voix sorties/<id>/reel.mp4`
-   (rythme, lisibilité, finition contre les meilleures fiches). « EN DESSOUS » = une boucle de correction de plus.
-4. Applique l'ordre (dans `reel.json` ou le moteur), refais le rendu, recontrôle. Publiable quand une passe ne trouve
-   plus ni P1 ni P2. Après 3 boucles encore insuffisantes : **ne publie pas**, garde le meilleur rendu dans
-   `sorties/<id>/`, explique pourquoi dans le récap et le journal.
+   (rythme, lisibilité, finition contre les meilleures fiches).
+   `comparer` n'est **bloquant que s'il est « probante »** (au moins 3 références de qualité ≥ 7 dans la base) ;
+   sinon ses raisons sont des conseils. Il écrit `comparer.json` avec chaque raison : mesuré, exigé, condition.
+4. **Évaluation indépendante** : la passe du sceptique (point 2) est faite par un **sous-agent** (outil Task/Agent),
+   qui ne reçoit que la vidéo, les planches, `engagement.png`, `jonction.jpg`, `controle.json`, `reel.json`, la charte,
+   MONTAGE.md et, à partir de la tentative 2, le verdict précédent : jamais les intentions ni les excuses de celui qui
+   a fabriqué. Il écrit `sorties/<id>/evaluation_N.json` (format dans `reel/verdict.py`) : chaque défaut avec sa
+   priorité, son temps exact, sa preuve et **une condition de passage vérifiable** (« entre 12 et 36 s, aucun plan ne
+   reste plus de 2,5 s sans changement d'échelle ou de couleur »), jamais un simple « c'est mou ».
+5. **Verdict** : `python3 reel/verdict.py evaluer sorties/<id>` rassemble les juges en `verdict_N.md` : PUBLIABLE ou
+   À REPRENDRE, chaque raison (où, preuve, exigé, condition) et **la liste complète des conditions** à remplir. C'est
+   la seule décision qui compte ; elle est commitée et citée dans le récap.
+6. **Retenter** (À REPRENDRE) : applique **toutes** les conditions de la liste, et seulement elles ; refais le rendu,
+   repasse controle.py et comparer, puis **resoumets** au juge (nouveau sous-agent, `evaluation_{N+1}.json`) qui
+   vérifie d'abord chaque condition précédente (levée / non levée, avec le temps exact), puis cherche le reste.
+   Juge équitable : à la tentative 2 et après, un défaut nouveau n'est recevable que s'il est P1, une régression causée
+   par la correction, ou invisible avant (dire pourquoi) ; sinon il devient un conseil. Les exigences ne bougent pas
+   d'une tentative à l'autre.
+7. **Durée de vie** : les tentatives continuent d'un passage à l'autre (état `controle`, `notes` = conditions
+   ouvertes, `verdict.py etat`), avant toute nouvelle production. Si deux tentatives de suite ne lèvent **aucune**
+   condition, changer d'approche sur la partie en cause (refaire le plan, pas le retoucher). Le jour réservé glisse si
+   besoin (règle du retard). Abandon seulement après 6 tentatives ou 7 jours après le jour réservé : banque
+   `marquer … refuse --raison "<verdict final>"`, et le récap donne à Zak le verdict final et ce qui a bloqué.
+   Jamais de publication tant que le verdict n'est pas PUBLIABLE.
 
 ## 6. Publier
 1. `posts/<AAAA-MM-JJ>-reel-<slug>/` : `reel.mp4`, `couverture.jpg`, `post.json` (type `reel`, `source_audio`,

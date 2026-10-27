@@ -492,9 +492,41 @@ def cmd_comparer(R, video, n=5):
     axes['finition'] = dict(reel=dict(nettete=nt, lufs=s.get('lufs'), coupes_sur_attaque=sync), ref=dict(nettete=ref_nt, coupes_sur_attaque=ref_sync),
                             ok=(np.isnan(ref_nt) or nt >= ref_nt * .6) and (s.get('lufs') is None or -16 <= s['lufs'] <= -12)
                             and (sync is None or np.isnan(ref_sync) or sync >= ref_sync - .2))
-    out['axes'] = axes; out['verdict'] = 'au niveau' if all(a['ok'] for a in axes.values()) else 'EN DESSOUS : boucle de correction'
-    print(json.dumps(out, ensure_ascii=False, indent=1, default=lambda o: None if isinstance(o, float) and np.isnan(o) else o))
-    if out['verdict'] != 'au niveau': sys.exit(1)
+    # raisons explicites : ce qui est mesuré, ce qui est exigé, et comment passer (lu par reel/verdict.py)
+    f = lambda v: None if v is None or (isinstance(v, float) and np.isnan(v)) else round(float(v), 2)
+    raisons = []
+    if not axes['rythme']['ok']:
+        if not np.isnan(ref_dp) and dp > ref_dp * 1.35:
+            raisons.append(dict(cle='comparer.rythme.duree_plan', mesure=f(dp), exige=f'≤ {f(ref_dp * 1.35)} s', quoi='plans trop longs en moyenne',
+                                condition=f'durée moyenne des plans ≤ {f(ref_dp * 1.35)} s (couper ou relancer dans les plans longs)'))
+        if mes['coupes_3s'] < min(1, med('coupes_3s')):
+            raisons.append(dict(cle='comparer.rythme.coupes_3s', mesure=mes['coupes_3s'], exige='≥ 1', quoi='aucune coupe dans les 3 premières secondes',
+                                condition='au moins une coupe ou un changement de plan avant 3 s'))
+    if not axes['lisibilite']['ok']:
+        if h is not None and h < 20:
+            raisons.append(dict(cle='comparer.lisibilite.hauteur', mesure=h, exige='≥ 20 px (boîte OCR)', quoi='texte trop petit',
+                                condition='plus petit texte lisible ≥ 20 px de haut (police ≥ 34 px)'))
+        if not np.isnan(ref_mpi) and mpi > max(ref_mpi * 1.5, 4):
+            raisons.append(dict(cle='comparer.lisibilite.mots', mesure=f(mpi), exige=f'≤ {f(max(ref_mpi * 1.5, 4))}', quoi='trop de mots à l écran à la fois',
+                                condition=f'au plus {f(max(ref_mpi * 1.5, 4))} mots par image en moyenne'))
+    if not axes['finition']['ok']:
+        if not np.isnan(ref_nt) and nt < ref_nt * .6:
+            raisons.append(dict(cle='comparer.finition.nettete', mesure=f(nt), exige=f'≥ {f(ref_nt * .6)}', quoi='image plus floue que les références',
+                                condition=f'netteté médiane ≥ {f(ref_nt * .6)} (moins de flou global, textures plus fines)'))
+        if s.get('lufs') is not None and not -16 <= s['lufs'] <= -12:
+            raisons.append(dict(cle='comparer.finition.lufs', mesure=f(s['lufs']), exige='entre −16 et −12 LUFS', quoi='niveau sonore', condition='volume intégré entre −16 et −12 LUFS'))
+        if sync is not None and not np.isnan(ref_sync) and sync < ref_sync - .2:
+            raisons.append(dict(cle='comparer.finition.synchro', mesure=f(sync), exige=f'≥ {f(ref_sync - .2)}', quoi='coupes pas assez calées sur les attaques du son',
+                                condition=f'part des coupes sur une attaque ≥ {f(ref_sync - .2)}'))
+    # une comparaison n'est probante qu'avec assez de bonnes références : sinon elle informe, elle ne bloque pas
+    probante = len([x for x in meilleures if (x.get('qualite') or 0) >= 7]) >= 3
+    out['axes'] = axes; out['raisons'] = raisons; out['probante'] = probante
+    out['verdict'] = 'au niveau' if not raisons else ('EN DESSOUS : boucle de correction' if probante else 'en dessous (indicatif : moins de 3 références de qualité ≥ 7, non bloquant)')
+    js = json.dumps(out, ensure_ascii=False, indent=1, default=lambda o: None if isinstance(o, float) and np.isnan(o) else o)
+    print(js)
+    open(os.path.join(os.path.dirname(os.path.abspath(video)), 'comparer.json'), 'w').write(js)
+    for r in raisons: print(f"- {r['quoi']} : mesuré {r['mesure']}, exigé {r['exige']} → {r['condition']}")
+    if raisons and probante: sys.exit(1)
 
 
 # ---------------------------------------------------------------- pratique et progression
