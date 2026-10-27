@@ -171,8 +171,14 @@ pourquoi dans `seances.jsonl`).
    (« à transcrire ») pour les reprendre dès que le réseau est ouvert.
    **Lire une vidéo YouTube** (règle de Zak du 27/10), dans cet ordre :
    1. le **connecteur vidIQ** d'abord (`vidiq_video_transcript`, chargé avec ToolSearch ; il passe par son API, pas
-      par le réseau de l'environnement) → transcription complète, `lu: complet` ;
-   2. en secours, `yt-dlp` (sous-titres) puis la page elle-même ;
+      par le réseau de l'environnement) → transcription complète, `lu: complet`. **Crédits comptés** : 5 crédits par
+      transcription, environ 150 par cycle (123 restants le 27/10, renouvelés le 29). Avant chaque appel,
+      `vidiq_balance` (gratuit) ; garder une réserve de 20 crédits et réserver vidIQ aux vidéos qui comptent le plus.
+      Ne jamais utiliser `vidiq_youtube_search` ni les autres outils payants pour chercher : la recherche se fait avec
+      `yt-dlp --flat-playlist --print "%(id)s | %(title)s | %(channel)s | %(duration)s" "ytsearch10:<requête>"`
+      (gratuit) ou WebSearch. Si le connecteur n'est pas joint à la session : passer au secours, sans bloquer ;
+   2. en secours (crédits bas, connecteur absent, vidéo refusée) : `yt-dlp --skip-download --write-subs
+      --write-auto-subs --sub-langs "fr.*,en.*" --sub-format vtt <url>` (testé le 27/10 : marche), puis la page ;
    3. si tout échoue : `lu: resume`, la vidéo reste dans la file `savoir.py a-lire`.
    **Réseau** : le mode est « Limité » ; domaines ouverts le 27/10 : youtube.com et sous-domaines, ytimg.com,
    googlevideo.com, wikipedia.org, wikimedia.org, arxiv.org, openalex.org, doi.org, ncbi.nlm.nih.gov, plos.org,
