@@ -4,6 +4,11 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 27/10 (3 h 41) — Red Bull non publiable, Koulechov démarré
+- Filet stories : 27→30/10 couvert (10 h), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Cerveau : rien de nouveau.
+- Red Bull : rendu complet 46,8 s (le premier rendu avait été coupé à 43 s), controle.py 0 bloquant, mais comparer = EN DESSOUS et sceptique : ennui 12–36 s, palette trop sombre. 3 boucles passées : NON programmé. Jour 31/10 conservé en réserve, refonte de la partie grille nécessaire.
+- Koulechov (storyboard de Zak) : idée ajoutée à la banque (score 9, Claire), transcription corrigée (une tombe, chiot, Koulechov, Production), jour réservé 29/10, étape « compris ». Écart : la fin de « l'ordre dans lequel tu [le montres] » manque dans l'audio.
+
 ## 26/10 (15 h 41) — Red Bull : boucle et relances corrigées, non programmé
 - Filet stories : 27→30/10 couvert (10 h), aucune en erreur, réserve 7. Veille : non faite ce passage (temps pris par le rendu).
 - Red Bull : scène finale en fondu vers la canette 3D du début (boucle), 5 relances sur 4,8–10,2 s ; rendu 46,8 s ; controle.py 0 bloquant. `cerveau.py comparer` = EN DESSOUS (netteté 86 contre 133), sceptique pas passé : rien programmé. Jour décalé au 29/10. Teaser story prêt. Correctif : render.mjs pointe maintenant sur /opt/pw-browsers/chromium.

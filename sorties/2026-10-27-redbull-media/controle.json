@@ -64,7 +64,7 @@
    34.0,
    37.3,
    38.1,
-   38.8,
+   38.7,
    40.6,
    41.2,
    42.4,
@@ -79,13 +79,13 @@
   ],
   "boucle": {
    "ecart_image": 6.3,
-   "ecart_couleur": 0.05,
+   "ecart_couleur": 0.06,
    "mouvement_fin": 1.5,
    "mouvement_debut": 1.25,
    "son": {
     "debut_db": -16.0,
-    "fin_db": -17.7,
-    "fin_derniers_80ms_db": -23.7,
+    "fin_db": -17.6,
+    "fin_derniers_80ms_db": -23.6,
     "moyenne_db": -16.2
    }
   },

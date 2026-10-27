@@ -1,0 +1,12 @@
+{
+ "source": "/home/user/brooze-voix/audio/2026-10/memo-2026-10-25-koulechov.mp3",
+ "duree_brut": 43.36,
+ "duree_voix": 39.99,
+ "rapport_parole_bruit_db": 53.0,
+ "saturation": 0.0,
+ "mots": 117,
+ "debit_mots_s": 2.93,
+ "transcription": "Regarde ce visage. A ton avis, quelle émotion il ressent ? Si je te montre ce visage puis une assiette de frites, tu te dis qu'il a faim Si je te montre le même visage puis il tombe, tu penses qu'il est triste. Et si je te montre un shio mignon, tu vas te dire qu'il est attendri. Pourtant, l'image du visage n'a jamais changé. C'est ce qu'on appelle l'effet Kulchov. Ton cerveau crée une émotion en associant deux images qui n'ont rien à voir. La vraie magie d'une vidéo, ce n'est pas ce que tu filmes, c'est l'ordre dans lequel tu Le montage, c'est de la manipulation pure. Laisse Brooze Productions manipuler ton audience pour toi. Abonne-toi.",
+ "verdict": "ok",
+ "raisons": []
+}

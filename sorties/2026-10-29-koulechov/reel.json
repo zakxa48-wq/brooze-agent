@@ -1,0 +1,33 @@
+{
+  "id": "2026-10-29-koulechov",
+  "fps": 30,
+  "source": [
+    0.0,
+    39.99
+  ],
+  "fin": 2.4,
+  "banque": {
+    "idee": "memo-2026-10-25-koulechov-59ecb6-0000",
+    "audio": "audio/2026-10/memo-2026-10-25-koulechov.mp3"
+  },
+  "avatar": "Claire",
+  "idee": "L'effet Koulechov : le montage crée l'émotion (storyboard de Zak)",
+  "hook": {
+    "choisi": "Regarde ce visage. À ton avis, quelle émotion il ressent ?",
+    "ecartes": []
+  },
+  "hypothese": "",
+  "scenes": [],
+  "musique": {
+    "bpm": 96,
+    "tonalite": "la",
+    "sections": []
+  },
+  "silences": [],
+  "couverture": {
+    "theme": "encre",
+    "label": "",
+    "titre": ""
+  },
+  "storyboard_zak": "storyboard_zak.md"
+}
