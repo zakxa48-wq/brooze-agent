@@ -1,33 +1,251 @@
 {
-  "id": "2026-10-29-koulechov",
-  "fps": 30,
-  "source": [
-    0.0,
-    39.99
-  ],
-  "fin": 2.4,
-  "banque": {
-    "idee": "memo-2026-10-25-koulechov-59ecb6-0000",
-    "audio": "audio/2026-10/memo-2026-10-25-koulechov.mp3"
+ "id": "2026-10-29-koulechov",
+ "fps": 30,
+ "source": [
+  0.0,
+  39.99
+ ],
+ "fin": 2.4,
+ "banque": {
+  "idee": "memo-2026-10-25-koulechov-59ecb6-0000",
+  "audio": "audio/2026-10/memo-2026-10-25-koulechov.mp3"
+ },
+ "avatar": "Claire",
+ "idee": "L'effet Koulechov : le montage crée l'émotion (storyboard de Zak)",
+ "hook": {
+  "choisi": "Regarde ce visage. À ton avis, quelle émotion il ressent ?",
+  "ecartes": []
+ },
+ "hypothese": "Un Reel qui FAIT l'effet qu'il explique (le même visage, trois objets, trois émotions) montre le décryptage au lieu de le dire : on reste pour voir l'émotion changer (durée moyenne regardée, partages).",
+ "scenes": [
+  {
+   "de": 0,
+   "type": "plan",
+   "video": "atelier/plan.mp4",
+   "debut": 0,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.05
+    ],
+    [
+     0.5,
+     0.5,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0
+  }
+ ],
+ "musique": {
+  "bpm": 96,
+  "tonalite": "la",
+  "sections": [
+   [
+    0.2,
+    "@10",
+    "suspens"
+   ],
+   [
+    "@10",
+    "@57",
+    "tension"
+   ],
+   [
+    "@57",
+    "@84",
+    "calme"
+   ],
+   [
+    "@84",
+    "@108",
+    "tension"
+   ],
+   [
+    "@108",
+    42.39,
+    "resolution"
+   ]
+  ]
+ },
+ "silences": [],
+ "couverture": {
+  "theme": "encre",
+  "label": "",
+  "titre": ""
+ },
+ "storyboard_zak": "storyboard_zak.md",
+ "boucle": true,
+ "plans_3d": [],
+ "clins_d_oeil": [
+  {
+   "t": 0.0,
+   "quoi": "le visage de la fin est le même dessin, à la même place et à la même taille que celui du début : la vidéo se referme sur le visage neutre, comme si rien n'avait changé"
   },
-  "avatar": "Claire",
-  "idee": "L'effet Koulechov : le montage crée l'émotion (storyboard de Zak)",
-  "hook": {
-    "choisi": "Regarde ce visage. À ton avis, quelle émotion il ressent ?",
-    "ecartes": []
+  {
+   "t": 19.0,
+   "quoi": "le visage cloné trois fois est un seul et même dessin : l'effet Koulechov se démontre lui-même"
+  }
+ ],
+ "sons": [
+  {
+   "t": 0.25,
+   "son": "chime",
+   "g": 0.3
   },
-  "hypothese": "",
-  "scenes": [],
-  "musique": {
-    "bpm": 96,
-    "tonalite": "la",
-    "sections": []
+  {
+   "t": 0.55,
+   "son": "tick",
+   "g": 0.2
   },
-  "silences": [],
-  "couverture": {
-    "theme": "encre",
-    "label": "",
-    "titre": ""
+  {
+   "t": 0.85,
+   "son": "tick",
+   "g": 0.2
   },
-  "storyboard_zak": "storyboard_zak.md"
+  {
+   "t": 1.15,
+   "son": "tick",
+   "g": 0.2
+  },
+  {
+   "t": 2.6,
+   "son": "pop",
+   "g": 0.4
+  },
+  {
+   "t": 4.2,
+   "son": "whoosh",
+   "g": 0.3
+  },
+  {
+   "t": 5.9,
+   "son": "papier_glisse",
+   "g": 0.3,
+   "args": {
+    "d": 0.35
+   }
+  },
+  {
+   "t": 10.9,
+   "son": "granit",
+   "g": 0.25,
+   "args": {
+    "d": 0.45
+   }
+  },
+  {
+   "t": 11.4,
+   "son": "low_hit",
+   "g": 0.3
+  },
+  {
+   "t": 14.55,
+   "son": "papier_glisse",
+   "g": 0.3,
+   "args": {
+    "d": 0.35
+   }
+  },
+  {
+   "t": 15.0,
+   "son": "pop",
+   "g": 0.4
+  },
+  {
+   "t": 15.35,
+   "son": "chime",
+   "g": 0.18,
+   "args": {
+    "n": 88
+   }
+  },
+  {
+   "t": 18.2,
+   "son": "whoosh",
+   "g": 0.35
+  },
+  {
+   "t": 18.5,
+   "son": "pop",
+   "g": 0.3
+  },
+  {
+   "t": 18.8,
+   "son": "pop",
+   "g": 0.3
+  },
+  {
+   "t": 25.5,
+   "son": "trait",
+   "g": 0.25
+  },
+  {
+   "t": 26.3,
+   "son": "pop",
+   "g": 0.3
+  },
+  {
+   "t": 26.7,
+   "son": "pop",
+   "g": 0.3
+  },
+  {
+   "t": 27.1,
+   "son": "pop",
+   "g": 0.3
+  },
+  {
+   "t": 27.85,
+   "son": "whoosh",
+   "g": 0.3
+  },
+  {
+   "t": 31.9,
+   "son": "snap",
+   "g": 0.35
+  },
+  {
+   "t": 32.5,
+   "son": "snap",
+   "g": 0.3
+  },
+  {
+   "t": 33.13,
+   "son": "low_hit",
+   "g": 0.45
+  },
+  {
+   "t": 33.7,
+   "son": "snap",
+   "g": 0.3
+  },
+  {
+   "t": 34.6,
+   "son": "snap",
+   "g": 0.3
+  },
+  {
+   "t": 36.3,
+   "son": "tampon",
+   "g": 0.9
+  },
+  {
+   "t": 36.3,
+   "son": "low_hit",
+   "g": 0.6
+  },
+  {
+   "t": 39.1,
+   "son": "tick",
+   "g": 0.5
+  },
+  {
+   "t": 39.1,
+   "son": "pop",
+   "g": 0.3
+  }
+ ]
 }
