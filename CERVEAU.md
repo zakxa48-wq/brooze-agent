@@ -159,7 +159,17 @@ pourquoi dans `seances.jsonl`).
    (apprendre en avance ce qu'ils vont demander : Koulechov → perception, montage soviétique, études de réplication),
    ce que Zak a déposé dans `data/connaissances/` ou `data/docs/`. Une ou deux questions par séance, approfondies
    plutôt que survolées ; varier les domaines d'une semaine à l'autre.
-3. **Chercher partout, puis lire** : WebSearch (études : Google Scholar, PubMed, arXiv, revues ; vidéos YouTube de
+3. **YouTube d'abord** (demande de Zak du 27/10) : chaque séance commence par YouTube, et la majorité des sources
+   absorbées en viennent : conférences et cours, monteurs et motion designers reconnus, chaînes de vulgarisation
+   scientifique, décryptages de pubs, créateurs qui montrent leurs chiffres. Pour chaque vidéo : la transcription
+   complète (`yt-dlp --skip-download --write-auto-subs --sub-langs "fr.*,en.*" --sub-format vtt <url>`, `lu: complet`),
+   les idées extraites avec le minutage, et la vidéo jugée pour ce qu'elle est (`type` selon l'auteur : chercheur qui
+   présente son étude → `etude` si l'étude est citée et retrouvée, praticien reconnu → `praticien`, sinon `video`).
+   Prioriser YouTube pour la quantité ne veut pas dire le croire davantage : une affirmation forte vue sur YouTube est
+   recoupée par une étude ou par les chiffres du compte avant de monter à `solide`. Sans accès au réseau, les
+   transcriptions sont impossibles : noter les vidéos trouvées par WebSearch (`lu: resume`) dans `questions.md`
+   (« à transcrire ») pour les reprendre dès que le réseau est ouvert.
+   **Puis compléter ailleurs** : WebSearch (études : Google Scholar, PubMed, arXiv, revues ; vidéos YouTube de
    praticiens reconnus ; livres ; documentation officielle des plateformes ; cours ; articles d'experts), plusieurs
    sources de natures différentes par question, en français et en anglais. Lire vraiment quand le réseau le permet :
    WebFetch pour une page, `yt-dlp --skip-download --write-auto-subs --sub-langs "fr.*,en.*" --sub-format vtt <url>`
