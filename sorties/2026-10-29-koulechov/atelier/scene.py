@@ -15,10 +15,10 @@ T_SPLIT, T_ZOOM, T_TL, T_STAMP = T(10) - .05, T(57) - .05, T(84) - .25, T(110) +
 T_LOOP = D - 1.0
 
 # ---------- caméra du monde (monde = Nul ; rangées : -640 assiette, 0 tombe, 640 chiot)
-S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.25, doux), (T_ZOOM + .95, .82, sortie(3)), (D, .82, lin))
-CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, 0, sortie(3)), (D, 0, lin))
-CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 160, sortie(3)),
-       (T_TL, 160, doux), (T_TL + .6, 2300, expo(6)), (D, 2300, lin))
+S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.25, doux), (T_ZOOM + .95, .66, sortie(3)), (D, .66, lin))
+CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, 65, sortie(3)), (D, 65, lin))
+CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 315, sortie(3)),
+       (T_TL, 315, doux), (T_TL + .6, 2300, expo(6)), (D, 2300, lin))
 monde = comp.ajouter(Nul(position=lambda t: (540 - val(S, t) * val(CX, t), 960 - val(S, t) * val(CY, t)), echelle=lambda t: val(S, t), fin=T_TL + .8))
 
 def ressort_in(t0, dur=.45, de=0., a=1., f=3.0, am=.5):
@@ -129,37 +129,37 @@ def rangee(y, nom, t0, mot_emotion, t_mot):
     co = carte(rr, 40, t0); on = Nul(parent=rr, position=(40, 0), debut=t0); comp.ajouter(on); OBJETS[nom](on, t0)
     # « + » entre visage et objet, « = émotion » à droite
     tp = T(76)
-    comp.ajouter(Texte('+', police='Inter', taille=70, graisse=800, position=(-160, 0), parent=rr,
+    comp.ajouter(Texte('+', police='Inter', taille=90, graisse=800, position=(-128, 0), parent=rr,
                        opacite=K((tp, 0, lin), (tp + .25, 1, lin)), echelle=ressort_in(tp, .5, .3, 1.0), debut=t0))
     ta = T(76) + .3
-    comp.ajouter(Forme(svg('M -360 240 L -360 275 L 430 275 L 430 70'), remplissage=None, trait=INK, epaisseur=7, position=(0, 0), parent=rr,
+    comp.ajouter(Forme(svg('M -360 240 L -360 275 L 470 275 L 470 70'), remplissage=None, trait=INK, epaisseur=7, position=(0, 0), parent=rr,
                        trace_fin=K((ta, 0, doux), (ta + .7, 1, lin)), debut=t0))
-    comp.ajouter(Forme(points([(-22, 30), (0, 0), (22, 30)]), remplissage=None, trait=INK, epaisseur=7, position=(430, 62), parent=rr,
+    comp.ajouter(Forme(points([(-22, 30), (0, 0), (22, 30)]), remplissage=None, trait=INK, epaisseur=7, position=(470, 62), parent=rr,
                        opacite=K((ta + .6, 0, lin), (ta + .7, 1, lin)), debut=t0))
-    comp.ajouter(Texte('=', police='Inter', taille=70, graisse=800, position=(262, 0), parent=rr,
+    comp.ajouter(Texte('=', police='Inter', taille=90, graisse=800, position=(232, 0), parent=rr,
                        opacite=K((t_mot - .1, 0, lin), (t_mot + .15, 1, lin)), debut=t0))
-    comp.ajouter(Texte(mot_emotion, police='Inter', taille=76, graisse=800, position=(430, 0), parent=rr,
+    comp.ajouter(Texte(mot_emotion, police='Inter', taille=100, graisse=800, position=(470, 0), parent=rr,
                        opacite=K((t_mot, 0, lin), (t_mot + .2, 1, lin)), echelle=ressort_in(t_mot, .5, .5, 1.0), debut=t0))
 # rangée vivante (chiot) : mêmes « + » et « = » que les deux autres, ajoutés au monde
 def formule_vivante(y, mot, t_mot, t0):
     tp = T(76)
-    comp.ajouter(Texte('+', police='Inter', taille=70, graisse=800, position=(-160, y), parent=monde, debut=t0, fin=T_TL + .8,
+    comp.ajouter(Texte('+', police='Inter', taille=90, graisse=800, position=(-128, y), parent=monde, debut=t0, fin=T_TL + .8,
                        opacite=K((tp, 0, lin), (tp + .25, 1, lin)), echelle=ressort_in(tp, .5, .3, 1.0)))
-    comp.ajouter(Texte('=', police='Inter', taille=70, graisse=800, position=(262, y), parent=monde, debut=t0, fin=T_TL + .8,
+    comp.ajouter(Texte('=', police='Inter', taille=90, graisse=800, position=(232, y), parent=monde, debut=t0, fin=T_TL + .8,
                        opacite=K((t_mot - .1, 0, lin), (t_mot + .15, 1, lin))))
-    comp.ajouter(Texte(mot, police='Inter', taille=76, graisse=800, position=(430, y), parent=monde, debut=t0, fin=T_TL + .8,
+    comp.ajouter(Texte(mot, police='Inter', taille=100, graisse=800, position=(470, y), parent=monde, debut=t0, fin=T_TL + .8,
                        opacite=K((t_mot, 0, lin), (t_mot + .2, 1, lin)), echelle=ressort_in(t_mot, .5, .5, 1.0)))
 formule_vivante(640, 'attendri', T(78) + .75, T_ZOOM)
 ta3 = T(76) + .3
-comp.ajouter(Forme(svg('M -360 880 L -360 915 L 430 915 L 430 710'), remplissage=None, trait=INK, epaisseur=7, parent=monde, debut=T_ZOOM, fin=T_TL + .8,
+comp.ajouter(Forme(svg('M -360 880 L -360 915 L 470 915 L 470 710'), remplissage=None, trait=INK, epaisseur=7, parent=monde, debut=T_ZOOM, fin=T_TL + .8,
                    trace_fin=K((ta3, 0, doux), (ta3 + .7, 1, lin))))
-comp.ajouter(Forme(points([(-22, 30), (0, 0), (22, 30)]), remplissage=None, trait=INK, epaisseur=7, position=(430, 702), parent=monde, debut=T_ZOOM, fin=T_TL + .8,
+comp.ajouter(Forme(points([(-22, 30), (0, 0), (22, 30)]), remplissage=None, trait=INK, epaisseur=7, position=(470, 702), parent=monde, debut=T_ZOOM, fin=T_TL + .8,
                    opacite=K((ta3 + .6, 0, lin), (ta3 + .7, 1, lin))))
 rangee(-640, 'assiette', T(57) + .22, 'faim', T(78) - .05)
 rangee(0, 'tombe', T(57) + .5, 'triste', T(78) + .35)
 
 # ---------- 4. la timeline (générique : aucune interface de logiciel reconnaissable)
-TL = Nul(position=K((T_TL, (540, 3000), expo(6)), (T_TL + .7, (540, 880), tenir)), debut=T_TL, fin=T_STAMP + .4); comp.ajouter(TL)
+TL = Nul(echelle=.92, position=K((T_TL, (540, 3000), expo(6)), (T_TL + .7, (540, 880), tenir)), debut=T_TL, fin=T_STAMP + .4); comp.ajouter(TL)
 def fade_tl(t): return val(K((T_STAMP - .35, 1, lin), (T_STAMP, 0, lin)), t)
 BL = [(150, GREY), (230, INK), (110, '#CFC9BE'), (190, INK), (130, GREY), (140, '#CFC9BE')]
 inverse_t = T(101)

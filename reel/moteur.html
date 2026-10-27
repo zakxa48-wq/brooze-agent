@@ -667,7 +667,7 @@ function sousTitres(t, sc) {
   const fini = groupe.at(-1)[0].end < sc.de + .02;
   if (t < debut || t > fin || fini || groupe.some(([, j]) => montres.has(j))) { st.style.display = 'none'; return; }
   st.style.display = 'flex';
-  st.className = ['plan', 'clip'].includes(sc.type) ? 'image' : (sc.theme ?? 'papier') === 'encre' ? 'sombre' : 'clair';
+  st.className = sc.sous_titres ? sc.sous_titres : ['plan', 'clip'].includes(sc.type) ? 'image' : (sc.theme ?? 'papier') === 'encre' ? 'sombre' : 'clair';   // sous_titres: 'clair' | 'sombre' pour un plan d'illustration à fond clair
   // Chaque mot n'apparaît qu'au moment où il est dit (sa place est réservée : la ligne ne saute pas) ; il arrive
   // avec 0,08 s d'avance seulement, sinon l'œil le lit AVANT que la voix le dise.
   l.innerHTML = groupe.map(([m, j]) => {
