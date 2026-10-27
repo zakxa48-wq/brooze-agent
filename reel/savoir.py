@@ -26,6 +26,7 @@ Commandes (python3 reel/savoir.py <commande> R …) :
   revu       R <notion> ["ce qui a été consolidé"]
   seance     R '<json>'                 enregistre la séance d'apprentissage du jour
   carte      R                          régénère les blocs automatiques des notions et carte.md
+  corriger   R <A-id> <S-id> '<json>'  corrige la note ou le sens d'une preuve après lecture complète (gardé dans l'historique)
   recalculer R                          repondère chaque preuve selon ce qui a VRAIMENT été lu de sa source (après une relecture)
   a-lire     R                          sources lues seulement en résumé ou en extrait (file de lecture, plus anciennes d'abord)
   verifier   R                          rien d'oublié (toutes les ids d'hier existent), cohérence ; met à jour memoire.json
@@ -257,6 +258,19 @@ def cmd_carte(R):
     open(os.path.join(D(R), 'carte.md'), 'w', encoding='utf-8').write('\n'.join(c) + '\n'); print('\n'.join(c[:3]))
 
 
+def cmd_corriger(R, aid, sid, js):
+    x = json.loads(js); affs = lire(R, 'affirmations.jsonl'); srcs = {s['id']: s for s in lire(R, 'sources.jsonl')}
+    a = next((y for y in affs if y['id'] == aid), None)
+    p = next((q for q in (a or {}).get('preuves', []) if q['source'] == sid), None)
+    if not p: sys.exit(f'preuve introuvable : {aid} / {sid}')
+    avant = dict(note=p['note'], sens=p['sens'])
+    if 'note' in x: p['note'] = x['note']
+    if 'sens' in x: p['sens'] = 1 if int(x['sens']) > 0 else -1
+    p['poids'] = poids(srcs[sid]); a['pour'], a['contre'], a['niveau'], a['contestee'] = evaluer(a, srcs)
+    a['historique'].append(dict(date=aujourd(), niveau=a['niveau'], cause=f"preuve {sid} corrigée après lecture (avant : {avant})"))
+    ecrire(R, 'affirmations.jsonl', affs); print(f"{aid} [{a['niveau']}] pour {a['pour']} / contre {a['contre']}")
+
+
 def cmd_recalculer(R):
     srcs = {s['id']: s for s in lire(R, 'sources.jsonl')}; affs = lire(R, 'affirmations.jsonl'); n = 0
     for a in affs:
@@ -325,5 +339,6 @@ if __name__ == '__main__':
     elif cmd == 'carte': cmd_carte(R)
     elif cmd == 'verifier': cmd_verifier(R)
     elif cmd == 'recalculer': cmd_recalculer(R)
+    elif cmd == 'corriger': cmd_corriger(R, r[0], r[1], r[2])
     elif cmd == 'a-lire': cmd_a_lire(R)
     else: sys.exit(__doc__)
