@@ -33,6 +33,9 @@ n'annonce jamais un succès sur les vues seules.
    `completer … --regles "…"`. Un retour qui contredit une règle existante la corrige (et la note dans « Retirées »).
    Conversations et rendez-vous (`conversations-AAAA-MM.txt`) : reporte chaque ligne dans brooze-kit avec
    `python3 tools/analytics.py conv …` (attache brooze-kit avec add_repo si besoin) et dans `marketing.md`.
+3 bis. **Question de Zak** (`retours/question-AAAA-MM-JJ.txt`) : à chaque passage, une question sans réponse reçoit
+   une réponse honnête dans le récap envoyé à Zak ET dans `journal.md` (« Réponse à la question du JJ/MM »), puis la
+   ligne `RÉPONDU le JJ/MM` en bas du fichier. Une question n'est jamais un ordre de bâcler ou de presser un Reel.
 4. **Document** (`docs/`) : `cerveau.py texte R <fichier>` → principes réutilisables (type `document`, confiance
    « à vérifier » tant que la pratique ou les chiffres ne les ont pas confirmés), avec la source exacte.
 5. **Des fiches aux principes** : une règle `mesuré` naît quand **au moins 3 fiches** (ou 5 Reels pour les résultats)
