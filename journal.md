@@ -4,6 +4,13 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 27/10 (15 h 41) — veille, réponse à Zak, Koulechov en cours
+- Filet stories : 28→31/10 couvert (10 h), aucune en erreur, réserve 7. Veille faite (voir veille.md : Spotify v2 à J+2 = 136 vues, 31,9 % > 3 s, ×0,85 la médiane). Séance du savoir : déjà faite à 3 h 41.
+- **Réponse à Zak (question du 27/10)** : *Koulechov* : environ le 31/10 à 18 h (le 29/10 seulement si direction, images, son et rendu passent le contrôle d'ici le 28 au soir ; il me reste : concept 2D vectoriel, rendu, son, contrôle sceptique). *Red Bull* : environ le 3/11 ; il me reste à refaire la partie grille 12–36 s (palette plus claire, plans variés), re-rendre et repasser le contrôle.
+- **Stratégie régularité/qualité** : viser 3 à 4 Reels par semaine (les jours sans carrousel : mar., jeu., sam., dim.) ; travailler à J+2 minimum ; une étape par passage, état poussé sur main ; les jours sans Reel prêt, le filet garantit une story (réserve 7) et rien n'est publié à moitié. Freins aujourd'hui : (1) la banque ne contient que 2 audios exploitables (0 idée disponible), donc peu de matière : pense à enregistrer ; (2) les rendus 3D/Atelier prennent 20–40 min chacun sur 2–4 cœurs ; (3) deux passages de ~45 min par jour, dont setup ~3 min et veille ; (4) Red Bull refusé 3 fois au contrôle (ennui, palette).
+
+---
+
 ## 27/10 (3 h 41) — Red Bull non publiable, Koulechov démarré
 - Filet stories : 27→30/10 couvert (10 h), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Cerveau : rien de nouveau.
 - Red Bull : rendu complet 46,8 s (le premier rendu avait été coupé à 43 s), controle.py 0 bloquant, mais comparer = EN DESSOUS et sceptique : ennui 12–36 s, palette trop sombre. 3 boucles passées : NON programmé. Jour 31/10 conservé en réserve, refonte de la partie grille nécessaire.
