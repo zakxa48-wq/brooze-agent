@@ -5,7 +5,7 @@
   0.0,
   39.99
  ],
- "fin": 2.4,
+ "fin": 1.4,
  "banque": {
   "idee": "memo-2026-10-25-koulechov-59ecb6-0000",
   "audio": "audio/2026-10/memo-2026-10-25-koulechov.mp3"
@@ -182,6 +182,21 @@
    "g": 0.3
   },
   {
+   "t": 20.13,
+   "son": "tick",
+   "g": 0.3
+  },
+  {
+   "t": 22.39,
+   "son": "pop",
+   "g": 0.45
+  },
+  {
+   "t": 23.62,
+   "son": "tick",
+   "g": 0.25
+  },
+  {
    "t": 25.5,
    "son": "trait",
    "g": 0.25
@@ -205,6 +220,16 @@
    "t": 27.85,
    "son": "whoosh",
    "g": 0.3
+  },
+  {
+   "t": 29.24,
+   "son": "tick",
+   "g": 0.4
+  },
+  {
+   "t": 30.44,
+   "son": "tick",
+   "g": 0.4
   },
   {
    "t": 31.9,
@@ -250,6 +275,16 @@
    "t": 39.1,
    "son": "pop",
    "g": 0.3
+  },
+  {
+   "t": 40.4,
+   "son": "chime",
+   "g": 0.25
   }
- ]
+ ],
+ "justifications": {
+  "boucle": "visage de la dernière image recalé sur celui de la première (échelle 1,7 × 1,06, position, halo) ; halo et gonflement jusqu'à la dernière image ; queue après la voix ramenée de 2,4 à 1,4 s",
+  "durée": "voix entière de Zak (39,99 s) ramenée de ~55 s de script ; seule la queue muette a été coupée",
+  "3D": "storyboard de Zak : illustration vectorielle 2D (esprit Illustrator) ; la 3D n'est ajoutée que si elle sert son style (AGENT_REEL.md, storyboard fourni par Zak)"
+ }
 }

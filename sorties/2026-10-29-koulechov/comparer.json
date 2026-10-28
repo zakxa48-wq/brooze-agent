@@ -1,23 +1,26 @@
 {
  "reel": {
-  "duree_s": 42.4,
+  "duree_s": 41.3,
   "format": "1080×1920",
   "ips": 30.0,
-  "debit_mbps": 3.6,
-  "plans": 2,
-  "duree_plan_moy_s": 21.2,
-  "duree_plan_med_s": 21.2,
-  "duree_plan_min_s": 3.2,
-  "duree_plan_max_s": 39.2,
+  "debit_mbps": 4.5,
+  "plans": 1,
+  "duree_plan_moy_s": 41.3,
+  "duree_plan_med_s": 41.3,
+  "duree_plan_min_s": 41.3,
+  "duree_plan_max_s": 41.3,
   "coupes_3s": 0,
-  "premiere_coupe_s": 39.2,
-  "coupes": [
-   39.2
-  ],
+  "premiere_coupe_s": null,
+  "coupes": [],
   "transitions": [
    {
     "t": 27.9,
     "d": 0.6,
+    "type": "fondu"
+   },
+   {
+    "t": 33.2,
+    "d": 0.5,
     "type": "fondu"
    },
    {
@@ -26,40 +29,38 @@
     "type": "filé horizontal"
    },
    {
-    "t": 41.1,
-    "d": 0.4,
-    "type": "filé horizontal"
+    "t": 39.8,
+    "d": 0.8,
+    "type": "fondu"
    }
   ],
-  "transitions_progressives": 3,
+  "transitions_progressives": 4,
   "camera": {
-   "dérive lente": 1,
    "quasi fixe": 1
   },
   "camera_par_plan": [
-   "dérive lente",
    "quasi fixe"
   ],
   "palette": {
    "couleurs": [
     {
-     "hex": "#eeede8",
-     "part": 0.83
+     "hex": "#edece7",
+     "part": 0.82
     },
     {
-     "hex": "#e1d2bd",
-     "part": 0.07
+     "hex": "#e0d2bd",
+     "part": 0.08
     },
     {
-     "hex": "#13100e",
+     "hex": "#13110e",
      "part": 0.05
     },
     {
-     "hex": "#a49f96",
+     "hex": "#a7a095",
      "part": 0.03
     },
     {
-     "hex": "#716353",
+     "hex": "#6e6355",
      "part": 0.03
     }
    ],
@@ -68,39 +69,39 @@
    "temperature": "neutre"
   },
   "texte": {
-   "part_du_temps": 0.83,
-   "hauteur_px_med": 47.0,
-   "hauteur_px_min": 34.0,
-   "mots_par_image": 2.5,
+   "part_du_temps": 0.85,
+   "hauteur_px_med": 48.0,
+   "hauteur_px_min": 35.0,
+   "mots_par_image": 2.3,
    "zones": {
     "haut": 0.09,
-    "milieu": 0.12,
-    "bas": 0.79
+    "milieu": 0.13,
+    "bas": 0.78
    },
-   "changements_par_s": 0.83,
+   "changements_par_s": 0.85,
    "premieres_3s": "Regarde Regarde Regarde Regarde ce visage. Regarde ce visage. ton avis, ton avis,"
   },
-  "nettete_med": 263.0,
+  "nettete_med": 384.0,
   "son": {
    "present": true,
    "lufs": -14.0,
    "crete_db": -1.4,
-   "energie_3s_db": -21.1,
+   "energie_3s_db": -20.4,
    "energie_moy_db": -18.6,
-   "dynamique_db": 11.6,
-   "attaques_par_s": 1.51,
-   "coupes_sur_attaque": 0.0,
+   "dynamique_db": 11.4,
+   "attaques_par_s": 1.53,
+   "coupes_sur_attaque": null,
    "coupes_sur_attaque_si_hasard": 0.38
   }
  },
- "planche": "/tmp/tmpwq_0yqqq/reel.jpg",
+ "planche": "/tmp/tmpmtyo23qr/reel.jpg",
  "references": [
   "mes-videos-reel-apple-v3"
  ],
  "axes": {
   "rythme": {
    "reel": {
-    "duree_plan_moy_s": 21.2,
+    "duree_plan_moy_s": 41.3,
     "coupes_3s": 0
    },
    "ref": {
@@ -111,8 +112,8 @@
   },
   "lisibilite": {
    "reel": {
-    "hauteur_px_min": 34.0,
-    "mots_par_image": 2.5
+    "hauteur_px_min": 35.0,
+    "mots_par_image": 2.3
    },
    "ref": {
     "hauteur_px_min": 29.0,
@@ -122,22 +123,22 @@
   },
   "finition": {
    "reel": {
-    "nettete": 263.0,
+    "nettete": 384.0,
     "lufs": -14.0,
-    "coupes_sur_attaque": 0.0
+    "coupes_sur_attaque": null
    },
    "ref": {
     "nettete": 133.0,
     "coupes_sur_attaque": 0.33
    },
-   "ok": false
+   "ok": true
   }
  },
  "verdict": "en dessous (indicatif : moins de 3 références de qualité ≥ 7, non bloquant)",
  "raisons": [
   {
    "cle": "comparer.rythme.duree_plan",
-   "mesure": 21.2,
+   "mesure": 41.3,
    "exige": "≤ 3.48 s",
    "quoi": "plans trop longs en moyenne",
    "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs)"
@@ -148,13 +149,6 @@
    "exige": "≥ 1",
    "quoi": "aucune coupe dans les 3 premières secondes",
    "condition": "au moins une coupe ou un changement de plan avant 3 s"
-  },
-  {
-   "cle": "comparer.finition.synchro",
-   "mesure": 0.0,
-   "exige": "≥ 0.13",
-   "quoi": "coupes pas assez calées sur les attaques du son",
-   "condition": "part des coupes sur une attaque ≥ 0.13"
   }
  ],
  "probante": false

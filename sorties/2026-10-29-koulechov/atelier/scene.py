@@ -5,21 +5,26 @@ import math
 from atelier import *
 from atelier import val
 
-IPS = 30; D = 42.39
+IPS = 30; D = 41.39
 INK, PAPER, CU, CARD, GREY = '#141210', '#EDEBE7', '#B87333', '#F5F1EA', '#A9A398'
 SKIN, FRY = '#E4D3BC', '#F3E9CC'
 voix = Voix('mots.json'); T = voix.t
 comp = Composition(1080, 1920, ips=IPS, duree=D, fond=PAPER)
+# pulsations du fond (derrière tout) : un « battement » d'encre à 5 % sur les mots appuyés, pour relancer l'œil sans toucher au visage
+def battement(t0, a=.055):
+    comp.ajouter(Solide(INK, debut=t0, fin=t0 + .5, opacite=K((t0, a, lin), (t0 + .45, 0, lin))))
 
+for _i in (13, 18, 21, 24, 26, 30, 36, 38, 41, 46, 60, 63, 68, 71, 74, 77, 79, 83, 88, 91, 95): battement(T(_i))
 T_SPLIT, T_ZOOM, T_TL, T_STAMP = T(10) - .05, T(57) - .05, T(84) - .25, T(110) + .1
 T_LOOP = D - 1.0
 
 # ---------- caméra du monde (monde = Nul ; rangées : -640 assiette, 0 tombe, 640 chiot)
 S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.38, lin), (T_ZOOM + .95, .66, sortie(3)), (D, .66, lin))
-CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, 65, sortie(3)), (D, 65, lin))
+CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, -150, sortie(3)), (T(75) - .1, -150, doux), (T(75) + .85, 65, sortie(3)), (D, 65, lin))
 CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 315, sortie(3)),
        (T_TL, 315, doux), (T_TL + .6, 2300, expo(6)), (D, 2300, lin))
-monde = comp.ajouter(Nul(position=lambda t: (540 - val(S, t) * val(CX, t), 960 - val(S, t) * val(CY, t)), echelle=lambda t: val(S, t), fin=T_TL + .8))
+def SS(t): return val(S, t) * ((1 + .07 * math.exp(-(t - T(68)) * 8)) if T(68) <= t < T(68) + 1.5 else 1)
+monde = comp.ajouter(Nul(position=lambda t: (540 - SS(t) * val(CX, t), 960 - SS(t) * val(CY, t)), echelle=SS, fin=T_TL + .8))
 
 def ressort_in(t0, dur=.45, de=0., a=1., f=3.0, am=.5):
     return K((t0, de, ressort(f, am)), (t0 + dur, a, lin))
@@ -114,15 +119,23 @@ c3o = comp.ajouter(Forme(rect(280, 420, 30), remplissage=CARD, trait=INK, epaiss
 T_PLATE, T_TOMB, T_PUPPY = T(17) - .12, T(36) - .35, T(48) - .3
 def entree_objet(t0, t1):
     return K((t0, (520, 0), tenir), (t0, (520, 0), expo(6)), (t0 + .5, (0, 0), tenir))
-def objet_vivant(nom, debut, fin):
-    n = Nul(parent=monde, position=lambda t: (40 + val(K((debut, 640, expo(7)), (debut + .5, 0, tenir)), t) - (val(K((fin - .5, 0, entree(2.2)), (fin, 640, tenir)), t) if fin < 900 else 0), 640 + 16 * math.sin(t * 5.5) * min(1, max(0, (t - debut - .5) * 2))),
-            debut=debut, fin=fin + .05 if fin < 900 else None)
+def objet_vivant(nom, debut, fin, mode='droite', punches=()):
+    def pos(t):
+        dx = dy = 0
+        if mode == 'droite': dx = val(K((debut, 640, expo(7)), (debut + .5, 0, tenir)), t)
+        if mode == 'haut': dy = val(K((debut, -900, ressort(2.6, .4)), (debut + .7, 0, lin)), t)
+        sortie_x = val(K((fin - .5, 0, entree(2.2)), (fin, 640, tenir)), t) if fin < 900 else 0
+        return (40 + dx - sortie_x, 640 + dy + 16 * math.sin(t * 5.5) * min(1, max(0, (t - debut - .5) * 2)))
+    def ech(t):
+        b = val(K((debut, .2, ressort(3.2, .5)), (debut + .6, 1, lin)), t) if mode == 'bas' else 1
+        return b * (1 + .1 * sum(math.exp(-(t - q) * 8) for q in punches if t >= q))
+    n = Nul(parent=monde, position=pos, echelle=ech, debut=debut, fin=fin + .05 if fin < 900 else None)
     comp.ajouter(n); OBJETS[nom](n, debut, fin + .05 if fin < 900 else None)
     return n
 # l'assiette sort quand la tombe arrive (et réciproquement) : la tombe entre sur la voix « tombe »
-objet_vivant('assiette', T_PLATE, T_TOMB)
-objet_vivant('tombe', T_TOMB, T_PUPPY)
-objet_vivant('chiot', T_PUPPY, 9999)
+objet_vivant('assiette', T_PLATE, T_TOMB, 'droite', (T(21), T(24), T(26) - .05))
+objet_vivant('tombe', T_TOMB, T_PUPPY, 'haut', (T(38), T(41) - .05))
+objet_vivant('chiot', T_PUPPY, 9999, 'bas', (T(53), T(56) - .05))
 
 # point d'interrogation (cuivre, le seul de l'image) qui rebondit sur « quelle émotion »
 qm = comp.ajouter(Texte('?', police='Inter', taille=230, graisse=900, couleurs={0: CU}, position=(690, 300), debut=T(6), fin=T_SPLIT + .1,
@@ -166,11 +179,24 @@ comp.ajouter(Forme(points([(-22, 30), (0, 0), (22, 30)]), remplissage=None, trai
 rangee(-640, 'assiette', T(57) + .22, 'faim', T(78) - .05)
 rangee(0, 'tombe', T(57) + .5, 'triste', T(78) + .35)
 
+# relances de la grille : anneaux cuivre sur les trois visages (jamais changé / Koulechov / cerveau / émotion), mot KOULECHOV
+def anneaux(t0):
+    for k, y in enumerate((-640, 0, 640)):
+        a = t0 + .1 * k
+        comp.ajouter(Forme(ellipse(310, 410), remplissage=None, trait=CU, epaisseur=9, position=(-360, y), parent=monde, debut=a, fin=a + .65,
+                           echelle=K((a, 1.0, sortie(3)), (a + .6, 1.35, lin)), opacite=K((a, .9, lin), (a + .6, 0, lin))))
+for _t in (T(62), T(69), T(71), T(74)): anneaux(_t)
+comp.ajouter(Texte('KOULECHOV', police='Inter', taille=100, graisse=800, position=(540, 1428), debut=T(68), fin=T(75) + .15,
+                   echelle=ressort_in(T(68), .5, .6, 1.0), opacite=K((T(68), 0, lin), (T(68) + .12, 1, lin), (T(75) - .2, 1, lin), (T(75) + .1, 0, lin))))
+
 # ---------- 4. la timeline (générique : aucune interface de logiciel reconnaissable)
-TL = Nul(echelle=.92, position=K((T_TL, (540, 3000), expo(6)), (T_TL + .7, (540, 880), tenir)), debut=T_TL, fin=T_STAMP + .4); comp.ajouter(TL)
+TL = Nul(echelle=.92, position=K((T_TL, (540, 3000), expo(6)), (T_TL + .7, (540, 1000), tenir)), debut=T_TL, fin=T_STAMP + .4); comp.ajouter(TL)
 def fade_tl(t): return val(K((T_STAMP - .35, 1, lin), (T_STAMP, 0, lin)), t)
 BL = [(150, GREY), (230, INK), (110, '#CFC9BE'), (190, INK), (130, GREY), (140, '#CFC9BE')]
 inverse_t = T(101)
+def mixc(c1, c2, u):
+    a = [int(c1[i:i + 2], 16) for i in (1, 3, 5)]; b = [int(c2[i:i + 2], 16) for i in (1, 3, 5)]
+    return '#%02X%02X%02X' % tuple(round(x + (y - x) * u) for x, y in zip(a, b))
 for ligne, (y, hh) in enumerate(((-250, 170), (-60, 170))):
     x0 = -490; xs = []
     for k, (w, c) in enumerate(BL): xs.append((x0 + w / 2, w, c)); x0 += w + 6
@@ -179,27 +205,29 @@ for ligne, (y, hh) in enumerate(((-250, 170), (-60, 170))):
         # permutations rapides à partir de « l'ordre » (mot 97), en rythme
         beats = [T(97), T(98) + .1, T(99) + .15, T(100) + .05, T(101) + .0, T(102) + .15, T(104) + .0, T(106) + .1]
         autre = xs[(k + 2 + ligne) % len(xs)][0]; autre2 = xs[(k + 3) % len(xs)][0]
-        x = K((beats[0] - .01, cx0, ressort(2.6, .55)), (beats[0] + .35, autre, ressort(2.6, .55)), (beats[1] + .35, cx0 + (autre - cx0) * .0 + (autre2 - cx0) * .3 + 0, ressort(2.6, .55)),
+        a1 = xs[(k + 1 + ligne) % len(xs)][0]
+        x = K((T(88) - .01, cx0, ressort(2.6, .55)), (T(88) + .35, a1, ressort(2.6, .55)), (T(92) - .01, a1, ressort(2.6, .55)), (T(92) + .35, cx0, ressort(2.6, .55)),
+              (beats[0] - .01, cx0, ressort(2.6, .55)), (beats[0] + .35, autre, ressort(2.6, .55)), (beats[1] + .35, cx0 + (autre - cx0) * .0 + (autre2 - cx0) * .3 + 0, ressort(2.6, .55)),
               (beats[2] + .35, autre2, ressort(2.6, .55)), (beats[4] + .35, cx0, ressort(2.6, .55)), (beats[5] + .35, autre, ressort(2.6, .55)), (beats[7] + .4, cx0, lin))
         apres = (PAPER if c == INK else INK) if c in (INK, GREY) else c
-        fond = c if c == CU else (lambda t, c=c, apres=apres: c if t < inverse_t else apres)
+        fond = c if c == CU else (lambda t, c=c, apres=apres: mixc(c, apres, min(1, max(0, (t - inverse_t) / .5))))
         comp.ajouter(Forme(rect(w, hh, 14), remplissage=fond, trait=INK, epaisseur=5, position=lambda t, x=x, y=y: (val(x, t), y), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
 # piste son (ligne d'onde) et tête de lecture
 comp.ajouter(Forme(lambda t: points([(x, math.sin(x / 11 + t * 5) * (8 + 16 * abs(math.sin(x / 70)))) for x in range(-490, 491, 6)]),
                    remplissage=None, trait=INK, epaisseur=5, position=(0, 170), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
 comp.ajouter(Forme(points([(0, -310), (0, 230)]), remplissage=None, trait=INK, epaisseur=8,
                    position=lambda t: (-490 + 980 * ((t - T_TL) / (T_STAMP - T_TL)) , 0), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
-comp.ajouter(Texte('piste 1', police='Inter', taille=28, graisse=600, position=(-400, -380), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
+comp.ajouter(Texte('piste 1', police='Inter', taille=40, graisse=600, position=(-400, -380), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
 
 # ---------- 5. tampon Brooze (typo : le fichier logo n'est pas fourni) + clic « abonne-toi »
 t_clac = T(110) + .12
 ST = Nul(position=lambda t: (540, 760), rotation=-7, debut=T_STAMP - .5, fin=T_LOOP + .4,
          echelle=K((T_STAMP - .5, 3.2, entree(2)), (t_clac, 1.0, tenir), (t_clac, 1.0, ressort(4, .35)), (t_clac + .3, 1.0, lin))); comp.ajouter(ST)
-def fade_end(t): return val(K((T_LOOP - .35, 1, lin), (T_LOOP + .3, 0, lin)), t)
+def fade_end(t): return val(K((T_LOOP - .6, 1, lin), (T_LOOP - .1, 0, lin)), t)
 def op_st(t): return min(val(K((T_STAMP - .5, 0, lin), (t_clac - .05, 1, lin)), t), fade_end(t))
 comp.ajouter(Forme(rect(760, 340, 26), remplissage=PAPER, trait=INK, epaisseur=16, parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
 comp.ajouter(Forme(rect(724, 304, 18), remplissage=None, trait=INK, epaisseur=4, parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
-comp.ajouter(Texte('BROOZE', police='Inter', taille=160, graisse=900, interlettrage=-.02, position=(0, -30), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
+comp.ajouter(Texte('BROOZE', police='Inter', taille=160, graisse=800, interlettrage=-.02, position=(0, -30), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
 comp.ajouter(Texte('PRODUCTION', police='Inter', taille=60, graisse=600, interlettrage=.32, position=(0, 85), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
 
 t_btn, t_clic = T(112) - .1, T(116) + .55
@@ -218,9 +246,16 @@ comp.ajouter(Forme(ellipse(60, 60), remplissage=None, trait=INK, epaisseur=5, po
                    echelle=K((t_clic, .4, expo(7)), (t_clic + .4, 2.6, lin)), opacite=K((t_clic, .9, lin), (t_clic + .4, 0, lin)), debut=t_clic, fin=t_clic + .45))
 
 # ---------- boucle : le visage du tout début revient, identique au pixel (même fonction, même place, même taille)
-fb = Nul(position=(540, 940), echelle=1.9, debut=T_LOOP, opacite=1); comp.ajouter(fb)
-fond_boucle = comp.ajouter(Solide(PAPER, debut=T_LOOP, opacite=K((T_LOOP, 0, lin), (T_LOOP + .55, 1, lin))))
-visage(fb, T_LOOP, None)
+# même position, même échelle (1,7 × 1,06) et même halo que la toute première image : la boucle est sans raccord visible
+T_FIN = D - .05
+BF = [T_LOOP - .05, T_LOOP + .5]
+def ech_fb(t):
+    return 1.7 * (1 + .06 * sum(math.exp(-(t - b) * 7) for b in BF if t >= b) + .06 * min(1, max(0, (t - (T_LOOP + .9)) / (T_FIN - T_LOOP - .9))))
+fb = Nul(position=(540, 940), echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
+for _b in (T_LOOP - .05, T_LOOP + .5, T_FIN - .0):
+    comp.ajouter(Forme(ellipse(560, 700), remplissage='#E9D2B8', trait=CU, epaisseur=14, position=(540, 940),
+                       echelle=K((_b, .75, sortie(3)), (_b + 1.3, 1.9, lin)), opacite=K((_b, .75, lin), (_b + 1.3, 0, lin)), debut=_b, fin=_b + 1.35))
+visage(fb, T_LOOP - .05, None)
 
 # ---------- son (sons de la scène ; la voix et le mix final sont refaits par son.py depuis reel.json)
 comp.sons = []
