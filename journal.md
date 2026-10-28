@@ -4,6 +4,11 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 28/10 (15 h 41) — veille, Koulechov tentative 2 (À REPRENDRE, 2 P2 restants)
+- Filet stories : 28→01/11 couvert (10 h), aucune en erreur, réserve 7. Séance du savoir : déjà faite à 3 h 41. Veille faite (voir veille.md : aucun Reel publié depuis le 25/10, rien n'a bougé).
+- Koulechov : verdict_1 À REPRENDRE (2 P1, 4 P2) → corrigé (grille centrée, anneaux + KOULECHOV + punch caméra sur « Koulechov », battements de fond, entrées d'objets variées, boucle recalée, queue 2,4→1,4 s, timeline centrée, inversion douce, Inter 800) ; controle.py 0 problème ; verdict_2 À REPRENDRE : reste KOULECHOV coupé par la pastille de sous-titre, raccord de boucle (visage 25 px plus haut, halo), tampon typographique à valider par Zak (le fichier logo n'existe pas). Aucun P1. Rien programmé ; post, couverture et teaser prêts.
+- Limites : la voix de Zak s'arrête à « l'ordre dans lequel tu… » (mot « montres » absent) : sous-titres « tu… » / « Le montage ».
+
 ## 28/10 (3 h 41) — savoir, Koulechov rendu et contrôlé (technique), sceptique à faire
 - Filet stories : 28/10→01/11 couvert (10 h, 10 h 01…), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Séance du savoir faite : 3 vidéos YouTube lues en entier (Hitchcock, No Film School, Crash Course), notion montage-contraste (A-0007 à vérifier), A-0005 renforcée ; lup.lub.lu.se (Barratt 2016 complet) hors domaines autorisés.
 - Koulechov (jour réservé 29/10, étape contrôle) : plan.mp4 re-rendu (hook plus vivant : ondes cuivre + coups de zoom ; écran scindé : poussée lente et flottement), reel.mp4 42,4 s, controle.py sans bloquant hors alerte FLASH 33,57 s (inversion des blocs de la timeline, voulue par le storyboard). comparer non probante. Reste : sceptique indépendant + verdict, couverture, teaser, programmation (29/10 18 h si PUBLIABLE, sinon 31/10).

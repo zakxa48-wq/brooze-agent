@@ -1,0 +1,149 @@
+{
+ "defauts": [
+  {
+   "priorite": "P2",
+   "de": 22.4,
+   "a": 24.8,
+   "quoi": "Le mot-pivot « KOULECHOV » (Inter 800, 100 px, posé à y≈1428) est coupé en deux par la pastille de sous-titre (y≈1470-1570) : la moitié basse des lettres est masquée ou fantomatique, et le sous-titre répète « l'effet Koulechov. » juste dessous. Élément ajouté par la correction de V1-11, donc régression : le moment censé être le pivot ressemble à un bug de calques.",
+   "preuve": "frame 22.9 s en pleine résolution (1080x1920) : lettres K-O-U-L-E-C-H-O-V rognées à mi-hauteur par la pastille ; frame 24.6 : même collision avec « une émotion » ; scene.py l.189 position=(540,1428) vs sous-titres en bas.",
+   "condition": "Sur les images 22.4-24.8 s, aucune intersection entre la boîte du mot KOULECHOV et la pastille de sous-titre (écart >= 40 px, vérifiable en pleine résolution), le mot restant lisible en entier.",
+   "piste": "Remonter le mot à y≈1250 (sous la grille, au-dessus des sous-titres) ou le faire disparaître avant l'arrivée de la pastille ; ou supprimer la pastille pendant ce mot.",
+   "nouveau_pourquoi": "régression"
+  },
+  {
+   "priorite": "P2",
+   "de": 41.0,
+   "a": 41.33,
+   "quoi": "Boucle : le raccord n'est pas à ±2 px. Dernière image (41.33 s) : contour du visage x 202-876, y 523-1313 ; première image (0 s) : x 209-869, y 548-1322, soit visage ~2-4 % plus grand et ~25 px plus haut au sommet. En plus, la dernière image est dominée par un halo cuivre qui sort du cadre alors que l'image 0 n'a aucun halo et réintroduit la pastille « Regarde » : le saut est lisible. Le visage se redimensionne aussi en coupe sèche à 40.9 s (visible sur la planche 40.5 -> 41.1).",
+   "preuve": "mesure sur F_last (41.33 s) et F_0 (0.0 s), masque noir y<1350 : bbox 202-876/523-1313 contre 209-869/548-1322 ; image 40.9 (visage grand + halo) contre 41.1 (visage plus petit, anneau cuivre) ; engagement.json boucle.ecart_image 11.6 (vs 14.7 avant : mieux, non nul).",
+   "condition": "bbox du contour du visage à la dernière image = bbox de l'image 0 à +-3 px à 1080 de large (le halo peut subsister s'il est présent aussi à l'image 0, ou absent aux deux) ; pas de coupe sèche de taille entre 40.8 et 41.33 s.",
+   "piste": "Caler l'échelle finale sur celle de l'image 0 (x 209-869) et faire naître le halo dès 0.0 (ou l'éteindre sur les 6 dernières images) ; remplacer la coupe de 40.9 par un glissé.",
+   "nouveau_pourquoi": "régression"
+  },
+  {
+   "priorite": "P3",
+   "de": 32.8,
+   "a": 33.3,
+   "quoi": "Conséquence de la voix tronquée : trou audio de 0,45 s (RMS -56 à -65 dB de 32.85 à 33.25 s) pendant lequel le sous-titre « tu… » est affiché sans aucun son, puis « Le » est affiché à 33.135 alors que l'audio ne reprend qu'à 33.30 (0,17 s d'avance). Honnêtement géré (ellipse, groupes séparés), mais audible.",
+   "preuve": "RMS par 50 ms de voix_reel.wav : -17 dB à 32.5, -62 dB à 32.9, -64 dB à 33.2, -20 dB à 33.30 ; mots.json tu…@32.925-33.135, Le@33.135.",
+   "condition": "Conseil : décaler « Le » à 33.30 et raccourcir le trou à <= 0,2 s ; idéal : demander à Zak de ré-enregistrer « montres » (1 s).",
+   "piste": "Resserrer le silence de 0,25 s ou le habiller d'un tick de timeline.",
+   "nouveau_pourquoi": "pas visible avant"
+  },
+  {
+   "priorite": "P3",
+   "de": 33.4,
+   "a": 33.7,
+   "quoi": "Inversion de la timeline : la luminance de la zone fait encore un rebond d'une image (162,3 -> 178,7 -> 171,1 -> 177,7 -> 173,5 -> 175,1), pas monotone. Ressemble à un accroc.",
+   "preuve": "moyenne de gris sur y 560-1060 par image de 33.3 à 33.9 s.",
+   "condition": "Conseil : luminance monotone, rebond <= 2 unités.",
+   "piste": "Interpoler l'inversion sur 6 images sans rebond.",
+   "nouveau_pourquoi": "pas visible avant"
+  },
+  {
+   "priorite": "P3",
+   "de": 19.5,
+   "a": 25.5,
+   "quoi": "Grille 3x2 : la carte du haut démarre à y≈105 px (et ≈55 px pendant le zoom à 22.4), au-dessus de la zone sûre story (y >= 220), sous l'en-tête Instagram. Les visages débordent aussi de leur carte (oreilles et cheveux hors cadre), pas les objets.",
+   "preuve": "frame 22.9 pleine résolution : bord haut de la carte 1 à y≈105 ; charte.md zone sûre 220-1700 ; cheveux et oreilles hors carte x 265-515 contre carte 285-490.",
+   "condition": "Conseil : tout le contenu entre y 220 et 1700, visage contenu dans sa carte.",
+   "piste": "Réduire la grille de 8 % et la descendre de 120 px ; élargir la carte du visage ou réduire le visage.",
+   "nouveau_pourquoi": "pas visible avant"
+  },
+  {
+   "priorite": "P3",
+   "de": 36.5,
+   "a": 39.2,
+   "quoi": "Ennui de fin : de 36.5 à 39.2 s l'image est quasi figée (diff d'image 0,06-0,14) hormis le clic à 37.3-37.6 ; 1,4 s d'immobilité totale 37.8-39.2 sur le tampon et le bouton, pendant la CTA « manipuler ton audience pour toi. Abonne-toi. ». Le fondu du tampon à 35.8-36.4 superpose aussi un tampon géant translucide sur la timeline (0,6 s de bouillie).",
+   "preuve": "diff moyenne y<1350 à 6 i/s : 36.5-37.2 = 0,07-0,12 ; 37.8-39.1 = 0,06-0,18.",
+   "condition": "Conseil : une micro-animation (tampon qui vibre, curseur qui se déplace, bouton qui pulse) toutes les 1,2 s.",
+   "piste": "Faire pulser le bouton cuivre dès 37.8 et décaler le curseur.",
+   "nouveau_pourquoi": "pas visible avant"
+  }
+ ],
+ "conditions_precedentes": {
+  "V1-1": {
+   "statut": "levée",
+   "pourquoi": "controle.json glitchs.alertes = [] (coupes listées 1.4 ... 40.9, aucune alerte FLASH/SAUT/NOIR/COUPE)."
+  },
+  "V1-2": {
+   "statut": "levée",
+   "pourquoi": "relances 4.9, 6.2, 6.7, 7.3, 8.3, 8.9, 9.3, 9.8, 10.7 : max 1.0 s dans 4.8-10.7 ; mesure : diff d'image 7.3 = 11.9, 7.8 = 12.2, 8.3 = 13.0. Frames 7.5 et 9 s lisibles."
+  },
+  "V1-3": {
+   "statut": "levée",
+   "pourquoi": "relances 11.3, 11.8, 12.6, 13.2, 13.7, 14.6 : écart max 0,9 s ; diff d'image 11.2-12.0 = 7-12, 13.2 = 10,8."
+  },
+  "V1-4": {
+   "statut": "levée",
+   "pourquoi": "relances 18.8 -> 28.0 : 19.3, 20.6, 21.1, 22.4, 22.9, 23.6, 24.1, 24.6, 26.1, 27.4 ; écart max 1.5 s ; diff 22.3 = 26,2 (KOULECHOV), 25.3-26.0 = 16-22 (flèches). Réserve : 21.2-22.2 s et 23.0-23.5 s restent calmes (diff 1,2-3)."
+  },
+  "V1-5": {
+   "statut": "levée",
+   "pourquoi": "relances 28.6, 29.3, 30.2, 30.7, 31.2, 31.9 : écart max 0.9 s ; diff 29.3 = 31,3, 30.5 = 26,1."
+  },
+  "V1-6": {
+   "statut": "levée",
+   "pourquoi": "boucle.mouvement_fin 4,63 (>= 0,5) vs mouvement_début 2,62 ; ouverture vivante ; mais le raccord reste imparfait (voir défaut 41.0-41.33)."
+  },
+  "V1-7": {
+   "statut": "levée",
+   "pourquoi": "justification « durée » : voix entière de Zak 39,99 s, seule la queue coupée (2,4 -> 1,4 s) ; mots.json : dernier mot « Abonne-toi. » à 38.62 ; plus court = couper la voix de Zak. Acceptée."
+  },
+  "V1-8": {
+   "statut": "non levée",
+   "pourquoi": "conseil : comparer.json donne 1 plan de 41,3 s (rendu monoplan composé), sans objet pour un motion design où les relances sont <= 1,8 s ; ne bloque pas."
+  },
+  "V1-9": {
+   "statut": "levée",
+   "pourquoi": "changement net à 1.0 (pop), 2.6-2.8 (visage gonflé + « ? ») ; relance avant 3 s ; image 3 s lisible."
+  },
+  "V1-10": {
+   "statut": "non levée",
+   "pourquoi": "coupes_sur_attaque null dans comparer.json : non mesuré ; conseil non bloquant."
+  },
+  "V1-11": {
+   "statut": "levée",
+   "pourquoi": "pic d'énergie 26,2 à 22.3-22.4 s (KOULECHOV apparaît, seuil > 2), écart max de relances 1.5 s sur 18.8-28.0 (controle.json). Effet secondaire : le mot est collé sur la pastille de sous-titres (nouveau défaut P2)."
+  },
+  "V1-12": {
+   "statut": "levée",
+   "pourquoi": "fusion supprimée : mots.json groupes « tu… » g41 et « Le montage, » g42 séparés, frames 32.95 « tu… » puis 33.25 « Le montage, ». « montres » absent de l'audio (RMS -62 dB de 32.85 à 33.25) : impossible à lever côté montage, voir justification. Trou de 0,45 s signalé en P3."
+  },
+  "V1-13": {
+   "statut": "non levée",
+   "pourquoi": "bbox visage : dernière image x 202-876 y 523-1313 vs image 0 x 209-869 y 548-1322 (écart ~25 px à 1080 > tolérance) et halo présent à la fin, absent au début. Levées : pas de pastille ni tampon sur le visage à 40.5-41.1, mouvement_fin 4,63, aucun gel > 1,2 s entre 39.3 et 41.33 (diff 0,10 de 39.5 à 39.8 seulement 0,5 s)."
+  },
+  "V1-14": {
+   "statut": "levée",
+   "pourquoi": "relances 7.3, 8.3, 8.9, 9.3, 9.8 entre 7.0 et 9.5 ; diff d'image 8.0 = 10,5, 8.3 = 13,0 ; entrées d'objet à 5.9/11.1/15.0 avec durées de plan différentes (4.8 / 3.6 / 3.2 s) : contrôle visuel des frames 7.5, 9, 12, 16."
+  },
+  "V1-15": {
+   "statut": "levée",
+   "pourquoi": "grille centrée : cartes x 265-780 sur 1080 (centre 522, écart 3 % < 5 %) à 22.9 s ; vide de droite occupé ensuite par les flèches/annotations. Voir P3 zone sûre."
+  },
+  "V1-16": {
+   "statut": "non levée",
+   "pourquoi": "graisse 900 corrigée en 800 (scene.py l.230, Inter 800 + PRODUCTION 600) ; mais le tampon cadré (rect incliné, double filet) reste un logo recomposé en typographie, sans fichier ni validation écrite de Zak. Dépendance externe : à signaler à Zak, voir justification."
+  },
+  "V1-17": {
+   "statut": "levée",
+   "pourquoi": "timeline : changements à 29.3 (31,3), 30.2-30.5 (26), 31.2 ; plus de creux 3,7 s."
+  },
+  "V1-18": {
+   "statut": "levée",
+   "pourquoi": "« piste 1 » : Inter 600 taille 40 à 1080 de large (scene.py l.220) >= 34 px."
+  },
+  "V1-19": {
+   "statut": "non levée",
+   "pourquoi": "luma zone timeline 33.3-33.9 s : 162,3 -> 178,7 -> 171,1 -> 177,7 -> 173,5 : rebond d'image encore présent (conseil P3)."
+  }
+ },
+ "justifications": {
+  "durée 41.3 s": "acceptée : voix entière de Zak (mots.json, dernier mot à 38.62 s), relances <= 1,8 s sur toute la durée, aucune zone morte ; couper = couper la voix de Zak.",
+  "3D : aucun moment 3D déclaré": "acceptée : le storyboard de Zak impose le motion design 2D vectoriel (storyboard_zak.md) ; il prime sur MONTAGE.md § 2 bis. À signaler seulement.",
+  "boucle": "acceptée avec réserve : mouvement_fin 4,63 contre 2,62, mais la bbox n'est pas à +-2 px (défaut P2 41.0-41.33) ; la phrase « visage recalé » de la justification est vraie à 4 % près, pas exactement.",
+  "voix tronquée « l'ordre dans lequel tu… » (mot « montres » absent)": "acceptée : défaut de la source (voix de Zak, mots.json et RMS : silence 32.85-33.25) ; l'ellipse « tu… » et la séparation des groupes sont honnêtes ; à signaler à Zak (ré-enregistrer 1 s) mais non bloquant.",
+  "logo Brooze : fichier non fourni, tampon typographique": "refusée comme condition remplie, acceptée comme limite externe : le tampon n'est pas le logo officiel ; publiable seulement si Zak valide par écrit le wordmark ou fournit le fichier avant la mise en ligne (charte : jamais redessiné)."
+ }
+}
