@@ -15,7 +15,7 @@ T_SPLIT, T_ZOOM, T_TL, T_STAMP = T(10) - .05, T(57) - .05, T(84) - .25, T(110) +
 T_LOOP = D - 1.0
 
 # ---------- caméra du monde (monde = Nul ; rangées : -640 assiette, 0 tombe, 640 chiot)
-S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.25, doux), (T_ZOOM + .95, .66, sortie(3)), (D, .66, lin))
+S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.38, lin), (T_ZOOM + .95, .66, sortie(3)), (D, .66, lin))
 CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, 65, sortie(3)), (D, 65, lin))
 CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 315, sortie(3)),
        (T_TL, 315, doux), (T_TL + .6, 2300, expo(6)), (D, 2300, lin))
@@ -92,9 +92,17 @@ def chiot(p, debut, fin=None, op=1):
 OBJETS = {'assiette': assiette, 'tombe': tombe, 'chiot': chiot}
 
 # ---------- 0. hook : le visage, gros plan, au centre (le MÊME dessin que partout)
+BUMPS = [k * 1.4 for k in range(int((T_SPLIT - .6) / 1.4) + 1)]
 fm = Nul(parent=monde, position=K((0, (0, -20), lin), (T_SPLIT, (0, -20), doux), (T_SPLIT + .85, (-360, 640), sortie(3))),
-         echelle=K((0, 1.9, lin), (T_SPLIT - .25, 2.08, lin), (T_SPLIT, 2.08, doux), (T_SPLIT + .85, 1.0, sortie(3))), fin=T_TL + .8)
+         echelle=lambda t: val(K((0, 1.7, lin), (T_SPLIT - .25, 2.1, doux), (T_SPLIT, 2.1, doux), (T_SPLIT + .85, 1.0, sortie(3))), t) * (1 + .06 * sum(math.exp(-(t - b) * 7) for b in BUMPS if t >= b)), fin=T_TL + .8)
 comp.ajouter(fm)
+# ondes cuivre qui partent du visage (relance toutes les 1,4 s : « ding » visuel), avant la séparation
+t_r = 0.0
+while t_r < T_SPLIT - .6:
+    comp.ajouter(Forme(ellipse(560, 700), remplissage='#E9D2B8', trait=CU, epaisseur=14, position=(0, -20), parent=monde,
+                       echelle=K((t_r, .75, sortie(3)), (t_r + 1.3, 1.9, lin)), opacite=K((t_r, .75, lin), (t_r + 1.3, 0, lin)),
+                       debut=t_r, fin=t_r + 1.35))
+    t_r += 1.4
 # la carte du visage (rangée du chiot = rangée « vivante ») apparaît dès la séparation
 ROW3 = Nul(parent=monde, position=(0, 640), debut=0, fin=T_TL + .8); comp.ajouter(ROW3)
 c3f = comp.ajouter(Forme(rect(280, 420, 30), remplissage=CARD, trait=INK, epaisseur=5, parent=monde, position=(-360, 640),
@@ -107,7 +115,7 @@ T_PLATE, T_TOMB, T_PUPPY = T(17) - .12, T(36) - .35, T(48) - .3
 def entree_objet(t0, t1):
     return K((t0, (520, 0), tenir), (t0, (520, 0), expo(6)), (t0 + .5, (0, 0), tenir))
 def objet_vivant(nom, debut, fin):
-    n = Nul(parent=monde, position=lambda t: (40 + val(K((debut, 640, expo(7)), (debut + .5, 0, tenir)), t) - (val(K((fin - .5, 0, entree(2.2)), (fin, 640, tenir)), t) if fin < 900 else 0), 640),
+    n = Nul(parent=monde, position=lambda t: (40 + val(K((debut, 640, expo(7)), (debut + .5, 0, tenir)), t) - (val(K((fin - .5, 0, entree(2.2)), (fin, 640, tenir)), t) if fin < 900 else 0), 640 + 16 * math.sin(t * 5.5) * min(1, max(0, (t - debut - .5) * 2))),
             debut=debut, fin=fin + .05 if fin < 900 else None)
     comp.ajouter(n); OBJETS[nom](n, debut, fin + .05 if fin < 900 else None)
     return n

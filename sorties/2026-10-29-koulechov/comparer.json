@@ -1,0 +1,161 @@
+{
+ "reel": {
+  "duree_s": 42.4,
+  "format": "1080×1920",
+  "ips": 30.0,
+  "debit_mbps": 3.6,
+  "plans": 2,
+  "duree_plan_moy_s": 21.2,
+  "duree_plan_med_s": 21.2,
+  "duree_plan_min_s": 3.2,
+  "duree_plan_max_s": 39.2,
+  "coupes_3s": 0,
+  "premiere_coupe_s": 39.2,
+  "coupes": [
+   39.2
+  ],
+  "transitions": [
+   {
+    "t": 27.9,
+    "d": 0.6,
+    "type": "fondu"
+   },
+   {
+    "t": 35.8,
+    "d": 0.6,
+    "type": "filé horizontal"
+   },
+   {
+    "t": 41.1,
+    "d": 0.4,
+    "type": "filé horizontal"
+   }
+  ],
+  "transitions_progressives": 3,
+  "camera": {
+   "dérive lente": 1,
+   "quasi fixe": 1
+  },
+  "camera_par_plan": [
+   "dérive lente",
+   "quasi fixe"
+  ],
+  "palette": {
+   "couleurs": [
+    {
+     "hex": "#eeede8",
+     "part": 0.83
+    },
+    {
+     "hex": "#e1d2bd",
+     "part": 0.07
+    },
+    {
+     "hex": "#13100e",
+     "part": 0.05
+    },
+    {
+     "hex": "#a49f96",
+     "part": 0.03
+    },
+    {
+     "hex": "#716353",
+     "part": 0.03
+    }
+   ],
+   "luminosite": 0.87,
+   "saturation": 0.05,
+   "temperature": "neutre"
+  },
+  "texte": {
+   "part_du_temps": 0.83,
+   "hauteur_px_med": 47.0,
+   "hauteur_px_min": 34.0,
+   "mots_par_image": 2.5,
+   "zones": {
+    "haut": 0.09,
+    "milieu": 0.12,
+    "bas": 0.79
+   },
+   "changements_par_s": 0.83,
+   "premieres_3s": "Regarde Regarde Regarde Regarde ce visage. Regarde ce visage. ton avis, ton avis,"
+  },
+  "nettete_med": 263.0,
+  "son": {
+   "present": true,
+   "lufs": -14.0,
+   "crete_db": -1.4,
+   "energie_3s_db": -21.1,
+   "energie_moy_db": -18.6,
+   "dynamique_db": 11.6,
+   "attaques_par_s": 1.51,
+   "coupes_sur_attaque": 0.0,
+   "coupes_sur_attaque_si_hasard": 0.38
+  }
+ },
+ "planche": "/tmp/tmpwq_0yqqq/reel.jpg",
+ "references": [
+  "mes-videos-reel-apple-v3"
+ ],
+ "axes": {
+  "rythme": {
+   "reel": {
+    "duree_plan_moy_s": 21.2,
+    "coupes_3s": 0
+   },
+   "ref": {
+    "duree_plan_moy_s": 2.58,
+    "coupes_3s": 1.0
+   },
+   "ok": false
+  },
+  "lisibilite": {
+   "reel": {
+    "hauteur_px_min": 34.0,
+    "mots_par_image": 2.5
+   },
+   "ref": {
+    "hauteur_px_min": 29.0,
+    "mots_par_image": 3.1
+   },
+   "ok": true
+  },
+  "finition": {
+   "reel": {
+    "nettete": 263.0,
+    "lufs": -14.0,
+    "coupes_sur_attaque": 0.0
+   },
+   "ref": {
+    "nettete": 133.0,
+    "coupes_sur_attaque": 0.33
+   },
+   "ok": false
+  }
+ },
+ "verdict": "en dessous (indicatif : moins de 3 références de qualité ≥ 7, non bloquant)",
+ "raisons": [
+  {
+   "cle": "comparer.rythme.duree_plan",
+   "mesure": 21.2,
+   "exige": "≤ 3.48 s",
+   "quoi": "plans trop longs en moyenne",
+   "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs)"
+  },
+  {
+   "cle": "comparer.rythme.coupes_3s",
+   "mesure": 0,
+   "exige": "≥ 1",
+   "quoi": "aucune coupe dans les 3 premières secondes",
+   "condition": "au moins une coupe ou un changement de plan avant 3 s"
+  },
+  {
+   "cle": "comparer.finition.synchro",
+   "mesure": 0.0,
+   "exige": "≥ 0.13",
+   "quoi": "coupes pas assez calées sur les attaques du son",
+   "condition": "part des coupes sur une attaque ≥ 0.13"
+  }
+ ],
+ "probante": false
+}

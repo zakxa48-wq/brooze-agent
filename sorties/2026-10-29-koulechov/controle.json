@@ -1,0 +1,135 @@
+{
+ "video": "sorties/2026-10-29-koulechov/reel.mp4",
+ "ok": [
+  "format 1080×1920",
+  "30.00 i/s",
+  "vidéo h264 yuv420p",
+  "son aac",
+  "durée 42.4 s",
+  "poids 19.3 Mo",
+  "volume -14.0 LUFS (cible −14)",
+  "crête vraie -1.4 dBTP (max −1)",
+  "appris · bord_decouvert",
+  "appris · marque_reelle",
+  "appris · sous_titres_petit_mot",
+  "engagement : aucune zone morte, ouverture vivante, relance max 9.2 s"
+ ],
+ "problemes": [
+  "glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes"
+ ],
+ "montage": {},
+ "engagement": {
+  "duree_s": 42.4,
+  "ouverture": {
+   "luma_image_1": 219.1,
+   "fondu_depuis_noir": false,
+   "mouvement_premiere_demi_seconde": true
+  },
+  "zones_mortes": [],
+  "relances": [
+   1.0,
+   2.8,
+   3.6,
+   4.8,
+   10.7,
+   11.2,
+   14.6,
+   15.1,
+   16.3,
+   16.8,
+   17.3,
+   18.8,
+   28.0,
+   28.6,
+   31.9,
+   33.0,
+   33.9,
+   34.4,
+   36.1,
+   36.6,
+   37.8,
+   39.5,
+   41.4
+  ],
+  "ecart_max_relances_s": 9.2,
+  "coupes_s": [
+   31.9,
+   32.0,
+   34.0,
+   36.2,
+   41.4
+  ],
+  "boucle": {
+   "ecart_image": 14.7,
+   "ecart_couleur": 0.12,
+   "mouvement_fin": 0.03,
+   "mouvement_debut": 2.62,
+   "son": {
+    "debut_db": -21.4,
+    "fin_db": -20.5,
+    "fin_derniers_80ms_db": -23.6,
+    "moyenne_db": -16.1
+   }
+  },
+  "lecture": [],
+  "bloquants": [],
+  "a_justifier": [
+   "pas de relance pendant 5.9 s (4.8–10.7 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 3.4 s (11.2–14.6 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 9.2 s (18.8–28.0 s) : viser une relance toutes les 1,5 à 3 s",
+   "pas de relance pendant 3.3 s (28.6–31.9 s) : viser une relance toutes les 1,5 à 3 s",
+   "boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
+   "durée 42.4 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
+  ]
+ },
+ "a_justifier": [
+  "engagement · pas de relance pendant 5.9 s (4.8–10.7 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 3.4 s (11.2–14.6 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 9.2 s (18.8–28.0 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · pas de relance pendant 3.3 s (28.6–31.9 s) : viser une relance toutes les 1,5 à 3 s",
+  "engagement · boucle : la fin est immobile, la reprise se verra (garder le mouvement jusqu'à la dernière image)",
+  "engagement · durée 42.4 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
+ ],
+ "glitchs": {
+  "fps": 30.0,
+  "coupes": [
+   1.4,
+   2.8,
+   32.733,
+   32.9,
+   33.2,
+   41.4
+  ],
+  "rapides": [
+   [
+    4.3,
+    5.0
+   ],
+   [
+    18.167,
+    19.1
+   ],
+   [
+    27.833,
+    28.533
+   ],
+   [
+    35.8,
+    36.3
+   ]
+  ],
+  "alertes": [
+   [
+    "FLASH",
+    33.567,
+    33.567
+   ]
+  ]
+ },
+ "images_cles": [
+  0.3,
+  42.29
+ ],
+ "planche": "/home/user/brooze-agent/sorties/2026-10-29-koulechov/planche_cles.jpg",
+ "bandes": "/home/user/brooze-agent/sorties/2026-10-29-koulechov/_glitchs"
+}

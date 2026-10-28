@@ -4,6 +4,10 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 28/10 (3 h 41) — savoir, Koulechov rendu et contrôlé (technique), sceptique à faire
+- Filet stories : 28/10→01/11 couvert (10 h, 10 h 01…), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Séance du savoir faite : 3 vidéos YouTube lues en entier (Hitchcock, No Film School, Crash Course), notion montage-contraste (A-0007 à vérifier), A-0005 renforcée ; lup.lub.lu.se (Barratt 2016 complet) hors domaines autorisés.
+- Koulechov (jour réservé 29/10, étape contrôle) : plan.mp4 re-rendu (hook plus vivant : ondes cuivre + coups de zoom ; écran scindé : poussée lente et flottement), reel.mp4 42,4 s, controle.py sans bloquant hors alerte FLASH 33,57 s (inversion des blocs de la timeline, voulue par le storyboard). comparer non probante. Reste : sceptique indépendant + verdict, couverture, teaser, programmation (29/10 18 h si PUBLIABLE, sinon 31/10).
+
 ## 27/10 (15 h 41) — veille, réponse à Zak, Koulechov en cours
 - Filet stories : 28→31/10 couvert (10 h), aucune en erreur, réserve 7. Veille faite (voir veille.md : Spotify v2 à J+2 = 136 vues, 31,9 % > 3 s, ×0,85 la médiane). Séance du savoir : déjà faite à 3 h 41.
 - Koulechov (suite, 15 h 41) : scène Atelier 2D complète rendue (plan.mp4 42,4 s, planche vue, sous-titres lisibles ; correctif moteur `sous_titres`), son OK. Reste : re-rendu (timeline à l'échelle .92), rendu final par morceaux, contrôle, sceptique, programmation (29/10 18 h si le contrôle passe au 28/10, sinon 31/10).
