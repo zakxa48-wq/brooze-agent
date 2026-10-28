@@ -1,0 +1,19 @@
+{
+ "type": "story",
+ "date_prevue": "2026-10-29T18:30:00+01:00",
+ "avatar": "Claire",
+ "pilier": "Teaser du Reel",
+ "hypothese": "Une story qui annonce le Reel augmente sa portée les premières heures.",
+ "nouveau_format": false,
+ "slides": [
+  {
+   "layout": "cover",
+   "theme": "encre",
+   "label": "Nouveau Reel",
+   "titre": "Même visage. *Trois* émotions.",
+   "taille": "t-l",
+   "texte": "Ce que ton cerveau invente entre deux images. Il est sur notre profil.",
+   "swipe": "Voir le Reel"
+  }
+ ]
+}
