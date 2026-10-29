@@ -256,9 +256,9 @@ def doux_m(p): return 4 * p ** 3 if p < .5 else 1 - (-2 * p + 2) ** 3 / 2
 def cam_g(t): return doux_m(min(1., max(0., t / D)))
 def cam_c(t): return 1.002 + 2 * 18 * cam_g(t) / 1920
 def ech_fb(t):
-    base = 1.7 * (1 + .06 * sum(bosse(t, b) for b in BF) + .06 * min(1, max(0, (t - (T_LOOP + .9)) / (T_FIN - T_LOOP - .9))))
+    base = 1.7 * (1 + .06 * sum(bosse(t, b) for b in BF) + .06 * doux_m(min(1, max(0, (t - (T_LOOP + .2)) / (T_FIN - T_LOOP - .2)))))   # gonflement étalé sur 1,1 s (avant : 0,05 s = saut de 6 % sur les 3 dernières images)
     return base * cam_c(0) / cam_c(t)
-def pos_fb(t): return (540, 960 + (cam_c(0) * (940 - 960) + 18 * cam_g(t)) / cam_c(t))
+def pos_fb(t): return (540, 960 + (cam_c(0) * (940 - 960) + 18 * cam_g(t)) / cam_c(t) - 3.5 * cam_g(t))   # -3,5 px : écart mesuré sur le rendu (tentative 3)
 fb = Nul(position=pos_fb, echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
 for _b in (T_LOOP - .05, T_LOOP + .1):   # halos éteints avant la dernière image (comme à l'image 0)
     comp.ajouter(Forme(ellipse(560, 700), remplissage='#E9D2B8', trait=CU, epaisseur=14, position=(540, 940),

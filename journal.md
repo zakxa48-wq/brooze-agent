@@ -4,6 +4,11 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 29/10 (3 h 41) — savoir, Koulechov tentative 3 (À REPRENDRE de peu), jour décalé au 31/10
+- Filet stories : 29/10→01/11 couvert (10 h, 10 h 01…), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Séance du savoir faite : perception du mouvement (Orgs 2011, A-0008, à vérifier) et montage de collision d'Eisenstein (aucun test expérimental retrouvé, A-0009) ; yt-dlp en 429 et vidIQ absent : 3 vidéos restent à transcrire (questions.md).
+- Koulechov : corrections V2-4/5/6 (wordmark Space Grotesk 700 sans cadre, KOULECHOV à 65 px de la pastille, boucle lissée, halos éteints, caméra du moteur compensée), re-rendu, controle.py 0 problème ; evaluation_3 : 0 P1, 1 P2 (boucle à 3-4 px et saut de taille sur les 3 dernières images, cause trouvée : gonflement sur 0,05 s) ; scene.py corrigé, re-rendu au passage de 15 h 41. Jour réservé : 31/10 18 h (Red Bull glissé au 3/11). Rien programmé.
+- Réponse à Zak : Koulechov ≈ 31/10 (il reste un re-rendu et un contrôle ; tampon : wordmark typographique en attendant le fichier logo, à m'envoyer si tu veux le vrai), Red Bull ≈ 3/11 (refonte de la partie grille).
+
 ## 28/10 (15 h 41) — veille, Koulechov tentative 2 (À REPRENDRE, 2 P2 restants)
 - Filet stories : 28→01/11 couvert (10 h), aucune en erreur, réserve 7. Séance du savoir : déjà faite à 3 h 41. Veille faite (voir veille.md : aucun Reel publié depuis le 25/10, rien n'a bougé).
 - Koulechov : verdict_1 À REPRENDRE (2 P1, 4 P2) → corrigé (grille centrée, anneaux + KOULECHOV + punch caméra sur « Koulechov », battements de fond, entrées d'objets variées, boucle recalée, queue 2,4→1,4 s, timeline centrée, inversion douce, Inter 800) ; controle.py 0 problème ; verdict_2 À REPRENDRE : reste KOULECHOV coupé par la pastille de sous-titre, raccord de boucle (visage 25 px plus haut, halo), tampon typographique à valider par Zak (le fichier logo n'existe pas). Aucun P1. Rien programmé ; post, couverture et teaser prêts.

@@ -1,0 +1,143 @@
+{
+ "defauts": [
+  {
+   "priorite": "P3",
+   "de": 11.4,
+   "a": 18.2,
+   "quoi": "La poussée de caméra lente fait déborder la paire visage/objet : l'oreille gauche du visage est rognée par le bord gauche de l'écran pendant ~6,8 s et la marge droite descend à ~30 px (puis 15-35 px).",
+   "preuve": "masque noir par image (toutes les 0,2 s) : x min = 0 de 11.4 à 18.0 s, x max 1032-1047 ; frames 14.0 et 17.0 vues en 1080x1920 ; la planche d'origine à 8 s et 16 s montrait des marges de ~60 px. Existait depuis la tentative 1 (etat.json : poussée caméra lente), donc pas un défaut nouveau recevable.",
+   "condition": "Sur 11.0-18.5 s, aucune pixel sombre du visage/des cartes sur x < 24 ni x > 1056 (marge 24 px, idéal 40).",
+   "piste": "Plafonner la poussée (échelle finale <= 1.0 du plan à 8 s) ou recentrer la paire pendant la poussée.",
+   "nouveau_pourquoi": "visible avant (planche et etat.json) : conseil seulement"
+  },
+  {
+   "priorite": "P3",
+   "de": 22.4,
+   "a": 22.87,
+   "quoi": "KOULECHOV apparaît (fondu 22.4, plein 22.5) 0,4 s avant d'être dit : mots.json place « Koulechov. » à 22.87-23.395 ; le mot est lisible à l'écran alors que la voix dit « l'effet ».",
+   "preuve": "frames 22.4 (mot gris), 22.5 (plein), sous-titre « l'effet » à 22.5 ; mots.json w=Koulechov. start 22.87",
+   "condition": "Soit relance à 22.4 conservée (condition V1-11) et mot plein à partir de 22.87 ± 0.1, soit les deux avec le fondu complet seulement à 22.8.",
+   "piste": "Garder le coup de zoom et les anneaux à 22.4, faire entrer le mot à 22.8 sur le son.",
+   "nouveau_pourquoi": "issu de la correction V1-11 (régression légère) : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 36.3,
+   "a": 39.1,
+   "quoi": "Fin de CTA presque figée : 36.3-37.35 s (1,05 s) et 37.65-39.1 s (1,45 s) avec diff d'image <= 0,15 (hors clic du curseur 37.37-37.6), pendant « manipuler ton audience pour toi. Abonne-toi. ».",
+   "preuve": "signalstats sur reel.mp4 : diff 0,02-0,09 de 36.3 à 37.35, 0,02-0,15 de 37.63 à 39.1 ; engagement.json relances 36.1 / 37.8 / 39.5 (1,7 s d'écart)",
+   "condition": "Un mouvement visible (diff > 0,5) au moins toutes les 1,2 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Tampon qui vibre ou se re-claque à la voix de « Abonne-toi », bouton qui pulse, curseur qui glisse vers le bouton (V2-10 de la tentative 2).",
+   "nouveau_pourquoi": "déjà signalé en V2-10"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.0,
+   "quoi": "Les pastilles de sous-titres sont dimensionnées pour le groupe entier : un seul mot (« Regarde », « À ») flotte à gauche d'une grande pastille vide, ce qui fait « fantôme ». À 0.0 s le sous-titre est déjà affiché alors qu'à la dernière image il est absent : il « pop » au raccord.",
+   "preuve": "frames 0.0, 1.0 (« À »), 2.0 et dernière image 1239",
+   "condition": "Largeur de pastille = largeur du texte affiché (ou fondu d'entrée du premier mot à partir de la dernière image)",
+   "piste": "Pastille ajustée au mot courant avec transition de largeur de 4 images.",
+   "nouveau_pourquoi": "visible avant : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.9,
+   "a": 40.3,
+   "quoi": "Le wordmark est un composé typographique, pas le fichier officiel ; la charte exige le vrai fichier si Zak en a un.",
+   "preuve": "assets/logo.* absent ; glyphes = Space Grotesk 700 (rendu de comparaison)",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou remplace par assets/logo.* avant publication.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau_pourquoi": "dépendance externe déjà connue (V2-4)"
+  },
+  {
+   "priorite": "P3",
+   "de": 32.8,
+   "a": 34.2,
+   "quoi": "Pendant l'inversion des blocs de la timeline, des blocs sont coupés par le bord gauche et droit (x=0 / x=1079).",
+   "preuve": "frames 32.8, 33.0, 34.0 en pleine résolution ; masque noir x min 0 / x max 1079 à 33.0, 34.0",
+   "condition": "Soit blocs entièrement visibles avec marge >= 24 px, soit débord assumé sur toute la durée (timeline qui défile).",
+   "piste": "Défilement continu plutôt que permutation coupée.",
+   "nouveau_pourquoi": "visible avant : conseil"
+  }
+ ],
+ "conditions_precedentes": {
+  "V1-1": {
+   "statut": "levée",
+   "pourquoi": "controle.json : glitchs.alertes = [] et problemes = [] sur le rendu 41,4 s ; aucune alerte FLASH/SAUT/NOIR/COUPE."
+  },
+  "V1-2": {
+   "statut": "levée",
+   "pourquoi": "controle.json a_justifier : durée 41,3 s. Justification reel.json « durée » (voix entière de Zak finie à 39,99 s, mots.json dernier mot 38.62-39.99) ; la voix est un fait de la source, relances max 1,8 s, aucune zone morte."
+  },
+  "V1-3": {
+   "statut": "levée",
+   "pourquoi": "controle.json a_justifier : 3D absente. Le storyboard_zak.md impose un motion design 2D vectoriel ; justification reel.json « 3D » recevable, Zak prime."
+  },
+  "V1-4": {
+   "statut": "levée",
+   "pourquoi": "point à justifier du contrôle d'engagement, couvert par la justification de durée/relances (engagement.json : zones_mortes = [], ecart_max_relances_s 1.8)."
+  },
+  "V1-5": {
+   "statut": "levée",
+   "pourquoi": "idem V1-4 : relances toutes les <= 1,8 s mesurées sur engagement.json (48 relances), aucun intervalle sans relance."
+  },
+  "V1-6": {
+   "statut": "levée",
+   "pourquoi": "boucle : mouvement_fin 2,14 (>= 0,5), visage final de même échelle que l'image 0 (hauteur 777 px des deux côtés, largeur 662 contre 661) ; l'ancien écart de 15 % de taille est résorbé."
+  },
+  "V1-7": {
+   "statut": "levée",
+   "pourquoi": "engagement.json : relance max 1,8 s, aucune zone morte, ouverture avec mouvement dans la première demi-seconde."
+  },
+  "V1-11": {
+   "statut": "levée",
+   "pourquoi": "relances.json/engagement.json : relances à 22.4 et 22.9 (KOULECHOV apparaît en fondu à 22.4, plein à 22.5), écart max entre relances sur 18.8-28.0 = 1,3 s (<= 3,5). Réserve P3 : le mot est dit à 22.87 (mots.json) donc affiché 0,45 s avant la voix."
+  },
+  "V1-12": {
+   "statut": "levée",
+   "pourquoi": "mots.json groupes g41 « tu… » et g42 « Le montage, » séparés ; frame 32.8 « tu… », frame 33.0 sans fusion, 34.0 « c'est ». « montres » toujours absent de l'audio de Zak (défaut de la source, justification acceptée en tentative 2) ; aucun groupe de sous-titres ne mélange deux phrases."
+  },
+  "V1-13": {
+   "statut": "non levée",
+   "pourquoi": "Mesure reel.mp4, masque trait noir (somme RVB < 150), y < 1400. Image 0 : x 209-870, y 547-1323. Image 1239 (41.30 s) : x 208-870, y 550-1327. Écart : x 1 px, y haut +3 px, y bas +4 px (visage de même taille 777 px, décalé de ~3,5 px vers le bas) ; la mesure ne change pas avec le seuil (100/150/300/450 : dy haut 3, bas 4). Tolérance exigée 2-3 px : dépassée de 1 px sur le bord bas. Levées dans la même condition : aucun résidu de tampon ou de bouton après 41.0 (frames 40.37-41.30 = visage + halo seulement, halo éteint à 41.30 comme à 0.0), mouvement_fin 2,14 >= 0,5, plus long gel 39.3-41.33 = 0,5 s (diff 0,06-0,19 de 39.3 à 39.8) < 1,2 s. Reste uniquement le décalage vertical de 3-4 px. Correction triviale."
+  },
+  "V1-14": {
+   "statut": "levée",
+   "pourquoi": "engagement.json : relances 7.3, 8.3, 8.9, 9.3, 9.8 dans 7.0-9.5 ; entrées d'objet différentes (assiette, tombe, chiot) vues sur la planche 0-18 s."
+  },
+  "V1-15": {
+   "statut": "levée",
+   "pourquoi": "grille 3 rangées 22.4-24.8 : contenu x 262-779 sur 1080, centre 520 (écart 20 px = 1,9 % < 5 %) ; arrivée des flèches ensuite, vide de droite occupé."
+  },
+  "V1-16": {
+   "statut": "levée",
+   "pourquoi": "Le tampon (35.9-40.3 s) n'a plus ni cadre, ni double filet : deux lignes de texte inclinées (BROOZE + PRODUCTION espacé). J'ai rendu BROOZE avec les polices du dépôt (fonts/space-grotesk-latin-700 et inter-latin-800) : les glyphes B, R à empattement gauche, O ovale et Z du tampon sont ceux de Space Grotesk 700, pas d'Inter 900 ; aucune graisse 900 visible (sous-titres et bouton = Inter 800). charte.md l.13 cite « Space Grotesk 700 capitales espacées (labels, wordmark) » : la typographie du wordmark est donc écrite par Zak dans la charte. Cela suffit pour un wordmark texte (plus de faux logo encadré qu'on confondrait avec le fichier officiel) ; ça ne remplace pas le vrai fichier si Zak en fournit un (charte l.16 « jamais redessiné ») : à confirmer par Zak avant mise en ligne, en P3."
+  },
+  "V2-3": {
+   "statut": "non levée",
+   "pourquoi": "Même mesure que V1-13 : bbox image 0 x 209-870 / y 547-1323 contre image 1239 x 208-870 / y 550-1327 (dy +3 haut, +4 bas) ; condition <= 2 px non atteinte. Sous-conditions résidu de tampon/bouton, mouvement_fin 2,14, gel <= 1,2 s : tenues. Seul le décalage vertical bloque."
+  },
+  "V2-4": {
+   "statut": "levée",
+   "pourquoi": "Voir V1-16 : wordmark Space Grotesk 700 capitales, sans cadre, plus de graisse 900, conforme à charte.md l.13. Le fichier logo officiel reste absent du dépôt (dépendance externe, à signaler à Zak, non bloquante pour un wordmark texte)."
+  },
+  "V2-5": {
+   "statut": "levée",
+   "pourquoi": "Pleine résolution 1080x1920, frames 22.9, 23.4, 24.0, 24.6 : mot KOULECHOV y 1324-1405 (lisible en entier, 82 px de capitales), pastille de sous-titre y 1470-1571 : écart 65 px (>= 40). Rangée 3 de la grille se termine à y 1277 : 47 px au-dessus du mot. Frame 22.5 (zoom) : cartes jusqu'à y 1286, mot y 1322 : 36 px avec le mot, pas avec la pastille."
+  },
+  "V2-6": {
+   "statut": "non levée",
+   "pourquoi": "Halo : absent à l'image 0 et à l'image 1239, identique aux deux bouts (levé). Bbox : y bas +4 px (>±3 px) comme V2-3. Taille 40.8-41.33 : pas de coupe de grande taille, la pulsation est lissée (1 px/image) SAUF à la toute dernière image : 41.27 x 212-867 / y 555-1322 puis 41.30 x 208-870 / y 550-1327, soit un saut de 4-5 px par bord (hauteur 767 -> 777 px, ~1,3 %) en une image, juste avant le raccord. Petit mais c'est une coupe de taille dans la fenêtre 40.8-41.33."
+  }
+ },
+ "justifications": {
+  "durée 41.3 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée : voix entière de Zak (39,99 s), relances <= 1,8 s, aucune zone morte ; couper = couper la voix de Zak.",
+  "engagement · durée 41.3 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée : voix entière de Zak (mots.json dernier mot 39.993 s), relances <= 1,8 s, aucune zone morte.",
+  "3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)": "acceptée : storyboard_zak.md impose le motion design 2D vectoriel, il prime sur MONTAGE.md § 2 bis.",
+  "engagement · 3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)": "acceptée : storyboard_zak.md impose le motion design 2D vectoriel.",
+  "boucle": "refusée tant que V1-13/V2-3/V2-6 ne sont pas levées : la justification dit « à 3 px », la mesure est +3 px haut, +4 px bas, plus un saut de 4-5 px à la dernière image.",
+  "voix tronquée « l'ordre dans lequel tu… » (mot « montres » absent)": "acceptée : défaut de la source, à signaler à Zak (ré-enregistrer 1 s).",
+  "logo Brooze : fichier non fourni, tampon typographique": "acceptée : wordmark Space Grotesk 700 conforme à la charte, sans cadre ; confirmation de Zak à obtenir avant mise en ligne (P3)."
+ }
+}

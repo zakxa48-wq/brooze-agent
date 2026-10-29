@@ -1,0 +1,154 @@
+{
+ "tentative": 3,
+ "date": "2026-10-29T03:20",
+ "decision": "À REPRENDRE",
+ "raisons": [
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "plans trop longs en moyenne",
+   "ou": "",
+   "preuve": "mesuré 41.3 (références : mes-videos-reel-apple-v3)",
+   "exige": "≤ 3.48 s",
+   "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs) (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V3-1"
+  },
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "aucune coupe dans les 3 premières secondes",
+   "ou": "",
+   "preuve": "mesuré 0 (références : mes-videos-reel-apple-v3)",
+   "exige": "≥ 1",
+   "condition": "au moins une coupe ou un changement de plan avant 3 s (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V3-2"
+  },
+  {
+   "source": "condition précédente",
+   "bloque": true,
+   "priorite": "P2",
+   "quoi": "Raccord de boucle visible : le visage final (largeur 247 px à 360 de large, haut 161) est ~15 % plus grand que le visage de la 1re image (largeur 215, haut 186) et décalé ; la première image réintroduit le sous-titre « Regarde » et le halo. À 41.0–41.4 un résidu du bouton (pastille cuivre couleur chair) et le fantôme du tampon traversent le visage. Le clin d'œil déclaré (« même dessin, même place, même taille ») est faux à la mesure. En plus, 39.5→41.4 est immobile (énergie ~0 sur engagement.png) alors que la voix est finie à ~39.3 : ~3 s de vide avant la reprise.",
+   "ou": "41.0–42.4 s",
+   "preuve": "Même mesure que V1-13 : bbox image 0 x 209-870 / y 547-1323 contre image 1239 x 208-870 / y 550-1327 (dy +3 haut, +4 bas) ; condition <= 2 px non atteinte. Sous-conditions résidu de tampon/bouton, mouvement_fin 2,14, gel <= 1,2 s : tenues. Seul le décalage vertical bloque.",
+   "exige": "",
+   "condition": "bbox du visage à la dernière image = bbox à la première (écart <= 2 px, même échelle) ; aucun résidu de tampon ou de bouton sur le visage après 41.0 ; mouvement_fin >= 0,5 (boucle.mouvement_fin) ; plus de 1,2 s sans changement entre 39.3 et 42.4 interdit.",
+   "piste": "Faire revenir le visage à la taille exacte de l'ouverture en glissant pendant que le bouton repart (sans pastille chair), garder une micro-animation (clignement, halo qui commence à enfler) jusqu'à la dernière image, et raccourcir les 3 s de queue après la voix.",
+   "id": "V3-3"
+  },
+  {
+   "source": "condition précédente",
+   "bloque": true,
+   "priorite": "P2",
+   "quoi": "Boucle : le raccord n'est pas à ±2 px. Dernière image (41.33 s) : contour du visage x 202-876, y 523-1313 ; première image (0 s) : x 209-869, y 548-1322, soit visage ~2-4 % plus grand et ~25 px plus haut au sommet. En plus, la dernière image est dominée par un halo cuivre qui sort du cadre alors que l'image 0 n'a aucun halo et réintroduit la pastille « Regarde » : le saut est lisible. Le visage se redimensionne aussi en coupe sèche à 40.9 s (visible sur la planche 40.5 -> 41.1).",
+   "ou": "41.0–41.3 s",
+   "preuve": "Halo : absent à l'image 0 et à l'image 1239, identique aux deux bouts (levé). Bbox : y bas +4 px (>±3 px) comme V2-3. Taille 40.8-41.33 : pas de coupe de grande taille, la pulsation est lissée (1 px/image) SAUF à la toute dernière image : 41.27 x 212-867 / y 555-1322 puis 41.30 x 208-870 / y 550-1327, soit un saut de 4-5 px par bord (hauteur 767 -> 777 px, ~1,3 %) en une image, juste avant le raccord. Petit mais c'est une coupe de taille dans la fenêtre 40.8-41.33.",
+   "exige": "",
+   "condition": "bbox du contour du visage à la dernière image = bbox de l'image 0 à +-3 px à 1080 de large (le halo peut subsister s'il est présent aussi à l'image 0, ou absent aux deux) ; pas de coupe sèche de taille entre 40.8 et 41.33 s.",
+   "piste": "Caler l'échelle finale sur celle de l'image 0 (x 209-869) et faire naître le halo dès 0.0 (ou l'éteindre sur les 6 dernières images) ; remplacer la coupe de 40.9 par un glissé.",
+   "id": "V3-4"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "La poussée de caméra lente fait déborder la paire visage/objet : l'oreille gauche du visage est rognée par le bord gauche de l'écran pendant ~6,8 s et la marge droite descend à ~30 px (puis 15-35 px).",
+   "ou": "11.4–18.2 s",
+   "preuve": "masque noir par image (toutes les 0,2 s) : x min = 0 de 11.4 à 18.0 s, x max 1032-1047 ; frames 14.0 et 17.0 vues en 1080x1920 ; la planche d'origine à 8 s et 16 s montrait des marges de ~60 px. Existait depuis la tentative 1 (etat.json : poussée caméra lente), donc pas un défaut nouveau recevable.",
+   "exige": "",
+   "condition": "Sur 11.0-18.5 s, aucune pixel sombre du visage/des cartes sur x < 24 ni x > 1056 (marge 24 px, idéal 40).",
+   "piste": "Plafonner la poussée (échelle finale <= 1.0 du plan à 8 s) ou recentrer la paire pendant la poussée.",
+   "nouveau": "visible avant (planche et etat.json) : conseil seulement",
+   "id": "V3-5"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "KOULECHOV apparaît (fondu 22.4, plein 22.5) 0,4 s avant d'être dit : mots.json place « Koulechov. » à 22.87-23.395 ; le mot est lisible à l'écran alors que la voix dit « l'effet ».",
+   "ou": "22.4–22.9 s",
+   "preuve": "frames 22.4 (mot gris), 22.5 (plein), sous-titre « l'effet » à 22.5 ; mots.json w=Koulechov. start 22.87",
+   "exige": "",
+   "condition": "Soit relance à 22.4 conservée (condition V1-11) et mot plein à partir de 22.87 ± 0.1, soit les deux avec le fondu complet seulement à 22.8.",
+   "piste": "Garder le coup de zoom et les anneaux à 22.4, faire entrer le mot à 22.8 sur le son.",
+   "nouveau": "issu de la correction V1-11 (régression légère) : conseil",
+   "id": "V3-6"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Fin de CTA presque figée : 36.3-37.35 s (1,05 s) et 37.65-39.1 s (1,45 s) avec diff d'image <= 0,15 (hors clic du curseur 37.37-37.6), pendant « manipuler ton audience pour toi. Abonne-toi. ».",
+   "ou": "36.3–39.1 s",
+   "preuve": "signalstats sur reel.mp4 : diff 0,02-0,09 de 36.3 à 37.35, 0,02-0,15 de 37.63 à 39.1 ; engagement.json relances 36.1 / 37.8 / 39.5 (1,7 s d'écart)",
+   "exige": "",
+   "condition": "Un mouvement visible (diff > 0,5) au moins toutes les 1,2 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Tampon qui vibre ou se re-claque à la voix de « Abonne-toi », bouton qui pulse, curseur qui glisse vers le bouton (V2-10 de la tentative 2).",
+   "nouveau": "déjà signalé en V2-10",
+   "id": "V3-7"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Les pastilles de sous-titres sont dimensionnées pour le groupe entier : un seul mot (« Regarde », « À ») flotte à gauche d'une grande pastille vide, ce qui fait « fantôme ». À 0.0 s le sous-titre est déjà affiché alors qu'à la dernière image il est absent : il « pop » au raccord.",
+   "ou": "0.0–3.0 s",
+   "preuve": "frames 0.0, 1.0 (« À »), 2.0 et dernière image 1239",
+   "exige": "",
+   "condition": "Largeur de pastille = largeur du texte affiché (ou fondu d'entrée du premier mot à partir de la dernière image)",
+   "piste": "Pastille ajustée au mot courant avec transition de largeur de 4 images.",
+   "nouveau": "visible avant : conseil",
+   "id": "V3-8"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Le wordmark est un composé typographique, pas le fichier officiel ; la charte exige le vrai fichier si Zak en a un.",
+   "ou": "35.9–40.3 s",
+   "preuve": "assets/logo.* absent ; glyphes = Space Grotesk 700 (rendu de comparaison)",
+   "exige": "",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou remplace par assets/logo.* avant publication.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau": "dépendance externe déjà connue (V2-4)",
+   "id": "V3-9"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Pendant l'inversion des blocs de la timeline, des blocs sont coupés par le bord gauche et droit (x=0 / x=1079).",
+   "ou": "32.8–34.2 s",
+   "preuve": "frames 32.8, 33.0, 34.0 en pleine résolution ; masque noir x min 0 / x max 1079 à 33.0, 34.0",
+   "exige": "",
+   "condition": "Soit blocs entièrement visibles avec marge >= 24 px, soit débord assumé sur toute la durée (timeline qui défile).",
+   "piste": "Défilement continu plutôt que permutation coupée.",
+   "nouveau": "visible avant : conseil",
+   "id": "V3-10"
+  }
+ ],
+ "suivi": {
+  "V2-3": {
+   "statut": "non levée",
+   "pourquoi": "Même mesure que V1-13 : bbox image 0 x 209-870 / y 547-1323 contre image 1239 x 208-870 / y 550-1327 (dy +3 haut, +4 bas) ; condition <= 2 px non atteinte. Sous-conditions résidu de tampon/bouton, mouvement_fin 2,14, gel <= 1,2 s : tenues. Seul le décalage vertical bloque.",
+   "condition": "bbox du visage à la dernière image = bbox à la première (écart <= 2 px, même échelle) ; aucun résidu de tampon ou de bouton sur le visage après 41.0 ; mouvement_fin >= 0,5 (boucle.mouvement_fin) ; plus de 1,2 s sans changement entre 39.3 et 42.4 interdit."
+  },
+  "V2-4": {
+   "statut": "levée",
+   "pourquoi": "Voir V1-16 : wordmark Space Grotesk 700 capitales, sans cadre, plus de graisse 900, conforme à charte.md l.13. Le fichier logo officiel reste absent du dépôt (dépendance externe, à signaler à Zak, non bloquante pour un wordmark texte).",
+   "condition": "Soit le vrai fichier logo est utilisé tel quel, soit Zak valide par écrit la version typographique comme « wordmark » (Space Grotesk 700 caps, ou Inter 800) ; plus aucune graisse 900."
+  },
+  "V2-5": {
+   "statut": "levée",
+   "pourquoi": "Pleine résolution 1080x1920, frames 22.9, 23.4, 24.0, 24.6 : mot KOULECHOV y 1324-1405 (lisible en entier, 82 px de capitales), pastille de sous-titre y 1470-1571 : écart 65 px (>= 40). Rangée 3 de la grille se termine à y 1277 : 47 px au-dessus du mot. Frame 22.5 (zoom) : cartes jusqu'à y 1286, mot y 1322 : 36 px avec le mot, pas avec la pastille.",
+   "condition": "Sur les images 22.4-24.8 s, aucune intersection entre la boîte du mot KOULECHOV et la pastille de sous-titre (écart >= 40 px, vérifiable en pleine résolution), le mot restant lisible en entier."
+  },
+  "V2-6": {
+   "statut": "non levée",
+   "pourquoi": "Halo : absent à l'image 0 et à l'image 1239, identique aux deux bouts (levé). Bbox : y bas +4 px (>±3 px) comme V2-3. Taille 40.8-41.33 : pas de coupe de grande taille, la pulsation est lissée (1 px/image) SAUF à la toute dernière image : 41.27 x 212-867 / y 555-1322 puis 41.30 x 208-870 / y 550-1327, soit un saut de 4-5 px par bord (hauteur 767 -> 777 px, ~1,3 %) en une image, juste avant le raccord. Petit mais c'est une coupe de taille dans la fenêtre 40.8-41.33.",
+   "condition": "bbox du contour du visage à la dernière image = bbox de l'image 0 à +-3 px à 1080 de large (le halo peut subsister s'il est présent aussi à l'image 0, ou absent aux deux) ; pas de coupe sèche de taille entre 40.8 et 41.33 s."
+  }
+ },
+ "conditions_levees": 2
+}
