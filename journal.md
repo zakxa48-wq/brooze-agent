@@ -4,6 +4,10 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 29/10 (15 h 41) — veille, Koulechov tentative 4-5 (À REPRENDRE, 1 P2 de boucle), jour 31/10
+- Filet stories : 30/10→01/11 couvert (10 h), aucune en erreur, réserve 7. Séance du savoir : déjà faite à 3 h 41. Veille faite (relevé identique à la veille : aucun Reel publié depuis le 25/10, aucune détection).
+- Koulechov : verdict_4 (régression : visage final +5 %) → corrigé, boucle à ≤ 1 px de l'image 0 ; verdict_5 À REPRENDRE pour un seul point : pulsation du visage entre 40,6 et 41,2 s avec écarts de 8-10 px par image (seuil 3). Aucun P1. Correctif connu, re-rendu au prochain passage (cache _clip_plan_* à vider avant tout re-rendu). Rien programmé.
+
 ## 29/10 (3 h 41) — savoir, Koulechov tentative 3 (À REPRENDRE de peu), jour décalé au 31/10
 - Filet stories : 29/10→01/11 couvert (10 h, 10 h 01…), aucune en erreur, réserve 7. Veille : non (passage de 15 h 41). Séance du savoir faite : perception du mouvement (Orgs 2011, A-0008, à vérifier) et montage de collision d'Eisenstein (aucun test expérimental retrouvé, A-0009) ; yt-dlp en 429 et vidIQ absent : 3 vidéos restent à transcrire (questions.md).
 - Koulechov : corrections V2-4/5/6 (wordmark Space Grotesk 700 sans cadre, KOULECHOV à 65 px de la pastille, boucle lissée, halos éteints, caméra du moteur compensée), re-rendu, controle.py 0 problème ; evaluation_3 : 0 P1, 1 P2 (boucle à 3-4 px et saut de taille sur les 3 dernières images, cause trouvée : gonflement sur 0,05 s) ; scene.py corrigé, re-rendu au passage de 15 h 41. Jour réservé : 31/10 18 h (Red Bull glissé au 3/11). Rien programmé.

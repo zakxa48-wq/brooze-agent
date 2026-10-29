@@ -1,0 +1,65 @@
+{
+ "defauts": [
+  {
+   "priorite": "P3",
+   "de": 37.67,
+   "a": 38.7,
+   "quoi": "Plateau quasi immobile de 1,03 s (diff d'image < 0,5) pendant « ton audience pour toi » : sous le seuil de 1,2 s, donc conforme ; reste le seul vrai creux de la fin.",
+   "preuve": "diff image par image, runs < 0,5 de plus de 0,6 s : un seul, 37.67-38.70 ; engagement.png",
+   "condition": "Un mouvement visible au moins toutes les 1,0 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Bouton qui pulse légèrement.",
+   "nouveau_pourquoi": "déjà signalé V3-7 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 11.4,
+   "a": 18.2,
+   "quoi": "Poussée de caméra qui rogne l'oreille gauche (V3-5) : non remesuré cette passe, supposé inchangé.",
+   "preuve": "non vérifié en tentative 4 (hors périmètre des conditions).",
+   "condition": "Sur 11.0-18.5 s, aucun pixel sombre du visage/des cartes sur x < 24 ni x > 1056.",
+   "piste": "Plafonner la poussée.",
+   "nouveau_pourquoi": "déjà signalé V3-5 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.0,
+   "quoi": "Pastilles de sous-titres dimensionnées au groupe entier ; la pastille « Regarde » est présente à 0.0 et absente à la dernière image : elle « pop » au raccord (jonction.jpg).",
+   "preuve": "frames 0 et 1239 ; jonction.jpg",
+   "condition": "Largeur de pastille = largeur du texte, ou entrée en fondu depuis la dernière image.",
+   "piste": "Pastille ajustée au mot courant.",
+   "nouveau_pourquoi": "déjà signalé V3-8 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.9,
+   "a": 40.3,
+   "quoi": "Wordmark typographique, pas le fichier officiel (V3-9).",
+   "preuve": "assets/logo.* absent",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou fichier officiel utilisé.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau_pourquoi": "dépendance externe : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 40.0,
+   "a": 40.37,
+   "quoi": "Fantôme du tampon/bouton puis visage ; non régressé (aucun pixel cuivre mesuré à 40.2, 40.37, 40.5, 41.0, 41.3).",
+   "preuve": "saturation/teinte cuivre = 0 px",
+   "condition": "Sans objet",
+   "piste": "-",
+   "nouveau_pourquoi": "déjà signalé V3 : conseil"
+  }
+ ],
+ "conditions_precedentes": {
+  "V4-3": {
+   "statut": "levée",
+   "pourquoi": "Mesure pleine résolution 1080x1920, masque trait noir (somme RVB<150, y<1400). Image 0 (0.00 s) : x 209-870 / y 547-1323. Dernière image 1238 (41.27 s) : x 208-870 / y 547-1322. Écarts : gauche -1, droite 0, haut 0, bas -1 px (<= 2 px, levé). Cuivre résiduel (teinte 5-25, S>120, V>120) : 0 px à 40.2, 40.37, 40.5, 41.0, 41.3 (levé). mouvement_fin 2,9 >= 0,5 (controle.json engagement.boucle ; diff 41.23=0,76) (levé). Plus long run de diff < 0,5 entre 39.3 et la fin : 37.67-38.70 est avant 39.3 et dure 1,03 s ; après 39.3, diff minimum 0,028 à 40.3 (1 seule image), pas de gel > 1,2 s (levé). Raccord dernière image -> image 0 : 662x775 -> 661x776 puis contraction douce de 661 à 640 en 8 images (continu)."
+  },
+  "V4-4": {
+   "statut": "non levée",
+   "pourquoi": "Bbox +-3 px : levée (-1/0/0/-1). Halo absent aux deux bouts : levé. MAIS sous-condition « pas de saut de taille > 3 px entre images consécutives de 40.8 à la fin » : non levée. Largeur/hauteur par image : 40.90 686x805 -> 40.93 694x813 (+8/+8) ; 40.93 -> 40.97 +3/+4 ; 41.00 -> 41.03 -4/-5 ; 41.03 -> 41.07 684x802 (-8/-10) ; 41.07 -> 41.10 675x792 (-9/-10) ; 41.10 -> 41.13 -7/-9. Le visage enfle de 659 à 697 px de large (+5,8 %) de 40.63 à 40.97 puis se dégonfle à 662 à 41.20 : pulsation ample, plus grosse que le seuil, sur 0,5 s. Plus de coupe sèche d'une image, mais 4 images dépassent 3 px (40.93, 41.07, 41.10, 41.13)."
+  }
+ },
+ "justifications": {}
+}
