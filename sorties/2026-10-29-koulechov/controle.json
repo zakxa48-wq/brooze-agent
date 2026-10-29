@@ -1,5 +1,5 @@
 {
- "video": "reel.mp4",
+ "video": "sorties/2026-10-29-koulechov/reel.mp4",
  "ok": [
   "format 1080×1920",
   "30.00 i/s",
@@ -102,9 +102,9 @@
    40.4
   ],
   "boucle": {
-   "ecart_image": 1.7,
-   "ecart_couleur": 0.13,
-   "mouvement_fin": 2.14,
+   "ecart_image": 6.9,
+   "ecart_couleur": 0.14,
+   "mouvement_fin": 2.54,
    "mouvement_debut": 2.62,
    "son": {
     "debut_db": -16.2,
