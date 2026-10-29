@@ -1,0 +1,71 @@
+{
+ "defauts": [
+  {
+   "priorite": "P3",
+   "de": 36.5,
+   "a": 39.5,
+   "quoi": "Plateaux quasi immobiles en fin : la courbe d'énergie d'engagement.png reste sous le seuil de 36.4 à 37.8 puis 37.9 à 39.4 (hors clic) pendant « Abonne-toi ».",
+   "preuve": "engagement.png (zones plates à 36.5-37.8 et 37.9-39.4) ; signalé déjà en V3-7 ; non remesuré image par image cette passe.",
+   "condition": "Un mouvement visible (diff > 0,5) au moins toutes les 1,2 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Tampon qui vibre à la voix, bouton qui pulse.",
+   "nouveau_pourquoi": "déjà signalé en V3-7 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 40.0,
+   "a": 40.37,
+   "quoi": "Le tampon et le bouton s'effacent (40.0-40.33) puis le visage arrive en coupe sèche à 40.37 (diff d'image 16,6) ; 0,37 s de fond quasi vide avant le visage.",
+   "preuve": "diff par image 1200-1211 : 0,9 constant puis 16,59 à 40.37 ; bbox du visage absente de 40.03 à 40.33 (seul le fantôme pâle du tampon, non mesurable au seuil 150).",
+   "condition": "Visage présent (même pâle) dès l'effacement du tampon, ou fondu enchaîné sur 6 images, au lieu d'un trou de 0,37 s puis d'une coupe.",
+   "piste": "Faire glisser le visage depuis le bas pendant que le tampon s'efface.",
+   "nouveau_pourquoi": "visible avant (déjà en tentative 3) : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 11.4,
+   "a": 18.2,
+   "quoi": "Poussée de caméra qui rogne l'oreille gauche (V3-5) : non remesuré cette passe, supposé inchangé.",
+   "preuve": "non vérifié en tentative 4 (hors périmètre des conditions).",
+   "condition": "Sur 11.0-18.5 s, aucun pixel sombre du visage/des cartes sur x < 24 ni x > 1056.",
+   "piste": "Plafonner la poussée.",
+   "nouveau_pourquoi": "déjà signalé V3-5 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.0,
+   "quoi": "Pastilles de sous-titres dimensionnées au groupe entier ; la pastille « Regarde » est présente à 0.0 et absente à la dernière image : elle « pop » au raccord (jonction.jpg).",
+   "preuve": "frames 0 et 1239 ; jonction.jpg",
+   "condition": "Largeur de pastille = largeur du texte, ou entrée en fondu depuis la dernière image.",
+   "piste": "Pastille ajustée au mot courant.",
+   "nouveau_pourquoi": "déjà signalé V3-8 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.9,
+   "a": 40.3,
+   "quoi": "Wordmark typographique, pas le fichier officiel (V3-9).",
+   "preuve": "assets/logo.* absent",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou fichier officiel utilisé.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau_pourquoi": "dépendance externe : conseil"
+  }
+ ],
+ "conditions_precedentes": {
+  "V3-3": {
+   "statut": "non levée",
+   "pourquoi": "Mesure pleine résolution 1080x1920, masque trait noir (somme RVB < 150, y < 1400). Image 0 (0.00 s) : x 209-870 / y 547-1323 (661 x 777). Dernière image 1239 (41.30 s) : x 193-886 / y 528-1341 (694 x 814). Écarts : gauche -16, droite +16, haut -19, bas +18 px ; échelle +5 % en largeur et +4,8 % en hauteur. Tolérance <= 2 px : dépassée de 14-17 px, c'est pire qu'en tentative 3 (+3/+4 px, même échelle). Cause : à 40.87-41.03 le visage gonfle de 661 à 696 px de large (x 209-870 -> 192-887, y 547-1322 -> 527-1342) et reste à cette taille jusqu'à la fin (41.03-41.30, bbox 192-887/527-1342 puis 193-886/528-1341) ; l'image 0 repart à 661 px puis se contracte (209 -> 214 à 0.07 s). Sous-conditions : résidu tampon/bouton après 41.0 : levée (images 40.37-41.30 = visage seul, plus de pixel du tampon) ; mouvement_fin 2,54 (controle.json boucle) >= 0,5 : levée ; plus de 1,2 s sans changement entre 39.3 et la fin : levée (diff d'image minimum 0,18 à 39.67, pas de gel). Reste non levée : l'égalité de bbox, et c'est une régression de la correction (V3 : visage de même échelle ; V4 : visage 5 % plus gros)."
+  },
+  "V3-4": {
+   "statut": "non levée",
+   "pourquoi": "Bbox dernière image 193-886 / 528-1341 contre image 0 209-870 / 547-1323 : écart 16-19 px par bord, tolérance +-3 px dépassée (x6). Halo : absent aux deux bouts (pixels de fond identiques [233 237 239] en 1239 ; levé). Coupe sèche de taille entre 40.8 et fin : pas de coupe d'une image (pas de saut de 4-5 px de la dernière image comme en V3 : 41.27 -> 41.30 = 1 px), mais gonflement rapide 40.87 -> 41.03 de 5-6 px par bord et par image (40.90 : 206-873 ; 40.93 : 201-877 ; 40.97 : 197-882 ; 41.00 : 194-885 ; 41.03 : 192-887), soit +5 % en 5 images : sous-condition coupe sèche levée au sens strict, mais l'échelle finale est fausse. Condition non levée sur la bbox (jonction.jpg et planche_cles.jpg : visage final visiblement plus grand, plus haut, sans pastille)."
+  }
+ },
+ "justifications": {
+  "boucle": "refusée : reel.json dit que le visage de la fin est « à la même place et à la même taille » ; la mesure donne +16 px par côté (+5 %) et 19 px plus haut au sommet.",
+  "engagement · durée 41.3 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée : voix entière de Zak (39,99 s), relances <= 1,8 s.",
+  "durée 41.3 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée : voix entière de Zak, relances <= 1,8 s.",
+  "3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)": "acceptée : storyboard_zak.md impose le motion design 2D vectoriel.",
+  "engagement · 3D : aucun moment 3D déclaré (reel.json \"plans_3d\") ; 1 ou 2 moments 3D magnifiques de 2 à 5 s par Reel (MONTAGE.md § 2 bis)": "acceptée : storyboard_zak.md impose le motion design 2D vectoriel."
+ }
+}

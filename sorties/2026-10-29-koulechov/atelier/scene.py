@@ -256,7 +256,9 @@ def doux_m(p): return 4 * p ** 3 if p < .5 else 1 - (-2 * p + 2) ** 3 / 2
 def cam_g(t): return doux_m(min(1., max(0., t / D)))
 def cam_c(t): return 1.002 + 2 * 18 * cam_g(t) / 1920
 def ech_fb(t):
-    base = 1.7 * (1 + .06 * sum(bosse(t, b) for b in BF) + .06 * doux_m(min(1, max(0, (t - (T_LOOP + .2)) / (T_FIN - T_LOOP - .2)))))   # gonflement étalé sur 1,1 s (avant : 0,05 s = saut de 6 % sur les 3 dernières images)
+    fin = 1 - doux_m(min(1, max(0, (t - (T_FIN - .45)) / .45)))   # toute pulsation revient à 0 avant la dernière image : même échelle qu'à l'image 0
+    sw = math.sin(math.pi * min(1, max(0, (t - (T_LOOP + .2)) / (T_FIN - T_LOOP - .2)))) ** 2
+    base = 1.7 * (1 + .0145 * (1 - fin) + fin * (.06 * sum(bosse(t, b) for b in BF) + .05 * sw))   # +1,45 % : calé sur la mesure du rendu (dernière image = image 0)
     return base * cam_c(0) / cam_c(t)
 def pos_fb(t): return (540, 960 + (cam_c(0) * (940 - 960) + 18 * cam_g(t)) / cam_c(t) - 3.5 * cam_g(t))   # -3,5 px : écart mesuré sur le rendu (tentative 3)
 fb = Nul(position=pos_fb, echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
