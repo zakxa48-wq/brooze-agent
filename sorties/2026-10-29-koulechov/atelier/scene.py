@@ -19,10 +19,10 @@ T_SPLIT, T_ZOOM, T_TL, T_STAMP = T(10) - .05, T(57) - .05, T(84) - .25, T(110) +
 T_LOOP = D - 1.0
 
 # ---------- caméra du monde (monde = Nul ; rangées : -640 assiette, 0 tombe, 640 chiot)
-S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.38, lin), (T_ZOOM + .95, .66, sortie(3)), (D, .66, lin))
+S = K((0, 1.0, lin), (T_SPLIT, 1.0, doux), (T_SPLIT + .85, 1.25, sortie(3)), (T_ZOOM, 1.38, lin), (T_ZOOM + .95, .62, sortie(3)), (D, .62, lin))
 CX = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, -160, sortie(3)), (T_ZOOM, -160, doux), (T_ZOOM + .95, -150, sortie(3)), (T(75) - .1, -150, doux), (T(75) + .85, 65, sortie(3)), (D, 65, lin))
-CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 315, sortie(3)),
-       (T_TL, 315, doux), (T_TL + .6, 2300, expo(6)), (D, 2300, lin))
+CY = K((0, 0, lin), (T_SPLIT, 0, doux), (T_SPLIT + .85, 640, sortie(3)), (T_ZOOM, 640, doux), (T_ZOOM + .95, 370, sortie(3)),
+       (T_TL, 370, doux), (T_TL + .6, 2700, expo(6)), (D, 2700, lin))
 def SS(t): return val(S, t) * ((1 + .07 * math.exp(-(t - T(68)) * 8)) if T(68) <= t < T(68) + 1.5 else 1)
 monde = comp.ajouter(Nul(position=lambda t: (540 - SS(t) * val(CX, t), 960 - SS(t) * val(CY, t)), echelle=SS, fin=T_TL + .8))
 
@@ -138,7 +138,7 @@ objet_vivant('tombe', T_TOMB, T_PUPPY, 'haut', (T(38), T(41) - .05))
 objet_vivant('chiot', T_PUPPY, 9999, 'bas', (T(53), T(56) - .05))
 
 # point d'interrogation (cuivre, le seul de l'image) qui rebondit sur « quelle émotion »
-qm = comp.ajouter(Texte('?', police='Inter', taille=230, graisse=900, couleurs={0: CU}, position=(690, 300), debut=T(6), fin=T_SPLIT + .1,
+qm = comp.ajouter(Texte('?', police='Inter', taille=230, graisse=800, couleurs={0: CU}, position=(690, 300), debut=T(6), fin=T_SPLIT + .1,
                         echelle=ressort_in(T(6), .6, .2, 1.0), rotation=lambda t: 8 * math.sin((t - T(6)) * 5),
                         opacite=K((T_SPLIT - .15, 1, lin), (T_SPLIT + .1, 0, lin))))
 # ---------- 3. la rangée triple après « Pourtant » (le visage cloné 3 fois)
@@ -186,7 +186,7 @@ def anneaux(t0):
         comp.ajouter(Forme(ellipse(310, 410), remplissage=None, trait=CU, epaisseur=9, position=(-360, y), parent=monde, debut=a, fin=a + .65,
                            echelle=K((a, 1.0, sortie(3)), (a + .6, 1.35, lin)), opacite=K((a, .9, lin), (a + .6, 0, lin))))
 for _t in (T(62), T(69), T(71), T(74)): anneaux(_t)
-comp.ajouter(Texte('KOULECHOV', police='Inter', taille=100, graisse=800, position=(540, 1428), debut=T(68), fin=T(75) + .15,
+comp.ajouter(Texte('KOULECHOV', police='Inter', taille=100, graisse=800, position=(540, 1338), debut=T(68), fin=T(75) + .15,
                    echelle=ressort_in(T(68), .5, .6, 1.0), opacite=K((T(68), 0, lin), (T(68) + .12, 1, lin), (T(75) - .2, 1, lin), (T(75) + .1, 0, lin))))
 
 # ---------- 4. la timeline (générique : aucune interface de logiciel reconnaissable)
@@ -219,16 +219,14 @@ comp.ajouter(Forme(points([(0, -310), (0, 230)]), remplissage=None, trait=INK, e
                    position=lambda t: (-490 + 980 * ((t - T_TL) / (T_STAMP - T_TL)) , 0), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
 comp.ajouter(Texte('piste 1', police='Inter', taille=40, graisse=600, position=(-400, -380), parent=TL, opacite=fade_tl, debut=T_TL, fin=T_STAMP + .4))
 
-# ---------- 5. tampon Brooze (typo : le fichier logo n'est pas fourni) + clic « abonne-toi »
+# ---------- 5. tampon Brooze (wordmark typographique Space Grotesk 700 capitales : le fichier logo n'est pas fourni) + clic « abonne-toi »
 t_clac = T(110) + .12
 ST = Nul(position=lambda t: (540, 760), rotation=-7, debut=T_STAMP - .5, fin=T_LOOP + .4,
          echelle=K((T_STAMP - .5, 3.2, entree(2)), (t_clac, 1.0, tenir), (t_clac, 1.0, ressort(4, .35)), (t_clac + .3, 1.0, lin))); comp.ajouter(ST)
 def fade_end(t): return val(K((T_LOOP - .6, 1, lin), (T_LOOP - .1, 0, lin)), t)
 def op_st(t): return min(val(K((T_STAMP - .5, 0, lin), (t_clac - .05, 1, lin)), t), fade_end(t))
-comp.ajouter(Forme(rect(760, 340, 26), remplissage=PAPER, trait=INK, epaisseur=16, parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
-comp.ajouter(Forme(rect(724, 304, 18), remplissage=None, trait=INK, epaisseur=4, parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
-comp.ajouter(Texte('BROOZE', police='Inter', taille=160, graisse=800, interlettrage=-.02, position=(0, -30), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
-comp.ajouter(Texte('PRODUCTION', police='Inter', taille=60, graisse=600, interlettrage=.32, position=(0, 85), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
+comp.ajouter(Texte('BROOZE', police='SpaceGrotesk', taille=170, graisse=700, interlettrage=.12, position=(0, -30), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
+comp.ajouter(Texte('PRODUCTION', police='SpaceGrotesk', taille=56, graisse=700, interlettrage=.4, position=(0, 85), parent=ST, opacite=op_st, debut=T_STAMP - .5, fin=T_LOOP + .4))
 
 t_btn, t_clic = T(112) - .1, T(116) + .55
 BT = Nul(position=lambda t: (540, 1250), echelle=K((t_btn, .6, ressort(3.2, .5)), (t_btn + .5, 1.0, tenir), (t_clic - .08, 1.0, entree(2)), (t_clic, .93, ressort(3, .5)), (t_clic + .25, 1.0, lin)),
@@ -249,12 +247,22 @@ comp.ajouter(Forme(ellipse(60, 60), remplissage=None, trait=INK, epaisseur=5, po
 # même position, même échelle (1,7 × 1,06) et même halo que la toute première image : la boucle est sans raccord visible
 T_FIN = D - .05
 BF = [T_LOOP - .05, T_LOOP + .5]
+def bosse(t, b):
+    u = t - b
+    return 0. if u < 0 else math.exp(-u * 7) * min(1., u / .14)   # montée douce : jamais de coupe de taille
+# la caméra du moteur (reel/moteur.html : dérive de 18 px vers le haut, zoom de couverture) bouge le plan pendant tout le Reel :
+# on la compense sur le visage final pour qu'il retombe pile sur celui de la première image (boucle sans raccord)
+def doux_m(p): return 4 * p ** 3 if p < .5 else 1 - (-2 * p + 2) ** 3 / 2
+def cam_g(t): return doux_m(min(1., max(0., t / D)))
+def cam_c(t): return 1.002 + 2 * 18 * cam_g(t) / 1920
 def ech_fb(t):
-    return 1.7 * (1 + .06 * sum(math.exp(-(t - b) * 7) for b in BF if t >= b) + .06 * min(1, max(0, (t - (T_LOOP + .9)) / (T_FIN - T_LOOP - .9))))
-fb = Nul(position=(540, 940), echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
-for _b in (T_LOOP - .05, T_LOOP + .5, T_FIN - .0):
+    base = 1.7 * (1 + .06 * sum(bosse(t, b) for b in BF) + .06 * min(1, max(0, (t - (T_LOOP + .9)) / (T_FIN - T_LOOP - .9))))
+    return base * cam_c(0) / cam_c(t)
+def pos_fb(t): return (540, 960 + (cam_c(0) * (940 - 960) + 18 * cam_g(t)) / cam_c(t))
+fb = Nul(position=pos_fb, echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
+for _b in (T_LOOP - .05, T_LOOP + .1):   # halos éteints avant la dernière image (comme à l'image 0)
     comp.ajouter(Forme(ellipse(560, 700), remplissage='#E9D2B8', trait=CU, epaisseur=14, position=(540, 940),
-                       echelle=K((_b, .75, sortie(3)), (_b + 1.3, 1.9, lin)), opacite=K((_b, .75, lin), (_b + 1.3, 0, lin)), debut=_b, fin=_b + 1.35))
+                       echelle=K((_b, .75, sortie(3)), (_b + .75, 1.5, lin)), opacite=K((_b, .75, lin), (_b + .75, 0, lin)), debut=_b, fin=_b + .8))
 visage(fb, T_LOOP - .05, None)
 
 # ---------- son (sons de la scène ; la voix et le mix final sont refaits par son.py depuis reel.json)

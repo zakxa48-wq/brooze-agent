@@ -38,6 +38,7 @@
   23.6,
   24.1,
   24.6,
+  25.7,
   26.1,
   27.4,
   28.0,
@@ -52,7 +53,8 @@
   36.1,
   37.8,
   39.5,
-  40.4
+  40.4,
+  41.2
  ],
  "ecart_max_relances_s": 1.8,
  "coupes_s": [
@@ -68,12 +70,15 @@
   30.2,
   30.5,
   31.2,
-  31.9
+  31.9,
+  36.1,
+  36.2,
+  40.4
  ],
  "boucle": {
-  "ecart_image": 11.6,
-  "ecart_couleur": 0.38,
-  "mouvement_fin": 4.63,
+  "ecart_image": 1.7,
+  "ecart_couleur": 0.13,
+  "mouvement_fin": 2.14,
   "mouvement_debut": 2.62,
   "son": {
    "debut_db": -16.2,

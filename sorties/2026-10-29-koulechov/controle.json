@@ -1,12 +1,12 @@
 {
- "video": "sorties/2026-10-29-koulechov/reel.mp4",
+ "video": "reel.mp4",
  "ok": [
   "format 1080×1920",
   "30.00 i/s",
   "vidéo h264 yuv420p",
   "son aac",
   "durée 41.4 s",
-  "poids 23.1 Mo",
+  "poids 22.5 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.4 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
@@ -64,6 +64,7 @@
    23.6,
    24.1,
    24.6,
+   25.7,
    26.1,
    27.4,
    28.0,
@@ -78,7 +79,8 @@
    36.1,
    37.8,
    39.5,
-   40.4
+   40.4,
+   41.2
   ],
   "ecart_max_relances_s": 1.8,
   "coupes_s": [
@@ -94,12 +96,15 @@
    30.2,
    30.5,
    31.2,
-   31.9
+   31.9,
+   36.1,
+   36.2,
+   40.4
   ],
   "boucle": {
-   "ecart_image": 11.6,
-   "ecart_couleur": 0.38,
-   "mouvement_fin": 4.63,
+   "ecart_image": 1.7,
+   "ecart_couleur": 0.13,
+   "mouvement_fin": 2.14,
    "mouvement_debut": 2.62,
    "son": {
     "debut_db": -16.2,
@@ -144,20 +149,23 @@
    31.233,
    32.733,
    32.9,
-   40.367,
-   40.9
+   40.367
   ],
   "rapides": [
    [
     18.167,
+    18.6
+   ],
+   [
+    18.667,
     19.1
    ],
    [
     27.867,
-    28.433
+    28.467
    ],
    [
-    35.9,
+    36.033,
     36.3
    ]
   ],

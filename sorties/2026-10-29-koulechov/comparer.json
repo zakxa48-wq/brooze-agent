@@ -3,7 +3,7 @@
   "duree_s": 41.3,
   "format": "1080×1920",
   "ips": 30.0,
-  "debit_mbps": 4.5,
+  "debit_mbps": 4.3,
   "plans": 1,
   "duree_plan_moy_s": 41.3,
   "duree_plan_med_s": 41.3,
@@ -24,13 +24,13 @@
     "type": "fondu"
    },
    {
-    "t": 35.8,
-    "d": 0.6,
-    "type": "filé horizontal"
+    "t": 35.9,
+    "d": 0.5,
+    "type": "fondu"
    },
    {
     "t": 39.8,
-    "d": 0.8,
+    "d": 0.7,
     "type": "fondu"
    }
   ],
@@ -44,24 +44,24 @@
   "palette": {
    "couleurs": [
     {
-     "hex": "#edece7",
-     "part": 0.82
+     "hex": "#edece8",
+     "part": 0.83
     },
     {
-     "hex": "#e0d2bd",
-     "part": 0.08
+     "hex": "#e1d2bd",
+     "part": 0.07
     },
     {
-     "hex": "#13110e",
-     "part": 0.05
+     "hex": "#13100e",
+     "part": 0.04
     },
     {
-     "hex": "#a7a095",
+     "hex": "#a69f94",
      "part": 0.03
     },
     {
-     "hex": "#6e6355",
-     "part": 0.03
+     "hex": "#6e6153",
+     "part": 0.02
     }
    ],
    "luminosite": 0.87,
@@ -70,18 +70,18 @@
   },
   "texte": {
    "part_du_temps": 0.85,
-   "hauteur_px_med": 48.0,
-   "hauteur_px_min": 35.0,
-   "mots_par_image": 2.3,
+   "hauteur_px_med": 49.0,
+   "hauteur_px_min": 36.0,
+   "mots_par_image": 2.4,
    "zones": {
-    "haut": 0.09,
-    "milieu": 0.13,
-    "bas": 0.78
+    "haut": 0.08,
+    "milieu": 0.1,
+    "bas": 0.81
    },
    "changements_par_s": 0.85,
    "premieres_3s": "Regarde Regarde Regarde Regarde ce visage. Regarde ce visage. ton avis, ton avis,"
   },
-  "nettete_med": 384.0,
+  "nettete_med": 362.0,
   "son": {
    "present": true,
    "lufs": -14.0,
@@ -94,7 +94,7 @@
    "coupes_sur_attaque_si_hasard": 0.38
   }
  },
- "planche": "/tmp/tmpmtyo23qr/reel.jpg",
+ "planche": "/tmp/tmp6ldw3qla/reel.jpg",
  "references": [
   "mes-videos-reel-apple-v3"
  ],
@@ -112,8 +112,8 @@
   },
   "lisibilite": {
    "reel": {
-    "hauteur_px_min": 35.0,
-    "mots_par_image": 2.3
+    "hauteur_px_min": 36.0,
+    "mots_par_image": 2.4
    },
    "ref": {
     "hauteur_px_min": 29.0,
@@ -123,7 +123,7 @@
   },
   "finition": {
    "reel": {
-    "nettete": 384.0,
+    "nettete": 362.0,
     "lufs": -14.0,
     "coupes_sur_attaque": null
    },
