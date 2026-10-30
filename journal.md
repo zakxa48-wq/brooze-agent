@@ -6,6 +6,8 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ## 30/10 (3 h 41) — filet, savoir, Koulechov tentative 6
 - Filet : story de réserve R-001 programmée le 02/11 à 10 h (seul jour sans story jusqu'à J+3). Réserve : 6.
+- Séance du savoir faite : Orgs 2011 relue en entier (A-0008 précisée : aucun appui pour une règle d'animation), notion signaux-classement-instagram (A-0010, à vérifier : watch time, j'aime et partages par portée officiels ; boucle et 3 s non déclarés).
+- **Koulechov : verdict_6 PUBLIABLE** (tentative 6 : pulsation finale supprimée, bbox finale ≤ 1 px, variation ≤ 2 px/image ; 0 P1/P2 ; comparer non probante). Programmé le 31/10 à 18 h, teaser story à 18 h 30. Registre : concept 2D vectoriel, même visage jamais animé, technique nouvelle Atelier 2D. Conseils P3 ouverts : pop au raccord, bords rognés 11-18 s, wordmark non officiel (logo à fournir par Zak).
 
 ## 29/10 (15 h 41) — veille, Koulechov tentative 4-5 (À REPRENDRE, 1 P2 de boucle), jour 31/10
 - Filet stories : 30/10→01/11 couvert (10 h), aucune en erreur, réserve 7. Séance du savoir : déjà faite à 3 h 41. Veille faite (relevé identique à la veille : aucun Reel publié depuis le 25/10, aucune détection).
@@ -65,6 +67,7 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
 |---|---|---|---|---|---|---|
 | 23/10 | 2026-10-23-apple-montre (v3 publiée) | « dire vs montrer » : une fiche technique imprimée sans fin (ce qu'on dit) contre des photos d'objets du quotidien sublimés (ce qu'on montre), autour d'un téléphone générique | **relief 2,5D** des rendus photoréalistes (parallaxe par pixel) | opposition qui bascule : la fiche domine, puis les photos prennent toute la place, titre-question, fin sur fond noir | photoréalisme fixe animé, **carte de profondeur + WebGL**, coups de zoom sur 4 mots, whip | Blender, moteur HTML |
 | 25/10 | 2026-10-24-spotify-wrapped | une carte « bilan » qui se duplique en champ de milliers, puis se retourne sur des visages | **retournement en vague de cartes (instanciation GPU)** | plan-séquence à caméra continue : accumulation exponentielle, rupture, plongée | **three.js InstancedMesh + shader, barres pilotées par la voix**, titres sur vidéo continue | three.js, moteur HTML |
+| 31/10 | 2026-10-29-koulechov | un même visage jamais animé, trois rangées d'objets clonées sur écran scindé (assiette, tombe, chiot) : l'émotion vient de l'objet, pas du visage | **boucle sur le visage de l'image 0 (bbox ±1 px)** et inversion douce des blocs de la timeline | démonstration en direct : hook visage, trois objets, révélation « effet Koulechov », timeline générique, tampon + abonne-toi | **Atelier 2D vectoriel (scène Python, calques, caméra 2,5D, flou de mouvement)**, battements de fond sur mots appuyés | Atelier, moteur HTML |
 
 ---
 
