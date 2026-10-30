@@ -1,6 +1,0 @@
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/000.mp4'
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/001.mp4'
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/002.mp4'
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/003.mp4'
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/004.mp4'
-file '/home/user/brooze-agent/sorties/2026-10-29-koulechov/morceaux/005.mp4'
