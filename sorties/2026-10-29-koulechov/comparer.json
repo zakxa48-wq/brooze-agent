@@ -56,11 +56,11 @@
      "part": 0.04
     },
     {
-     "hex": "#a69f94",
+     "hex": "#a59e93",
      "part": 0.03
     },
     {
-     "hex": "#6e6153",
+     "hex": "#6d6051",
      "part": 0.02
     }
    ],
@@ -94,7 +94,7 @@
    "coupes_sur_attaque_si_hasard": 0.38
   }
  },
- "planche": "/tmp/tmp6ldw3qla/reel.jpg",
+ "planche": "/tmp/tmpfpftbeij/reel.jpg",
  "references": [
   "mes-videos-reel-apple-v3"
  ],

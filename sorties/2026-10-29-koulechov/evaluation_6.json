@@ -1,0 +1,71 @@
+{
+ "defauts": [
+  {
+   "priorite": "P3",
+   "de": 40.27,
+   "a": 40.37,
+   "quoi": "Trois images (40.27-40.33, 0,13 s) de fond vide entre l'extinction du bouton et l'apparition du visage, puis le visage apparaît en une seule image à pleine taille (pastille/halo absents). Raccord lisible comme un « pop », mais court et voulu pour la boucle ; déjà présent aux tentatives précédentes (V5-8).",
+   "preuve": "images 1208-1210 : 0 px sombre, écart-type 2,9 ; image 1211 : 111 710 px sombres ; diff 40.37 = 16,4 (controle.json coupes_s contient 40.4)",
+   "condition": "Visage qui entre en 4-6 images (fondu ou léger gonflement) au lieu d'une apparition sèche.",
+   "piste": "Fondu court du visage depuis 40.27.",
+   "nouveau_pourquoi": "déjà vu (V5-8), non régressé : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 11.0,
+   "a": 18.5,
+   "quoi": "Poussée de caméra qui rogne les bords latéraux (V3-5) : mesure faite cette passe, inchangée.",
+   "preuve": "pixels sombres (somme RVB<150, y<1400) sur x<24 ou x>1056 : présents sur 219 des 226 images de 11.0 à 18.5 s, max 2 816 px",
+   "condition": "Sur 11.0-18.5 s, aucun pixel sombre du visage/des cartes sur x < 24 ni x > 1056.",
+   "piste": "Plafonner la poussée.",
+   "nouveau_pourquoi": "déjà signalé V3-5 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.0,
+   "quoi": "Pastille de sous-titre « Regarde » présente à l'image 0 mais absente à la dernière image : elle apparaît d'un coup au raccord (V3-8) ; pastilles dimensionnées au groupe.",
+   "preuve": "frames 0 et 1239 ; jonction.jpg ; planche 0-3 s",
+   "condition": "Largeur de pastille = largeur du texte, ou entrée en fondu depuis la dernière image.",
+   "piste": "Pastille ajustée au mot courant.",
+   "nouveau_pourquoi": "déjà signalé V3-8 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 37.67,
+   "a": 38.7,
+   "quoi": "Plateau quasi immobile de 1,03 s (diff < 0,5) pendant « ton audience pour toi » ; sous le seuil de 1,2 s, conforme.",
+   "preuve": "diff image par image : run 37.67-38.70 ; autres runs < 0,6 s",
+   "condition": "Un mouvement visible au moins toutes les 1,0 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Bouton qui pulse légèrement.",
+   "nouveau_pourquoi": "déjà signalé V3-7 : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 1.4,
+   "a": 2.8,
+   "quoi": "Aucune coupe avant 1.4 s et durée moyenne des plans élevée pour 41,3 s (V5-1/V5-2, indicatifs).",
+   "preuve": "controle.json glitchs.coupes",
+   "condition": "Durée moyenne des plans <= 3.48 s.",
+   "piste": "Relancer dans les plans longs.",
+   "nouveau_pourquoi": "déjà signalé : conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.9,
+   "a": 40.3,
+   "quoi": "Wordmark typographique, pas le fichier officiel (V3-9).",
+   "preuve": "assets/logo.* absent",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou fichier officiel utilisé.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau_pourquoi": "dépendance externe : conseil"
+  }
+ ],
+ "conditions_precedentes": {
+  "V5-3": {
+   "statut": "levée",
+   "pourquoi": "Mesure pleine résolution 1080x1920, masque somme RVB<150, y<1400. Image 0 : x 209-870 / y 547-1323. Dernière image 1239 (41.30 s) : x 209-870 / y 547-1322. Écarts : 0/0/0/-1 px (<= 3, levé). Halo cuivre (teinte 5-25, S>120, V>120) : 0 px aux deux images. Taille 40.8-41.3 : largeur 652 -> 661, hauteur 765 -> 775, variation max entre images consécutives +2/+2 px (à 41.10 et 41.13), aucune > 3 px, aucune coupe sèche de taille (levé). Raccord : plus de pulsation, le visage grossit continûment en 9 images. Réserve non bloquante : pastille « Regarde » qui pop à l'image 0 (P3)."
+  }
+ },
+ "justifications": {}
+}

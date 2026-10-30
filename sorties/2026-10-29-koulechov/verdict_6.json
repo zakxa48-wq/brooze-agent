@@ -1,0 +1,115 @@
+{
+ "tentative": 6,
+ "date": "2026-10-30T03:07",
+ "decision": "PUBLIABLE",
+ "raisons": [
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "plans trop longs en moyenne",
+   "ou": "",
+   "preuve": "mesuré 41.3 (références : mes-videos-reel-apple-v3)",
+   "exige": "≤ 3.48 s",
+   "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs) (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V6-1"
+  },
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "aucune coupe dans les 3 premières secondes",
+   "ou": "",
+   "preuve": "mesuré 0 (références : mes-videos-reel-apple-v3)",
+   "exige": "≥ 1",
+   "condition": "au moins une coupe ou un changement de plan avant 3 s (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V6-2"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Trois images (40.27-40.33, 0,13 s) de fond vide entre l'extinction du bouton et l'apparition du visage, puis le visage apparaît en une seule image à pleine taille (pastille/halo absents). Raccord lisible comme un « pop », mais court et voulu pour la boucle ; déjà présent aux tentatives précédentes (V5-8).",
+   "ou": "40.3–40.4 s",
+   "preuve": "images 1208-1210 : 0 px sombre, écart-type 2,9 ; image 1211 : 111 710 px sombres ; diff 40.37 = 16,4 (controle.json coupes_s contient 40.4)",
+   "exige": "",
+   "condition": "Visage qui entre en 4-6 images (fondu ou léger gonflement) au lieu d'une apparition sèche.",
+   "piste": "Fondu court du visage depuis 40.27.",
+   "nouveau": "déjà vu (V5-8), non régressé : conseil",
+   "id": "V6-3"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Poussée de caméra qui rogne les bords latéraux (V3-5) : mesure faite cette passe, inchangée.",
+   "ou": "11.0–18.5 s",
+   "preuve": "pixels sombres (somme RVB<150, y<1400) sur x<24 ou x>1056 : présents sur 219 des 226 images de 11.0 à 18.5 s, max 2 816 px",
+   "exige": "",
+   "condition": "Sur 11.0-18.5 s, aucun pixel sombre du visage/des cartes sur x < 24 ni x > 1056.",
+   "piste": "Plafonner la poussée.",
+   "nouveau": "déjà signalé V3-5 : conseil",
+   "id": "V6-4"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Pastille de sous-titre « Regarde » présente à l'image 0 mais absente à la dernière image : elle apparaît d'un coup au raccord (V3-8) ; pastilles dimensionnées au groupe.",
+   "ou": "0.0–3.0 s",
+   "preuve": "frames 0 et 1239 ; jonction.jpg ; planche 0-3 s",
+   "exige": "",
+   "condition": "Largeur de pastille = largeur du texte, ou entrée en fondu depuis la dernière image.",
+   "piste": "Pastille ajustée au mot courant.",
+   "nouveau": "déjà signalé V3-8 : conseil",
+   "id": "V6-5"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Plateau quasi immobile de 1,03 s (diff < 0,5) pendant « ton audience pour toi » ; sous le seuil de 1,2 s, conforme.",
+   "ou": "37.7–38.7 s",
+   "preuve": "diff image par image : run 37.67-38.70 ; autres runs < 0,6 s",
+   "exige": "",
+   "condition": "Un mouvement visible au moins toutes les 1,0 s entre 36.3 et 39.3, hors clic.",
+   "piste": "Bouton qui pulse légèrement.",
+   "nouveau": "déjà signalé V3-7 : conseil",
+   "id": "V6-6"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Aucune coupe avant 1.4 s et durée moyenne des plans élevée pour 41,3 s (V5-1/V5-2, indicatifs).",
+   "ou": "1.4–2.8 s",
+   "preuve": "controle.json glitchs.coupes",
+   "exige": "",
+   "condition": "Durée moyenne des plans <= 3.48 s.",
+   "piste": "Relancer dans les plans longs.",
+   "nouveau": "déjà signalé : conseil",
+   "id": "V6-7"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Wordmark typographique, pas le fichier officiel (V3-9).",
+   "ou": "35.9–40.3 s",
+   "preuve": "assets/logo.* absent",
+   "exige": "",
+   "condition": "Zak confirme par écrit le wordmark typographique, ou fichier officiel utilisé.",
+   "piste": "Demander le fichier à Zak.",
+   "nouveau": "dépendance externe : conseil",
+   "id": "V6-8"
+  }
+ ],
+ "suivi": {
+  "V5-3": {
+   "statut": "levée",
+   "pourquoi": "Mesure pleine résolution 1080x1920, masque somme RVB<150, y<1400. Image 0 : x 209-870 / y 547-1323. Dernière image 1239 (41.30 s) : x 209-870 / y 547-1322. Écarts : 0/0/0/-1 px (<= 3, levé). Halo cuivre (teinte 5-25, S>120, V>120) : 0 px aux deux images. Taille 40.8-41.3 : largeur 652 -> 661, hauteur 765 -> 775, variation max entre images consécutives +2/+2 px (à 41.10 et 41.13), aucune > 3 px, aucune coupe sèche de taille (levé). Raccord : plus de pulsation, le visage grossit continûment en 9 images. Réserve non bloquante : pastille « Regarde » qui pop à l'image 0 (P3).",
+   "condition": "bbox du contour du visage à la dernière image = bbox de l'image 0 à +-3 px à 1080 de large (le halo peut subsister s'il est présent aussi à l'image 0, ou absent aux deux) ; pas de coupe sèche de taille entre 40.8 et 41.33 s."
+  }
+ },
+ "conditions_levees": 1
+}
