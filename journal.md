@@ -4,6 +4,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 30/10 (3 h 41) — filet, savoir, Koulechov tentative 6
+- Filet : story de réserve R-001 programmée le 02/11 à 10 h (seul jour sans story jusqu'à J+3). Réserve : 6.
+
 ## 29/10 (15 h 41) — veille, Koulechov tentative 4-5 (À REPRENDRE, 1 P2 de boucle), jour 31/10
 - Filet stories : 30/10→01/11 couvert (10 h), aucune en erreur, réserve 7. Séance du savoir : déjà faite à 3 h 41. Veille faite (relevé identique à la veille : aucun Reel publié depuis le 25/10, aucune détection).
 - Koulechov : verdict_4 (régression : visage final +5 %) → corrigé, boucle à ≤ 1 px de l'image 0 ; verdict_5 À REPRENDRE pour un seul point : pulsation du visage entre 40,6 et 41,2 s avec écarts de 8-10 px par image (seuil 3). Aucun P1. Correctif connu, re-rendu au prochain passage (cache _clip_plan_* à vider avant tout re-rendu). Rien programmé.
