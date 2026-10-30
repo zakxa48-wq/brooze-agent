@@ -258,7 +258,7 @@ def cam_c(t): return 1.002 + 2 * 18 * cam_g(t) / 1920
 def ech_fb(t):
     fin = 1 - doux_m(min(1, max(0, (t - (T_FIN - .45)) / .45)))   # toute pulsation revient à 0 avant la dernière image : même échelle qu'à l'image 0
     sw = math.sin(math.pi * min(1, max(0, (t - (T_LOOP + .2)) / (T_FIN - T_LOOP - .2)))) ** 2
-    base = 1.7 * (1 + .0145 * (1 - fin) + fin * (.06 * sum(bosse(t, b) for b in BF) + .05 * sw))   # +1,45 % : calé sur la mesure du rendu (dernière image = image 0)
+    base = 1.7 * (1 + .0145 * (1 - fin))   # tentative 6 : plus aucune pulsation finale (V5-3), le visage reste à l'échelle de l'image 0   # +1,45 % : calé sur la mesure du rendu (dernière image = image 0)
     return base * cam_c(0) / cam_c(t)
 def pos_fb(t): return (540, 960 + (cam_c(0) * (940 - 960) + 18 * cam_g(t)) / cam_c(t) - 3.5 * cam_g(t))   # -3,5 px : écart mesuré sur le rendu (tentative 3)
 fb = Nul(position=pos_fb, echelle=ech_fb, debut=T_LOOP - .05, opacite=1); comp.ajouter(fb)
