@@ -4,6 +4,12 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 30/10 (15 h 41) — veille, rien de nouveau à produire
+- Filet stories : 30/10→02/11 couvert, aucune en erreur, réserve 6. Séance du savoir : déjà faite à 3 h 41.
+- Veille faite : relevé identique à la veille, aucune détection. Koulechov programmé 31/10 18 h (verdict_6 PUBLIABLE), teaser 18 h 30.
+- Banque : 0 idée disponible, aucun nouvel audio, rien dans urgent/. Red Bull (jour réservé 03/11) : verdict_1 À REPRENDRE, refonte 12–36 s (plans variés, fond clair, mention ≥ 28 px) non lancée ce passage (étape longue, setup.sh encore en cours) ; reprise au prochain passage.
+
+
 ## 30/10 (3 h 41) — filet, savoir, Koulechov tentative 6
 - Filet : story de réserve R-001 programmée le 02/11 à 10 h (seul jour sans story jusqu'à J+3). Réserve : 6.
 - Séance du savoir faite : Orgs 2011 relue en entier (A-0008 précisée : aucun appui pour une règle d'animation), notion signaux-classement-instagram (A-0010, à vérifier : watch time, j'aime et partages par portée officiels ; boucle et 3 s non déclarés).
