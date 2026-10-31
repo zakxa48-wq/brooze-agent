@@ -28,3 +28,4 @@
 (aucun pour l'instant)
 | 2026-10-25 | Reel | Spotify Wrapped : le contenu parle d'eux, donc il se partage (voix de Zak) | « Spotify a réussi quelque chose d'assez extraordinaire en marketing. » |
 | 2026-11-02 | Story (réserve) | Méthode : avant / après | « Même restaurant. Autre 1re phrase. » (R-001) |
+- Question directe : « Ta dernière vidéo : client ou patron ? » (story de réserve R-002, 03/11)

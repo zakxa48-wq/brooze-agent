@@ -4,6 +4,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 31/10 (3 h 41) — filet
+- Filet : story de réserve R-002 programmée le 03/11 à 10 h (seul jour sans story jusqu'à J+3). Réserve : 5. Koulechov toujours programmé 31/10 18 h + teaser 18 h 30.
+
 ## 30/10 (15 h 41) — veille, rien de nouveau à produire
 - Filet stories : 30/10→02/11 couvert, aucune en erreur, réserve 6. Séance du savoir : déjà faite à 3 h 41.
 - Veille faite : relevé identique à la veille, aucune détection. Koulechov programmé 31/10 18 h (verdict_6 PUBLIABLE), teaser 18 h 30.
