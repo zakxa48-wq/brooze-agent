@@ -4,7 +4,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
-## 31/10 (3 h 41) — filet
+## 31/10 (3 h 41) — filet, savoir, Red Bull tentative 2
+- Savoir : Eisenstein NtnTs90knro lu en entier (S-0014, A-0009 reste théorie de praticien) ; 3 notions revues. Rien de neuf qui change la pratique.
+- Red Bull (jour réservé 03/11) : refonte selon verdict_1 (fond papier ≈63 %, mur allumé dès 5,9 s, caméra par sujets, piles de pièces, canette barrée, mention 48 px, 10 scènes de relance, justifications) ; plan.mp4 re-rendu ; rendu final, contrôle et évaluation au prochain passage (limite des 45 min).
 - Filet : story de réserve R-002 programmée le 03/11 à 10 h (seul jour sans story jusqu'à J+3). Réserve : 5. Koulechov toujours programmé 31/10 18 h + teaser 18 h 30.
 
 ## 30/10 (15 h 41) — veille, rien de nouveau à produire
