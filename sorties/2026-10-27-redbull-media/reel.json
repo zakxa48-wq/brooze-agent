@@ -274,10 +274,10 @@
    "taille": 130
   },
   {
-   "de": "@48",
+   "de": 15.45,
    "type": "plan",
    "video": "plan.mp4",
-   "debut": 15.35,
+   "debut": 15.45,
    "cadre": [
     [
      0.5,
@@ -288,6 +288,126 @@
      0.5,
      0.5,
      1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@52",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 16.865,
+   "cadre": [
+    [
+     0.5,
+     0.52,
+     1.08
+    ],
+    [
+     0.46,
+     0.5,
+     1.12
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@55",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 18.375,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.55,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@58",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 19.205,
+   "cadre": [
+    [
+     0.52,
+     0.5,
+     1.05
+    ],
+    [
+     0.5,
+     0.46,
+     1.1
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@61",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 20.545,
+   "cadre": [
+    [
+     0.5,
+     0.48,
+     1.1
+    ],
+    [
+     0.54,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@63",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 21.435,
+   "cadre": [
+    [
+     0.5,
+     0.52,
+     1.08
+    ],
+    [
+     0.46,
+     0.5,
+     1.12
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@66",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 22.14,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.55,
+     1.05
     ]
    ],
    "transition": "coupe",
@@ -307,6 +427,86 @@
     [
      0.5,
      0.5,
+     1.05
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@75",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 25.265,
+   "cadre": [
+    [
+     0.52,
+     0.5,
+     1.05
+    ],
+    [
+     0.5,
+     0.46,
+     1.1
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@77",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 26.38,
+   "cadre": [
+    [
+     0.5,
+     0.48,
+     1.1
+    ],
+    [
+     0.54,
+     0.5,
+     1.04
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@80",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 27.27,
+   "cadre": [
+    [
+     0.5,
+     0.52,
+     1.08
+    ],
+    [
+     0.46,
+     0.5,
+     1.12
+    ]
+   ],
+   "transition": "coupe",
+   "main": 0.4
+  },
+  {
+   "de": "@83",
+   "type": "plan",
+   "video": "plan.mp4",
+   "debut": 28.52,
+   "cadre": [
+    [
+     0.5,
+     0.5,
+     1.12
+    ],
+    [
+     0.5,
+     0.55,
      1.05
     ]
    ],
@@ -553,5 +753,10 @@
    "sujet": "canette générique (graphite, bande cuivre, buée) : contre-plongée qui se redresse en vue de face, balayage de lumière ; raccord sur la canette 2D"
   }
  ],
- "mention_independante_a_l_ecran": true
+ "mention_independante_a_l_ecran": true,
+ "justifications": {
+  "durée 46.7 s": "Le propos tient en 45 s de voix continue de Zak (hook, thèse, 3 preuves, leçon) ; rien n'est coupé dans ses phrases et chaque idée a son image propre : couper un passage ferait dire autre chose à Zak.",
+  "palette": "Fond papier de la charte du recul (5,6 s) jusqu'à la fusion (35 s), soit environ 63 % de la durée ; l'encre n'est gardée que pour l'ouverture 3D, la révélation « émotion » et la boucle.",
+  "images réelles": "Reel entièrement en graphisme 2D/3D généré par code (analyse d'une marque, aucun rush ni photo disponible pour ce propos)."
+ }
 }

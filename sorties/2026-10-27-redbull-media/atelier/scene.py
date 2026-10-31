@@ -13,19 +13,38 @@ CAN_Y = 1500                                   # la canette repose sous le mur (
 
 comp = Composition(1080, 1920, ips=IPS, duree=D, fond=INK)
 
-# ---------- caméra : (échelle, centre) du monde ; monde = Nul
-def cle(*k): return K(*k)
-t_recul0, t_recul1 = T(16), T(17) + .7
-S = cle((0, 1.50, lin), (T(16), 1.58, doux), (T(17) + 1.6, .62, sortie(3)), (T(38), .66, doux), (T(52), .78, doux),
-        (T(55) - .2, .78, expo(7)), (T(55) + .05, 1.7, tenir), (T(58) - .22, 1.7, expo(7)), (T(58) + .05, 1.7, tenir),
-        (T(61) + .05, 1.7, expo(7)), (T(62) + .5, 1.7, tenir), (T(63) - .1, 1.7, doux), (T(72) - .3, .95, doux), (T(83), .95, doux),
-        (T(83) + 1.4, .62, sortie(3)), (T(98), .62, doux), (T(108), .9, doux), (T(121) + .25, .9, lin), (T(121) + .4, 1.5, tenir), (D, 1.56, doux))
-CX = cle((0, 0, lin), (T(17) + 1.6, 0, doux), (T(55) - .2, 0, expo(7)), (T(55) + .05, -350, tenir), (T(58) - .22, -350, expo(7)), (T(58) + .05, 0, tenir),
-         (T(61) + .05, 0, expo(7)), (T(62) + .5, 350, tenir), (T(63) - .1, 350, doux), (T(72), 0, doux), (D, 0))
-CY = cle((0, CAN_Y, lin), (T(16), CAN_Y, doux), (T(17) + 1.6, 520, sortie(3)), (T(38), 560, doux), (T(52), -250, doux),
-         (T(55) - .2, -250, expo(7)), (T(55) + .05, -250, tenir), (T(58) - .22, -250, expo(7)), (T(58) + .05, -760, tenir),
-         (T(61) + .05, -760, expo(7)), (T(62) + .5, 250, tenir), (T(63) - .1, 250, doux), (T(72), 0, doux), (T(83), 0, doux),
-         (T(83) + 1.4, 520, sortie(3)), (T(98), 520, doux), (T(108), 0, doux), (T(121) + .25, 0, lin), (T(121) + .4, CAN_Y, tenir), (D, CAN_Y))
+# ---------- fond papier (charte) du recul jusqu'à la fusion ; l'encre revient pour « émotion »
+comp.ajouter(Solide(PAPER, opacite=lambda t: val(K((T(16), 0, lin), (T(18) + .3, 1, lin), (T(98), 1, lin), (T(98) + 1.6, 0, doux)), t) * (0 if t > T(121) else 1)))
+
+# ---------- caméra : (échelle, centre) du monde ; monde = Nul. Une suite de plans, chacun sur un sujet différent
+def parcours(depart, evts):
+    """depart = (S, cx, cy) ; evts = [(t0, t1, S, cx, cy, courbe)] : part de l'état précédent en t0, y arrive en t1, tient ensuite."""
+    ks = [[], [], []]; etat = depart
+    for (t0, t1, s_, x_, y_, cb) in evts:
+        for k, (a_, b_) in enumerate(zip(etat, (s_, x_, y_))):
+            ks[k] += [(t0, a_, cb), (t1, b_, tenir)]
+        etat = (s_, x_, y_)
+    return ks
+EVTS = [
+    (T(16), T(18) + .3, .58, 0, 250, sortie(3)),                  # recul : la canette rapetisse devant le mur
+    (T(38), T(38) + .4, .6, 0, 270, doux),
+    (T(40) - .3, T(40) + .3, 1.9, 0, 0, sortie(3)),               # « quel est leur vrai métier ? » : un seul écran
+    (T(45) - .2, T(45) + .05, 1.5, 390, 570, expo(7)),            # « créer du contenu »
+    (T(55) - .2, T(55) + .05, 1.9, -390, -570, expo(7)),          # F1
+    (T(58) - .22, T(58) + .05, 1.9, 0, -570, expo(7)),            # sauts depuis l'espace
+    (T(61) - .2, T(61) + .05, 1.9, 390, -570, expo(7)),           # breakdance
+    (T(63) - .2, T(63) + .05, 1.25, 1500, CAN_Y, expo(7)),        # « ne te vendent même pas de la taurine » : la canette seule, barrée
+    (T(72) - .3, T(72) + .25, .95, 0, 0, doux),                   # « ils vendent » : retour au mur
+    (T(75) - .2, T(75) + .05, 1.8, -390, 0, expo(7)),             # adrénaline
+    (T(77) - .2, T(77) + .05, 1.8, -390, 570, expo(7)),           # frisson
+    (T(80) - .2, T(80) + .05, 1.8, 390, 0, expo(7)),              # dépassement de soi
+    (T(82), T(83) + 1.4, .58, 0, 250, sortie(3)),                 # la canette revient, minuscule
+    (T(83) + 1.5, T(98) - .1, .64, 0, 290, doux),
+    (T(98), T(108), .9, 0, 0, doux),
+    (T(121) + .25, T(121) + .4, 1.5, 0, CAN_Y, tenir),            # boucle : retour au cadrage du début
+]
+(ks, kx, ky) = parcours((1.58, 0, CAN_Y), EVTS)
+S = K((0, 1.50, lin), (T(16) - .01, 1.58, lin), *ks); CX = K((0, 0, lin), *kx); CY = K((0, CAN_Y, lin), *ky)
 monde = comp.ajouter(Nul(position=lambda t: (540 - val(S, t) * val(CX, t), 1000 - val(S, t) * val(CY, t)), echelle=lambda t: val(S, t)))
 
 # ---------- contenus d'écran (coordonnées locales de l'écran, 300 × 440 utiles)
@@ -58,7 +77,8 @@ def pouls(c, nul, op, off, c1=PAPER):
 KINDS = [streaks, espace, break_, pouls]
 
 # ---------- le mur
-ordre_allumage = [T(24) + .3] + [T(24) + .0, T(24) + .1, T(24) + .22, T(24) + .12, T(24) + .3, T(24) + .05, T(24) + .36, T(24) + .2, T(24) + .42, T(24) + .15, T(24) + .28, T(24) + .5]
+A0 = T(18) + .05
+ordre_allumage = [A0 + .3] + [A0 + .0, A0 + .1, A0 + .22, A0 + .12, A0 + .3, A0 + .05, A0 + .36, A0 + .2, A0 + .42, A0 + .15, A0 + .28, A0 + .5]
 FUSION = T(98); FIN_FUSION = T(107)
 ecrans = []
 for i in range(COLS * ROWS):
@@ -102,7 +122,7 @@ cy_can = lambda t: CAN_Y
 sc_can = K((0, 1, lin), (T(83), 1, lin), (T(94) - .1, 1, doux), (T(94) + .2, .52, ressort(3, .5)), (T(121) + .3, .52, lin), (T(121) + .4, 1, tenir))
 can = comp.ajouter(Nul(position=lambda t: (cx_can(t), CAN_Y + 20 * math.sin(2 * math.pi * t / 4.5) * (1 if t < T(8) else 0)), echelle=sc_can, parent=monde))
 # fantôme laissé par la canette (« sous-traitent »)
-comp.ajouter(Forme(rect(210, 640, 34), remplissage=None, trait=PAPER, epaisseur=3, parent=monde, position=(0, CAN_Y),
+comp.ajouter(Forme(rect(210, 640, 34), remplissage=None, trait=INK, epaisseur=3, parent=monde, position=(0, CAN_Y),
                    opacite=lambda t: val(K((T(34), 0, lin), (T(34) + .5, .55, lin), (T(83) - .3, .55, lin), (T(83) + .25, 0)), t)))
 corps = '#27241F'
 comp.ajouter(Forme(rect(210, 560, 34), remplissage=corps, parent=can, position=(0, 0), trait='#4A443C', epaisseur=3,
@@ -115,19 +135,41 @@ comp.ajouter(Forme(ellipse(124, 26), remplissage='#B9B3AA', parent=can, position
 comp.ajouter(Forme(ellipse(78, 12), remplissage='#4C4842', parent=can, position=(0, -326)))
 comp.ajouter(Forme(rect(210, 16, 8), remplissage='#1A1814', parent=can, position=(0, 272)))
 # étiquette « produit dérivé » (forme pure, sans texte), seulement quand elle est tombée du mur
-comp.ajouter(Forme(points([(-70, -40), (70, -40), (70, 40), (-70, 40), (-100, 0)], True), remplissage=PAPER, parent=monde,
+comp.ajouter(Forme(points([(-70, -40), (70, -40), (70, 40), (-70, 40), (-100, 0)], True), remplissage=CU, trait=INK, epaisseur=3, parent=monde,
                    position=(-330 + 105, CAN_Y - 70), rotation=14, echelle=.55, opacite=lambda t: val(K((T(94), 0, lin), (T(94) + .25, 1)), t) * (0 if t > T(121) else 1)))
+
+
+# « ne te vendent même pas de la taurine » : la canette seule, barrée d'un trait de cuivre qui se dessine
+comp.ajouter(Forme(points([(-170, -330), (170, 330)]), remplissage=None, trait=CU, epaisseur=22, parent=monde, position=(1500, CAN_Y),
+                   trace_fin=lambda t: val(K((T(66) - .1, 0, lin), (T(66) + .35, 1, expo(6))), t),
+                   opacite=lambda t: 1. if (t > T(66) - .1 and t < T(72)) else 0.))
+# « ils dépensent des milliards » : des piles de pièces qui montent (aucun chiffre), sur le papier
+PILE0, PILE1 = T(48) - .05, T(55) - .12
+comp.ajouter(Solide(PAPER, opacite=lambda t: 1. if (t >= PILE0 and t < PILE1) else 0.))
+pile = comp.ajouter(Nul(position=(540, 1000), echelle=K((PILE0, 1.0, lin), (PILE1, 1.1, doux))))
+HAUT = [9, 15, 11, 6, 13]
+for c_, h_ in enumerate(HAUT):
+    for j_ in range(h_):
+        ta = PILE0 + .05 + j_ * .07 + c_ * .09
+        def py(t, j_=j_, ta=ta):
+            u = max(0., 1 - (t - ta) / .2)
+            return 500 - j_ * 40 - 260 * u * u
+        comp.ajouter(Forme(rect(150, 34, 17), remplissage=CU, trait=INK, epaisseur=3, parent=pile,
+                           position=lambda t, c_=c_, py=py: ((c_ - 2) * 175, py(t)),
+                           opacite=lambda t, ta=ta: 1. if (t >= ta and t < PILE1) else 0.))
 
 # ---------- lumière d'ambiance (dégradés pré-calculés : un flou de 250 px coûterait 2 s par image)
 comp.ajouter(Image_('lueur_cuivre.png', position=(540, 980), opacite=lambda t: .55 if (t < T(16) or t > T(122) + .3) else 0.))
 comp.ajouter(Image_('lueur_papier.png', position=(540, 1000), opacite=lambda t: .55 * chaud(t), fusion='ajout'))
 
 # ---------- signature : « MÉDIAS » dont les lettres sont des fenêtres sur le contenu
-mini = Composition(1080, 1920, ips=IPS, duree=D, fond=PAPER)
+mini = Composition(1080, 1920, ips=IPS, duree=D, fond=INK)
 mn = mini.ajouter(Nul(position=(540, 660)))
 for k, (kd, sx) in enumerate([(0, -380), (1, 0), (2, 380)]):
     n = mini.ajouter(Nul(position=(sx, 0), parent=mn, echelle=1.9))
-    KINDS[[0, 2, 3][k]](mini, n, 1., k, INK)
+    KINDS[[0, 2, 3][k]](mini, n, 1., k, PAPER)
+plaque_op = lambda t: val(K((T(24), 0, lin), (T(24) + .12, 1, lin), (T(32) - .2, 1, lin), (T(32) + .15, 0)), t)
+comp.ajouter(Forme(rect(1000, 380, 30), remplissage=PAPER, trait=INK, epaisseur=4, position=(540, 660), opacite=plaque_op))
 titre = comp.ajouter(Texte('MÉDIAS', police='Inter', taille=270, graisse=K((T(24), 500, lin), (T(24) + .5, 900)), interlettrage=-.04, position=(540, 660), visible=False))
 fen = comp.ajouter(Precomp(mini, position=(540, 960), cache=(titre, 'alpha'),
                            opacite=lambda t: val(K((T(24), 0, lin), (T(24) + .12, 1, lin), (T(32) - .2, 1, lin), (T(32) + .15, 0)), t)))
@@ -152,6 +194,8 @@ comp.ajouter(Forme(ellipse(26, 26), remplissage='#D8492F', position=(150, 330),
 comp.ajouter(Forme(rect(1400, 8), remplissage=PAPER, position=(540, 1000), opacite=lambda t: val(K((T(121) - .05, 0, lin), (T(121) + .02, 1, lin), (T(121) + .17, 0)), t)))
 comp.ajouter(Solide(INK, opacite=lambda t: val(K((T(121) + .1, 0, lin), (T(121) + .3, 1, lin), (T(122) + .1, 1, lin), (T(122) + .6, 0)), t)))
 # mention de charte (marque réelle analysée) : discrète, en haut, toute la durée
-comp.ajouter(Texte('analyse indépendante · aucun lien avec la marque', police='Inter', taille=30, graisse=500, interlettrage=.04,
-                   couleur_=PAPER, position=(540, 150), opacite=lambda t: .62 * (0 if (t > T(121) + .1 and t < T(121) + .9) else 1)))
+mention_op = lambda t: 0 if (t > T(121) + .1 and t < T(121) + .9) else 1
+comp.ajouter(Forme(rect(900, 150, 28), remplissage=INK, position=(540, 225), opacite=lambda t: .88 * mention_op(t)))
+comp.ajouter(Texte('analyse indépendante', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 200), opacite=mention_op))
+comp.ajouter(Texte('aucun lien avec la marque', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 252), opacite=mention_op))
 comp.ajouter(Reglage(effets=[Grain(intensite=.035), Vignette(force=.28)]))
