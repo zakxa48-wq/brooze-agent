@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "hypothese": "Story de réserve intemporelle : une idée de méthode lisible en 2 s.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Coulisses",
+      "titre": "Avant de monter, on cherche une seule chose : la phrase qui arrête le *pouce*.",
+      "taille": "t-l",
+      "texte": "Le montage vient après."
+    }
+  ]
+}

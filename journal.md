@@ -4,6 +4,16 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 01/11 (dimanche) — semaine du 02/11 programmée
+- **Analyse** : aucune mesure possible (portée trop faible, hypothèses des 26-30/10 toujours « à mesurer », aucun verdict). Concurrents : rien de nouveau. Fenêtre 02-08/11 : stories 02, 03, 04 déjà là (réserve R-001 à R-003), pas de carrousel ; Reel Red Bull réservé au 03/11 mais non prêt (voir ci-dessus).
+- **Décision** : 3 carrousels (lun., mer., ven.) de structures différentes des 2 semaines passées (étapes, 5 duels, chiffres) : quiz, faux post annoté, échanges objection / réponse. 3 nouvelles mises en page (`quiz`, `faux`, `echange`). Équilibre attirer / prouver / convertir : 3 attirer, 1 prouver, 2 convertir en carrousels et stories.
+- 02/11 18 h · carrousel quiz · Karim · diagnostic · attirer · « Laquelle arrête le pouce ? » · nouveau format · contrôle 9/10
+- 04/11 18 h · carrousel décryptage · Claire · prouver · « Un post, ligne par ligne. » · nouveau format · 9/10
+- 06/11 18 h · carrousel objections · Karim · convertir · « 3 phrases que tu te dis. » · nouveau format · 9/10
+- Stories 10 h : 05/11 question « seule ou à cinq » (Claire, attirer) · 06/11 teaser 18 h (Karim) · 07/11 logo n'est pas une accroche (Karim) · 08/11 avis franc, mot-clé AUDIT (Karim, convertir).
+- Réserve : R-001 à R-003 utilisées, R-008 à R-010 créées : 7 disponibles.
+- Refusés : aucun.
+
 ## 01/11 (3 h 41) — filet, savoir, Red Bull
 - Filet : story de réserve R-003 programmée le 04/11 à 10 h (seul jour sans story jusqu'à J+3 ; 01–03/11 couverts, aucune en erreur). Réserve : 4.
 - Savoir : A-0010 recoupée par relais (resume), 3 notions revues ; yt-dlp/vidIQ indisponibles pendant setup.

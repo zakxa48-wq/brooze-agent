@@ -29,3 +29,11 @@
 | 2026-10-25 | Reel | Spotify Wrapped : le contenu parle d'eux, donc il se partage (voix de Zak) | « Spotify a réussi quelque chose d'assez extraordinaire en marketing. » |
 | 2026-11-02 | Story (réserve) | Méthode : avant / après | « Même restaurant. Autre 1re phrase. » (R-001) |
 - Question directe : « Ta dernière vidéo : client ou patron ? » (story de réserve R-002, 03/11)
+| 2026-11-02 | Carrousel | Quiz : laquelle arrête le pouce (scène vs annonce) | « Laquelle arrête le pouce ? » |
+| 2026-11-04 | Carrousel | Décryptage d'un faux post de boulangerie, ligne par ligne | « Un post, ligne par ligne. » |
+| 2026-11-05 | Story | Question directe : valider seule ou à cinq | « Tes vidéos : tu les valides seule, ou à cinq ? » |
+| 2026-11-06 | Story | Teaser | « Ce soir : 3 phrases que tu te dis avant d'écrire à un studio. » |
+| 2026-11-06 | Carrousel | Convertir : trois objections de Karim avant d'écrire | « 3 phrases que tu te dis. » |
+| 2026-11-07 | Story | Diagnostic : le logo n'est pas une accroche | « Ton logo n'est pas une accroche. » |
+| 2026-11-08 | Story | Appel à l'action : avis franc, pas de compliment | « On ne te dira pas que ta vidéo est super. » |
+| (réserve) | Story | R-008 question durée de validation · R-009 on cherche la phrase avant de monter · R-010 un rush, plusieurs accroches | — |

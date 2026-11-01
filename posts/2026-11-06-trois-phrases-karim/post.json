@@ -1,0 +1,61 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-11-06T18:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Offre claire",
+  "role": "convertir",
+  "hypothese": "Si un carrousel qui répond à trois objections de Karim avant d'écrire à un studio, alors les messages reçus (mot-clé ou question) / portée seront plus hauts que sur les carrousels précédents, parce qu'il retire le frein « je n'ai rien de prêt ».",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Avant d'écrire à un studio",
+      "titre": "3 phrases que tu te *dis*.",
+      "texte": "Et ce qu'on te répondrait."
+    },
+    {
+      "layout": "echange",
+      "dit": "« Je n'ai rien de beau à montrer. »",
+      "reponse": "Pas besoin. On part de ce que tu as **déjà** : tes rushs, tes photos, ce que tes clients filment."
+    },
+    {
+      "layout": "echange",
+      "dit": "« Je n'ai pas le temps de m'en occuper. »",
+      "reponse": "Un message suffit pour commencer : **envoie-nous ta dernière vidéo**."
+    },
+    {
+      "layout": "echange",
+      "dit": "« Est-ce ma vidéo qui est faible, ou la plateforme ? »",
+      "taille": "t-m",
+      "reponse": "On regarde ta vidéo et on te dit **ce qu'on changerait en premier**."
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Le point commun",
+      "titre": "Tu n'as rien à *préparer*.",
+      "taille": "t-l",
+      "texte": "Écris-nous d'abord. Le reste vient après."
+    },
+    {
+      "layout": "liste",
+      "label": "Ce que tu peux envoyer",
+      "titre": "Un seul suffit.",
+      "items": [
+        "Ta dernière vidéo publiée.",
+        "Un rush resté dans ta galerie.",
+        {
+          "texte": "Une question sur ce qui ne marche pas.",
+          "cle": true
+        }
+      ]
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Écris-nous. Même sans rien préparer.",
+      "texte": "On répond avec ce qu'on verrait en premier."
+    }
+  ],
+  "caption": "Avant d'écrire à un studio, on se dit tous la même chose.\n\nPas de belles images, pas de temps, pas sûr que la vidéo soit le problème. Aucune de ces trois phrases n'est un obstacle : on part de ce que tu as déjà, et on te dit ce qu'on changerait en premier.\n\nChez Brooze, on fabrique des vidéos qui retiennent dès la première image.\nEnvoie-nous un message → @broozeproduction\n\nLaquelle de ces trois phrases est la tienne ? 👇\n\nEnvoie-le à un commerçant qui hésite à se lancer.\n\n#marketingvideo #commerçants #strasbourg"
+}

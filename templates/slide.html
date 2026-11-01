@@ -93,6 +93,20 @@ body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
 .pseudo { font-family: Grotesk; font-weight: 700; font-size: 34px; letter-spacing: .06em; color: var(--encre-douce); }
 .encre .pseudo { color: var(--gris-ui); }
 
+
+/* Quiz : deux cartes neutres (aucune ne laisse deviner la bonne réponse) */
+.quiz { display: grid; grid-template-rows: 1fr 1fr; gap: 28px; flex: 1; }
+.quiz .carte { justify-content: center; }
+.quiz .lettre { font-family: Grotesk; font-weight: 700; font-size: 34px; letter-spacing: .14em; color: var(--encre-douce); }
+.quiz .phrase { color: var(--encre); }
+/* Faux post annoté */
+.faux { background: var(--carte); border-radius: 36px; padding: 56px 60px; margin-top: 40px; margin-bottom: 56px;
+  box-shadow: 0 30px 60px -30px rgba(16,14,13,.28), 0 2px 0 rgba(255,255,255,.7) inset; }
+.faux .marque { font-family: Grotesk; font-weight: 700; font-size: 34px; letter-spacing: .1em; text-transform: uppercase; color: var(--encre-douce); margin-bottom: 32px; }
+.faux .corps { font-weight: 800; font-size: 60px; letter-spacing: -0.03em; line-height: 1.12; color: var(--encre); text-wrap: balance; }
+.faux .corps.pale { color: var(--gris-ui); }
+.faux .corps .cuivre { color: var(--cuivre-profond); }
+
 .flex1 { flex: 1; }
 .col { display: flex; flex-direction: column; }
 </style>
@@ -179,6 +193,37 @@ const L = {
     ${S.label ? `<div class="label" style="margin-bottom:40px">${esc(S.label)}</div>` : ''}
     <div class="titre ${S.taille || 't-l'}">${md(S.titre)}</div>
     ${S.texte ? `<div class="texte" style="margin-top:48px">${md(S.texte)}</div>` : ''}
+    <div class="flex1"></div>`,
+
+  // Quiz : deux propositions neutres, la bonne réponse est donnée plus loin
+  quiz: () => `${entete()}
+    ${S.label ? `<div class="label" style="margin-top:48px">${esc(S.label)}</div>` : ''}
+    ${S.titre ? `<div class="titre t-m" style="margin:24px 0 40px">${md(S.titre)}</div>` : '<div style="height:40px"></div>'}
+    <div class="quiz">
+      <div class="carte"><div class="lettre">A</div><div class="phrase" style="${taillePhrase(S.a)}">${md(S.a)}</div></div>
+      <div class="carte"><div class="lettre">B</div><div class="phrase" style="${taillePhrase(S.b)}">${md(S.b)}</div></div>
+    </div>`,
+
+  // Faux post (marque fictive) : le passage visé porte l'unique accent cuivre, le reste pâlit
+  faux: () => `${entete()}
+    ${S.label ? `<div class="label" style="margin-top:48px">${esc(S.label)}</div>` : ''}
+    <div class="faux">
+      <div class="marque">${esc(S.marque)}</div>
+      <div class="corps ${S.pale ? 'pale' : ''}">${md(S.post)}</div>
+    </div>
+    <div class="flex1"></div>
+    ${S.titre ? `<div class="titre t-m">${md(S.titre)}</div>` : ''}
+    ${S.texte ? `<div class="texte" style="margin-top:32px">${md(S.texte)}</div>` : ''}
+    <div class="flex1"></div>`,
+
+  // Échange : ce qu'on se dit / ce qu'on répond
+  echange: () => `${entete()}
+    <div class="flex1"></div>
+    <div class="label" style="margin-bottom:32px">${esc(S.label || 'Ce que tu te dis')}</div>
+    <div class="titre ${S.taille || 't-m'}">${md(S.dit)}</div>
+    <div class="filet" style="margin:64px 0 48px"></div>
+    <div class="label" style="margin-bottom:28px">${esc(S.label2 || 'Notre réponse')}</div>
+    <div class="texte" style="color:var(--encre)">${md(S.reponse)}</div>
     <div class="flex1"></div>`,
 
   // Fin : logo + appel à l'action

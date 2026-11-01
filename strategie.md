@@ -19,6 +19,11 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 | Une accusation douce pour Claire fait moins de sorties / portée qu'un conseil neutre. | 2026-10-23 | à mesurer |
 | Le format mythe / réalité en story fait moins de sorties / portée. | 2026-10-29 (nouveau format) | à mesurer |
 
+| Un quiz « laquelle arrête le pouce ? » (nouveau format) obtient plus d'enregistrements et partages / portée que les carrousels en étapes. | 2026-11-02 | à mesurer |
+| Le décryptage d'un faux post (nouveau format) obtient plus d'enregistrements / portée que nos checklists. | 2026-11-04 | à mesurer |
+| Un carrousel qui lève trois objections de Karim amène plus de messages / portée. | 2026-11-06 | à mesurer |
+| Une story « avis franc » obtient plus de messages / portée que l'offre directe du 01/11. | 2026-11-08 | à mesurer |
+
 ## Confirmées (devenues des règles)
 (rien pour l'instant)
 
@@ -26,5 +31,5 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 (rien pour l'instant)
 
 ## Prochain nouveau format à tester
-- Série en 3 épisodes (stories lundi-mardi-mercredi qui se suivent).
+- Série en 3 épisodes (reporté : stories lundi-mercredi déjà programmées) (stories lundi-mardi-mercredi qui se suivent).
 - Quiz « laquelle arrête le pouce ? » en carrousel (réponse en dernière diapo).

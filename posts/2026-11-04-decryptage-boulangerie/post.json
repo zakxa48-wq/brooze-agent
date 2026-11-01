@@ -1,0 +1,69 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-11-04T18:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Décryptage",
+  "role": "prouver",
+  "hypothese": "Si le décryptage ligne par ligne d'un faux post de marque fictive pour Claire, alors les enregistrements / portée seront plus hauts que sur nos checklists, parce qu'il permet de relire ses propres posts avec les mêmes questions.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Décryptage · marque fictive",
+      "titre": "Un post, *ligne* par ligne.",
+      "texte": "Ce qui coince dans une légende de boulangerie, et ce qui la règle."
+    },
+    {
+      "layout": "faux",
+      "label": "Le post",
+      "marque": "Les Trois Épis · exemple fictif",
+      "post": "Nouveau ! Découvrez notre gamme de pains au levain, faits avec passion dans le respect de la tradition."
+    },
+    {
+      "layout": "faux",
+      "label": "Ligne 1",
+      "marque": "Les Trois Épis · exemple fictif",
+      "pale": true,
+      "post": "*Nouveau !* Découvrez notre gamme de pains au levain, faits avec passion dans le respect de la tradition.",
+      "titre": "Nouveau pour qui ?",
+      "texte": "Tout le monde écrit ce mot. **Dis ce qui change pour ton client.**"
+    },
+    {
+      "layout": "faux",
+      "label": "Ligne 2",
+      "marque": "Les Trois Épis · exemple fictif",
+      "pale": true,
+      "post": "Nouveau ! *Découvrez notre gamme* de pains au levain, faits avec passion dans le respect de la tradition.",
+      "titre": "Une gamme, c'est un catalogue.",
+      "texte": "Ton client achète **un pain**, pas une gamme."
+    },
+    {
+      "layout": "faux",
+      "label": "Ligne 3",
+      "marque": "Les Trois Épis · exemple fictif",
+      "pale": true,
+      "post": "Nouveau ! Découvrez notre gamme de pains au levain, *faits avec passion dans le respect de la tradition.*",
+      "titre": "Le voisin peut l'écrire aussi.",
+      "texte": "Une phrase copiable chez le voisin **ne prouve rien**."
+    },
+    {
+      "layout": "duel",
+      "titre": "La même boulangerie, réécrite.",
+      "a": {
+        "label": "Avant",
+        "texte": "Nouveau ! Découvrez notre gamme de pains au levain."
+      },
+      "b": {
+        "label": "Après",
+        "texte": "6 h 30 : le premier *levain* sort du four. Passe avant l'école."
+      }
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-nous ton dernier post.",
+      "texte": "On le lit comme celui-ci : ligne par ligne."
+    }
+  ],
+  "caption": "Un post de boulangerie, lu ligne par ligne.\n\nLa boulangerie est un exemple fictif. Les trois lignes qui coincent, on les retrouve partout : « nouveau », « découvrez notre gamme », « avec passion ». Aucune ne montre un moment précis, donc aucune n'arrête le pouce.\n\nChez Brooze, on fabrique des vidéos qui retiennent dès la première image.\nEnvoie-nous un message → @broozeproduction\n\nTon dernier post : tu y reconnais une de ces trois lignes, oui ou non ? 👇\n\nEnvoie-le à la personne qui relit tes légendes.\n\n#marketingvideo #communication #strasbourg"
+}

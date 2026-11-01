@@ -1,0 +1,18 @@
+{
+  "type": "story",
+  "date_prevue": "2026-12-01T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "hypothese": "Story de réserve intemporelle : une idée de méthode lisible en 2 s.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Méthode",
+      "titre": "Un même rush peut cacher plusieurs *accroches*.",
+      "taille": "t-l",
+      "texte": "On les cherche toutes. On garde celle qui arrête le pouce."
+    }
+  ]
+}

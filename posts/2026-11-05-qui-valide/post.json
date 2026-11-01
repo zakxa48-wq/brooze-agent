@@ -1,0 +1,25 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-05T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Question directe",
+  "role": "attirer",
+  "hypothese": "Une question binaire sur la validation interne obtient plus de réponses / portée qu'une affirmation, parce que Claire s'y reconnaît tout de suite.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "label": "Question",
+      "titre": "Tes vidéos : tu les valides *seule*, ou à cinq ?",
+      "taille": "t-l"
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Réponds « SEULE » ou « À CINQ ».",
+      "taille": "t-l",
+      "texte": "On te dit ce que ça change sur la vidéo.",
+      "bouton": "Réponds en message"
+    }
+  ]
+}

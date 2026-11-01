@@ -1,0 +1,74 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-11-02T18:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Diagnostic",
+  "role": "attirer",
+  "hypothese": "Si un quiz « laquelle arrête le pouce ? » (réponses en fin de carrousel) pour Karim, alors les enregistrements et partages / portée seront plus hauts que sur les carrousels en étapes (Noël 26/10), parce que le lecteur joue avant de glisser et a envie de comparer sa réponse.",
+  "nouveau_format": true,
+  "slides": [
+    {
+      "layout": "cover",
+      "label": "Quiz · 3 questions",
+      "titre": "Laquelle arrête le *pouce* ?",
+      "texte": "Trois paires de premières phrases. Choisis avant de glisser."
+    },
+    {
+      "layout": "quiz",
+      "label": "Fleuriste · exemple",
+      "titre": "Laquelle ouvre la vidéo ?",
+      "a": "Ce bouquet est parti en 20 minutes ce matin.",
+      "b": "Découvrez nos bouquets de saison."
+    },
+    {
+      "layout": "quiz",
+      "label": "Association · exemple",
+      "titre": "Laquelle ouvre la vidéo ?",
+      "a": "Soutenez notre action, chaque don compte.",
+      "b": "Le jeudi soir, des enfants attendent quelqu'un pour lire avec eux."
+    },
+    {
+      "layout": "quiz",
+      "label": "Restaurant · exemple",
+      "titre": "Laquelle ouvre la vidéo ?",
+      "a": "Midi pile : la table du fond part toujours en premier.",
+      "b": "Notre restaurant vous accueille 7 jours sur 7."
+    },
+    {
+      "layout": "liste",
+      "label": "Les réponses",
+      "titre": "A, B, A.",
+      "items": [
+        "Fleuriste : A. Un bouquet parti, on voit la scène.",
+        "Association : B. Des enfants, un jeudi, on se voit dedans.",
+        {
+          "texte": "Restaurant : A. Une table, un détail vrai.",
+          "cle": true
+        }
+      ]
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "Le point commun",
+      "titre": "Une scène, pas une *annonce*.",
+      "taille": "t-l",
+      "texte": "Les bonnes phrases montrent **un moment précis**. Les autres annoncent **ce que tu fais**."
+    },
+    {
+      "layout": "phrase",
+      "theme": "studio",
+      "label": "Ton exercice",
+      "titre": "Remplace « Découvrez » par une *scène*.",
+      "taille": "t-l",
+      "texte": "Prends ta prochaine vidéo. Écris la 1re phrase comme ce que ton client a vu hier."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-nous ta 1re phrase.",
+      "texte": "Chez Brooze, on fabrique des vidéos qui retiennent dès la première image."
+    }
+  ],
+  "caption": "Laquelle arrête le pouce ?\n\nTrois paires de premières phrases, trois commerces d'exemple (fictifs). Glisse jusqu'aux réponses : le point commun tient en cinq mots, une scène, pas une annonce.\n\nChez Brooze, on fabrique des vidéos qui retiennent dès la première image.\nEnvoie-nous un message → @broozeproduction\n\nTu as trouvé 3 sur 3, oui ou non ? 👇\n\nEnvoie-le à la personne qui écrit tes légendes.\n\n#marketingvideo #communication #strasbourg"
+}

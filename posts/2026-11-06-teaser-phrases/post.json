@@ -1,0 +1,17 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-06T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Teaser",
+  "role": "attirer",
+  "hypothese": "Une story teaser le matin augmente la portée du carrousel du soir.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "titre": "Ce soir : 3 phrases que tu te dis avant d'*écrire* à un studio.",
+      "taille": "t-l",
+      "texte": "Dans le carrousel de 18 h."
+    }
+  ]
+}

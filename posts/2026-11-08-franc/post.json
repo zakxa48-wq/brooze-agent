@@ -1,0 +1,24 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-08T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Appel à l'action",
+  "role": "convertir",
+  "hypothese": "Une story qui promet un avis franc (et non un compliment) obtient plus de messages / portée que l'offre directe du 01/11.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "titre": "On ne te dira pas que ta vidéo est super. On te dira ce qui *coince*.",
+      "taille": "t-l"
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Envoie-nous ta dernière vidéo.",
+      "taille": "t-l",
+      "texte": "Un avis franc, en premier ce qu'on changerait.",
+      "bouton": "Réponds « AUDIT » en message"
+    }
+  ]
+}

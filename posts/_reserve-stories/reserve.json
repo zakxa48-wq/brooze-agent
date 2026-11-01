@@ -54,5 +54,29 @@
     "role": "attirer",
     "cree_le": "2026-10-23",
     "utilisee_le": null
+  },
+  {
+    "id": "R-008-combien-de-temps",
+    "angle": "Question directe",
+    "pilier": "Question directe",
+    "role": "attirer",
+    "cree_le": "2026-11-01",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-009-chercher-la-phrase",
+    "angle": "Coulisses / méthode",
+    "pilier": "Coulisses / méthode",
+    "role": "prouver",
+    "cree_le": "2026-11-01",
+    "utilisee_le": null
+  },
+  {
+    "id": "R-010-trois-accroches",
+    "angle": "Coulisses / méthode",
+    "pilier": "Coulisses / méthode",
+    "role": "prouver",
+    "cree_le": "2026-11-01",
+    "utilisee_le": null
   }
 ]

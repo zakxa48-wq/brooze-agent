@@ -1,0 +1,24 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-07T10:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Diagnostic",
+  "role": "attirer",
+  "hypothese": "Une affirmation courte et franche pour Karim (« ton logo n'est pas une accroche ») fait moins de sorties / portée qu'un conseil neutre.",
+  "nouveau_format": false,
+  "slides": [
+    {
+      "layout": "phrase",
+      "titre": "Ton logo n'est pas une *accroche*.",
+      "taille": "t-xl"
+    },
+    {
+      "layout": "phrase",
+      "theme": "encre",
+      "label": "À la place",
+      "titre": "Mets d'abord ce que ton client vient *chercher*.",
+      "taille": "t-l",
+      "texte": "Le logo vient à la fin."
+    }
+  ]
+}
