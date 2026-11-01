@@ -1,7 +1,7 @@
 {
  "duree_s": 46.7,
  "ouverture": {
-  "luma_image_1": 18.8,
+  "luma_image_1": 18.9,
   "fondu_depuis_noir": false,
   "mouvement_premiere_demi_seconde": true
  },
@@ -11,7 +11,7 @@
   1.8,
   2.4,
   3.4,
-  4.7,
+  4.2,
   6.1,
   7.6,
   8.6,
@@ -60,7 +60,7 @@
  "ecart_max_relances_s": 2.5,
  "coupes_s": [
   2.4,
-  4.7,
+  3.4,
   7.6,
   8.6,
   10.1,

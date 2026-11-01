@@ -1,0 +1,238 @@
+{
+ "reel": {
+  "duree_s": 46.7,
+  "format": "1080×1920",
+  "ips": 30.0,
+  "debit_mbps": 14.7,
+  "plans": 5,
+  "duree_plan_moy_s": 9.34,
+  "duree_plan_med_s": 3.4,
+  "duree_plan_min_s": 3.0,
+  "duree_plan_max_s": 25.3,
+  "coupes_3s": 0,
+  "premiere_coupe_s": 3.4,
+  "coupes": [
+   3.4,
+   15.4,
+   18.4,
+   21.4
+  ],
+  "transitions": [
+   {
+    "t": 4.8,
+    "d": 1.2,
+    "type": "fondu"
+   },
+   {
+    "t": 7.4,
+    "d": 0.3,
+    "type": "fondu"
+   },
+   {
+    "t": 7.9,
+    "d": 0.8,
+    "type": "fondu"
+   },
+   {
+    "t": 9.2,
+    "d": 0.8,
+    "type": "fondu"
+   },
+   {
+    "t": 12.5,
+    "d": 0.4,
+    "type": "fondu"
+   },
+   {
+    "t": 18.6,
+    "d": 0.8,
+    "type": "fondu"
+   },
+   {
+    "t": 20.5,
+    "d": 0.3,
+    "type": "fondu"
+   },
+   {
+    "t": 24.3,
+    "d": 0.7,
+    "type": "fondu"
+   },
+   {
+    "t": 25.2,
+    "d": 0.3,
+    "type": "filé horizontal"
+   },
+   {
+    "t": 26.3,
+    "d": 0.3,
+    "type": "fondu"
+   },
+   {
+    "t": 27.0,
+    "d": 0.6,
+    "type": "fondu"
+   },
+   {
+    "t": 28.4,
+    "d": 1.2,
+    "type": "fondu"
+   },
+   {
+    "t": 33.6,
+    "d": 1.2,
+    "type": "fondu"
+   },
+   {
+    "t": 34.8,
+    "d": 0.4,
+    "type": "noir"
+   },
+   {
+    "t": 36.9,
+    "d": 0.4,
+    "type": "fondu"
+   },
+   {
+    "t": 42.7,
+    "d": 0.4,
+    "type": "noir"
+   },
+   {
+    "t": 45.9,
+    "d": 0.3,
+    "type": "filé vertical"
+   }
+  ],
+  "transitions_progressives": 17,
+  "camera": {
+   "dérive lente": 3,
+   "zoom avant": 1,
+   "épaule": 1
+  },
+  "camera_par_plan": [
+   "dérive lente",
+   "dérive lente",
+   "dérive lente",
+   "zoom avant",
+   "épaule"
+  ],
+  "palette": {
+   "couleurs": [
+    {
+     "hex": "#080605",
+     "part": 0.54
+    },
+    {
+     "hex": "#68625a",
+     "part": 0.15
+    },
+    {
+     "hex": "#e6e2da",
+     "part": 0.14
+    },
+    {
+     "hex": "#2b2520",
+     "part": 0.09
+    },
+    {
+     "hex": "#9d9992",
+     "part": 0.08
+    }
+   ],
+   "luminosite": 0.27,
+   "saturation": 0.28,
+   "temperature": "chaude"
+  },
+  "texte": {
+   "part_du_temps": 0.98,
+   "hauteur_px_med": 42.0,
+   "hauteur_px_min": 29.0,
+   "mots_par_image": 7.8,
+   "zones": {
+    "haut": 0.78,
+    "milieu": 0.0,
+    "bas": 0.21
+   },
+   "changements_par_s": 1.03,
+   "premieres_3s": "analyse marque Red analyse Red Bull analyse indépendante lien la marque ne analyse indépendante lien la marque ne vend pas boissons énergisantes boissons énergisantes analyse indépendante lien la marq"
+  },
+  "nettete_med": 197.0,
+  "son": {
+   "present": true,
+   "lufs": -14.0,
+   "crete_db": -1.5,
+   "energie_3s_db": -17.6,
+   "energie_moy_db": -18.9,
+   "dynamique_db": 12.0,
+   "attaques_par_s": 1.56,
+   "coupes_sur_attaque": 0.25,
+   "coupes_sur_attaque_si_hasard": 0.39
+  }
+ },
+ "planche": "/tmp/tmpoawzv1qb/reel.jpg",
+ "references": [
+  "mes-videos-reel-apple-v3"
+ ],
+ "axes": {
+  "rythme": {
+   "reel": {
+    "duree_plan_moy_s": 9.34,
+    "coupes_3s": 0
+   },
+   "ref": {
+    "duree_plan_moy_s": 2.58,
+    "coupes_3s": 1.0
+   },
+   "ok": false
+  },
+  "lisibilite": {
+   "reel": {
+    "hauteur_px_min": 29.0,
+    "mots_par_image": 7.8
+   },
+   "ref": {
+    "hauteur_px_min": 29.0,
+    "mots_par_image": 3.1
+   },
+   "ok": false
+  },
+  "finition": {
+   "reel": {
+    "nettete": 197.0,
+    "lufs": -14.0,
+    "coupes_sur_attaque": 0.25
+   },
+   "ref": {
+    "nettete": 133.0,
+    "coupes_sur_attaque": 0.33
+   },
+   "ok": true
+  }
+ },
+ "verdict": "en dessous (indicatif : moins de 3 références de qualité ≥ 7, non bloquant)",
+ "raisons": [
+  {
+   "cle": "comparer.rythme.duree_plan",
+   "mesure": 9.34,
+   "exige": "≤ 3.48 s",
+   "quoi": "plans trop longs en moyenne",
+   "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs)"
+  },
+  {
+   "cle": "comparer.rythme.coupes_3s",
+   "mesure": 0,
+   "exige": "≥ 1",
+   "quoi": "aucune coupe dans les 3 premières secondes",
+   "condition": "au moins une coupe ou un changement de plan avant 3 s"
+  },
+  {
+   "cle": "comparer.lisibilite.mots",
+   "mesure": 7.8,
+   "exige": "≤ 4.65",
+   "quoi": "trop de mots à l écran à la fois",
+   "condition": "au plus 4.65 mots par image en moyenne"
+  }
+ ],
+ "probante": false
+}

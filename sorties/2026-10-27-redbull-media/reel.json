@@ -757,6 +757,7 @@
  "justifications": {
   "durée 46.7 s": "Le propos tient en 45 s de voix continue de Zak (hook, thèse, 3 preuves, leçon) ; rien n'est coupé dans ses phrases et chaque idée a son image propre : couper un passage ferait dire autre chose à Zak.",
   "palette": "Fond papier de la charte du recul (5,6 s) jusqu'à la fusion (35 s), soit environ 63 % de la durée ; l'encre n'est gardée que pour l'ouverture 3D, la révélation « émotion » et la boucle.",
-  "images réelles": "Reel entièrement en graphisme 2D/3D généré par code (analyse d'une marque, aucun rush ni photo disponible pour ce propos)."
+  "images réelles": "Reel entièrement en graphisme 2D/3D généré par code (analyse d'une marque, aucun rush ni photo disponible pour ce propos).",
+  "coupe_6_03": "Alerte COUPE à 6,03 s = arrivée d'une rangée de cartes du mur (animation d'entrée, 3 images après la coupe déclarée à 5,97 s), pas un raccord : vérifié sur 6 images consécutives 5,90–6,13 s, le fond papier et la canette restent continus."
  }
 }
