@@ -4,6 +4,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 01/11 (3 h 41) — filet, savoir, Red Bull
+- Filet : story de réserve R-003 programmée le 04/11 à 10 h (seul jour sans story jusqu'à J+3 ; 01–03/11 couverts, aucune en erreur). Réserve : 4.
+
 ## 31/10 (15 h 41) — veille, Red Bull tentative 2 rendue
 - Veille : relevé identique (aucun Reel publié depuis le 25/10). Story 31/10 10 h en ERREUR (« account limit » Metricool) ; jour couvert par le teaser 18 h 30 ; alerte envoyée. Filet : 01–03/11 couverts, réserve 5.
 - Red Bull : setup.sh très lent (~15 min), son + rendu final refaits (46,8 s), controle.py : 1 coupe non déclarée à 6,03 s ; comparer + évaluation indépendante au prochain passage (limite des 45 min).
