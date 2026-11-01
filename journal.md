@@ -4,6 +4,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 01/11 (15 h 41) — veille, Koulechov reprogrammé
+- Koulechov (31/10 18 h), son teaser et la story 31/10 étaient en ERREUR (limite de compte Metricool). Reprogrammé une fois : 01/11 18 h 30, [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=2014507807303156125). Filet 02–04/11 OK, réserve 7. Savoir du jour déjà fait au passage de 3 h 41. Red Bull tentative 3 non lancée (setup très lent, limite de temps) : conditions V2-1, V2-5, V2-7 toujours ouvertes.
+
 ## 01/11 (dimanche) — semaine du 02/11 programmée
 - **Analyse** : aucune mesure possible (portée trop faible, hypothèses des 26-30/10 toujours « à mesurer », aucun verdict). Concurrents : rien de nouveau. Fenêtre 02-08/11 : stories 02, 03, 04 déjà là (réserve R-001 à R-003), pas de carrousel ; Reel Red Bull réservé au 03/11 mais non prêt (voir ci-dessus).
 - **Décision** : 3 carrousels (lun., mer., ven.) de structures différentes des 2 semaines passées (étapes, 5 duels, chiffres) : quiz, faux post annoté, échanges objection / réponse. 3 nouvelles mises en page (`quiz`, `faux`, `echange`). Équilibre attirer / prouver / convertir : 3 attirer, 1 prouver, 2 convertir en carrousels et stories.
