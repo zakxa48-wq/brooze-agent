@@ -6,6 +6,8 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ## 01/11 (3 h 41) — filet, savoir, Red Bull
 - Filet : story de réserve R-003 programmée le 04/11 à 10 h (seul jour sans story jusqu'à J+3 ; 01–03/11 couverts, aucune en erreur). Réserve : 4.
+- Savoir : A-0010 recoupée par relais (resume), 3 notions revues ; yt-dlp/vidIQ indisponibles pendant setup.
+- Red Bull t2 : rendu 46,8 s, controle ok sauf alerte COUPE 6,03 s ; **verdict_2 À REPRENDRE** (3 conditions : V2-1 coupe, V2-5 mur 3x3 5,4 s à 29,6-35 s, V2-7 mention tranchée en haut). Rien programmé. Tentative 3 au prochain passage.
 
 ## 31/10 (15 h 41) — veille, Red Bull tentative 2 rendue
 - Veille : relevé identique (aucun Reel publié depuis le 25/10). Story 31/10 10 h en ERREUR (« account limit » Metricool) ; jour couvert par le teaser 18 h 30 ; alerte envoyée. Filet : 01–03/11 couverts, réserve 5.

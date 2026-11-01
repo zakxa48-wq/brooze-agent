@@ -21,7 +21,8 @@
   "31/10 3 h 41 : refonte tentative 2 (verdict_1) : scene.py (fond papier ≈63 %, mur allumé dès 5,9 s, parcours de caméra par sujets, piles de pièces « milliards », canette barrée « taurine », zooms adrénaline/frisson/dépassement, mention 48 px sur pastille encre), reel.json (10 scènes de relance, @48 décalé 15,45, justifications durée/palette/images) ; plan.mp4 en re-rendu",
   "31/10 : plan.mp4 re-rendu (1407 images, 1003 s) ; reste rendu.mjs --morceaux, son.py, controle.py, comparer, evaluation_2",
   "31/10 15h41-16h20 : tentative 2 : son.py + rendu --morceaux OK (reel.mp4 46,8 s, 83,6 Mo, non versionné) ; controle.py : format/son OK, engagement OK (aucune zone morte), 1 problème : COUPE non déclarée à 6,033 s (à côté de la coupe 5,97 s, à regarder dans _glitchs/)",
-  "01/11 3h41-3h50 : reel.mp4 re-rendu (46,8 s), controle.py : seule alerte COUPE 6,03 s = entrée de cartes (justifiée dans reel.json), comparer non probante (conseils), inspecter.py fait, evaluation_2 confiée à un sous-agent"
+  "01/11 3h41-3h50 : reel.mp4 re-rendu (46,8 s), controle.py : seule alerte COUPE 6,03 s = entrée de cartes (justifiée dans reel.json), comparer non probante (conseils), inspecter.py fait, evaluation_2 confiée à un sous-agent",
+  "01/11 : evaluation_2 -> verdict_2 À REPRENDRE (V2-1 alerte COUPE 6,03 s à corriger à la source ou déclarer ; V2-5 mur 3x3 reste 5,4 s à 29,6-35 s, 'produit dérivé' sans image propre ; V2-7 mention 'analyse indépendante' tranchée par le bord haut sur 27 images : la sortir de la couche caméra, y>=60 px)"
  ],
- "notes": "Reprendre : lire evaluation_2.json, `python3 reel/verdict.py evaluer sorties/2026-10-27-redbull-media`, corriger les conditions ouvertes ou programmer (couverture, teaser, post.json, créneau 03/11) si PUBLIABLE. reel.mp4/plan.mp4 non versionnés : voir recette précédente."
+ "notes": "Tentative 3 : corriger V2-1, V2-5, V2-7 (et seulement elles), re-rendre plan.mp4 (~17 min) + rendu --morceaux (~13 min), controle.py, comparer, evaluation_3 par nouveau sous-agent (vérifier d'abord V2-1/5/7). Jour réservé 03/11 : décaler au 05/11 si pas prêt le 02/11 15 h 41."
 }

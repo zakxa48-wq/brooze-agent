@@ -1,0 +1,118 @@
+{
+ "defauts": [
+  {
+   "priorite": "P2",
+   "de": 29.6,
+   "a": 35.0,
+   "quoi": "V1-6 non levée : le même mur 3x3 de cartes noires reste 5,4 s à l'écran (6,5 s si on compte le recadrage dès 28,5 s), seul le zoom bouge de 1,04 à 1,12. L'idée « produit dérivé / vendre » n'a pas d'image propre : on revoit le mur du début (5,9–12,5 s), avec une canette minuscule en bas.",
+   "preuve": "Images regardées toutes les 0,75 s de 12 à 36 s (mid.jpg) : 29,25 / 30,0 / 30,75 / 31,5 / 32,25 / 33,0 / 33,75 = même grille, mêmes pictogrammes ; t33.png : canette de 5 % de l'écran + étiquette. reel.json : cadres 1.12→1.05, 1.10→1.04 seulement (scènes @87, @92, @97, @101).",
+   "condition": "Entre 12 et 36 s, aucune image (même composition, hors simple zoom < 15 %) ne dépasse 4 s : le passage 29,6–35,0 est découpé en au moins 2 plans de sujet différent (ex. gros plan canette + étiquette de prix occupant ≥ 1/4 de l'écran ; un seul écran en plein cadre ; mur qui se fond en un cadre) ; et « produit dérivé » (≈ 32–33 s) a une image propre.",
+   "piste": "Remplacer la 2e moitié du mur par : plan serré sur la canette avec son étiquette de prix, grande (≥ 25 % de la hauteur), puis les 9 écrans qui convergent en un seul cadre dès 33 s, au lieu d'attendre 35 s.",
+   "nouveau_pourquoi": ""
+  },
+  {
+   "priorite": "P2",
+   "de": 3.4,
+   "a": 46.3,
+   "quoi": "RÉGRESSION de V1-9 : la mention « analyse indépendante / aucun lien avec la marque » est lisible (pastille de 46 px de corps) mais elle bouge avec la caméra et sort du cadre : la 1re ligne est coupée par le bord haut de l'image, lettres tranchées.",
+   "preuve": "Détection par script (lignes 0–3 px, pastille sombre + pixels de texte) : 7,3–7,5 ; 8,2–8,5 ; 12,5–12,7 ; 19,0–19,1 ; 23,5–23,9 ; 25,2 ; 27,2 ; 28,8 ; 29,2–29,5 ; 32,6–32,8 s, soit 27 images (≈2,7 s) ; images extraites c7.4, c8.3, c23.7, c29.4, c32.7 : « analyse indépendante » tranché en haut. t33.png : pastille dépassant du cadre.",
+   "condition": "Sur 3,4–46,3 s, à chaque image (1/30 s), la pastille entière, les 2 lignes comprises, reste dans le cadre avec au moins 40 px de marge au-dessus (script : aucune image où la ligne 0–3 px contient du texte ou une pastille tranchée).",
+   "piste": "Sortir la mention de la couche caméra (calque fixe au-dessus du monde, y ≥ 60 px), sans zoom ni décalage de plan.",
+   "nouveau_pourquoi": "régression causée par la correction de V1-9 (la pastille n'existait pas en tentative 1) ; la mention obligatoire de la charte § Marques réelles est visiblement coupée"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.6,
+   "a": 37.3,
+   "quoi": "Écran presque noir : un fantôme de carte quasi invisible, 1,8 s, entre « ne vends pas un produit » et « vends une émotion ». Voulu (le vide avant l'émotion) mais mou, et l'énergie sonore y est basse.",
+   "preuve": "gap2.jpg : images à 35,5 / 36,0 / 36,5 / 37,0 : luma ≈ 10, carte à peine visible ; mouvement ≈ 1–2,5 par 0,1 s (engagement.json : relances 34,6 → 36,5 → 37,3).",
+   "condition": "Conseil : un mouvement net (la carte qui se resserre ou s'allume) toutes les 1,2 s.",
+   "piste": "Faire battre le rectangle (échelle ou lueur) sur « un produit ».",
+   "nouveau_pourquoi": "contrôle passé, conseil seulement"
+  },
+  {
+   "priorite": "P3",
+   "de": 4.8,
+   "a": 5.8,
+   "quoi": "Écran presque vide (fond gris, canette minuscule coupée en bas) pendant environ 1 s sur « En réalité, ». Même défaut que V1-8, décalé à 4,8 s ; V1-8 (6–8 s) est bien levé.",
+   "preuve": "rec.jpg : images à 5,0 / 5,2 / 5,4 / 5,6 s.",
+   "condition": "Conseil : un sujet ≥ 1/4 de l'écran dès 5,0 s.",
+   "piste": "Faire entrer les 1res cartes 0,5 s plus tôt.",
+   "nouveau_pourquoi": ""
+  },
+  {
+   "priorite": "P3",
+   "de": 9.2,
+   "a": 12.5,
+   "quoi": "Le mur reste quasiment fixe 3,3 s après la fin de « MÉDIAS » ; seuls les sous-titres changent (sous-traitent tout à 100 %).",
+   "preuve": "Planche 1,5 s (p0.jpg) et planche_cles.jpg, rangées 3–4.",
+   "condition": "Conseil : un événement visuel à ≈ 10,5 s.",
+   "piste": "Allumer une carte en cuivre ou faire sortir la canette du cadre à « sous-traitent ».",
+   "nouveau_pourquoi": ""
+  },
+  {
+   "priorite": "P3",
+   "de": 43.5,
+   "a": 46.3,
+   "quoi": "Fin : la canette 2D, plus pauvre que la 3D du début, reste presque immobile 2,5–3 s avec le faux bouton « Envoie-nous un message → ». Raccord de boucle : double exposition (contour 2D + canette 3D) vers 46,4–46.7 s.",
+   "preuve": "gap3.jpg ; jonction.jpg images 1–2.",
+   "condition": "Conseil seulement : fin de carte CTA acceptable.",
+   "piste": "Raccourcir le fondu de boucle ou aligner la canette 2D sur la 3D.",
+   "nouveau_pourquoi": ""
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 46.8,
+   "quoi": "Détails : (a) mention 0–3,4 s en gris sombre (≈ 4:1) sur noir, corps ≈ 28 px, lue de justesse ; (b) sous-titres à y ≈ 79 % et mention en haut dans les zones de l'interface Instagram ; (c) sous-titre mot à mot à des abscisses variables (« une », « de leurs » décalés à gauche) ; (d) 3 pictogrammes répétés ×3 dans 9 cartes : aspect « template » ; (e) fond « papier » gris à fort vignettage, loin du #EDEBE7 de la charte.",
+   "preuve": "m*.png, mstack.png, t6.5.png, t33.png.",
+   "condition": "Conseil.",
+   "piste": "Remonter les sous-titres de ≈ 80 px ; 9 cartes avec ≥ 5 pictogrammes différents ; éclaircir le papier.",
+   "nouveau_pourquoi": ""
+  }
+ ],
+ "conditions_precedentes": {
+  "V1-1": {
+   "statut": "levée",
+   "pourquoi": "23,1–26,3 s corrigé (non justifié) : zoom/coupes à 23,5, 24,4, 24,9, 25,3, 26,4 ; images 22,5–27 s regardées (canette barrée, cartes F1 / frisson / dépassement), mouvement par 0,1 s ≥ 1,3 partout ; controle.json : plus de zone morte."
+  },
+  "V1-2": {
+   "statut": "levée",
+   "pourquoi": "34–37,3 s : relances à 34,0, 34,6, 36,5, 37,3 (écart max 1,9 s) ; images 34,5–37,5 : mur qui s'éteint, « vends » / « vends une » en gros titre. Passage faible (P3 écran noir) mais pas de zone morte mesurée."
+  },
+  "V1-3": {
+   "statut": "levée",
+   "pourquoi": "43,0–46,2 s : le CTA apparaît à 43,1, les sous-titres changent toutes les 0,3–0,5 s, fondu de boucle vers la 3D à 46,2. Fin statique mais acceptable pour une carte CTA."
+  },
+  "V1-4": {
+   "statut": "levée",
+   "pourquoi": "Justifiée dans reel.json, jugée acceptable (voir justifications) : 46,8 s, voix continue de Zak sans temps mort."
+  },
+  "V1-5": {
+   "statut": "levée",
+   "pourquoi": "14,2 s « Créer du contenu. » : 1,23 s affichées pour 1,15 s requises (controle.json) ; images 14,25–15,4 s lues. Marge mince (0,08 s)."
+  },
+  "V1-6": {
+   "statut": "non levée",
+   "pourquoi": "Entre 12 et 36 s on compte bien ≥ 6 images différentes (mur zoomé, carte pendule, carte roue, pièces, canette barrée, cartes F1 / frisson / dépassement) et dépenser / ne pas vendre / vendre-émotion ont chacune leur image. Mais le mur 3x3 reste 5,4 s (29,6–35,0) avec un simple zoom 1,12→1,05 : la condition « aucune ne reste plus de 4 s » n'est pas tenue, et « produit dérivé » n'a pas d'image propre."
+  },
+  "V1-7": {
+   "statut": "levée",
+   "pourquoi": "Mesure sur 10 images/s : fond clair visible sur les bords 20,6 s sur 46,7 s (44 %) : 5,4–12,5 ; 15,4–18,4 ; 20,6–24,7 ; 29,2–34,3. Seuil d'un tiers (15,6 s) tenu. Le chiffre de 63 % de la justification est inexact (les gros plans de cartes noires, 12,5–15,4 et 24,7–29 s, couvrent l'écran) mais la 1re branche de la condition suffit."
+  },
+  "V1-8": {
+   "statut": "levée",
+   "pourquoi": "6,5 s (t6.5.png) : la grille de 9 cartes occupe 3/4 de la largeur et 56 % de la hauteur ; 7,0 et 7,5 s idem. Voir P3 4,8–5,8 s."
+  },
+  "V1-9": {
+   "statut": "levée",
+   "pourquoi": "Taille, contraste et durée OK : pastille sombre, texte clair ≈ 46 px de corps de 3,4 s à 46,3 s (≈ 43 s), avant cela ligne grise ≈ 28 px de 0 à 3,4 s (crops m*.png, top20.png). MAIS la pastille est coupée par le bord haut à ≈ 10 moments : nouveau P2 (régression)."
+  }
+ },
+ "justifications": {
+  "durée 46.7 s": "acceptée : le propos repose sur 45 s de voix continue de Zak (129 mots, aucune respiration morte), les mots de Zak ne se réordonnent ni se changent (MONTAGE.md) ; la règle autorise la justification. Réserve : la phrase « chaque idée a son image propre » est fausse pour 29,6–35,0 s (voir V1-6).",
+  "palette": "acceptée avec réserve : le seuil d'un tiers de fond clair est tenu à l'image (44 % mesuré), mais le chiffre de 63 % est inexact ; la justification n'est pas nécessaire, la mesure suffit.",
+  "images réelles": "acceptée : Reel en graphisme et 3D générés ; aucune image réelle n'existe pour une analyse de marque (charte § Marques réelles : nom seul, pas de logo).",
+  "coupe_6_03": "acceptée : l'arrivée d'une rangée de cartes du mur à 6,03 s est visible sur rec2/rec.jpg (fond et canette continus 5,9–6,2 s), pas un raccord."
+ }
+}
