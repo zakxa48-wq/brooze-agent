@@ -11,6 +11,7 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 - 04/11 18 h · carrousel décryptage · Claire · prouver · « Un post, ligne par ligne. » · nouveau format · 9/10
 - 06/11 18 h · carrousel objections · Karim · convertir · « 3 phrases que tu te dis. » · nouveau format · 9/10
 - Stories 10 h : 05/11 question « seule ou à cinq » (Claire, attirer) · 06/11 teaser 18 h (Karim) · 07/11 logo n'est pas une accroche (Karim) · 08/11 avis franc, mot-clé AUDIT (Karim, convertir).
+- Liens Metricool : [quiz 02/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=5242185177772411316) · [décryptage 04/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7825260104597786567) · [objections 06/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=8842860836338157698) · stories [05/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=5345192515434661424) [06/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=1555598556538881672) [07/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=7928993100428559100) [08/11](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-6099358766239692489). Vérifié par getScheduledPosts : aucun doublon.
 - Réserve : R-001 à R-003 utilisées, R-008 à R-010 créées : 7 disponibles.
 - Refusés : aucun.
 
