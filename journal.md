@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 02/11 (3 h 41) — filet, savoir, Red Bull tentative 3
+- Filet : stories 02→06/11 couvertes, aucune en erreur, réserve 7 (aucune utilisée).
+- Savoir : séance réduite (S-0016 : 12 principes d'animation, règles de praticiens ; 3 notions revues) ; fanpagekarma.com et creatorflow.so fermés, yt-dlp et vidIQ indisponibles pendant le setup.
+- Red Bull t3 : V2-5 (mur 28,5–33,5 s découpé en 5 plans, étiquette de prix sur « produit dérivé »), V2-7 (mention y=360), V2-1 (coupes_internes 6,033) ; rendu 46,8 s, controle.py 0 problème. comparer + evaluation_3 au prochain passage. Rien programmé.
+
 Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---

@@ -6,20 +6,19 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 46.8 s",
-  "poids 86.1 Mo",
+  "poids 86.3 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.5 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
   "3 moments de gros texte (objectif ≤ 3)",
   "types de transition hors coupe : fondu (objectif ≤ 2)",
+  "glitchs : aucune alerte",
   "appris · bord_decouvert",
   "appris · marque_reelle",
   "appris · sous_titres_petit_mot",
   "engagement : aucune zone morte, ouverture vivante, relance max 2.5 s"
  ],
- "problemes": [
-  "glitchs : alertes FLASH/SAUT/NOIR/COUPE, voir les bandes"
- ],
+ "problemes": [],
  "montage": {
   "part_images_reelles": 1.0,
   "gros_textes": 3,
@@ -30,7 +29,7 @@
  "engagement": {
   "duree_s": 46.7,
   "ouverture": {
-   "luma_image_1": 18.9,
+   "luma_image_1": 18.8,
    "fondu_depuis_noir": false,
    "mouvement_premiere_demi_seconde": true
   },
@@ -41,7 +40,7 @@
    2.4,
    3.4,
    4.2,
-   6.1,
+   5.9,
    7.6,
    8.6,
    9.9,
@@ -54,27 +53,26 @@
    16.4,
    17.9,
    18.4,
-   19.2,
    19.6,
    20.1,
    20.6,
    21.4,
    22.2,
    22.6,
-   23.5,
+   23.6,
    24.9,
    25.3,
    26.4,
    26.8,
    27.3,
-   28.7,
-   29.4,
+   28.4,
+   29.6,
    31.0,
    31.6,
-   32.4,
-   33.1,
+   32.8,
+   33.2,
    34.0,
-   34.6,
+   34.8,
    36.5,
    37.3,
    38.1,
@@ -102,21 +100,28 @@
    15.4,
    15.5,
    18.4,
-   18.5,
-   19.2,
    21.4,
    22.2,
+   25.2,
    25.3,
    27.2,
-   27.3,
    27.4,
+   28.4,
+   28.5,
+   29.6,
+   29.7,
+   29.8,
+   29.9,
    31.6,
-   33.1
+   31.7,
+   32.8,
+   32.9,
+   33.0
   ],
   "boucle": {
    "ecart_image": 6.3,
-   "ecart_couleur": 0.05,
-   "mouvement_fin": 1.51,
+   "ecart_couleur": 0.07,
+   "mouvement_fin": 1.52,
    "mouvement_debut": 1.25,
    "son": {
     "debut_db": -16.0,
@@ -157,39 +162,30 @@
   "fps": 30.0,
   "coupes": [
    5.967,
-   6.033,
    7.633,
    8.6,
    10.067,
    11.0,
-   15.433,
    18.4,
    22.167,
    29.6,
-   31.567,
-   33.067
+   31.567
   ],
   "rapides": [
    [
     12.467,
-    12.7
+    12.667
    ],
    [
     24.5,
     24.767
    ],
    [
-    28.7,
-    28.933
+    32.7,
+    33.067
    ]
   ],
-  "alertes": [
-   [
-    "COUPE non déclarée",
-    6.033,
-    6.033
-   ]
-  ]
+  "alertes": []
  },
  "images_cles": [
   0.3,
