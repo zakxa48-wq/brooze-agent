@@ -2,6 +2,14 @@
 
 Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journal.
 
+## Ligne éditoriale (décision de Zak du 02/11) : voir `LIGNE_EDITORIALE.md`
+- Angle du Reel qui a le mieux marché (Koulechov, 01/11, ≈ 8 × la médiane à J+1) : une **expérience que le spectateur
+  vit**, pas un cours. Avec Apple et Sound design, 3 Reels sur 3 au-dessus de 2 × la médiane sont des démonstrations
+  (n = 3 : piste forte, à confirmer).
+- Pas 100 % sérieux (jeux, expériences, fictions annoncées), instructif même hors business, relié à Brooze, une
+  émotion nommée par contenu, carrousels bien plus visuels, un test osé par semaine avec un risque géré.
+- Reels livrés à Zak, qui publie ; Metricool = stories et carrousels seulement.
+
 ## Ce qu'on sait déjà (issu des Reels, voir brooze-direction/attention.md)
 - Une douleur concrète, dans les mots de Karim ou Claire, retient le plus.
 - Les partages sont presque à zéro : chaque post doit donner envie d'être envoyé à quelqu'un de précis.

@@ -9,6 +9,14 @@ la barre de qualité qu'il tiendrait.
 `attention.md` et `direction-artistique.md`.** C'est la charte, la voix et les avatars. Ils priment sur tout ce qui
 suit. Si le skill est introuvable, `charte.md` dans ce dépôt en contient l'essentiel.
 
+**Puis lis `LIGNE_EDITORIALE.md` (décision de Zak du 02/11)** : communauté engagée, contenus pas 100 % sérieux (jeux,
+expériences, devinettes, fictions annoncées), stories vraiment instructives même hors business et reliées à Brooze,
+carrousels bien plus visuels, une **émotion nommée** dans chaque contenu, un test osé par semaine avec un risque géré.
+Elle remplace le ton « conseils » des semaines précédentes partout où les deux divergent.
+
+**Ce que tu programmes dans Metricool : stories et carrousels uniquement.** Jamais un Reel (décision du 02/11) : les
+Reels sont livrés à Zak, qui les met en ligne lui-même (`AGENT_REEL.md` § 6).
+
 ## Constantes
 - Metricool : marque `broozeproduction`, brandId `7268093`, fuseau `Europe/Paris`.
 - Dépôt public : `zakxa48-wq/brooze-agent`. Images servies à
@@ -20,7 +28,7 @@ De **demain** jusqu'au **dimanche de la semaine suivante** (semaines du lundi au
 du lundi au dimanche qui suivent. Dans cette fenêtre :
 - **1 story par jour** (1 ou 2 images 1080×1920) ;
 - **2 à 3 carrousels** par semaine complète du lundi au dimanche (6 à 8 diapos 1080×1350), uniquement les
-  `jours_carrousel` de `config.json` (lundi, mercredi, vendredi), jamais un jour où un Reel est déjà programmé.
+  `jours_carrousel` de `config.json` (lundi, mercredi, vendredi), jamais le jour suggéré d'un Reel déjà livré à Zak (registre de `journal.md`).
   Sur des jours isolés hors semaine complète : stories seulement.
 - **Les Reels** (un par jour hors carrousel) sont fabriqués par la tâche quotidienne à partir de la banque de voix :
   tu n'en crées pas, mais tu en tiens compte (créneaux, story teaser du jour, pas de doublon d'angle).
@@ -49,7 +57,7 @@ Zak passe TOUJOURS avant une idée inventée. Ce que tu utilises, déplace-le da
 
 ### 1 bis. Audios en attente et banque de voix (jamais oubliés)
 Si `inbox/audio/` ou `urgent/` de la banque privée contient un audio : traite-le d'abord en suivant **`AGENT_REEL.md`** de bout en
-bout (un ou plusieurs Reels + story teaser), avant de programmer la semaine. Les Reels programmés occupent leurs
+bout (un ou plusieurs Reels livrés à Zak), avant de programmer la semaine. Les jours suggérés des Reels occupent leurs
 créneaux : la semaine se construit autour, sans doublon. Indexe aussi la banque (`reel/banque.py indexer`) ; la tâche
 quotidienne « Brooze montage inbox » se charge de remplir chaque jour libre avec un Reel (section « La banque de voix »
 de `AGENT_REEL.md`). **Carrousels uniquement les `jours_carrousel` de `config.json`** (lundi, mercredi, vendredi),
@@ -116,8 +124,9 @@ Claire aura plus d'enregistrements / portée que nos checklists, parce qu'il don
   Jamais « pour tout le monde ». Test : si « Voici des conseils pour vos vidéos » peut remplacer le hook, recommence.
 - **Pas de doublon d'idée** : compare chaque angle et chaque hook à `idees.md` et au journal. Un angle déjà pris
   (même idée, même si les mots changent) est refusé. Ajoute chaque nouvel angle à `idees.md`.
-- Pour chaque post, écris 3 idées différentes, note-les sur 10 (douleur concrète, clarté en 1 s, envie
-  d'enregistrer ou d'envoyer, nouveauté), garde la meilleure.
+- Pour chaque post, écris 3 idées différentes, note-les sur 10 (**émotion provoquée**, clarté en 1 s, envie de jouer,
+  d'enregistrer ou d'envoyer à quelqu'un, ce qu'on apprend même sans entreprise, lien avec Brooze, nouveauté), garde la
+  meilleure. Une idée sans émotion nette ou qui sonne « conseil de plus » est écartée.
 - Varie : alterne Karim et Claire, papier et encre, les piliers (diagnostic, méthode, coulisses, décryptage, preuve
   par la démonstration). Les stories d'une même semaine peuvent se répondre (teaser du carrousel du lendemain).
 
@@ -129,10 +138,18 @@ Claire aura plus d'enregistrements / portée que nos checklists, parce qu'il don
   Balisage : `*mot*` = l'unique accent cuivre de la diapo ; `**mot**` = mot appuyé.
   Tu peux ajouter une mise en page dans `templates/slide.html` pour un nouveau format, à condition de respecter la
   charte et de vérifier son rendu.
-- **Carrousel** : diapo 1 = le hook (marche en vignette), une idée par diapo, une diapo de preuve ou d'exemple, une
-  diapo à enregistrer, dernière diapo `cta` en `encre`. Jamais deux `encre` de suite.
-- **Story** : 1 ou 2 images, une seule idée lisible en 2 secondes, la dernière invite à agir (« Réponds « X » en
-  message »). Pas de sticker interactif (non disponible par l'API).
+- **Carrousel** (`LIGNE_EDITORIALE.md` § 4) : un petit jeu ou une petite histoire qu'on a envie de faire défiler
+  (énigme → réponse, « laquelle ? », expérience en images, fiction en cases…). Diapo 1 = le hook (marche en
+  vignette), **au moins 2 diapos sur 3 portent une image forte** (rendu 3D, illustration en code, photo ou rush de Zak,
+  image annotée), une direction artistique propre à ce carrousel, dernière diapo `cta` en `encre`. Crée les mises en
+  page qui manquent dans `templates/slide.html` (image pleine page, avant/après, image annotée, grille de choix,
+  révélation, cases de BD) et les images avec les outils de `reel/OUTILS.md`. Jamais deux `encre` de suite.
+- **Story** (`LIGNE_EDITORIALE.md` § 3) : 1 ou 2 images (3 pour une série ou une mini-fiction), une idée lisible en
+  2 secondes, qui apprend vraiment quelque chose ou fait jouer (quiz question → réponse, vrai ou faux, illusion
+  expliquée, mini-expérience, coulisse, histoire inventée **annoncée comme telle**). La dernière invite à agir
+  (répondre en message, deviner, envoyer à quelqu'un). Pas de sticker interactif (non disponible par l'API).
+- Chaque `post.json` déclare `"emotion": {"quoi", "comment", "ou"}` et, pour un test osé, `"test_ose": {"quoi",
+  "pourquoi", "risque", "garde_fou", "mesure", "arret"}`.
 - **Description de carrousel** : format de `ecrire.md` (accroche, valeur, Brooze au « nous », « Envoie-nous un
   message → @broozeproduction », question binaire, partage ciblé, 3 hashtags maximum).
 
@@ -141,15 +158,20 @@ Claire aura plus d'enregistrements / portée que nos checklists, parce qu'il don
 npm install --silent && node render.mjs posts/<id>/post.json
 ```
 - Le script refuse ce qui viole la charte (2 cuivres, emoji) et signale les débordements.
-- **Regarde `planche.png` puis chaque image**, avec tes yeux. Note sur 10 : arrêt du pouce, lisibilité sur
-  téléphone, charte (couleurs, typo, un seul cuivre, zone sûre), vérité, cible précise, « ne fait pas IA
-  générique », orthographe et typographie françaises (espace avant « ? ! : »).
+- **Regarde `planche.png` puis chaque image**, avec tes yeux. Note sur 10 : arrêt du pouce, **émotion ressentie**
+  (laquelle, où : dis-la avant de relire la déclaration ; aucune = refusé), **divertissement** (on veut la suite ?),
+  ce qu'on apprend, **qualité visuelle** (carrousel : ≥ 2 diapos sur 3 avec une image forte, planche différente des
+  3 carrousels précédents), lisibilité sur téléphone, charte (couleurs, typo, un seul cuivre, zone sûre), vérité
+  (fiction annoncée), lien avec Brooze, « ne fait pas IA générique », orthographe et typographie françaises (espace
+  avant « ? ! : »).
 - Sous 8 sur un critère : corrige et refais le rendu, 3 tours maximum. Toujours sous 8 : **ne programme pas ce post**,
   écris pourquoi dans le journal (section « Refusés ») et dans le récap. Une story ratée ne part jamais : ce jour-là,
   c'est une story de la **réserve** qui part (`posts/_reserve-stories/`, déjà contrôlée). Un jour sans story n'arrive pas.
 - Vérité : aucun chiffre, client, témoignage ou résultat inventé. Les seuls chiffres permis sont ceux de
   `attention.md`, du journal (nos vraies stats) ou d'une source publique citée. Un exemple fictif est présenté comme
-  un exemple (« Même restaurant, deux accroches »), avec un commerce générique ou une marque fictive.
+  un exemple (« Même restaurant, deux accroches »), avec un commerce générique ou une marque fictive. Une histoire
+  inventée est annoncée ou évidente (« Petite histoire inventée : », personnage stylisé) et ne se présente jamais
+  comme un vrai client de Brooze, un vrai témoignage ou un vrai résultat.
 
 ### 8. Programmer
 1. `bash outils/git_main.sh fin /home/user/brooze-agent "Semaine du <date> : <n> posts"` (doit afficher « OK : poussé
@@ -195,4 +217,5 @@ Le message final de ta session reprend ce récap en 10 lignes maximum.
 - Envoyer un message privé, écrire un commentaire, liker, suivre, supprimer ou modifier un post déjà programmé ou
   publié, dépenser de l'argent (aucun « boost », aucune pub).
 - Programmer un post qui n'a pas passé le contrôle qualité, ou si une étape a échoué.
+- Programmer un Reel dans Metricool (programmé, brouillon ou en validation) : les Reels sont livrés à Zak.
 - Envoyer un e-mail à quelqu'un d'autre que Zak.

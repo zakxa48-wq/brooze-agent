@@ -102,6 +102,10 @@ Les vidéos d'exercice ne sont pas versionnées.
      copie) » dans `veille.md` § Demandes ; la tâche de montage la traite au prochain jour libre ;
    - publication échouée → la reprogrammer **une seule fois** au prochain bon créneau (`createScheduledPost`, mêmes
      médias et texte), le noter dans `veille.md` et le journal de brooze-agent ;
+   - **Reels livrés à Zak** (`posts/*-reel-*/post.json`, `statut: "livre"`) : chercher chacun dans les Reels publiés
+     (même jour ou après, durée et légende identiques) ; trouvé → `statut: "publie"`, date réelle, mesure comme les
+     autres et teaser éventuel (AGENT_REEL.md § 6.6) ; pas en ligne 3 jours après le jour suggéré → une ligne dans le
+     récap, sans insister. Un Reel n'est **jamais** reprogrammé ni programmé dans Metricool (décision du 02/11) ;
 5. **Jamais** : répondre à un commentaire ou un message, liker, suivre, supprimer, dépenser.
 6. **Alerte** (PushNotification, et mail seulement si urgent) **uniquement** si : post viral (≥ 3× la médiane),
    chute forte (abonnés ou vues ≤ 0,4× sur 3 jours), échec de publication, commentaire ou message signalé qui demande
