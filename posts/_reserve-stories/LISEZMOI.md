@@ -13,3 +13,6 @@ sur main (URL raw en 200). `reserve.json` tient l'état : `[{id, angle, pilier, 
   story de réserve part, son angle entre dans `idees.md`.
 - **Utilisation** : la plus ancienne disponible dont l'angle n'a pas été vu depuis 4 semaines et qui équilibre
   attirer / prouver / convertir (`data/cerveau/marketing.md`).
+
+## Depuis le 02/11
+Les nouvelles stories de réserve suivent `LIGNE_EDITORIALE.md` § 3 : une vraie chose apprise ou un vrai jeu (quiz, vrai ou faux, illusion expliquée, mini-expérience, histoire inventée annoncée comme telle), une émotion nommée dans `post.json`, reliée à Brooze en une ligne.

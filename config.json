@@ -17,5 +17,11 @@
     "par_jour": 1,
     "heure_cible": "18:00",
     "ecart_min_story_h": 3
+  },
+  "reels_par_metricool": false,
+  "reels_livraison": {
+    "a": "zakxa48@gmail.com",
+    "depuis": "2026-11-02",
+    "note": "Zak publie les Reels lui-même ; Metricool = stories et carrousels seulement"
   }
 }
