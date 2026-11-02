@@ -1,0 +1,101 @@
+{
+ "defauts": [
+  {
+   "priorite": "P2",
+   "de": 14.4,
+   "a": 43.5,
+   "quoi": "RÉGRESSION de V2-7 : la pastille « analyse indépendante / aucun lien avec la marque », descendue à y ≈ 95–260 px pour sortir du bord haut, tombe maintenant sous les gros titres : (a) 14,43–15,43 s « Créer du contenu. » est posé PAR-DESSUS les 2 lignes de la mention, qui sont grisées et illisibles ; (b) 36,4–37,7 s « vends une émotion. » idem, mention grisée sur noir et coupée par le titre ; (c) 42,70–43,47 s (0,8 s) la mention a disparu (écran quasi noir, CTA déjà là). Au total 111 images (3,7 s) où la mention obligatoire n'est ni entière ni lisible.",
+   "preuve": "Script OpenCV sur les 1296 images 3,3–46,5 s (correspondance de contours multi-échelle de la mention, score ≥ 0,6) : 1185 images trouvées, pastille la plus haute à y = 94 px (7,40 ; 8,47 ; 29,40 s) donc la géométrie V2-7 est tenue ; les 111 images à score < 0,6 forment exactement 14,43–15,43 ; 36,4–37,7 ; 42,7–43,47 ; 46,07–46,47 s. Images regardées à 14,5 / 14,9 / 15,0 / 15,4 / 36,5 / 36,9 / 37,0 / 37,6 / 42,7 / 42,9 / 43,1 / 43,3 : titre blanc 800 par-dessus le texte gris de la mention ; 42,9–43,3 aucune mention.",
+   "condition": "Sur 3,4–46,3 s, à chaque image (1/30 s), les 2 lignes de la mention sont à pleine opacité (contraste ≥ 4,5:1 avec leur fond), n'intersectent la boîte d'aucun autre texte (gros titre, sous-titre, CTA) et ne disparaissent jamais plus de 0,1 s ; vérifiable par le même script (aucune image à score < 0,6 hors fondu de boucle 46,0–46,4) et en regardant 14,4–15,5 et 36,4–37,7 s.",
+   "piste": "Garder la pastille en calque fixe et déplacer plutôt les gros titres « Créer du contenu. » (14,4) et « vends une émotion. » (36,4) sous y ≈ 330 px, ou les faire entrer plus bas ; garder la mention à opacité 1 pendant les fondus au noir 36–37,7 et 42,7–43,5.",
+   "nouveau_pourquoi": "régression causée par la correction de V2-7 : la mention n'était pas à cet endroit avant (bord haut), le déplacement la met en collision avec les titres ; collision invisible tant que la mention était coupée en haut"
+  },
+  {
+   "priorite": "P3",
+   "de": 46.0,
+   "a": 46.5,
+   "quoi": "Boucle : double exposition canette 2D + canette 3D et double mention (pastille 2 lignes fantôme + ligne unique) pendant ≈ 0,4 s.",
+   "preuve": "images 46,0 / 46,1 / 46,4 s ; jonction.jpg",
+   "condition": "Conseil : fondu de boucle sans doublon de texte, ou raccord sec 2D→3D.",
+   "piste": "Couper la pastille 2 lignes à 45,9 s au lieu de la laisser fondre.",
+   "nouveau_pourquoi": "conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.6,
+   "a": 37.7,
+   "quoi": "Écran presque noir 35,6–37,0 s (carte fantôme, luma ≈ 10) entre « ne vends pas un produit » et « vends une émotion ».",
+   "preuve": "s_36 : images 36,0 / 36,5 / 37,0 s ; relances 34,8 → 36,5 → 37,3",
+   "condition": "Conseil : un mouvement net toutes les 1,2 s.",
+   "piste": "Faire battre la carte.",
+   "nouveau_pourquoi": "conseil, déjà signalé en V2-8"
+  },
+  {
+   "priorite": "P3",
+   "de": 4.8,
+   "a": 5.8,
+   "quoi": "Fond gris quasi vide, canette minuscule coupée en bas, ≈ 1 s sur « En réalité, ».",
+   "preuve": "images 5,0 et 5,5 s",
+   "condition": "Conseil : un sujet ≥ 1/4 de l'écran dès 5,0 s.",
+   "piste": "Entrer les cartes 0,5 s plus tôt.",
+   "nouveau_pourquoi": "conseil, déjà signalé en V2-9"
+  },
+  {
+   "priorite": "P3",
+   "de": 38.0,
+   "a": 42.5,
+   "quoi": "Le pouls (même cadre, même courbe blanche) reste 4,5 s ; seul le tracé bat. Tient grâce à l'audio et aux sous-titres mais c'est le plus long plan fixe du Reel.",
+   "preuve": "images 38,0 → 42,5 s toutes les 0,5 s",
+   "condition": "Conseil : un changement de cadrage ou d'échelle à ≈ 40,3 s.",
+   "piste": "Zoom serré sur le pic à « Besoin d'une vidéo ».",
+   "nouveau_pourquoi": "conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 3.4,
+   "a": 5.0,
+   "quoi": "Raccord de style : la canette 3D photoréaliste devient d'un coup une canette 2D plate (anneau blanc, aplat) ; même objet, deux niveaux de finition. Revient à 43,5–46 s (CTA 2D) puis la 3D reparaît à 46,1 s.",
+   "preuve": "images 3,0 / 3,5 / 4,0 s et 43,5–45,5 s",
+   "condition": "Conseil : garder la 3D jusqu'à 5,0 s ou un fondu enchaîné lent.",
+   "piste": "Réutiliser le rendu 3D en fin de CTA.",
+   "nouveau_pourquoi": "conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.4,
+   "quoi": "Mention de début en ligne unique grise très petite (corps ≈ 28 px, contraste ≈ 4:1) ; premier cadre quasi noir avec seulement « Red » en sous-titre.",
+   "preuve": "images 0,0–3,0 s",
+   "condition": "Conseil : mention plus contrastée ; image 1 plus riche que du noir.",
+   "piste": "",
+   "nouveau_pourquoi": "conseil"
+  },
+  {
+   "priorite": "P3",
+   "de": 13.0,
+   "a": 33.0,
+   "quoi": "Détails : pastille translucide laissant voir les bords des cartes à 13,8 et 32,8 s ; 3 pictogrammes répétés ×3 dans le mur (effet template) ; fond papier gris vignetté loin du #EDEBE7 ; sous-titres à y ≈ 79 % dans la zone d'interface Instagram.",
+   "preuve": "images 13,8 / 32,8 s ; s_12, s_24",
+   "condition": "Conseil.",
+   "piste": "",
+   "nouveau_pourquoi": "conseil"
+  }
+ ],
+ "conditions_precedentes": {
+  "V2-1": {
+   "statut": "levée",
+   "pourquoi": "controle.json (15:20, après le rendu de 15:09) : problemes = [] et « glitchs : aucune alerte » ; _glitchs/rapport.json alertes = [] (coupes 5,97 7,63 8,6 10,07 11,0 18,4 22,17 29,6 31,57 ; images rapides 12,47 / 24,5 / 32,7 vérifiées, ce sont des entrées de cartes, pas des sauts)."
+  },
+  "V2-5": {
+   "statut": "levée",
+   "pourquoi": "12–36 s, images toutes les 0,5 s + corrélation à 10 i/s : 12,5–15,4 cartes zoomées (pendule, roue), 15,5–18,4 barres de pièces (« dépensent »), 18,4–21,4 carte F1 / espace, 21,5–24,4 canette barrée (« ne te vendent même pas »), 24,4–29 gros plans de cartes frisson / dépassement (« ils vendent… »), 29–29,6 canette, 29,6–31,6 mur, 31,6–33 canette + étiquette de prix (« le produit dérivé » à 32,5 s), 33–35,5 mur qui converge : 10 images distinctes. Plus longue image identique : 21,6–24,3 s = 2,7 s (≤ 4 s) ; le mur n'est plus que 2,0 s (29,6–31,6) puis 2,5 s (33–35,5). Dépenser, ne pas vendre, vendre (adrénaline, frisson) et produit dérivé ont chacune leur image."
+  },
+  "V2-7": {
+   "statut": "levée",
+   "pourquoi": "Script de suivi de la pastille sur les 1296 images de 3,3 à 46,5 s : 1185 images trouvées, pastille entière à y ≥ 94 px (minimum à 7,40 / 8,47 / 29,40 s), plus aucun bord tranché (contre 27 images avant). Les 111 images non trouvées (14,43–15,43 ; 36,4–37,7 ; 42,7–43,47 ; 46,07–46,47 s) ont été regardées : pastille dans le cadre mais cachée par un titre ou absente : traité comme défaut P2 distinct (régression), voir défauts."
+  }
+ },
+ "justifications": {
+  "engagement · durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée : 45 s de voix continue (hook, thèse, 3 preuves, leçon), la rétention est tenue (aucune zone morte, relance max 2,5 s) ; l'ennui constaté n'est pas lié à la durée."
+ }
+}

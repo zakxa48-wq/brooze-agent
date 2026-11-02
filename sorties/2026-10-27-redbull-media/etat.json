@@ -1,6 +1,6 @@
 {
  "idee": "memo-2026-10-23-redbull-5a40aa-0000",
- "jour": "2026-10-31",
+ "jour": "2026-11-05",
  "etape": "controle",
  "faites": [
   "indexe",
@@ -25,7 +25,8 @@
   "01/11 : evaluation_2 -> verdict_2 À REPRENDRE (V2-1 alerte COUPE 6,03 s à corriger à la source ou déclarer ; V2-5 mur 3x3 reste 5,4 s à 29,6-35 s, 'produit dérivé' sans image propre ; V2-7 mention 'analyse indépendante' tranchée par le bord haut sur 27 images : la sortir de la couche caméra, y>=60 px)",
   "02/11 : tentative 3 : scene.py (V2-5 mur 28,5-33,5 s découpé en 5 plans : canette seule, recul, dérive, canette+étiquette de prix « produit dérivé », retour mur ; V2-7 mention remontée y=360 dans le plan) + reel.json coupes_internes [6.033] (V2-1) ; plan.mp4 en re-rendu",
   "02/11 3h-3h33 : tentative 3 : plan.mp4 re-rendu, son.py, reel.mp4 46,8 s (86 Mo, non versionné) par morceaux ; controle.py : 0 problème, aucune alerte glitch (V2-1 levée), engagement OK ; reste comparer + evaluation_3 (nouveau sous-agent : vérifier V2-1/5/7)",
-  "02/11 15h41 : tentative 3 : setup lent (whisper medium inutile), liens .outils créés à la main, son.py, rendu --morceaux 46,8 s OK, controle.py 0 problème/0 glitch, comparer fait, inspecter fait ; evaluation_3 confiée à un nouveau sous-agent"
+  "02/11 15h41 : tentative 3 : setup lent (whisper medium inutile), liens .outils créés à la main, son.py, rendu --morceaux 46,8 s OK, controle.py 0 problème/0 glitch, comparer fait, inspecter fait ; evaluation_3 confiée à un nouveau sous-agent",
+  "02/11 16h20 : evaluation_3 -> verdict_3 À REPRENDRE : V2-1, V2-5, V2-7 levées ; reste V3-4 (mention « analyse indépendante » cachée/grisée par un autre texte à 14,43–15,43 s et 36,4–37,7 s, absente 42,70–43,47 s : 111 images). Jour réservé décalé au 05/11 (règle du retard). Tentative 4 à faire."
  ],
- "notes": "Tentative 3 : evaluation_3.json -> verdict.py evaluer sorties/2026-10-27-redbull-media. Si PUBLIABLE : publier (jour 03/11 : décaler au 05/11 si pas prêt). Sinon appliquer TOUTES les conditions."
+ "notes": "Tentative 4 : appliquer SEULEMENT V3-4 (mention pleine opacité, sans intersection avec un autre texte, sans trou > 0,1 s sur 3,4–46,3 s ; script reel_sceptique/suivi_pastille.py : aucune image à score < 0,6 hors fondu de boucle 46,0–46,4). Puis re-rendre (plan.mp4 si scene.py touché, sinon seulement reel.json), controle.py, comparer, nouveau sous-agent evaluation_4 (vérifier V3-4 d'abord). Conseils P3 optionnels : V3-5 doublon de texte à la boucle, V3-8 pouls fixe."
 }
