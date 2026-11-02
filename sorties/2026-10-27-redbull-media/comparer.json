@@ -4,18 +4,19 @@
   "format": "1080×1920",
   "ips": 30.0,
   "debit_mbps": 14.7,
-  "plans": 5,
-  "duree_plan_moy_s": 9.34,
-  "duree_plan_med_s": 3.4,
-  "duree_plan_min_s": 3.0,
-  "duree_plan_max_s": 25.3,
+  "plans": 6,
+  "duree_plan_moy_s": 7.78,
+  "duree_plan_med_s": 4.2,
+  "duree_plan_min_s": 2.1,
+  "duree_plan_max_s": 18.2,
   "coupes_3s": 0,
   "premiere_coupe_s": 3.4,
   "coupes": [
    3.4,
-   15.4,
    18.4,
-   21.4
+   21.4,
+   26.4,
+   28.5
   ],
   "transitions": [
    {
@@ -29,13 +30,13 @@
     "type": "fondu"
    },
    {
-    "t": 7.9,
-    "d": 0.8,
+    "t": 8.0,
+    "d": 0.7,
     "type": "fondu"
    },
    {
-    "t": 9.2,
-    "d": 0.8,
+    "t": 9.3,
+    "d": 0.7,
     "type": "fondu"
    },
    {
@@ -50,7 +51,7 @@
    },
    {
     "t": 20.5,
-    "d": 0.3,
+    "d": 1.2,
     "type": "fondu"
    },
    {
@@ -64,28 +65,33 @@
     "type": "filé horizontal"
    },
    {
-    "t": 26.3,
-    "d": 0.3,
-    "type": "fondu"
-   },
-   {
-    "t": 27.0,
-    "d": 0.6,
-    "type": "fondu"
-   },
-   {
-    "t": 28.4,
-    "d": 1.2,
-    "type": "fondu"
-   },
-   {
-    "t": 33.6,
-    "d": 1.2,
-    "type": "fondu"
-   },
-   {
-    "t": 34.8,
+    "t": 27.2,
     "d": 0.4,
+    "type": "fondu"
+   },
+   {
+    "t": 28.2,
+    "d": 0.5,
+    "type": "fondu"
+   },
+   {
+    "t": 29.6,
+    "d": 0.5,
+    "type": "fondu"
+   },
+   {
+    "t": 31.6,
+    "d": 0.8,
+    "type": "fondu"
+   },
+   {
+    "t": 32.7,
+    "d": 0.5,
+    "type": "fondu"
+   },
+   {
+    "t": 34.3,
+    "d": 0.9,
     "type": "noir"
    },
    {
@@ -97,67 +103,64 @@
     "t": 42.7,
     "d": 0.4,
     "type": "noir"
-   },
-   {
-    "t": 45.9,
-    "d": 0.3,
-    "type": "filé vertical"
    }
   ],
   "transitions_progressives": 17,
   "camera": {
-   "dérive lente": 3,
+   "dérive lente": 1,
+   "zoom arrière": 3,
    "zoom avant": 1,
    "épaule": 1
   },
   "camera_par_plan": [
    "dérive lente",
-   "dérive lente",
-   "dérive lente",
+   "épaule",
    "zoom avant",
-   "épaule"
+   "zoom arrière",
+   "zoom arrière",
+   "zoom arrière"
   ],
   "palette": {
    "couleurs": [
     {
      "hex": "#080605",
-     "part": 0.54
+     "part": 0.53
     },
     {
-     "hex": "#68625a",
+     "hex": "#69635b",
      "part": 0.15
     },
     {
-     "hex": "#e6e2da",
-     "part": 0.14
+     "hex": "#ebe7df",
+     "part": 0.13
     },
     {
-     "hex": "#2b2520",
+     "hex": "#a4a099",
+     "part": 0.1
+    },
+    {
+     "hex": "#2d2721",
      "part": 0.09
-    },
-    {
-     "hex": "#9d9992",
-     "part": 0.08
     }
    ],
-   "luminosite": 0.27,
-   "saturation": 0.28,
+   "luminosite": 0.28,
+   "saturation": 0.26,
    "temperature": "chaude"
   },
   "texte": {
-   "part_du_temps": 0.98,
+   "part_du_temps": 0.96,
    "hauteur_px_med": 42.0,
-   "hauteur_px_min": 29.0,
-   "mots_par_image": 7.8,
+   "hauteur_px_min": 30.0,
+   "mots_par_image": 7.7,
    "zones": {
-    "haut": 0.78,
+    "haut": 0.79,
     "milieu": 0.0,
     "bas": 0.21
    },
-   "changements_par_s": 1.03,
-   "premieres_3s": "analyse marque Red analyse Red Bull analyse indépendante lien la marque ne analyse indépendante lien la marque ne vend pas boissons énergisantes boissons énergisantes analyse indépendante lien la marq"
+   "changements_par_s": 0.99,
+   "premieres_3s": "analyse Red analyse Red Bull analyse indépendante lien la marque ne analyse indépendante lien la marque ne vend pas boissons énergisantes boissons énergisantes analyse indépendante lien la marque et t"
   },
-  "nettete_med": 197.0,
+  "nettete_med": 155.0,
   "son": {
    "present": true,
    "lufs": -14.0,
@@ -166,18 +169,18 @@
    "energie_moy_db": -18.9,
    "dynamique_db": 12.0,
    "attaques_par_s": 1.56,
-   "coupes_sur_attaque": 0.25,
+   "coupes_sur_attaque": 0.4,
    "coupes_sur_attaque_si_hasard": 0.39
   }
  },
- "planche": "/tmp/tmpoawzv1qb/reel.jpg",
+ "planche": "/tmp/tmpvy_k_jv4/reel.jpg",
  "references": [
   "mes-videos-reel-apple-v3"
  ],
  "axes": {
   "rythme": {
    "reel": {
-    "duree_plan_moy_s": 9.34,
+    "duree_plan_moy_s": 7.78,
     "coupes_3s": 0
    },
    "ref": {
@@ -188,8 +191,8 @@
   },
   "lisibilite": {
    "reel": {
-    "hauteur_px_min": 29.0,
-    "mots_par_image": 7.8
+    "hauteur_px_min": 30.0,
+    "mots_par_image": 7.7
    },
    "ref": {
     "hauteur_px_min": 29.0,
@@ -199,9 +202,9 @@
   },
   "finition": {
    "reel": {
-    "nettete": 197.0,
+    "nettete": 155.0,
     "lufs": -14.0,
-    "coupes_sur_attaque": 0.25
+    "coupes_sur_attaque": 0.4
    },
    "ref": {
     "nettete": 133.0,
@@ -214,7 +217,7 @@
  "raisons": [
   {
    "cle": "comparer.rythme.duree_plan",
-   "mesure": 9.34,
+   "mesure": 7.78,
    "exige": "≤ 3.48 s",
    "quoi": "plans trop longs en moyenne",
    "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs)"
@@ -228,7 +231,7 @@
   },
   {
    "cle": "comparer.lisibilite.mots",
-   "mesure": 7.8,
+   "mesure": 7.7,
    "exige": "≤ 4.65",
    "quoi": "trop de mots à l écran à la fois",
    "condition": "au plus 4.65 mots par image en moyenne"
