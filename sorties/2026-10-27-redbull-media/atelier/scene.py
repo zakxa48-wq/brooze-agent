@@ -38,8 +38,11 @@ EVTS = [
     (T(75) - .2, T(75) + .05, 1.8, -390, 0, expo(7)),             # adrénaline
     (T(77) - .2, T(77) + .05, 1.8, -390, 570, expo(7)),           # frisson
     (T(80) - .2, T(80) + .05, 1.8, 390, 0, expo(7)),              # dépassement de soi
-    (T(82), T(83) + 1.4, .58, 0, 250, sortie(3)),                 # la canette revient, minuscule
-    (T(83) + 1.5, T(98) - .1, .64, 0, 290, doux),
+    (T(83) - .25, T(83) + .15, 1.7, -330, CAN_Y - 90, expo(7)),   # « la canette que tu achètes » : la canette seule, en gros plan
+    (T(87) - .1, T(87) + .4, .62, 0, 250, sortie(3)),             # « au supermarché » : recul sur le mur
+    (T(89), T(93) - .3, .72, 0, 200, doux),                       # « c'est juste le » : dérive lente sur le mur
+    (T(93) - .3, T(94) + .2, 1.6, -300, CAN_Y - 50, expo(7)),     # « produit dérivé » : canette + étiquette de prix en gros plan
+    (T(95) - .05, T(96) + .3, .8, 0, 120, sortie(3)),             # « de leurs vidéos » : retour sur le mur
     (T(98), T(108), .9, 0, 0, doux),
     (T(121) + .25, T(121) + .4, 1.5, 0, CAN_Y, tenir),            # boucle : retour au cadrage du début
 ]
@@ -136,7 +139,7 @@ comp.ajouter(Forme(ellipse(78, 12), remplissage='#4C4842', parent=can, position=
 comp.ajouter(Forme(rect(210, 16, 8), remplissage='#1A1814', parent=can, position=(0, 272)))
 # étiquette « produit dérivé » (forme pure, sans texte), seulement quand elle est tombée du mur
 comp.ajouter(Forme(points([(-70, -40), (70, -40), (70, 40), (-70, 40), (-100, 0)], True), remplissage=CU, trait=INK, epaisseur=3, parent=monde,
-                   position=(-330 + 105, CAN_Y - 70), rotation=14, echelle=.55, opacite=lambda t: val(K((T(94), 0, lin), (T(94) + .25, 1)), t) * (0 if t > T(121) else 1)))
+                   position=(-330 + 125, CAN_Y - 40), rotation=14, echelle=.95, opacite=lambda t: val(K((T(94), 0, lin), (T(94) + .25, 1)), t) * (0 if t > T(121) else 1)))
 
 
 # « ne te vendent même pas de la taurine » : la canette seule, barrée d'un trait de cuivre qui se dessine
@@ -195,7 +198,7 @@ comp.ajouter(Forme(rect(1400, 8), remplissage=PAPER, position=(540, 1000), opaci
 comp.ajouter(Solide(INK, opacite=lambda t: val(K((T(121) + .1, 0, lin), (T(121) + .3, 1, lin), (T(122) + .1, 1, lin), (T(122) + .6, 0)), t)))
 # mention de charte (marque réelle analysée) : discrète, en haut, toute la durée
 mention_op = lambda t: 0 if (t > T(121) + .1 and t < T(121) + .9) else 1
-comp.ajouter(Forme(rect(900, 150, 28), remplissage=INK, position=(540, 225), opacite=lambda t: .88 * mention_op(t)))
-comp.ajouter(Texte('analyse indépendante', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 200), opacite=mention_op))
-comp.ajouter(Texte('aucun lien avec la marque', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 252), opacite=mention_op))
+comp.ajouter(Forme(rect(900, 150, 28), remplissage=INK, position=(540, 360), opacite=lambda t: .88 * mention_op(t)))
+comp.ajouter(Texte('analyse indépendante', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 334), opacite=mention_op))
+comp.ajouter(Texte('aucun lien avec la marque', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 386), opacite=mention_op))
 comp.ajouter(Reglage(effets=[Grain(intensite=.035), Vignette(force=.28)]))
