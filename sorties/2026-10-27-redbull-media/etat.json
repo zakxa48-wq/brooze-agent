@@ -1,7 +1,7 @@
 {
  "idee": "memo-2026-10-23-redbull-5a40aa-0000",
  "jour": "2026-11-05",
- "etape": "controle",
+ "etape": "publie",
  "faites": [
   "indexe",
   "compris (Red Bull, taurine, Ils dépensent, ne vends/vends, Brooze Production corrigés ; fenêtre 0-45,62 s)",
@@ -29,7 +29,8 @@
   "02/11 16h20 : evaluation_3 -> verdict_3 À REPRENDRE : V2-1, V2-5, V2-7 levées ; reste V3-4 (mention « analyse indépendante » cachée/grisée par un autre texte à 14,43–15,43 s et 36,4–37,7 s, absente 42,70–43,47 s : 111 images). Jour réservé décalé au 05/11 (règle du retard). Tentative 4 à faire.",
   "03/11 3h41 : tentative 4 : V3-4 corrigé à la source : scene.py mention_op=1 (mention jamais masquée, y compris 42,7–43,5 s), reel.json titre_y 300→680 sur les scènes 11 (« Créer du contenu. ») et 28 (« vends une émotion. ») pour ne plus recouvrir la pastille (y≈285–435) ; plan.mp4 en re-rendu ; reste rendu final, controle.py, suivi de pastille, comparer, evaluation_4",
   "03/11 : plan.mp4 re-rendu (V3-4 corrigé), voix.wav + mix.flac recréés, liens reel/.outils recréés, rendu final --morceaux lancé ; reste controle.py, suivi de pastille (aucune image < 0,6 hors 46,0–46,4), comparer, evaluation_4",
-  "03/11 : rendu final reel.mp4 46,8 s ; controle.py 0 problème, 0 glitch ; images 14,9/37,0/43,1 s regardées : titres ne recouvrent plus la mention, mention présente à 43,1 s ; MAIS à 37,0 s la mention paraît grisée (fondu au noir 36–37,7 s de la scène ?) : à vérifier avec suivi_pastille.py. Reste comparer + evaluation_4 (nouveau sous-agent, vérifier V3-4 d'abord)"
+  "03/11 : rendu final reel.mp4 46,8 s ; controle.py 0 problème, 0 glitch ; images 14,9/37,0/43,1 s regardées : titres ne recouvrent plus la mention, mention présente à 43,1 s ; MAIS à 37,0 s la mention paraît grisée (fondu au noir 36–37,7 s de la scène ?) : à vérifier avec suivi_pastille.py. Reste comparer + evaluation_4 (nouveau sous-agent, vérifier V3-4 d'abord)",
+  "03/11 : tentative 5, voile_titre bas, verdict_5 PUBLIABLE, paquet posts/2026-11-05-reel-redbull-media"
  ],
- "notes": "Tentative 4 rendue. À faire : suivi de la pastille (aucune image à score < 0,6 hors 46,0–46,4), si grisée à 36,4–37,7 s mettre la mention hors du fondu (opacité 1 en calque supérieur), comparer, evaluation_4, verdict. Setup léger : liens reel/.outils à recréer (voir journal), whisper inutile."
+ "notes": "Livré à Zak le 03/11 (verdict_5 PUBLIABLE), suggéré 05/11 18 h ; attendre la mise en ligne (veille)."
 }

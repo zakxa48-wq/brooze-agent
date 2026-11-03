@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 03/11 (15 h 41) — veille, Red Bull PUBLIABLE et LIVRÉ
+- **Red Bull : verdict_5 PUBLIABLE** après 5 tentatives (V3-4 levée : la mention « analyse indépendante / aucun lien avec la marque » était grisée à ~49 % sous le voile sombre des gros titres ; nouvelle option moteur `voile_titre: "bas"` qui laisse le haut intact ; p97 texte ≥ 205/255, contraste ≥ 10,5:1 sur 3,4–45,9 s). 0 P1/P2, comparer non probante. Conseils P3 ouverts : fond vide 4,7–5,9 s, pouls fixe 38–42,7 s, raccord 3D→2D 2D plate, double exposition de boucle 0,4 s. Livré à Zak : posts/2026-11-05-reel-redbull-media, suggéré 05/11 18 h. Émotion : curiosité (« média »), énergie (« adrénaline »), frisson (« vends une émotion »).
+- Veille : Koulechov J+2 1 383 vues, aucun autre changement ; filet 04→07/11 OK, réserve 10, aucune erreur. Savoir du jour déjà fait à 3 h 41.
+
 ## 03/11 (3 h 41) — filet, savoir, Red Bull tentative 4 rendue
 - Filet : stories 03→06/11 programmées, aucune en erreur, réserve 10 (> 4).
 - Savoir : S-0017 (12 principes d'animation FR, lu en extrait), A-0011 (volume constant dans l'écrasement/étirement, à vérifier), 3 notions revues ; yt-dlp en 429 sur Mh3e-AjC51Q, vidIQ non joint.
@@ -112,6 +116,7 @@ signature** ou la **structure** d'un des 5 derniers ; chaque Reel ajoute au moin
 | 23/10 | 2026-10-23-apple-montre (v3 publiée) | « dire vs montrer » : une fiche technique imprimée sans fin (ce qu'on dit) contre des photos d'objets du quotidien sublimés (ce qu'on montre), autour d'un téléphone générique | **relief 2,5D** des rendus photoréalistes (parallaxe par pixel) | opposition qui bascule : la fiche domine, puis les photos prennent toute la place, titre-question, fin sur fond noir | photoréalisme fixe animé, **carte de profondeur + WebGL**, coups de zoom sur 4 mots, whip | Blender, moteur HTML |
 | 25/10 | 2026-10-24-spotify-wrapped | une carte « bilan » qui se duplique en champ de milliers, puis se retourne sur des visages | **retournement en vague de cartes (instanciation GPU)** | plan-séquence à caméra continue : accumulation exponentielle, rupture, plongée | **three.js InstancedMesh + shader, barres pilotées par la voix**, titres sur vidéo continue | three.js, moteur HTML |
 | 31/10 | 2026-10-29-koulechov | un même visage jamais animé, trois rangées d'objets clonées sur écran scindé (assiette, tombe, chiot) : l'émotion vient de l'objet, pas du visage | **boucle sur le visage de l'image 0 (bbox ±1 px)** et inversion douce des blocs de la timeline | démonstration en direct : hook visage, trois objets, révélation « effet Koulechov », timeline générique, tampon + abonne-toi | **Atelier 2D vectoriel (scène Python, calques, caméra 2,5D, flou de mouvement)**, battements de fond sur mots appuyés | Atelier, moteur HTML |
+| 03/11 (livré, suggéré 05/11) | 2026-10-27-redbull-media | une canette générique rapetisse à mesure que la caméra recule devant le mur de contenus qui fait vendre (analyse indépendante Red Bull) | **texte-fenêtre « MÉDIAS » (cache alpha d'une précomposition animée)** | inversion de hiérarchie : héros, recul, canette fantôme, mur d'extrême, pouls, retour minuscule + étiquette, fusion, viseur, boucle sur la canette 3D | **texte-fenêtre**, hiérarchie d'échelle pilotée par la voix, dégradés pré-calculés, voile de titre sans toucher la mention | Atelier 2D, three.js, moteur HTML |
 
 ---
 

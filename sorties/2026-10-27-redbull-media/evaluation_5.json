@@ -1,0 +1,117 @@
+{
+ "defauts": [
+  {
+   "priorite": "P3",
+   "de": 46.0,
+   "a": 46.5,
+   "quoi": "Boucle : double exposition canette 2D + canette 3D et mention double/grisée pendant le fondu (45,93–46,0 s p97 du texte 196 puis 142 à 46,0 s : exempté par la condition).",
+   "preuve": "images 45,97 s (planche low.png) ; jonction.jpg",
+   "condition": "Conseil : fondu de boucle sans doublon de texte, ou raccord sec.",
+   "piste": "Couper la pastille 2 lignes à 45,9 s.",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-6)"
+  },
+  {
+   "priorite": "P3",
+   "de": 4.7,
+   "a": 5.9,
+   "quoi": "Ennui : fond gris presque vide, mention seule, petite canette coupée en bas ≈ 1,2 s sur « En réalité, ».",
+   "preuve": "images 4,7 / 5,0 / 5,5 s ; engagement.png : creux 3,5–5,5 s",
+   "condition": "Conseil : un sujet ≥ 1/4 de l'écran dès 5,0 s.",
+   "piste": "Entrer les cartes 0,5 s plus tôt.",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-8)"
+  },
+  {
+   "priorite": "P3",
+   "de": 35.6,
+   "a": 37.0,
+   "quoi": "Ennui léger : écran quasi noir 35,6–36,6 s entre « un produit, » et « vends une émotion. » ; la mention est maintenant pleine (p97 = 222–236) donc c'est la respiration voulue avant la phrase-clé, tenue par la voix. Titre « vends une émotion. » lisible (blanc 235 sur noir 6–10, contraste > 14:1).",
+   "preuve": "images 36,2 / 36,8 / 37,0 / 37,5 s",
+   "condition": "Conseil : un micro-mouvement net à 36,4 s.",
+   "piste": "Faire battre la carte dès 36,4 s.",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-7)"
+  },
+  {
+   "priorite": "P3",
+   "de": 38.0,
+   "a": 42.7,
+   "quoi": "Ennui : pouls au même cadre ≈ 4,5 s, seul le tracé bat ; énergie sonore basse 38–43 s. Tient grâce à la voix.",
+   "preuve": "images 38,0 / 40,0 / 41,6 / 42,7 s ; engagement.png",
+   "condition": "Conseil : changement d'échelle vers 40,3 s.",
+   "piste": "Zoom serré sur le pic à « Besoin d'une vidéo ».",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-9)"
+  },
+  {
+   "priorite": "P3",
+   "de": 44.0,
+   "a": 45.9,
+   "quoi": "Ennui : CTA calme sur canette 2D immobile, énergie la plus basse du reel (≈ 0,3 vers 44–45 s, engagement.png) ; attendu pour un CTA mais c'est le moment où le doigt est sur « quitter ».",
+   "preuve": "images 43,5 / 44,0 s ; engagement.png",
+   "condition": "Conseil : un mouvement à 44,5 s (canette qui tourne, bouton qui pulse).",
+   "piste": "",
+   "nouveau_pourquoi": "nouveau mais conseil : creux d'énergie CTA, pas P1"
+  },
+  {
+   "priorite": "P3",
+   "de": 3.4,
+   "a": 5.0,
+   "quoi": "Raccord de style : canette 3D photoréaliste puis canette 2D plate à 3,4 s et en CTA ; la 3D revient à 46,1 s.",
+   "preuve": "images 3,35 / 5,0 / 45,0 / 46,2 s",
+   "condition": "Conseil : fondu enchaîné lent ou 3D conservée.",
+   "piste": "Réutiliser le rendu 3D en fin de CTA.",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-10)"
+  },
+  {
+   "priorite": "P3",
+   "de": 0.0,
+   "a": 3.4,
+   "quoi": "Mention de début en ligne unique, grise et très petite (≈ 28 px).",
+   "preuve": "images 0,0–3,35 s",
+   "condition": "Conseil : mention plus contrastée.",
+   "piste": "",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-11)"
+  },
+  {
+   "priorite": "P3",
+   "de": 7.4,
+   "a": 33.0,
+   "quoi": "Détails template : la pastille de mention est translucide et laisse voir les cartes (11,3 / 31,8 s), son 2e ligne déborde du bas de la pastille à 8,0–9,1 s ; la mention flotte et change d'échelle (1,0–1,1) avec la caméra ; pictogrammes de cartes ×3 ; « MÉDIAS » traversé de tiges (7,4–9,2 s) ; sous-titres à y ≈ 79 % dans la zone d'interface Instagram. Aucun effet IA vu (pas de scintillement, texte net, 3D propre).",
+   "preuve": "images 7,5 / 8,0 / 8,6 / 9,1 / 11,3 / 31,8 s (med.png)",
+   "condition": "Conseil.",
+   "piste": "Pastille opaque et fixe ; réserver la place de 2 lignes.",
+   "nouveau_pourquoi": "conseil, déjà signalé (V4-12)"
+  }
+ ],
+ "conditions_precedentes": {
+  "V2-1": {
+   "statut": "levée",
+   "pourquoi": "controle.json : problemes = [] ; aucun saut ni flash vus sur les planches ; le noir 35,6–37,0 est voulu."
+  },
+  "V2-5": {
+   "statut": "levée",
+   "pourquoi": "planche_cles.jpg : cartes, pièces, F1/espace/breakdance, canette barrée, mur ; aucune image identique > 4 s (rapport.md)."
+  },
+  "V2-7": {
+   "statut": "levée",
+   "pourquoi": "Mention entière dans le cadre à chaque image (haut du texte à y ≥ 120 px sur 1080x1920), aucun bord tranché."
+  },
+  "V3-4": {
+   "statut": "levée",
+   "pourquoi": "Script OpenCV (images ffmpeg 540x960, 1404 images, correspondance multi-échelle 0,7–1,5 de la mention par différence de gaussiennes, puis percentile 97 du texte et contraste (L1+0,05)/(L2+0,05) sur le fond local) sur 3,4–45,9 s (1 150 images) : percentile 97 du texte min 205/255 (14,2–15,5 s : min 213 ; 36,2–37,8 s : min 222 ; 42,6–43,6 s : min 222), contraste min 10,5:1 (min 12,1 sur 14,2–15,5 s ; 14,9 sur 36,2–37,8 s), fond médian ≤ 33/255, donc plus aucun palier à 49 % d'opacité. Le score de correspondance passe sous 0,6 sur ≈ 300 images (mention qui flotte en échelle/position, vérifié à la main à 5,0 / 11,3 / 22,5 / 29,0 / 34,9 / 37,2 / 41,6 s : mention toujours là, pleine, entière) : ce n'est pas une absence. Seules les images 45,93–46,0 s (fondu de boucle exempté, p97 196→142) sont sous les seuils. Aucune intersection avec un autre texte : titres à y ≥ 329 px (540x960) contre mention ≤ 212 px ; sous-titres à y ≈ 760 ; CTA ≈ 590 (540x960 ×2). Images regardées : 14,4 / 14,8 / 15,2 / 15,5 ; 36,2 / 36,8 / 37,0 / 37,5 ; 42,7 / 43,0 / 43,5 / 44,0 s : texte clair sur pastille sombre ou noir, lisible. Aucune absence > 0,1 s."
+  },
+  "V4-4": {
+   "statut": "levée",
+   "pourquoi": "même constat que V3-4 : mention pleine, sous les titres, jamais absente (42,7 / 43,0 / 43,5 s : p97 222–224, contraste ≈ 14,9:1)."
+  },
+  "V4-5": {
+   "statut": "levée",
+   "pourquoi": "p97 min 205 (≥ 200) et contraste min 10,5:1 (≥ 4,5) sur 3,4–45,9 s ; 14,2–15,5 s et 36,2–37,8 s sont à pleine opacité (213 et 222 min)."
+  }
+ },
+ "regression_titres": {
+  "statut": "aucune",
+  "pourquoi": "« Créer du contenu. » (14,4–15,4 s) : blanc 235, 2 lignes à y 330–590 (540x960), posé sur cartes noires, lisible à 14,4 (« Créer » entrant), 14,8 (« contenu. » en cours de révélation, masque voulu), 15,2 ; « vends une émotion. » (36,3–37,7 s) : blanc 235 sur noir 6–10, contraste > 14:1, lisible, sans collision avec le pouls ni la mention."
+ },
+ "justifications": {
+  "engagement · durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas": "acceptée comme aux tentatives 3–4 : 45 s de voix continue, aucune zone morte, relance max 2,5 s."
+ }
+}
