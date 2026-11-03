@@ -3,17 +3,16 @@
   "duree_s": 46.8,
   "format": "1080×1920",
   "ips": 30.0,
-  "debit_mbps": 14.8,
-  "plans": 7,
-  "duree_plan_moy_s": 6.69,
-  "duree_plan_med_s": 3.4,
+  "debit_mbps": 14.7,
+  "plans": 6,
+  "duree_plan_moy_s": 7.8,
+  "duree_plan_med_s": 4.2,
   "duree_plan_min_s": 2.1,
   "duree_plan_max_s": 18.3,
   "coupes_3s": 0,
   "premiere_coupe_s": 3.4,
   "coupes": [
    3.4,
-   15.4,
    18.4,
    21.4,
    26.4,
@@ -71,13 +70,8 @@
     "type": "filé horizontal"
    },
    {
-    "t": 26.1,
-    "d": 0.5,
-    "type": "fondu"
-   },
-   {
-    "t": 26.9,
-    "d": 0.7,
+    "t": 27.2,
+    "d": 0.4,
     "type": "fondu"
    },
    {
@@ -116,16 +110,16 @@
     "type": "filé vertical"
    }
   ],
-  "transitions_progressives": 19,
+  "transitions_progressives": 18,
   "camera": {
-   "dérive lente": 2,
-   "zoom arrière": 4,
-   "zoom avant": 1
+   "dérive lente": 1,
+   "zoom arrière": 3,
+   "zoom avant": 1,
+   "épaule": 1
   },
   "camera_par_plan": [
    "dérive lente",
-   "zoom arrière",
-   "dérive lente",
+   "épaule",
    "zoom avant",
    "zoom arrière",
    "zoom arrière",
@@ -135,22 +129,22 @@
    "couleurs": [
     {
      "hex": "#080605",
-     "part": 0.54
+     "part": 0.53
     },
     {
-     "hex": "#69635b",
+     "hex": "#6a645c",
      "part": 0.15
     },
     {
-     "hex": "#ebe7df",
-     "part": 0.12
+     "hex": "#eae6de",
+     "part": 0.13
     },
     {
      "hex": "#a4a199",
      "part": 0.1
     },
     {
-     "hex": "#2e2822",
+     "hex": "#2d2722",
      "part": 0.09
     }
    ],
@@ -159,7 +153,7 @@
    "temperature": "chaude"
   },
   "texte": {
-   "part_du_temps": 0.94,
+   "part_du_temps": 0.96,
    "hauteur_px_med": 42.0,
    "hauteur_px_min": 30.0,
    "mots_par_image": 7.9,
@@ -168,10 +162,10 @@
     "milieu": 0.01,
     "bas": 0.21
    },
-   "changements_par_s": 0.92,
+   "changements_par_s": 0.98,
    "premieres_3s": "analyse marque Red analyse Red Bull analyse indépendante lien la marque ne analyse indépendante lien la marque ne vend pas boissons énergisantes boissons énergisantes analyse indépendante lien la marq"
   },
-  "nettete_med": 185.0,
+  "nettete_med": 149.0,
   "son": {
    "present": true,
    "lufs": -14.0,
@@ -180,18 +174,18 @@
    "energie_moy_db": -18.9,
    "dynamique_db": 12.0,
    "attaques_par_s": 1.56,
-   "coupes_sur_attaque": 0.33,
+   "coupes_sur_attaque": 0.4,
    "coupes_sur_attaque_si_hasard": 0.39
   }
  },
- "planche": "/tmp/tmp1s7_t4tg/reel.jpg",
+ "planche": "/tmp/tmpsky4roje/reel.jpg",
  "references": [
   "mes-videos-reel-apple-v3"
  ],
  "axes": {
   "rythme": {
    "reel": {
-    "duree_plan_moy_s": 6.69,
+    "duree_plan_moy_s": 7.8,
     "coupes_3s": 0
    },
    "ref": {
@@ -213,9 +207,9 @@
   },
   "finition": {
    "reel": {
-    "nettete": 185.0,
+    "nettete": 149.0,
     "lufs": -14.0,
-    "coupes_sur_attaque": 0.33
+    "coupes_sur_attaque": 0.4
    },
    "ref": {
     "nettete": 133.0,
@@ -228,7 +222,7 @@
  "raisons": [
   {
    "cle": "comparer.rythme.duree_plan",
-   "mesure": 6.69,
+   "mesure": 7.8,
    "exige": "≤ 3.48 s",
    "quoi": "plans trop longs en moyenne",
    "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs)"

@@ -6,7 +6,7 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 46.8 s",
-  "poids 86.5 Mo",
+  "poids 86.2 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.5 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
@@ -179,6 +179,10 @@
    [
     24.5,
     24.767
+   ],
+   [
+    29.633,
+    29.9
    ],
    [
     32.7,
