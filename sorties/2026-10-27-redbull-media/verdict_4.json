@@ -1,0 +1,164 @@
+{
+ "tentative": 4,
+ "date": "2026-11-03T15:12",
+ "decision": "À REPRENDRE",
+ "raisons": [
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "plans trop longs en moyenne",
+   "ou": "",
+   "preuve": "mesuré 6.69 (références : mes-videos-reel-apple-v3)",
+   "exige": "≤ 3.48 s",
+   "condition": "durée moyenne des plans ≤ 3.48 s (couper ou relancer dans les plans longs) (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V4-1"
+  },
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "aucune coupe dans les 3 premières secondes",
+   "ou": "",
+   "preuve": "mesuré 0 (références : mes-videos-reel-apple-v3)",
+   "exige": "≥ 1",
+   "condition": "au moins une coupe ou un changement de plan avant 3 s (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V4-2"
+  },
+  {
+   "source": "cerveau.py comparer",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "trop de mots à l écran à la fois",
+   "ou": "",
+   "preuve": "mesuré 7.9 (références : mes-videos-reel-apple-v3)",
+   "exige": "≤ 4.65",
+   "condition": "au plus 4.65 mots par image en moyenne (indicatif : moins de 3 références de qualité ≥ 7)",
+   "id": "V4-3"
+  },
+  {
+   "source": "condition précédente",
+   "bloque": true,
+   "priorite": "P2",
+   "quoi": "RÉGRESSION de V2-7 : la pastille « analyse indépendante / aucun lien avec la marque », descendue à y ≈ 95–260 px pour sortir du bord haut, tombe maintenant sous les gros titres : (a) 14,43–15,43 s « Créer du contenu. » est posé PAR-DESSUS les 2 lignes de la mention, qui sont grisées et illisibles ; (b) 36,4–37,7 s « vends une émotion. » idem, mention grisée sur noir et coupée par le titre ; (c) 42,70–43,47 s (0,8 s) la mention a disparu (écran quasi noir, CTA déjà là). Au total 111 images (3,7 s) où la mention obligatoire n'est ni entière ni lisible.",
+   "ou": "14.4–43.5 s",
+   "preuve": "Collision avec les titres et trou 42,7–43,5 s corrigés (mention pleine à 42,7 / 43,0 / 43,5 s), mais la mention est à ≈ 49 % d'opacité (gris ≈ 109/255, contraste ≈ 3,8:1 < 4,5:1) pendant 14,23–15,43 s et 36,23–37,70 s ; grisée et peu lisible à 37,0 s.",
+   "exige": "",
+   "condition": "Sur 3,4–46,3 s, à chaque image (1/30 s), les 2 lignes de la mention sont à pleine opacité (contraste ≥ 4,5:1 avec leur fond), n'intersectent la boîte d'aucun autre texte (gros titre, sous-titre, CTA) et ne disparaissent jamais plus de 0,1 s ; vérifiable par le même script (aucune image à score < 0,6 hors fondu de boucle 46,0–46,4) et en regardant 14,4–15,5 et 36,4–37,7 s.",
+   "piste": "Garder la pastille en calque fixe et déplacer plutôt les gros titres « Créer du contenu. » (14,4) et « vends une émotion. » (36,4) sous y ≈ 330 px, ou les faire entrer plus bas ; garder la mention à opacité 1 pendant les fondus au noir 36–37,7 et 42,7–43,5.",
+   "id": "V4-4"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": true,
+   "priorite": "P2",
+   "quoi": "V3-4 NON LEVÉE : la mention « analyse indépendante / aucun lien avec la marque » n'est plus recouverte par les titres (ils sont descendus : « Créer du contenu. » y≈680, « vends une émotion. » y≈800+, plus aucune intersection) et ne disparaît plus à 42,7–43,5 s, MAIS elle est volontairement baissée à ≈ 49 % d'opacité pendant deux passages : 14,23–15,43 s (1,2 s, 37 images) et 36,23–37,70 s (1,5 s, 45 images). Texte gris (≈ 109/255 au lieu de ≈ 222), pastille quasi transparente (les cartes et le fond noir se voient à travers). Contraste mesuré ≈ 3,8:1, sous 4,5:1. À 37,0 s elle paraît bien grisée, à peine lisible sur noir.",
+   "ou": "14.2–37.7 s",
+   "preuve": "Script OpenCV (reel_sceptique, images ffmpeg 540x960, correspondance du texte de la mention par différence de gaussiennes, multi-échelle 0,85–1,15, score ≥ 0,6) sur 3,4–46,3 s : mention trouvée à chaque image (score min 0,88 sur 3,4–46,0 ; seules les images 46,07–46,57 sont sous 0,6 = fondu de boucle 46,0–46,4 exempté, plus 46,4–46,57 hors plage). Mesure d'opacité sur les mêmes images : percentile 97 du texte = 211–228 partout sauf 109 sur 14,23–15,43 et 36,23–37,70 (108–109, constant, donc un palier de fondu volontaire) ; fond médian 9–10 ; contraste (L1+0,05)/(L2+0,05) = 3,8–3,9 sur ces deux plages contre 11–15 ailleurs (89 images sous 4,5, dont 46,1–46,3 en fondu de boucle). Images regardées (PNG) à 14,4 / 14,9 / 15,5 : texte gris sur pastille translucide, à 15,5 plein ; 36,4 / 36,9 / 37,0 / 37,6 : texte gris sur noir ; 42,7 / 43,0 / 43,5 : mention pleine et lisible (trou levé).",
+   "exige": "",
+   "condition": "Sur 3,4–46,3 s, à chaque image (1/30 s), les 2 lignes de la mention sont à pleine opacité (texte ≥ 200/255 sur fond ≤ 40/255, contraste ≥ 4,5:1), n'intersectent la boîte d'aucun autre texte et ne disparaissent jamais plus de 0,1 s ; vérifiable par le même script (percentile 97 du texte ≥ 200 et contraste ≥ 4,5 à toutes les images 3,4–46,0 s, score ≥ 0,6 partout hors fondu de boucle 46,0–46,4) et en regardant 14,4–15,5 et 36,4–37,7 s.",
+   "piste": "Supprimer le palier d'opacité réduite sous les titres (la mention reste à opacité 1 pendant 14,23–15,43 et 36,23–37,70 ; les titres ne la touchent déjà plus) ; garder la pastille opaque (fond ≥ 85 %) pour que les cartes ne passent pas derrière le texte.",
+   "nouveau": "condition V3-4 non remplie : la correction a résolu la collision et le trou mais a introduit un grisage voulu que la condition exclut explicitement (pleine opacité, contraste ≥ 4,5:1)",
+   "id": "V4-5"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Boucle : double exposition canette 2D + canette 3D et double mention (2 lignes fantôme + ligne unique) ≈ 0,4 s. Toujours présent.",
+   "ou": "46.0–46.5 s",
+   "preuve": "jonction.jpg, images 46,0 / 46,1 / 46,2 s",
+   "exige": "",
+   "condition": "Conseil : fondu de boucle sans doublon de texte, ou raccord sec.",
+   "piste": "Couper la pastille 2 lignes à 45,9 s.",
+   "nouveau": "conseil, déjà signalé en V3-5",
+   "id": "V4-6"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Écran presque noir et vide 35,6–37,0 s entre « un produit » et « vends une émotion » ; la mention grisée y est la chose la plus visible. Mou, mais c'est la respiration avant la phrase-clé, tenue par la voix.",
+   "ou": "35.6–37.7 s",
+   "preuve": "images 36,0 / 36,4 / 36,9 s ; engagement.png : creux d'énergie 36–37 s",
+   "exige": "",
+   "condition": "Conseil : un mouvement net toutes les 1,2 s.",
+   "piste": "Faire battre la carte ou lancer le pouls dès 36,6 s.",
+   "nouveau": "conseil, déjà signalé en V2-8 / V3-6",
+   "id": "V4-7"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Fond gris quasi vide, petite canette coupée en bas, ≈ 1 s sur « En réalité, ».",
+   "ou": "4.8–5.8 s",
+   "preuve": "images 4,8 / 5,0 / 5,5 s (mention seule sur gris)",
+   "exige": "",
+   "condition": "Conseil : un sujet ≥ 1/4 de l'écran dès 5,0 s.",
+   "piste": "Entrer les cartes 0,5 s plus tôt.",
+   "nouveau": "conseil, déjà signalé en V3-7",
+   "id": "V4-8"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Pouls : même cadre, même courbe blanche, 4,5 s ; seul le tracé bat. Tient grâce à la voix et aux sous-titres ; énergie sonore basse 38–43 s (engagement.png).",
+   "ou": "38.0–42.5 s",
+   "preuve": "images 38,0 / 40,0 / 42,7 s",
+   "exige": "",
+   "condition": "Conseil : un changement de cadrage ou d'échelle vers 40,3 s.",
+   "piste": "Zoom serré sur le pic à « Besoin d'une vidéo ».",
+   "nouveau": "conseil, déjà signalé en V3-8",
+   "id": "V4-9"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Raccord de style : la canette 3D photoréaliste devient une canette 2D plate à 3,4 s et en CTA 43,5–46 s ; la 3D revient à 46,1 s.",
+   "ou": "3.4–5.0 s",
+   "preuve": "images 3,35 / 5,0 / 45,0 / 46,2 s",
+   "exige": "",
+   "condition": "Conseil : fondu enchaîné lent ou 3D conservée.",
+   "piste": "Réutiliser le rendu 3D en fin de CTA.",
+   "nouveau": "conseil, déjà signalé en V3-9",
+   "id": "V4-10"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Mention de début en ligne unique, grise et très petite (≈ 28 px) ; premier cadre sombre avec « Red » seul.",
+   "ou": "0.0–3.4 s",
+   "preuve": "images 0,0–3,35 s",
+   "exige": "",
+   "condition": "Conseil : mention plus contrastée.",
+   "piste": "",
+   "nouveau": "conseil, déjà signalé en V3-10",
+   "id": "V4-11"
+  },
+  {
+   "source": "évaluation indépendante",
+   "bloque": false,
+   "priorite": "P3",
+   "quoi": "Détails template : pastille translucide laissant voir les bords de cartes derrière le texte (7,45 / 12,5 / 13,7 / 32,8 / 34,0 s) ; pictogrammes de cartes répétés ×3 dans le mur ; « MÉDIAS » traversé par des tiges blanches (7,4–9,2 s) légèrement brouillon ; sous-titres à y ≈ 79 % dans la zone d'interface Instagram.",
+   "ou": "7.4–33.0 s",
+   "preuve": "images 7,45 / 8,0 / 12,5 / 32,8 s",
+   "exige": "",
+   "condition": "Conseil.",
+   "piste": "Pastille plus opaque (rejoint la piste P2).",
+   "nouveau": "conseil, déjà signalé en V3-11",
+   "id": "V4-12"
+  }
+ ],
+ "suivi": {
+  "V3-4": {
+   "statut": "non levée",
+   "pourquoi": "Collision avec les titres et trou 42,7–43,5 s corrigés (mention pleine à 42,7 / 43,0 / 43,5 s), mais la mention est à ≈ 49 % d'opacité (gris ≈ 109/255, contraste ≈ 3,8:1 < 4,5:1) pendant 14,23–15,43 s et 36,23–37,70 s ; grisée et peu lisible à 37,0 s.",
+   "condition": "Sur 3,4–46,3 s, à chaque image (1/30 s), les 2 lignes de la mention sont à pleine opacité (contraste ≥ 4,5:1 avec leur fond), n'intersectent la boîte d'aucun autre texte (gros titre, sous-titre, CTA) et ne disparaissent jamais plus de 0,1 s ; vérifiable par le même script (aucune image à score < 0,6 hors fondu de boucle 46,0–46,4) et en regardant 14,4–15,5 et 36,4–37,7 s."
+  }
+ },
+ "conditions_levees": 0
+}

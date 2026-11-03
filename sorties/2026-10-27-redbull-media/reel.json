@@ -270,7 +270,7 @@
     45,
     47
    ],
-   "titre_y": 680,
+   "titre_y": 680, "voile_titre": "bas",
    "taille": 130
   },
   {
@@ -616,7 +616,7 @@
     105,
     107
    ],
-   "titre_y": 680,
+   "titre_y": 680, "voile_titre": "bas",
    "taille": 130
   },
   {

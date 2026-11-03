@@ -102,6 +102,7 @@ body { font-family:Inter, sans-serif; -webkit-font-smoothing:antialiased; text-r
 .plan .voile { position:absolute; inset:0; pointer-events:none;
   background:linear-gradient(to bottom, rgba(10,8,7,.35) 0%, rgba(10,8,7,0) 22%, rgba(10,8,7,0) 56%, rgba(10,8,7,.5) 76%, rgba(10,8,7,.62) 100%); }
 /* un titre posé sur une image : le haut s'assombrit franchement pour qu'il se lise sur n'importe quel fond */
+.plan .voile.titre-bas { background:linear-gradient(to bottom, rgba(10,8,7,0) 0%, rgba(10,8,7,0) 24%, rgba(10,8,7,.58) 31%, rgba(10,8,7,.5) 46%, rgba(10,8,7,0) 58%, rgba(10,8,7,.5) 76%, rgba(10,8,7,.62) 100%); } /* titre sous une pastille fixe en haut : le haut reste intact */
 .plan .voile.titre { background:linear-gradient(to bottom, rgba(10,8,7,.72) 0%, rgba(10,8,7,.5) 24%, rgba(10,8,7,0) 46%, rgba(10,8,7,0) 56%, rgba(10,8,7,.5) 76%, rgba(10,8,7,.62) 100%); }
 .plan .titre-plan { position:absolute; left:96px; right:96px; top:300px; }
 .plan .titre-plan .bloc { color:var(--papier); text-shadow:0 6px 30px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.35); }
@@ -465,7 +466,7 @@ T.plan = {
     const media = sc.profondeur ? `<canvas class="media" width="1080" height="1920"></canvas>`
       : sc.video ? `<img class="media">` : `<img class="media" src="${sc.image}">`;
     const calques = (sc.calques ?? []).map((c, k) => `<img class="calque" data-k="${k}" src="${c.image}">`).join('');
-    return media + calques + `<div class="voile${sc.mots ? ' titre' : ''}" style="opacity:${sc.voile ?? 1}"></div>` +
+    return media + calques + `<div class="voile${sc.mots ? (sc.voile_titre === 'bas' ? ' titre-bas' : ' titre') : ''}" style="opacity:${sc.voile ?? 1}"></div>` +
       (sc.mots ? `<div class="titre-plan" style="top:${sc.titre_y ?? 300}px">${blocMots(sc)}</div>` : '');
   },
   apres(el, sc) {
