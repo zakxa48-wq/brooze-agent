@@ -197,7 +197,7 @@ comp.ajouter(Forme(ellipse(26, 26), remplissage='#D8492F', position=(150, 330),
 comp.ajouter(Forme(rect(1400, 8), remplissage=PAPER, position=(540, 1000), opacite=lambda t: val(K((T(121) - .05, 0, lin), (T(121) + .02, 1, lin), (T(121) + .17, 0)), t)))
 comp.ajouter(Solide(INK, opacite=lambda t: val(K((T(121) + .1, 0, lin), (T(121) + .3, 1, lin), (T(122) + .1, 1, lin), (T(122) + .6, 0)), t)))
 # mention de charte (marque réelle analysée) : discrète, en haut, toute la durée
-mention_op = lambda t: 0 if (t > T(121) + .1 and t < T(121) + .9) else 1
+mention_op = lambda t: 1   # V3-4 : la mention reste entière et à pleine opacité sur toute la durée
 comp.ajouter(Forme(rect(900, 150, 28), remplissage=INK, position=(540, 360), opacite=lambda t: .88 * mention_op(t)))
 comp.ajouter(Texte('analyse indépendante', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 334), opacite=mention_op))
 comp.ajouter(Texte('aucun lien avec la marque', police='Inter', taille=48, graisse=700, interlettrage=.02, couleur_=PAPER, position=(540, 386), opacite=mention_op))
