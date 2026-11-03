@@ -6,7 +6,7 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 46.8 s",
-  "poids 86.3 Mo",
+  "poids 86.1 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.5 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
@@ -27,9 +27,9 @@
   ]
  },
  "engagement": {
-  "duree_s": 46.7,
+  "duree_s": 46.8,
   "ouverture": {
-   "luma_image_1": 18.8,
+   "luma_image_1": 18.9,
    "fondu_depuis_noir": false,
    "mouvement_premiere_demi_seconde": true
   },
@@ -72,7 +72,7 @@
    32.8,
    33.2,
    34.0,
-   34.8,
+   34.9,
    36.5,
    37.3,
    38.1,
@@ -119,9 +119,9 @@
    33.0
   ],
   "boucle": {
-   "ecart_image": 6.3,
-   "ecart_couleur": 0.07,
-   "mouvement_fin": 1.52,
+   "ecart_image": 6.7,
+   "ecart_couleur": 0.05,
+   "mouvement_fin": 1.28,
    "mouvement_debut": 1.25,
    "son": {
     "debut_db": -16.0,
@@ -152,11 +152,11 @@
   ],
   "bloquants": [],
   "a_justifier": [
-   "durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
+   "durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
   ]
  },
  "a_justifier": [
-  "engagement · durée 46.7 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
+  "engagement · durée 46.8 s : la plus courte possible pour l'idée (souvent 15–30 s), couper ce qui ne sert pas"
  ],
  "glitchs": {
   "fps": 30.0,

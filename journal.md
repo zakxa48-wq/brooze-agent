@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 03/11 (3 h 41) — filet, savoir, Red Bull tentative 4 rendue
+- Filet : stories 03→06/11 programmées, aucune en erreur, réserve 10 (> 4).
+- Savoir : S-0017 (12 principes d'animation FR, lu en extrait), A-0011 (volume constant dans l'écrasement/étirement, à vérifier), 3 notions revues ; yt-dlp en 429 sur Mh3e-AjC51Q, vidIQ non joint.
+- Red Bull t4 (V3-4) : mention toujours visible (scene.py), titres décalés (titre_y 680), plan.mp4 + son + rendu final 46,8 s, controle.py 0 problème. Doute : mention grisée vers 37,0 s. comparer + evaluation_4 au prochain passage. Rien programmé ni livré.
+
 ## 02/11 (3 h 41) — filet, savoir, Red Bull tentative 3
 - Filet : stories 02→06/11 couvertes, aucune en erreur, réserve 7 (aucune utilisée).
 - Savoir : séance réduite (S-0016 : 12 principes d'animation, règles de praticiens ; 3 notions revues) ; fanpagekarma.com et creatorflow.so fermés, yt-dlp et vidIQ indisponibles pendant le setup.
