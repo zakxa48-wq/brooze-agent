@@ -6,7 +6,7 @@
   "vidéo h264 yuv420p",
   "son aac",
   "durée 46.8 s",
-  "poids 86.1 Mo",
+  "poids 86.5 Mo",
   "volume -14.0 LUFS (cible −14)",
   "crête vraie -1.5 dBTP (max −1)",
   "images réelles 100% du temps (objectif ≥ 60 %)",
@@ -29,7 +29,7 @@
  "engagement": {
   "duree_s": 46.8,
   "ouverture": {
-   "luma_image_1": 18.9,
+   "luma_image_1": 18.8,
    "fondu_depuis_noir": false,
    "mouvement_premiere_demi_seconde": true
   },
@@ -120,7 +120,7 @@
   ],
   "boucle": {
    "ecart_image": 6.7,
-   "ecart_couleur": 0.05,
+   "ecart_couleur": 0.06,
    "mouvement_fin": 1.28,
    "mouvement_debut": 1.25,
    "son": {
