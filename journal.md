@@ -18,6 +18,9 @@ Le plus récent en haut. Une entrée par post, puis les chiffres à J+2.
 
 ---
 
+## 04/11 (15 h 41) — veille, banque vide
+- Veille : Koulechov J+3 1 388 vues (stable), aucun décollage/effondrement, planification sans erreur, filet 04→07/11 OK, réserve 10. Red Bull livré, suggéré 05/11, pas encore en ligne. Banque : 0 idée disponible, aucun audio → rien à produire. Savoir du jour déjà fait à 3 h 41.
+
 ## 04/11 (3 h 41) — filet, savoir, banque vide
 - Filet : stories 04→07/11 programmées (aucune en erreur), réserve 10. Aucun audio dans urgent/ ni inbox/audio ; banque : 4 idées, 0 disponible → aucun nouveau Reel possible. Red Bull livré (suggéré 05/11 18 h), pas encore vérifié en ligne (veille 15 h 41).
 - Savoir : S-0018, A-0012 (replays/boucles dans le watch time, blogs secondaires, « à vérifier ») ; 3 notions revues ; yt-dlp 429 sur sous-titres, vidIQ non joint. Rien de neuf qui change la pratique.
