@@ -9,6 +9,7 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 - Pas 100 % sérieux (jeux, expériences, fictions annoncées), instructif même hors business, relié à Brooze, une
   émotion nommée par contenu, carrousels bien plus visuels, un test osé par semaine avec un risque géré.
 - Reels livrés à Zak, qui publie ; Metricool = stories et carrousels seulement.
+- 05/11 : 1 carrousel par semaine ; stories de l'ancien cap arrêtées, reprise seulement avec le nouveau cap.
 
 ## Ce qu'on sait déjà (issu des Reels, voir brooze-direction/attention.md)
 - Une douleur concrète, dans les mots de Karim ou Claire, retient le plus.

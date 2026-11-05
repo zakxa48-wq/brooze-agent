@@ -1,82 +1,96 @@
 [
-  {
-    "id": "R-001-avant-apres-carte",
-    "angle": "Méthode : avant / après",
-    "pilier": "Méthode : avant / après",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-02"
-  },
-  {
-    "id": "R-002-client-ou-patron",
-    "angle": "Question directe",
-    "pilier": "Question directe",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-03"
-  },
-  {
-    "id": "R-003-coupe-le-debut",
-    "angle": "Méthode",
-    "pilier": "Méthode",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-04"
-  },
-  {
-    "id": "R-004-son-a-zero",
-    "angle": "Mini-exercice",
-    "pilier": "Mini-exercice",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-005-une-idee",
-    "angle": "Principe d'attention",
-    "pilier": "Principe d'attention",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-006-mythe-quotidien",
-    "angle": "Mythe / réalité",
-    "pilier": "Mythe / réalité",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-007-envoie-une-video",
-    "angle": "Appel à l'action",
-    "pilier": "Appel à l'action",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-008-combien-de-temps",
-    "angle": "Question directe",
-    "pilier": "Question directe",
-    "role": "attirer",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-009-chercher-la-phrase",
-    "angle": "Coulisses / méthode",
-    "pilier": "Coulisses / méthode",
-    "role": "prouver",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null
-  },
-  {
-    "id": "R-010-trois-accroches",
-    "angle": "Coulisses / méthode",
-    "pilier": "Coulisses / méthode",
-    "role": "prouver",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null
-  }
+ {
+  "id": "R-001-avant-apres-carte",
+  "angle": "Méthode : avant / après",
+  "pilier": "Méthode : avant / après",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-02"
+ },
+ {
+  "id": "R-002-client-ou-patron",
+  "angle": "Question directe",
+  "pilier": "Question directe",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-03"
+ },
+ {
+  "id": "R-003-coupe-le-debut",
+  "angle": "Méthode",
+  "pilier": "Méthode",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-04"
+ },
+ {
+  "id": "R-004-son-a-zero",
+  "angle": "Mini-exercice",
+  "pilier": "Mini-exercice",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-005-une-idee",
+  "angle": "Principe d'attention",
+  "pilier": "Principe d'attention",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-006-mythe-quotidien",
+  "angle": "Mythe / réalité",
+  "pilier": "Mythe / réalité",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-007-envoie-une-video",
+  "angle": "Appel à l'action",
+  "pilier": "Appel à l'action",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-008-combien-de-temps",
+  "angle": "Question directe",
+  "pilier": "Question directe",
+  "role": "attirer",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-009-chercher-la-phrase",
+  "angle": "Coulisses / méthode",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-010-trois-accroches",
+  "angle": "Coulisses / méthode",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ }
 ]

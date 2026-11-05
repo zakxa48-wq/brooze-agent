@@ -16,3 +16,10 @@ sur main (URL raw en 200). `reserve.json` tient l'état : `[{id, angle, pilier, 
 
 ## Depuis le 02/11
 Les nouvelles stories de réserve suivent `LIGNE_EDITORIALE.md` § 3 : une vraie chose apprise ou un vrai jeu (quiz, vrai ou faux, illusion expliquée, mini-expérience, histoire inventée annoncée comme telle), une émotion nommée dans `post.json`, reliée à Brooze en une ligne.
+
+## 05/11 : réserve de l'ancien cap retirée
+Décision de Zak : plus aucune story de l'ancien cap ne part (celles qui étaient programmées du 06 au 08/11 sont passées
+en brouillon dans Metricool). Les stories de réserve non utilisées sont marquées `retiree_le` dans `reserve.json` et ne
+se programment plus jamais. La réserve se reconstruit **uniquement** avec des stories du nouveau cap
+(`LIGNE_EDITORIALE.md` § 3), chacune contrôlée (note ≥ 8, émotion ressentie). Tant qu'elle est vide, un jour sans story
+est normal : on ne bouche jamais un trou avec l'ancien style.

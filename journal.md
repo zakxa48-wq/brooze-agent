@@ -1,5 +1,11 @@
 # Journal de l'agent marketing Brooze
 
+
+## 05/11 — décision de Zak : 1 carrousel par semaine, stories de l'ancien cap arrêtées
+- Passés en **brouillon** dans Metricool (pas supprimés, réversibles) : carrousel « 3 phrases » du 06/11 18 h, stories
+  du 06/11 10 h, 07/11 10 h et 10 h 01, 08/11 10 h et 10 h 01.
+- Réserve de stories de l'ancien cap retirée (7 stories marquées `retiree_le`). Les stories reprennent seulement avec
+  le nouveau cap (LIGNE_EDITORIALE.md), sans obligation quotidienne. Carrousels : 1 par semaine.
 ## 05/11 (3 h 41) — filet, savoir, banque vide
 - Filet : stories 05→08/11 programmées (aucune en erreur), réserve 10. Aucun audio dans urgent/ ni inbox/audio, aucune idée disponible, aucune donnée nouvelle dans data/ : rien à produire. Red Bull livré (suggéré 05/11 18 h), vérification en ligne à 15 h 41.
 - Savoir : S-0019 (définition d'une vue : relectures comptées, poids des replays dans le classement non confirmé), S-0012 relue ; 3 notions revues ; yt-dlp absent et vidIQ non joint (setup.sh encore en cours). Rien de neuf qui change la pratique. Entraînement non lancé (outils python pas installés).

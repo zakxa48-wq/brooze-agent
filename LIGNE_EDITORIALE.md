@@ -32,6 +32,8 @@ choc (doux), émerveillement, tendresse, nostalgie, tristesse, fierté, frustrat
   urgence ou une image violente : c'est un renversement, une révélation, un chiffre vrai qui étonne.
 
 ## 3. Stories : courtes, instructives, créatives
+**Depuis le 05/11** : plus aucune story de l'ancien cap (réserve retirée, programmées passées en brouillon). Les
+stories reprennent seulement avec celles-ci, sans obligation d'une par jour.
 - Une idée par jour, lisible en 2 secondes par image, qui apprend vraiment quelque chose (même hors business) ou fait
   jouer : quiz en 2 images (question → réponse), « devine avant de passer », illusion d'optique expliquée, vrai ou
   faux, mini-expérience à faire chez soi, coulisse d'un plan, « ce que ton cerveau fait quand… ».
@@ -44,6 +46,7 @@ choc (doux), émerveillement, tendresse, nostalgie, tristesse, fierté, frustrat
   fabriquées ainsi, les anciennes restent valables jusqu'à épuisement.
 
 ## 4. Carrousels : bien plus visuels, mieux designés, divertissants
+**Un seul par semaine** (décision du 05/11) : tout le soin de la semaine va dans celui-là.
 - **Visuel d'abord** : au moins 2 diapos sur 3 portent une image forte (rendu 3D, illustration en code, photo ou
   rush de Zak, schéma animé figé, montage d'images), pas seulement du texte sur fond uni. Le texte ancre, l'image
   raconte. Les mises en page actuelles (`cover`, `phrase`, `point`, `duel`, `liste`, `cta`) ne suffisent pas : en

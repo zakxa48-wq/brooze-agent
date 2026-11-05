@@ -23,5 +23,11 @@
     "a": "zakxa48@gmail.com",
     "depuis": "2026-11-02",
     "note": "Zak publie les Reels lui-même ; Metricool = stories et carrousels seulement"
+  },
+  "carrousels_par_semaine": 1,
+  "stories": {
+    "ancien_cap": "retirées le 05/11 (réserve et programmées passées en brouillon)",
+    "reprise": "uniquement avec des stories du nouveau cap (LIGNE_EDITORIALE.md), contrôlées ; pas de filet quotidien obligatoire",
+    "depuis": "2026-11-05"
   }
 }

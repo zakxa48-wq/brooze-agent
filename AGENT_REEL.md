@@ -125,18 +125,18 @@ sautés à la reprise) → `controle` (controle.py, comparer, évaluation indép
   § 4, 30 min maximum, rien n'est publié), débrief, push, puis un message final court, sans mail ni notification.
   S'il ne reste vraiment rien à faire (ni donnée nouvelle, ni temps pour un exercice) : « Rien à faire aujourd'hui. ».
 
-## 0 bis. Filet de sécurité des stories (à CHAQUE exécution, avant les Reels, ~5 min)
-Une story doit partir **chaque jour sans exception**. À chaque passage :
-1. `getScheduledPosts` de maintenant à J+3 : chaque jour (aujourd'hui compris s'il reste un créneau ≥ 1 h plus tard)
-   a-t-il au moins une story (`instagramData.type = STORY`) ? Une story au statut d'erreur compte comme manquante.
-2. Pour chaque jour sans story : prends une story de la réserve (`posts/_reserve-stories/`, règles dans son
-   LISEZMOI), vérifie ses URL raw (200), programme-la au meilleur créneau de ce jour (≥ 3 h d'un Reel ou d'un
-   carrousel, entre 7 h et 21 h ; s'il est déjà tard, le prochain créneau ≥ 1 h plus tard), marque-la utilisée dans
-   `reserve.json`, ajoute son angle à `idees.md`, note-le au journal (« filet : story de réserve R-NNN le … »).
-3. Réserve sous 4 : fabrique des stories de réserve jusqu'à 7 (AGENT.md § 6–7 : création, rendu `render.mjs`, contrôle
-   ≥ 8) **avant** les Reels, pousse sur main.
-4. Si Metricool est indisponible : rien ne peut être programmé ; PushNotification immédiate à Zak (« stories non
-   assurées : connecteur Metricool »).
+## 0 bis. Stories (décision de Zak du 05/11 : plus aucune story de l'ancien cap)
+Les stories de l'ancien cap sont arrêtées : celles qui étaient programmées sont passées en brouillon, celles de la
+réserve sont retirées (`retiree_le` dans `posts/_reserve-stories/reserve.json`) et ne se programment **jamais**. Il n'y a
+plus d'obligation d'une story par jour : un jour sans story vaut mieux qu'une story hors cap.
+1. Les stories reprennent **uniquement** avec des stories du nouveau cap (`LIGNE_EDITORIALE.md` § 3 : une vraie chose
+   apprise ou un vrai jeu, une émotion nommée et ressentie au contrôle, la fiction annoncée), fabriquées et contrôlées
+   comme dans `AGENT.md` § 6–7 (note ≥ 8 sur chaque critère).
+2. À chaque passage, s'il reste du temps après les Reels en cours : fabrique au plus 2 stories du nouveau cap pour la
+   réserve (objectif : 7). Une story contrôlée peut être programmée dans Metricool au meilleur créneau d'un jour qui
+   n'en a pas encore, au plus une par jour, à au moins 3 h d'un carrousel.
+3. Ne repasse **jamais** en programmé un brouillon de l'ancien cap, et ne touche pas aux brouillons (c'est Zak qui
+   décide de les garder ou de les retirer).
 
 ## 1. Préparer la session
 ```

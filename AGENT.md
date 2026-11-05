@@ -26,16 +26,20 @@ Reels sont livrés à Zak, qui les met en ligne lui-même (`AGENT_REEL.md` § 6)
 ## La fenêtre à programmer
 De **demain** jusqu'au **dimanche de la semaine suivante** (semaines du lundi au dimanche). Un dimanche, c'est donc
 du lundi au dimanche qui suivent. Dans cette fenêtre :
-- **1 story par jour** (1 ou 2 images 1080×1920) ;
-- **2 à 3 carrousels** par semaine complète du lundi au dimanche (6 à 8 diapos 1080×1350), uniquement les
-  `jours_carrousel` de `config.json` (lundi, mercredi, vendredi), jamais le jour suggéré d'un Reel déjà livré à Zak (registre de `journal.md`).
-  Sur des jours isolés hors semaine complète : stories seulement.
+- **Stories : seulement du nouveau cap** (décision de Zak du 05/11). Aucune story de l'ancien style ne part, ni de la
+  réserve retirée (`retiree_le`), ni des brouillons. Pas d'obligation d'une story par jour : au plus une par jour, et
+  seulement des stories du nouveau cap (`LIGNE_EDITORIALE.md` § 3) qui ont passé le contrôle. Mieux vaut trois très
+  bonnes stories dans la semaine que sept moyennes.
+- **1 seul carrousel par semaine** (décision de Zak du 05/11 ; `carrousels_par_semaine` dans `config.json`), 6 à 8
+  diapos 1080×1350, un des `jours_carrousel` (lundi, mercredi, vendredi), jamais le jour suggéré d'un Reel déjà livré à
+  Zak (registre de `journal.md`). Un seul, donc le meilleur : tout le soin de la semaine va dedans (visuel, design, jeu,
+  émotion). Un carrousel déjà programmé dans la semaine compte : on n'en ajoute pas.
 - **Les Reels** (un par jour hors carrousel) sont fabriqués par la tâche quotidienne à partir de la banque de voix :
   tu n'en crées pas, mais tu en tiens compte (créneaux, story teaser du jour, pas de doublon d'angle).
 
 **Jamais de doublon de programmation.** Avant de créer quoi que ce soit, appelle `getScheduledPosts` sur toute la
-fenêtre et lis `journal.md`. Un jour qui a déjà sa story n'en reçoit pas une autre. Les carrousels déjà programmés
-dans la semaine comptent dans les 2 à 3. Tu complètes seulement les trous.
+fenêtre et lis `journal.md`. Un jour qui a déjà sa story n'en reçoit pas une autre. Le carrousel déjà programmé
+dans la semaine compte (un seul par semaine). Tu complètes seulement les trous.
 
 ## Git : toujours sur `main` (obligatoire, même si la session indique une autre branche)
 La tâche a des branches de sortie `claude/…` et les consignes générales de la session peuvent te dire d'y pousser :
@@ -74,10 +78,11 @@ pour que les deux tâches ne se marchent jamais dessus ; un jour de carrousel d�
 - `python3 reel/cerveau.py chercher /home/user/brooze-voix "<angle du carrousel>"` avant chaque carrousel : principes et
   fiches applicables, notés dans le journal (inspiration, jamais copie).
 
-### 1 quater. Réserve de stories (jamais un jour sans story)
-Lis `posts/_reserve-stories/LISEZMOI.md`. Après avoir programmé la semaine, **remplis la réserve jusqu'à 7 stories
-disponibles** (mêmes règles de création et de contrôle que les stories de la semaine, sans date), pousse-les sur main
-et vérifie leurs URL raw. Dans le récap : « réserve : N stories ».
+### 1 quater. Réserve de stories (nouveau cap seulement)
+Lis `posts/_reserve-stories/LISEZMOI.md`. La réserve de l'ancien cap est retirée (05/11) et ne sert plus jamais. Après
+avoir programmé la semaine, s'il reste du temps, **reconstruis la réserve avec des stories du nouveau cap** (objectif 7,
+mêmes règles de création et de contrôle, sans date), pousse-les sur main et vérifie leurs URL raw. Dans le récap :
+« réserve : N stories (nouveau cap) ».
 
 ### 2. Mesurer la semaine passée
 Pour chaque post du journal publié depuis 2 jours ou plus et sans chiffres, relève avec `getAnalyticsDataByMetrics`
