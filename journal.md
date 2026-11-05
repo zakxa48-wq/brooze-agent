@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 05/11 (3 h 41) — filet, savoir, banque vide
+- Filet : stories 05→08/11 programmées (aucune en erreur), réserve 10. Aucun audio dans urgent/ ni inbox/audio, aucune idée disponible, aucune donnée nouvelle dans data/ : rien à produire. Red Bull livré (suggéré 05/11 18 h), vérification en ligne à 15 h 41.
+- Savoir : S-0019 (définition d'une vue : relectures comptées, poids des replays dans le classement non confirmé), S-0012 relue ; 3 notions revues ; yt-dlp absent et vidIQ non joint (setup.sh encore en cours). Rien de neuf qui change la pratique. Entraînement non lancé (outils python pas installés).
+
 ## 03/11 (15 h 41) — veille, Red Bull PUBLIABLE et LIVRÉ
 - **Red Bull : verdict_5 PUBLIABLE** après 5 tentatives (V3-4 levée : la mention « analyse indépendante / aucun lien avec la marque » était grisée à ~49 % sous le voile sombre des gros titres ; nouvelle option moteur `voile_titre: "bas"` qui laisse le haut intact ; p97 texte ≥ 205/255, contraste ≥ 10,5:1 sur 3,4–45,9 s). 0 P1/P2, comparer non probante. Conseils P3 ouverts : fond vide 4,7–5,9 s, pouls fixe 38–42,7 s, raccord 3D→2D 2D plate, double exposition de boucle 0,4 s. Livré à Zak : posts/2026-11-05-reel-redbull-media, suggéré 05/11 18 h. Émotion : curiosité (« média »), énergie (« adrénaline »), frisson (« vends une émotion »).
 - Veille : Koulechov J+2 1 383 vues, aucun autre changement ; filet 04→07/11 OK, réserve 10, aucune erreur. Savoir du jour déjà fait à 3 h 41.
