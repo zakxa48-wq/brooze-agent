@@ -1,6 +1,9 @@
 # Journal de l'agent marketing Brooze
 
 
+## 05/11 (15 h 41) — veille, rien à produire
+- Veille : Koulechov J+4 1 389 vues (stable), aucun décollage ni effondrement, planification sans erreur (stories/carrousel 03-05/11 publiés, 06-08/11 en brouillon voulu). Red Bull suggéré 05/11 18 h, pas encore en ligne. Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle. Savoir du jour déjà fait à 3 h 41. Stories du nouveau cap : non fabriquées ce passage.
+
 ## 05/11 — décision de Zak : 1 carrousel par semaine, stories de l'ancien cap arrêtées
 - Passés en **brouillon** dans Metricool (pas supprimés, réversibles) : carrousel « 3 phrases » du 06/11 18 h, stories
   du 06/11 10 h, 07/11 10 h et 10 h 01, 08/11 10 h et 10 h 01.
