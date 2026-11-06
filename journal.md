@@ -1,6 +1,9 @@
 # Journal de l'agent marketing Brooze
 
 
+## 06/11 (15 h 41) — veille, rien à produire
+- Planification 06→09/11 : 5 éléments, tous en brouillon voulu (décision du 05/11), aucune erreur. Banque : 0 idée, aucun audio, aucune donnée nouvelle ; savoir du jour déjà fait à 3 h 41. Mesure fine non faite (analytics IGPO01 sans vues exploitables ; numpy absent, setup encore en cours). Aucune alerte.
+
 ## 06/11 (3 h 41) — savoir, rien à produire
 - Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours (Red Bull livré). Stories nouveau cap : non fabriquées (pas de temps utile, aucune obligation). Savoir : S-0020 (réplications Koulechov : le protocole intra-sujet trouve l'effet, l'essai unique non), 3 notions revues ; help.instagram.com fermé, yt-dlp bloqué (bot/429), vidIQ non joint. Rien de neuf qui change la pratique.
 
