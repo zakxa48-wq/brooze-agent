@@ -1,6 +1,9 @@
 # Journal de l'agent marketing Brooze
 
 
+## 06/11 (3 h 41) — savoir, rien à produire
+- Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours (Red Bull livré). Stories nouveau cap : non fabriquées (pas de temps utile, aucune obligation). Savoir : S-0020 (réplications Koulechov : le protocole intra-sujet trouve l'effet, l'essai unique non), 3 notions revues ; help.instagram.com fermé, yt-dlp bloqué (bot/429), vidIQ non joint. Rien de neuf qui change la pratique.
+
 ## 05/11 (15 h 41) — veille, rien à produire
 - Veille : Koulechov J+4 1 389 vues (stable), aucun décollage ni effondrement, planification sans erreur (stories/carrousel 03-05/11 publiés, 06-08/11 en brouillon voulu). Red Bull suggéré 05/11 18 h, pas encore en ligne. Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle. Savoir du jour déjà fait à 3 h 41. Stories du nouveau cap : non fabriquées ce passage.
 
