@@ -1,6 +1,9 @@
 # Journal de l'agent marketing Brooze
 
 
+## 07/11 (15 h 41) — veille légère, rien à produire
+- Planification 07→10/11 : seulement les 4 brouillons de stories de l'ancien cap (voulu, intouchés), aucune erreur. Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours. Savoir du jour déjà fait à 3 h 41. Relevé analytique détaillé non fait (rien de nouveau à comparer). Aucune alerte.
+
 ## 07/11 (3 h 41) — savoir, rien à produire
 - Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours. Stories nouveau cap : non fabriquées (aucune obligation). Metricool : outils présents, non utilisés (veille à 15 h 41).
 - Savoir : S-0021 / A-0013 (cécité attentionnelle, à vérifier, source encyclopédique), notion cecite-attentionnelle liée, 3 notions revues ; yt-dlp bloqué (anti-bot), vidIQ non joint, file à-lire non relue. Rien de neuf qui change la pratique ; idée de jeu pour les stories.
