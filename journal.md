@@ -3,8 +3,8 @@
 ## 08/11 — semaine du 09/11 programmée (1 carrousel, 4 stories, nouveau cap)
 - Analyse : fenêtre vide dans Metricool, aucun audio ni inbox. Mesure fine non faite (portées trop faibles, aucun post publié récent sans chiffres exploitables). Concurrents : non réévalués cette semaine.
 - Test osé : carrousel 100 % jeu d'illusions (risque : hors métier ; garde-fou : diapos 6-7 reliées au cadrage ; mesure : enregistrements + partages / portée > quiz du 02/11 ; arrêt : 2 jeux sans réaction).
-- Mer 11/11 18 h · carrousel « Laquelle est la plus longue ? » (3 illusions) · Karim · attirer · émotion : surprise (diapos 2 et 4) · 5 diapos sur 7 en image forte, nouvelle mise en page `visuel` · contrôle ≥ 8.
-- Lun 09/11 12 h · story grille d'Hermann (curiosité/surprise) · Mar 10/11 12 h · story fiction « Mina » annoncée (tendresse) · Jeu 12/11 12 h · story Stroop (frustration qui se résout) · Sam 14/11 12 h · story point aveugle (émerveillement).
+- Mer 11/11 10 h · carrousel « Laquelle est la plus longue ? » (3 illusions) · Karim · attirer · émotion : surprise (diapos 2 et 4) · 5 diapos sur 7 en image forte, nouvelle mise en page `visuel` · contrôle ≥ 8.
+- Lun 09/11 10 h · story grille d'Hermann (curiosité/surprise) · Mar 10/11 10 h · story fiction « Mina » annoncée (tendresse) · Jeu 12/11 10 h · story Stroop (frustration qui se résout) · Sam 14/11 10 h · story point aveugle (émerveillement).
 - Refusés : aucun. Réserve de stories nouveau cap : 0 (non reconstruite, temps utilisé pour la semaine).
 
 ## 08/11 (3 h 41) — savoir, rien à produire

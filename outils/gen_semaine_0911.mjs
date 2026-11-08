@@ -41,7 +41,7 @@ const ecrire = (id, o) => { fs.mkdirSync(D + id, { recursive: true }); fs.writeF
 const cta = (titre, texte, bouton) => ({ layout: 'cta', theme: 'encre', titre, taille: 't-m', texte, bouton });
 
 ecrire('2026-11-11-illusions-trois-essais', {
-  type: 'carrousel', date_prevue: '2026-11-11T18:00:00+01:00', avatar: 'Karim', pilier: 'Démonstration', role: 'attirer',
+  type: 'carrousel', date_prevue: '2026-11-11T10:00:00+01:00', avatar: 'Karim', pilier: 'Démonstration', role: 'attirer',
   hypothese: "Si un jeu d'illusions où le lecteur se trompe lui-même (carrousel visuel, sujet hors business relié au cadrage) pour Karim, alors les enregistrements et partages / portée seront plus hauts que sur le quiz du 02/11, parce que se tromper devant l'évidence donne envie de la montrer à quelqu'un.",
   nouveau_format: true,
   emotion: { quoi: 'surprise', comment: "les deux lignes qu'on jurait inégales sont pareilles, puis les deux ronds", ou: 'diapos 2 et 4' },
@@ -60,7 +60,7 @@ ecrire('2026-11-11-illusions-trois-essais', {
 });
 
 const story = (id, date, o) => ecrire(id, { type: 'story', date_prevue: date, role: 'attirer', nouveau_format: true, ...o });
-story('2026-11-09-ghost-grille', '2026-11-09T12:00:00+01:00', {
+story('2026-11-09-ghost-grille', '2026-11-09T10:00:00+01:00', {
   avatar: 'Karim', pilier: 'Démonstration', hypothese: "Une illusion à regarder (grille d'Hermann) obtient plus de réponses / portée qu'une affirmation, parce qu'on veut dire ce qu'on voit.",
   emotion: { quoi: 'curiosité puis surprise', comment: "des points gris apparaissent là où il n'y en a pas", ou: 'image 1' },
   slides: [
@@ -68,7 +68,7 @@ story('2026-11-09-ghost-grille', '2026-11-09T12:00:00+01:00', {
     { layout: 'phrase', theme: 'studio', label: 'Réponse', titre: 'Zéro. Ton œil les fabrique.', taille: 't-l', texte: 'Ton cerveau relie ce qu’il voit pour compléter. Le montage fait pareil avec deux plans : on en fait une histoire.' },
     { layout: 'cta', theme: 'encre', titre: 'Tu en as vu combien ? Réponds en message.', taille: 't-m', bouton: 'Réponds en message' },
   ]});
-story('2026-11-10-mina', '2026-11-10T12:00:00+01:00', {
+story('2026-11-10-mina', '2026-11-10T10:00:00+01:00', {
   avatar: 'Claire', pilier: 'Fiction annoncée', hypothese: "Une mini-fiction en 3 images (« Petite histoire inventée ») obtient plus de passages jusqu'à la dernière image que les stories sans récit.",
   emotion: { quoi: 'tendresse et sourire', comment: 'un petit point qui scrolle et s’arrête sur le seul carré penché', ou: 'image 3' },
   test_ose: { quoi: 'Première fiction en story, personnage récurrent possible (Mina)', pourquoi: 'les histoires gardent jusqu’au bout', risque: 'Perçue comme enfantine ou hors sujet', garde_fou: 'Fiction annoncée et reliée au métier en dernière image', mesure: 'passages vers l’image suivante / portée, sorties / portée', arret: 'Sorties élevées sur 2 fictions : on arrête' },
@@ -77,7 +77,7 @@ story('2026-11-10-mina', '2026-11-10T12:00:00+01:00', {
     { layout: 'visuel', label: 'Petite histoire inventée', titre: 'Et puis, un seul est penché.', svg: grille(3), h: 900, taille: 't-m' },
     { layout: 'cta', theme: 'encre', titre: 'Mina s’arrête. Pas pour le plus beau : pour celui qui sort du rang.', taille: 't-m', texte: 'Envoie ça à celui qui poste comme tout le monde.', bouton: 'Envoie-le à quelqu’un' },
   ]});
-story('2026-11-12-stroop', '2026-11-12T12:00:00+01:00', {
+story('2026-11-12-stroop', '2026-11-12T10:00:00+01:00', {
   avatar: 'Claire', pilier: 'Démonstration', hypothese: "Un petit test à faire à voix haute (effet Stroop) obtient plus de réponses / portée qu'une question, parce qu'il crée une sensation vécue.",
   emotion: { quoi: 'frustration qui se résout, rire', comment: 'on bute en disant la teinte à voix haute', ou: 'image 1' },
   slides: [
@@ -85,7 +85,7 @@ story('2026-11-12-stroop', '2026-11-12T12:00:00+01:00', {
     { layout: 'phrase', theme: 'studio', label: 'Si tu as ralenti', titre: 'Normal : lire est automatique.', taille: 't-l', texte: 'Un texte à l’écran est lu avant d’être jugé. Chez Brooze : cinq mots maximum par image.' },
     { layout: 'cta', theme: 'encre', titre: 'Tu as buté combien de fois ? Dis-le-nous.', taille: 't-m', bouton: 'Réponds en message' },
   ]});
-story('2026-11-14-point-aveugle', '2026-11-14T12:00:00+01:00', {
+story('2026-11-14-point-aveugle', '2026-11-14T10:00:00+01:00', {
   avatar: 'Karim', pilier: 'Mini-expérience', hypothese: "Une mini-expérience à faire chez soi (point aveugle) obtient plus de réponses / portée qu'un quiz à regarder, parce qu'elle fait agir.",
   emotion: { quoi: 'émerveillement', comment: 'le rond disparaît vraiment', ou: 'image 1' },
   slides: [
