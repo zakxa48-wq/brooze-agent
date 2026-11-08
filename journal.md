@@ -1,5 +1,8 @@
 # Journal de l'agent marketing Brooze
 
+## 08/11 (15 h 41) — veille et revue du dimanche, rien à produire
+- Veille : 3 décollages (« Tu as cligné ? » ×7 à J+0, bille ×7 à J+2, Red Bull ×3,4 à J+3, en ligne le 05/11) ; 6 Reels sur 17 à ≥ 2× la médiane, tous des démonstrations. Planification sans erreur. Red Bull : statut publie. Banque : 0 idée, aucun audio, rien à produire. Savoir du jour déjà fait à 3 h 41.
+
 ## 08/11 — semaine du 09/11 programmée (1 carrousel, 4 stories, nouveau cap)
 - Analyse : fenêtre vide dans Metricool, aucun audio ni inbox. Mesure fine non faite (portées trop faibles, aucun post publié récent sans chiffres exploitables). Concurrents : non réévalués cette semaine.
 - Test osé : carrousel 100 % jeu d'illusions (risque : hors métier ; garde-fou : diapos 6-7 reliées au cadrage ; mesure : enregistrements + partages / portée > quiz du 02/11 ; arrêt : 2 jeux sans réaction).
