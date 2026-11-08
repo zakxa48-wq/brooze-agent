@@ -1,0 +1,83 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-11-11T18:00:00+01:00",
+  "avatar": "Karim",
+  "pilier": "Démonstration",
+  "role": "attirer",
+  "hypothese": "Si un jeu d'illusions où le lecteur se trompe lui-même (carrousel visuel, sujet hors business relié au cadrage) pour Karim, alors les enregistrements et partages / portée seront plus hauts que sur le quiz du 02/11, parce que se tromper devant l'évidence donne envie de la montrer à quelqu'un.",
+  "nouveau_format": true,
+  "emotion": {
+    "quoi": "surprise",
+    "comment": "les deux lignes qu'on jurait inégales sont pareilles, puis les deux ronds",
+    "ou": "diapos 2 et 4"
+  },
+  "test_ose": {
+    "quoi": "Carrousel 100 % jeu d'illusions, sans conseil avant l'avant-dernière diapo",
+    "pourquoi": "Koulechov a montré que vivre une expérience bat une leçon",
+    "risque": "Sujet jugé hors métier, peu de messages",
+    "garde_fou": "Diapos 6 et 7 relient au cadrage vidéo et invitent à écrire",
+    "mesure": "enregistrements + partages / portée supérieurs à ceux du carrousel du 02/11 (quiz)",
+    "arret": "Deux jeux consécutifs sans partage ni enregistrement : retour à un carrousel plus proche du métier"
+  },
+  "direction_artistique": "Cartes claires, dessin géométrique net en encre et gris, un seul pointillé cuivre pour la vérité.",
+  "slides": [
+    {
+      "layout": "visuel",
+      "label": "Jeu · 3 illusions",
+      "titre": "Laquelle est la plus *longue* ?",
+      "texte": "Choisis dans ta tête avant de glisser.",
+      "svg": "<svg viewBox=\"0 0 888 560\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#100E0D\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\">\n    <path d=\"M224 180 H664\"/><path d=\"M258 146 L224 180 L258 214\" /><path d=\"M630 146 L664 180 L630 214\" />\n    <path d=\"M224 390 H664\"/><path d=\"M190 356 L224 390 L190 424\" /><path d=\"M698 356 L664 390 L698 424\" /></g>\n    </svg>",
+      "h": 680
+    },
+    {
+      "layout": "visuel",
+      "theme": "studio",
+      "label": "Réponse",
+      "titre": "Pareilles.",
+      "texte": "Les petites flèches ont décidé à ta place.",
+      "svg": "<svg viewBox=\"0 0 888 560\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#100E0D\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\">\n    <path d=\"M224 180 H664\"/><path d=\"M258 146 L224 180 L258 214\" /><path d=\"M630 146 L664 180 L630 214\" />\n    <path d=\"M224 390 H664\"/><path d=\"M190 356 L224 390 L190 424\" /><path d=\"M698 356 L664 390 L698 424\" /></g>\n    <g stroke=\"#C8834A\" stroke-width=\"6\" stroke-dasharray=\"4 16\" stroke-linecap=\"round\"><path d=\"M224 70 V500\"/><path d=\"M664 70 V500\"/></g></svg>",
+      "h": 680
+    },
+    {
+      "layout": "visuel",
+      "label": "Deuxième essai",
+      "titre": "Quel rond noir est le plus grand ?",
+      "svg": "<svg viewBox=\"0 0 888 560\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"370\" cy=\"280\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"296\" cy=\"408.1717597600969\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"148.00000000000003\" cy=\"408.17175976009696\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"74\" cy=\"280\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"147.99999999999994\" cy=\"151.8282402399031\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"296\" cy=\"151.8282402399031\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"756.1661251613942\" cy=\"298.2775784331456\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"716.8328788811906\" cy=\"356.6812781886831\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"647.7224215668543\" cy=\"370.16612516139423\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"589.3187218113169\" cy=\"330.8328788811906\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"575.8338748386058\" cy=\"261.72242156685434\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"615.1671211188094\" cy=\"203.3187218113169\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"684.2775784331457\" cy=\"189.83387483860577\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"742.6812781886831\" cy=\"229.1671211188094\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"222\" cy=\"280\" r=\"46\" fill=\"#100E0D\"/><circle cx=\"666\" cy=\"280\" r=\"46\" fill=\"#100E0D\"/></svg>",
+      "h": 680
+    },
+    {
+      "layout": "visuel",
+      "theme": "studio",
+      "label": "Réponse",
+      "titre": "Identiques.",
+      "texte": "Ce qui entoure change ce que tu vois.",
+      "svg": "<svg viewBox=\"0 0 888 560\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"370\" cy=\"280\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"296\" cy=\"408.1717597600969\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"148.00000000000003\" cy=\"408.17175976009696\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"74\" cy=\"280\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"147.99999999999994\" cy=\"151.8282402399031\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"296\" cy=\"151.8282402399031\" r=\"64\" fill=\"#8A8780\"/><circle cx=\"756.1661251613942\" cy=\"298.2775784331456\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"716.8328788811906\" cy=\"356.6812781886831\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"647.7224215668543\" cy=\"370.16612516139423\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"589.3187218113169\" cy=\"330.8328788811906\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"575.8338748386058\" cy=\"261.72242156685434\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"615.1671211188094\" cy=\"203.3187218113169\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"684.2775784331457\" cy=\"189.83387483860577\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"742.6812781886831\" cy=\"229.1671211188094\" r=\"22\" fill=\"#8A8780\"/><circle cx=\"222\" cy=\"280\" r=\"46\" fill=\"#100E0D\"/><circle cx=\"666\" cy=\"280\" r=\"46\" fill=\"#100E0D\"/><g fill=\"none\" stroke=\"#C8834A\" stroke-width=\"7\" stroke-dasharray=\"3 14\" stroke-linecap=\"round\"><circle cx=\"222\" cy=\"280\" r=\"58\"/><circle cx=\"666\" cy=\"280\" r=\"58\"/></g></svg>",
+      "h": 680
+    },
+    {
+      "layout": "visuel",
+      "label": "Dernier essai",
+      "titre": "Même rond. Deux cadres.",
+      "texte": "Dans le cadre serré, il paraît souvent plus gros. Dans le cadre large, plus petit.",
+      "svg": "<svg viewBox=\"0 0 888 560\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" stroke=\"#8A8780\" stroke-width=\"7\"><circle cx=\"210\" cy=\"280\" r=\"92\"/><circle cx=\"640\" cy=\"280\" r=\"200\"/></g>\n  <circle cx=\"210\" cy=\"280\" r=\"58\" fill=\"#100E0D\"/><circle cx=\"640\" cy=\"280\" r=\"58\" fill=\"#100E0D\"/></svg>",
+      "h": 680
+    },
+    {
+      "layout": "phrase",
+      "theme": "studio",
+      "label": "Ce que ça change pour toi",
+      "titre": "Ton cerveau ne *mesure* pas. Il compare.",
+      "taille": "t-l",
+      "texte": "Une vidéo, c’est un cadre : ce qu’on met autour de ton produit compte autant que le produit."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Ton cadre, on le travaille avec toi.",
+      "taille": "t-m",
+      "texte": "À partir de ce que tu as déjà filmé.",
+      "bouton": "Envoie-nous un message"
+    }
+  ],
+  "caption": "Deux lignes, laquelle est la plus longue ? Tu viens de te faire avoir, nous aussi la première fois.\n\nTon œil ne mesure pas : il compare avec ce qui entoure. Une vidéo marche pareil, le cadre autour d'un produit change ce qu'on en voit. C'est notre métier : cadrer ce que tu as déjà filmé.\n\nEnvoie-nous un message → @broozeproduction\n\nTu avais trouvé la 1re, ou tu t'es fait avoir ? Envoie ce carrousel à quelqu'un qui est sûr de ses yeux.\n\n#illusion #video #strasbourg"
+}

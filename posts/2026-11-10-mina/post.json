@@ -1,0 +1,49 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-10T12:00:00+01:00",
+  "role": "attirer",
+  "nouveau_format": true,
+  "avatar": "Claire",
+  "pilier": "Fiction annoncée",
+  "hypothese": "Une mini-fiction en 3 images (« Petite histoire inventée ») obtient plus de passages jusqu'à la dernière image que les stories sans récit.",
+  "emotion": {
+    "quoi": "tendresse et sourire",
+    "comment": "un petit point qui scrolle et s’arrête sur le seul carré penché",
+    "ou": "image 3"
+  },
+  "test_ose": {
+    "quoi": "Première fiction en story, personnage récurrent possible (Mina)",
+    "pourquoi": "les histoires gardent jusqu’au bout",
+    "risque": "Perçue comme enfantine ou hors sujet",
+    "garde_fou": "Fiction annoncée et reliée au métier en dernière image",
+    "mesure": "passages vers l’image suivante / portée, sorties / portée",
+    "arret": "Sorties élevées sur 2 fictions : on arrête"
+  },
+  "slides": [
+    {
+      "layout": "visuel",
+      "label": "Petite histoire inventée",
+      "titre": "Mina scrolle.",
+      "texte": "Des centaines de carrés pareils. Elle ne s’arrête sur aucun.",
+      "svg": "<svg viewBox=\"0 0 888 1010\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"70\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><circle cx=\"444\" cy=\"975\" r=\"26\" fill=\"#100E0D\"/></svg>",
+      "h": 1000,
+      "taille": "t-m"
+    },
+    {
+      "layout": "visuel",
+      "label": "Petite histoire inventée",
+      "titre": "Et puis, un seul est penché.",
+      "svg": "<svg viewBox=\"0 0 888 940\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"70\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"70\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"234\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"398\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#C8834A\" transform=\"rotate(14 617 555)\"/><rect x=\"562\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"562\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"50\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"200\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"350\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"500\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"650\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/><rect x=\"726\" y=\"800\" width=\"110\" height=\"110\" rx=\"8\" fill=\"#8A8780\" opacity=\".55\"/></svg>",
+      "h": 900,
+      "taille": "t-m"
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Mina s’arrête. Pas pour le plus beau : pour celui qui sort du rang.",
+      "taille": "t-m",
+      "texte": "Envoie ça à celui qui poste comme tout le monde.",
+      "bouton": "Envoie-le à quelqu’un"
+    }
+  ]
+}

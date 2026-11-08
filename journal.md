@@ -1,5 +1,12 @@
 # Journal de l'agent marketing Brooze
 
+## 08/11 — semaine du 09/11 programmée (1 carrousel, 4 stories, nouveau cap)
+- Analyse : fenêtre vide dans Metricool, aucun audio ni inbox. Mesure fine non faite (portées trop faibles, aucun post publié récent sans chiffres exploitables). Concurrents : non réévalués cette semaine.
+- Test osé : carrousel 100 % jeu d'illusions (risque : hors métier ; garde-fou : diapos 6-7 reliées au cadrage ; mesure : enregistrements + partages / portée > quiz du 02/11 ; arrêt : 2 jeux sans réaction).
+- Mer 11/11 18 h · carrousel « Laquelle est la plus longue ? » (3 illusions) · Karim · attirer · émotion : surprise (diapos 2 et 4) · 5 diapos sur 7 en image forte, nouvelle mise en page `visuel` · contrôle ≥ 8.
+- Lun 09/11 12 h · story grille d'Hermann (curiosité/surprise) · Mar 10/11 12 h · story fiction « Mina » annoncée (tendresse) · Jeu 12/11 12 h · story Stroop (frustration qui se résout) · Sam 14/11 12 h · story point aveugle (émerveillement).
+- Refusés : aucun. Réserve de stories nouveau cap : 0 (non reconstruite, temps utilisé pour la semaine).
+
 ## 08/11 (3 h 41) — savoir, rien à produire
 - Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours. Veille (et revue du dimanche) à 15 h 41. Stories nouveau cap : non fabriquées.
 - Savoir : S-0022 (gorille invisible, 46 % dans l'étude originale, source secondaire), A-0013 toujours à vérifier, 3 notions revues ; yt-dlp absent, vidIQ non joint. Rien de neuf qui change la pratique.

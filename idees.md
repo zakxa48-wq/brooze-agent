@@ -37,3 +37,9 @@
 | 2026-11-07 | Story | Diagnostic : le logo n'est pas une accroche | « Ton logo n'est pas une accroche. » |
 | 2026-11-08 | Story | Appel à l'action : avis franc, pas de compliment | « On ne te dira pas que ta vidéo est super. » |
 | (réserve) | Story | R-008 question durée de validation · R-009 on cherche la phrase avant de monter · R-010 un rush, plusieurs accroches | — |
+
+| 2026-11-09 | Story | Illusion : grille d'Hermann, points fantômes (lien montage) | « Combien de points gris vois-tu ? » |
+| 2026-11-10 | Story | Fiction annoncée : Mina scrolle, un carré penché | « Mina scrolle. » |
+| 2026-11-11 | Carrousel | Jeu d'illusions (Müller-Lyer, Ebbinghaus, Delboeuf) → le cadre | « Laquelle est la plus longue ? » |
+| 2026-11-12 | Story | Stroop : clair ou foncé, lecture automatique | « Pas le mot : clair ou foncé ? » |
+| 2026-11-14 | Story | Mini-expérience : point aveugle | « Ferme l'œil gauche. Fixe la croix. » |

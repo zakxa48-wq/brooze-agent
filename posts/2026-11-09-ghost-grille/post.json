@@ -1,0 +1,40 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-09T12:00:00+01:00",
+  "role": "attirer",
+  "nouveau_format": true,
+  "avatar": "Karim",
+  "pilier": "Démonstration",
+  "hypothese": "Une illusion à regarder (grille d'Hermann) obtient plus de réponses / portée qu'une affirmation, parce qu'on veut dire ce qu'on voit.",
+  "emotion": {
+    "quoi": "curiosité puis surprise",
+    "comment": "des points gris apparaissent là où il n'y en a pas",
+    "ou": "image 1"
+  },
+  "slides": [
+    {
+      "layout": "visuel",
+      "label": "Regarde les croisements",
+      "titre": "Combien de points *gris* vois-tu ?",
+      "texte": "Compte-les avant de passer.",
+      "svg": "<svg viewBox=\"0 0 888 888\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"44\" y=\"44\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"44\" y=\"254\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"44\" y=\"464\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"44\" y=\"674\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"254\" y=\"44\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"254\" y=\"254\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"254\" y=\"464\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"254\" y=\"674\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"464\" y=\"44\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"464\" y=\"254\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"464\" y=\"464\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"464\" y=\"674\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"674\" y=\"44\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"674\" y=\"254\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"674\" y=\"464\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/><rect x=\"674\" y=\"674\" width=\"170\" height=\"170\" rx=\"10\" fill=\"#100E0D\"/></svg>",
+      "h": 900,
+      "taille": "t-m"
+    },
+    {
+      "layout": "phrase",
+      "theme": "studio",
+      "label": "Réponse",
+      "titre": "Zéro. Ton œil les fabrique.",
+      "taille": "t-l",
+      "texte": "Ton cerveau relie ce qu’il voit pour compléter. Le montage fait pareil avec deux plans : on en fait une histoire."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Tu en as vu combien ? Réponds en message.",
+      "taille": "t-m",
+      "bouton": "Réponds en message"
+    }
+  ]
+}

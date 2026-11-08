@@ -1,0 +1,41 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-12T12:00:00+01:00",
+  "role": "attirer",
+  "nouveau_format": true,
+  "avatar": "Claire",
+  "pilier": "Démonstration",
+  "hypothese": "Un petit test à faire à voix haute (effet Stroop) obtient plus de réponses / portée qu'une question, parce qu'il crée une sensation vécue.",
+  "emotion": {
+    "quoi": "frustration qui se résout, rire",
+    "comment": "on bute en disant la teinte à voix haute",
+    "ou": "image 1"
+  },
+  "slides": [
+    {
+      "layout": "visuel",
+      "fond": "studio",
+      "label": "Dis à voix haute la teinte",
+      "titre": "Pas le mot : clair ou *foncé* ?",
+      "texte": "Le plus vite possible, de haut en bas.",
+      "svg": "<svg viewBox=\"0 0 888 900\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"444\" y=\"130\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#100E0D\">CLAIR</text><text x=\"444\" y=\"262\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#EDEBE7\">FONCÉ</text><text x=\"444\" y=\"394\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#100E0D\">FONCÉ</text><text x=\"444\" y=\"526\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#EDEBE7\">CLAIR</text><text x=\"444\" y=\"658\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#100E0D\">CLAIR</text><text x=\"444\" y=\"790\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"104\" letter-spacing=\"-3\" fill=\"#EDEBE7\">FONCÉ</text></svg>",
+      "h": 900,
+      "taille": "t-m"
+    },
+    {
+      "layout": "phrase",
+      "theme": "studio",
+      "label": "Si tu as ralenti",
+      "titre": "Normal : lire est automatique.",
+      "taille": "t-l",
+      "texte": "Un texte à l’écran est lu avant d’être jugé. Chez Brooze : cinq mots maximum par image."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Tu as buté combien de fois ? Dis-le-nous.",
+      "taille": "t-m",
+      "bouton": "Réponds en message"
+    }
+  ]
+}

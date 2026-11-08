@@ -1,0 +1,40 @@
+{
+  "type": "story",
+  "date_prevue": "2026-11-14T12:00:00+01:00",
+  "role": "attirer",
+  "nouveau_format": true,
+  "avatar": "Karim",
+  "pilier": "Mini-expérience",
+  "hypothese": "Une mini-expérience à faire chez soi (point aveugle) obtient plus de réponses / portée qu'un quiz à regarder, parce qu'elle fait agir.",
+  "emotion": {
+    "quoi": "émerveillement",
+    "comment": "le rond disparaît vraiment",
+    "ou": "image 1"
+  },
+  "slides": [
+    {
+      "layout": "visuel",
+      "label": "Mini-expérience · 20 secondes",
+      "titre": "Ferme l’œil gauche. Fixe la *croix*.",
+      "texte": "Approche ou éloigne le téléphone doucement, sans quitter la croix des yeux.",
+      "svg": "<svg viewBox=\"0 0 888 520\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke=\"#100E0D\" stroke-width=\"14\" stroke-linecap=\"round\"><path d=\"M130 260 H210 M170 220 V300\"/></g><circle cx=\"730\" cy=\"260\" r=\"30\" fill=\"#100E0D\"/></svg>",
+      "h": 520,
+      "taille": "t-m"
+    },
+    {
+      "layout": "phrase",
+      "theme": "studio",
+      "label": "Le rond a disparu ?",
+      "titre": "Ton cerveau comble les trous.",
+      "taille": "t-l",
+      "texte": "Tu as un point aveugle dans chaque œil, et tu ne le vois jamais. Un montage bien fait se remarque pareil : jamais."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Il a disparu pour toi ? Réponds OUI ou NON.",
+      "taille": "t-m",
+      "bouton": "Réponds en message"
+    }
+  ]
+}

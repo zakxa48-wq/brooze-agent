@@ -107,6 +107,13 @@ body { font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
 .faux .corps.pale { color: var(--gris-ui); }
 .faux .corps .cuivre { color: var(--cuivre-profond); }
 
+
+/* Visuel : image dessinée en code (SVG) dans une carte, titre et texte dessous */
+.vis { background: var(--carte); border-radius: 36px; margin-top: 40px; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(16,14,13,.28), 0 2px 0 rgba(255,255,255,.7) inset; }
+.vis svg { width: 100%; height: 100%; display: block; }
+.vis.studio { background: #8A8780; }
+
 .flex1 { flex: 1; }
 .col { display: flex; flex-direction: column; }
 </style>
@@ -224,6 +231,15 @@ const L = {
     <div class="filet" style="margin:64px 0 48px"></div>
     <div class="label" style="margin-bottom:28px">${esc(S.label2 || 'Notre réponse')}</div>
     <div class="texte" style="color:var(--encre)">${md(S.reponse)}</div>
+    <div class="flex1"></div>`,
+
+  // Visuel : une image SVG forte + titre + texte (jeux, illusions, schémas)
+  visuel: () => `${entete()}
+    ${S.label ? `<div class="label" style="margin-top:40px">${esc(S.label)}</div>` : ''}
+    <div class="vis ${S.fond || ''}" style="height:${S.h || 560}px">${S.svg}</div>
+    <div class="flex1"></div>
+    <div class="titre ${S.taille || 't-m'}">${md(S.titre)}</div>
+    ${S.texte ? `<div class="texte" style="margin-top:28px">${md(S.texte)}</div>` : ''}
     <div class="flex1"></div>`,
 
   // Fin : logo + appel à l'action

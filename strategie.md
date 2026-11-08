@@ -33,6 +33,10 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 | Un carrousel qui lève trois objections de Karim amène plus de messages / portée. | 2026-11-06 | à mesurer |
 | Une story « avis franc » obtient plus de messages / portée que l'offre directe du 01/11. | 2026-11-08 | à mesurer |
 
+| Un jeu d'illusions (carrousel visuel, test osé) obtient plus d'enregistrements et partages / portée que le quiz du 02/11. | 2026-11-11-illusions-trois-essais | à mesurer |
+| Une mini-fiction annoncée (Mina) garde plus jusqu'à la dernière image que les stories sans récit. | 2026-11-10-mina | à mesurer |
+| Une expérience à faire (point aveugle, Stroop, Hermann) obtient plus de réponses / portée qu'une question. | stories 09, 12, 14/11 | à mesurer |
+
 ## Confirmées (devenues des règles)
 (rien pour l'instant)
 
