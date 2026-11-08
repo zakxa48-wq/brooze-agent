@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 08/11 (3 h 41) — savoir, rien à produire
+- Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours. Veille (et revue du dimanche) à 15 h 41. Stories nouveau cap : non fabriquées.
+- Savoir : S-0022 (gorille invisible, 46 % dans l'étude originale, source secondaire), A-0013 toujours à vérifier, 3 notions revues ; yt-dlp absent, vidIQ non joint. Rien de neuf qui change la pratique.
+
 
 ## 07/11 (15 h 41) — veille légère, rien à produire
 - Planification 07→10/11 : seulement les 4 brouillons de stories de l'ancien cap (voulu, intouchés), aucune erreur. Banque : 0 idée disponible, aucun audio, aucune donnée nouvelle, aucun Reel en cours. Savoir du jour déjà fait à 3 h 41. Relevé analytique détaillé non fait (rien de nouveau à comparer). Aucune alerte.
