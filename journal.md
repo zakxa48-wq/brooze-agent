@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 09/11 (3 h 41) — savoir, rien à produire
+- Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours. Stories nouveau cap : non fabriquées. Veille à 15 h 41.
+- Savoir : S-0023 (durées et courbes de mouvement, conventions de praticiens, source faible, résumé seul), 1 lien, 3 notions revues ; YouTube bloqué par l'anti-bot (non contourné), vidIQ non joint. Rien de neuf qui change la pratique.
+
 ## 08/11 (15 h 41) — veille et revue du dimanche, rien à produire
 - Veille : 3 décollages (« Tu as cligné ? » ×7 à J+0, bille ×7 à J+2, Red Bull ×3,4 à J+3, en ligne le 05/11) ; 6 Reels sur 17 à ≥ 2× la médiane, tous des démonstrations. Planification sans erreur. Red Bull : statut publie. Banque : 0 idée, aucun audio, rien à produire. Savoir du jour déjà fait à 3 h 41.
 
