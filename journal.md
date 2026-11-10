@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 10/11 (3 h 41) — savoir, rien à produire
+- Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours, aucune donnée nouvelle. Stories nouveau cap : non fabriquées. Veille à 15 h 41.
+- Savoir : S-0024 (Palmer 2018, étude, extrait), A-0013 passée à probable et précisée (le taux dépend de la ressemblance objet/cible), 3 notions revues ; yt-dlp absent (setup en cours), vidIQ non joint. Rien de neuf qui change la pratique.
+
 ## 09/11 (15 h 41) — veille, rien à produire
 - Veille : cligné 1 518 vues (76 % > 3 s, 9 enregistrements), pas de nouvelle détection ; planification sans erreur (stories 09/11 publiées, 10/12/14/11 et carrousel 11/11 en attente). Banque : 0 idée, aucun audio, aucune donnée nouvelle, aucun Reel en cours ; savoir du jour déjà fait à 3 h 41. Stories nouveau cap : non fabriquées (aucune obligation, numpy absent au moment du passage).
 
