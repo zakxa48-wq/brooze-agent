@@ -1,0 +1,45 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": true,
+ "avatar": "Claire",
+ "pilier": "Expérience",
+ "angle": "Regarder n'est pas voir (cécité attentionnelle)",
+ "hypothese": "Une mini-expérience où le spectateur se rate lui-même provoque plus de réponses qu'une question, parce qu'il vit l'effet.",
+ "savoir": [
+  "A-0013",
+  "A-0014"
+ ],
+ "emotion": {
+  "quoi": "surprise",
+  "comment": "on avait tous les mots sous les yeux et on ne peut pas dire celui du bas à droite",
+  "ou": "image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Fixe le point 3 secondes",
+   "titre": "Ne bouge pas les yeux.",
+   "texte": "Puis passe à la suite.",
+   "svg": "<svg viewBox=\"0 0 888 900\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"150\" y=\"110\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">LUNE</text><text x=\"738\" y=\"130\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">CAFÉ</text><text x=\"444\" y=\"200\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">PORTE</text><text x=\"130\" y=\"470\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">VÉLO</text><text x=\"760\" y=\"450\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">SEL</text><text x=\"250\" y=\"780\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">PLUME</text><text x=\"700\" y=\"800\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">RENARD</text><text x=\"450\" y=\"700\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"46\" fill=\"#6B675F\">ROSE</text><circle cx=\"444\" cy=\"450\" r=\"34\" fill=\"#C8834A\"/></svg>",
+   "h": 900,
+   "taille": "t-m"
+  },
+  {
+   "layout": "phrase",
+   "theme": "studio",
+   "label": "Sans revenir en arrière",
+   "titre": "Quel mot était en bas à *droite* ?",
+   "taille": "t-l",
+   "texte": "Il était sous tes yeux. L’œil voit ce que l’attention choisit : en vidéo, on montre une chose à la fois."
+  },
+  {
+   "layout": "cta",
+   "theme": "encre",
+   "titre": "Tu l’avais ? Réponds en un mot.",
+   "taille": "t-m",
+   "bouton": "Réponds en message"
+  }
+ ]
+}

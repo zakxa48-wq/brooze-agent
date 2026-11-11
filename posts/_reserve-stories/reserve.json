@@ -92,5 +92,53 @@
   "utilisee_le": null,
   "retiree_le": "2026-11-05",
   "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-011-regarder-pas-voir",
+  "angle": "Regarder n'est pas voir (mini-expérience)",
+  "pilier": "Expérience",
+  "role": "attirer",
+  "cree_le": "2026-11-11",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : impossible de dire le mot du bas à droite sans revenir"
+  }
+ },
+ {
+  "id": "R-012-clignotant",
+  "angle": "Vrai ou faux : le clignotant attire plus",
+  "pilier": "Vrai ou faux",
+  "role": "attirer",
+  "cree_le": "2026-11-11",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : 86 % contre 91 %, on pariait sur un écart"
+  }
  }
 ]

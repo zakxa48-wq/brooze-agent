@@ -1,0 +1,45 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": true,
+ "avatar": "Karim",
+ "pilier": "Vrai ou faux",
+ "angle": "Un changement net attire autant qu'un clignotant",
+ "hypothese": "Un vrai ou faux contre-intuitif avec sa source donne envie de répondre (on parie avant de passer).",
+ "savoir": [
+  "A-0015"
+ ],
+ "source": "Palmer, Yamani, Bobrow, Karpinsky, Krusienski (2018), i-Perception 9(1), https://pmc.ncbi.nlm.nih.gov/articles/PMC5777565",
+ "emotion": {
+  "quoi": "surprise",
+  "comment": "on parie que le clignotant gagne, il ne gagne presque pas",
+  "ou": "image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Vrai ou faux ?",
+   "titre": "Ce qui clignote se remarque plus.",
+   "texte": "Parie avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 760\" preserveAspectRatio=\"xMidYMid meet\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"240\" cy=\"300\" r=\"110\" fill=\"#100E0D\"/><circle cx=\"240\" cy=\"300\" r=\"150\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-dasharray=\"14 18\"/><circle cx=\"240\" cy=\"300\" r=\"190\" fill=\"none\" stroke=\"#6B675F\" stroke-width=\"4\" stroke-dasharray=\"10 22\"/><circle cx=\"648\" cy=\"300\" r=\"110\" fill=\"#C8834A\"/><text x=\"240\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"44\" fill=\"#100E0D\">CLIGNOTE</text><text x=\"648\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"40\" fill=\"#100E0D\">CHANGE UNE FOIS</text></svg>",
+   "h": 760,
+   "taille": "t-m"
+  },
+  {
+   "layout": "phrase",
+   "theme": "papier",
+   "label": "Presque faux",
+   "titre": "Un seul changement *suffit*.",
+   "taille": "t-l",
+   "texte": "Un repère qui change une fois : vu par 86 % des gens. Qui clignote : 91 %. Pas de vraie différence (étude, 2018). Chez nous : un changement net."
+  },
+  {
+   "layout": "cta",
+   "theme": "encre",
+   "titre": "Tu avais parié vrai ? Dis-le-nous.",
+   "taille": "t-m",
+   "bouton": "Réponds en message"
+  }
+ ]
+}
