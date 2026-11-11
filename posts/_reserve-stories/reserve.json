@@ -99,7 +99,7 @@
   "pilier": "Expérience",
   "role": "attirer",
   "cree_le": "2026-11-11",
-  "utilisee_le": null,
+  "utilisee_le": "2026-11-13",
   "cap": "nouveau",
   "emotion": "surprise",
   "controle": {
@@ -115,7 +115,12 @@
    "pas_ia": 8,
    "orthographe": 9,
    "emotion_ressentie": "surprise, image 2 : impossible de dire le mot du bas à droite sans revenir"
-  }
+  },
+  "metricool": [
+   "424522804",
+   "424522829",
+   "424522846"
+  ]
  },
  {
   "id": "R-012-clignotant",

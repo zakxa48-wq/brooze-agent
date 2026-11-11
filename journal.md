@@ -1,5 +1,11 @@
 # Journal de l'agent marketing Brooze
 
+## 11/11 (15 h 41) — savoir, veille, 2 stories nouveau cap, rien d'autre à produire
+- Savoir (séance pas faite à 3 h 41, rattrapée) : S-0025 vidéo de D. Simons (YouTube, transcription complète) ; Palmer 2018 et « Soviet montage theory » relus en entier ; A-0013 → solide (le « 2× » du 10/11 corrigé : 100 % vs 42-57 % selon la couleur suivie) ; A-0014 « regarder n'est pas voir » et A-0015 « un changement net attire autant qu'un clignotant » (probables) ; P-043 ajouté. Barratt 2016 payant (sagepub 403), lup.lub.lu.se refusé ; TEDx Chabris bloqué par l'anti-bot ; vidIQ non joint.
+- Veille : carrousel illusions publié 11/11 10 h (pas encore mesurable), Reels stables (cligné 1 552), aucune erreur. Banque : 0 idée, aucun audio, aucun Reel en cours ou livré en attente.
+- Stories nouveau cap : R-011 « regarder n'est pas voir » (surprise, A-0013/A-0014) et R-012 « vrai ou faux clignotant » (surprise, A-0015, source Palmer 2018 citée) fabriquées, contrôlées (≥ 8 partout, 2 cuivres corrigés sur les images 1) ; R-011 programmée ven. 13/11 10 h (3 images, meilleur créneau). Réserve : 1 story disponible.
+- Question du 27/10 : déjà répondue le 28/10 (lignes ci-dessous) ; ligne RÉPONDU ajoutée au fichier.
+
 ## 10/11 (15 h 41) — veille, rien à produire
 - Veille : cligné 1 552 vues (75,6 % > 3 s), pas de nouvelle détection ; stories 09 et 10/11 publiées, 12 et 14/11 et carrousel 11/11 en attente, aucune erreur. Banque : 0 idée, aucun audio, aucun Reel en cours. Savoir du jour déjà fait à 3 h 41. Setup (numpy) encore en cours : cerveau.py nouveaux non exécutable, data/ sans fichier nouveau visible (retours/ inchangé).
 
