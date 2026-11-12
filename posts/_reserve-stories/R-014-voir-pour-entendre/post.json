@@ -1,0 +1,48 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": true,
+ "avatar": "Claire",
+ "pilier": "Vrai ou faux",
+ "angle": "Effet McGurk : ce qu’on voit change ce qu’on entend",
+ "hypothese": "Une illusion que le spectateur peut vérifier lui-même (chercher la vidéo) déclenche des réponses « moi j’entends… ».",
+ "savoir": [
+  "A-0016",
+  "A-0017"
+ ],
+ "source": "McGurk & MacDonald (1976), Nature 264 ; Basu Mallick, Magnotti & Beauchamp (2015), Psychon Bull Rev 22, https://pmc.ncbi.nlm.nih.gov/articles/PMC4580505",
+ "emotion": {
+  "quoi": "émerveillement",
+  "comment": "ses propres yeux trafiquent ce qu’il entend, et le savoir n’y change rien",
+  "ou": "image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Vrai ou faux ?",
+   "titre": "Ce que tu vois peut changer ce que tu *entends*.",
+   "texte": "Parie avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 760\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M170,370 C150,240 300,220 280,340 C270,390 230,380 225,430 C220,470 180,470 170,440\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"12\" stroke-linecap=\"round\"/><path d=\"M205,340 C200,290 255,285 245,330\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"10\" stroke-linecap=\"round\"/><path d=\"M558,360 C608,300 648,320 668,330 C688,320 728,300 778,360 C728,440 608,440 558,360 Z\" fill=\"#100E0D\"/><ellipse cx=\"668\" cy=\"368\" rx=\"60\" ry=\"22\" fill=\"#EDEBE7\"/><text x=\"220\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"40\" letter-spacing=\"5\" fill=\"#6B675F\">TU ENTENDS</text><text x=\"668\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"40\" letter-spacing=\"5\" fill=\"#6B675F\">TU VOIS</text><text x=\"444\" y=\"380\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"120\" fill=\"#100E0D\">?</text></svg>",
+   "h": 760,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Vrai",
+   "titre": "Ton cerveau mélange les deux.",
+   "texte": "Le son dit « ba », les lèvres disent « ga » : environ une personne sur deux entend « da ». Même en le sachant (effet McGurk, 1976). Chez nous, le son se choisit en regardant l’image.",
+   "svg": "<svg viewBox=\"0 0 888 760\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40.0\" y=\"170\" width=\"220\" height=\"150\" rx=\"40\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><text x=\"150\" y=\"272\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"84\" fill=\"#100E0D\">BA</text><rect x=\"334.0\" y=\"170\" width=\"220\" height=\"150\" rx=\"40\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><text x=\"444\" y=\"272\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"84\" fill=\"#100E0D\">GA</text><rect x=\"628.0\" y=\"170\" width=\"220\" height=\"150\" rx=\"40\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><text x=\"738\" y=\"272\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"84\" fill=\"#C8834A\">DA</text><text x=\"297\" y=\"275\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"72\" fill=\"#100E0D\">+</text><text x=\"591\" y=\"275\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"72\" fill=\"#100E0D\">=</text><text x=\"150\" y=\"420\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"36\" letter-spacing=\"4\" fill=\"#6B675F\">LE SON</text><text x=\"444\" y=\"420\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"36\" letter-spacing=\"4\" fill=\"#6B675F\">LES LÈVRES</text><text x=\"738\" y=\"420\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"36\" letter-spacing=\"4\" fill=\"#6B675F\">TU ENTENDS</text><path d=\"M334,600 C384,540 424,560 444,570 C464,560 504,540 554,600 C504,680 384,680 334,600 Z\" fill=\"#100E0D\"/><ellipse cx=\"444\" cy=\"608\" rx=\"60\" ry=\"22\" fill=\"#EDEBE7\"/></svg>",
+   "h": 660,
+   "taille": "t-m"
+  },
+  {
+   "layout": "cta",
+   "theme": "encre",
+   "titre": "Cherche « effet McGurk », ferme les yeux à mi-chemin. Tu entends quoi ?",
+   "taille": "t-m",
+   "bouton": "Raconte-nous en message"
+  }
+ ]
+}

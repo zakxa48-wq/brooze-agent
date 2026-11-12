@@ -145,5 +145,63 @@
    "orthographe": 9,
    "emotion_ressentie": "surprise, image 2 : 86 % contre 91 %, on pariait sur un écart"
   }
+ },
+ {
+  "id": "R-013-ralentir-avant-arret",
+  "angle": "Devine : slow in / slow out (une balle vivante ralentit avant l’arrêt)",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-12",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "curiosité",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "curiosité, image 1 : les deux trajets se ressemblent, on cherche ce qui fait vivant ; résolue image 2 par la courbe"
+  },
+  "corrections": [
+   "labels SVG en Inter (Space Grotesk tombait en serif)",
+   "hauteur image 2 (titre collé au cadre)",
+   "apostrophes typographiques"
+  ]
+ },
+ {
+  "id": "R-014-voir-pour-entendre",
+  "angle": "Vrai ou faux : ce qu’on voit change ce qu’on entend (effet McGurk)",
+  "pilier": "Vrai ou faux",
+  "role": "attirer",
+  "cree_le": "2026-11-12",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "émerveillement",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "émerveillement, image 2 : BA + GA = DA, et le savoir n’y change rien"
+  },
+  "corrections": [
+   "labels SVG en Inter",
+   "hauteur image 2",
+   "apostrophes typographiques"
+  ]
  }
 ]
