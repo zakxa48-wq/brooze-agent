@@ -157,7 +157,7 @@
   "pilier": "Devine",
   "role": "attirer",
   "cree_le": "2026-11-12",
-  "utilisee_le": null,
+  "utilisee_le": "2026-11-17",
   "cap": "nouveau",
   "emotion": "curiosité",
   "controle": {
@@ -178,6 +178,11 @@
    "labels SVG en Inter (Space Grotesk tombait en serif)",
    "hauteur image 2 (titre collé au cadre)",
    "apostrophes typographiques"
+  ],
+  "metricool": [
+   "425783633",
+   "425783671",
+   "425783703"
   ]
  },
  {

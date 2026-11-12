@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 12/11 (15 h 41) — veille, 1 story programmée, rien d'autre à produire
+- Veille : nouveau Reel publié le 11/11 (pas de l'agent) à 1 218 vues à J+1 (70,1 % > 3 s, 17,8 s, 6 enregistrements) = ×6,7 la médiane (≈ 181) : alerte « viral ». Carrousel illusions J+1 : portée 3, trop tôt. Stories 12/11 publiées, aucune erreur.
+- Stories nouveau cap : R-013 « slow in / slow out » programmée mar. 17/11 10 h (meilleur créneau, 3 images, ids 425783633/671/703 ; mardi choisi pour rester loin d'un éventuel carrousel lun/mer/ven). Aucune story fabriquée ce passage (pas d'affirmation solide non encore exploitée qui se montre en image fixe). Réserve : 1 story disponible (R-014).
+- Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente ; aucune donnée nouvelle dans data/ (cerveau.py nouveaux non exécutable : numpy absent, setup en cours). Savoir du jour fait à 3 h 41.
+
 ## 12/11 (3 h 41) — savoir, 2 stories nouveau cap, 1 story programmée, rien d'autre à produire
 - Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente. Veille à 15 h 41.
 - Savoir : nouvelle notion « intégration audiovisuelle » (effet McGurk) : S-0026 (synthèse) et S-0027 (Basu Mallick et al. 2015, étude lue en entier, n = 360) ; A-0016 probable (ce qu'on voit change ce qu'on entend, même en le sachant), A-0017 probable (0 à 100 % selon les personnes, stable à 1 an), A-0018 à vérifier (son toléré jusqu'à ~180 ms après l'image, très peu avant) ; S-0016 et S-0021 relues en entier. YouTube : 429 et anti-bot (non contourné), vidIQ non joint.
