@@ -43,4 +43,4 @@
 | 2026-11-11 | Carrousel | Jeu d'illusions (Müller-Lyer, Ebbinghaus, Delboeuf) → le cadre | « Laquelle est la plus longue ? » |
 | 2026-11-12 | Story | Stroop : clair ou foncé, lecture automatique | « Pas le mot : clair ou foncé ? » |
 | 2026-11-14 | Story | Mini-expérience : point aveugle | « Ferme l'œil gauche. Fixe la croix. » |
-- 15/11 · story R-012 · Vrai ou faux : un changement net attire autant qu'un clignotant (A-0015) · surprise
+| 2026-11-15 | Story | Vrai ou faux : un changement net attire autant qu'un clignotant (R-012) | « Ce qui clignote se remarque plus. » |
