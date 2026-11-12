@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 12/11 (3 h 41) — savoir, 2 stories nouveau cap, 1 story programmée, rien d'autre à produire
+- Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente. Veille à 15 h 41.
+- Savoir : nouvelle notion « intégration audiovisuelle » (effet McGurk) : S-0026 (synthèse) et S-0027 (Basu Mallick et al. 2015, étude lue en entier, n = 360) ; A-0016 probable (ce qu'on voit change ce qu'on entend, même en le sachant), A-0017 probable (0 à 100 % selon les personnes, stable à 1 an), A-0018 à vérifier (son toléré jusqu'à ~180 ms après l'image, très peu avant) ; S-0016 et S-0021 relues en entier. YouTube : 429 et anti-bot (non contourné), vidIQ non joint.
+- Stories nouveau cap : R-013 « laquelle bouge comme un vrai objet ? » (curiosité, slow in/slow out, règle de praticiens annoncée comme telle) et R-014 « ce que tu vois change ce que tu entends » (émerveillement, A-0016/A-0017, source citée) fabriquées et contrôlées (≥ 8 partout ; corrigé : police des SVG en serif, titre collé au cadre, apostrophes). R-012 programmée dim. 15/11 10 h (3 images, ids 425204632/38/44). Réserve : 2 stories disponibles.
+
 ## 11/11 (15 h 41) — savoir, veille, 2 stories nouveau cap, rien d'autre à produire
 - Savoir (séance pas faite à 3 h 41, rattrapée) : S-0025 vidéo de D. Simons (YouTube, transcription complète) ; Palmer 2018 et « Soviet montage theory » relus en entier ; A-0013 → solide (le « 2× » du 10/11 corrigé : 100 % vs 42-57 % selon la couleur suivie) ; A-0014 « regarder n'est pas voir » et A-0015 « un changement net attire autant qu'un clignotant » (probables) ; P-043 ajouté. Barratt 2016 payant (sagepub 403), lup.lub.lu.se refusé ; TEDx Chabris bloqué par l'anti-bot ; vidIQ non joint.
 - Veille : carrousel illusions publié 11/11 10 h (pas encore mesurable), Reels stables (cligné 1 552), aucune erreur. Banque : 0 idée, aucun audio, aucun Reel en cours ou livré en attente.

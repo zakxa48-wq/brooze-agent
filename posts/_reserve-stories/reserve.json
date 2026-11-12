@@ -128,7 +128,7 @@
   "pilier": "Vrai ou faux",
   "role": "attirer",
   "cree_le": "2026-11-11",
-  "utilisee_le": null,
+  "utilisee_le": "2026-11-15",
   "cap": "nouveau",
   "emotion": "surprise",
   "controle": {
@@ -144,7 +144,12 @@
    "pas_ia": 8,
    "orthographe": 9,
    "emotion_ressentie": "surprise, image 2 : 86 % contre 91 %, on pariait sur un écart"
-  }
+  },
+  "metricool": [
+   "425204632",
+   "425204638",
+   "425204644"
+  ]
  },
  {
   "id": "R-013-ralentir-avant-arret",
