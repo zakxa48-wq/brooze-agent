@@ -191,7 +191,7 @@
   "pilier": "Vrai ou faux",
   "role": "attirer",
   "cree_le": "2026-11-12",
-  "utilisee_le": null,
+  "utilisee_le": "2026-11-19",
   "cap": "nouveau",
   "emotion": "émerveillement",
   "controle": {
@@ -212,6 +212,11 @@
    "labels SVG en Inter",
    "hauteur image 2",
    "apostrophes typographiques"
+  ],
+  "metricool": [
+   "426482078",
+   "426482087",
+   "426482101"
   ]
  },
  {

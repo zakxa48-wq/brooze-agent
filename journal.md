@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 13/11 (3 h 41) — savoir, 1 story nouveau cap, 1 story programmée, rien d'autre à produire
+- Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle (question du 27/10 déjà répondue). Veille à 15 h 41.
+- Savoir : fenêtre de synchronie son/image recoupée par Venezia et al. 2016 (S-0028, lue en entier) et van Wassenhove 2013 (S-0029) → A-0018 probable ; A-0019 (impact d'objet : son en avance remarqué dès ~75 ms, en retard vers ~190 ms, Dixon & Spitz 1980) ; YouTube : monteur pro sur le calage de la musique (S-0030, transcription complète) → notion calage-musique, A-0020 ; S-0017 relue en entier ; P-044 (bruitage sur l'image d'impact ou 1-3 images après, jamais avant). Refusés : m1.material.io, research.cbs.dk ; 429 sur tAtKWqg2hII ; vidIQ non joint.
+- Stories nouveau cap : R-015 « un bruit en avance se remarque plus vite » (surprise, A-0018/A-0019, source citée) fabriquée et contrôlée (≥ 8 ; corrigé : marteau qui frappe vraiment le clou, légende « en moyenne »). R-014 programmée jeu. 19/11 10 h (3 images, ids 426482078/087/101, [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-6509802640656479512)). Réserve : 1 story disponible (R-015).
+
 ## 12/11 (15 h 41) — veille, 1 story programmée, rien d'autre à produire
 - Veille : nouveau Reel publié le 11/11 (pas de l'agent) à 1 218 vues à J+1 (70,1 % > 3 s, 17,8 s, 6 enregistrements) = ×6,7 la médiane (≈ 181) : alerte « viral ». Carrousel illusions J+1 : portée 3, trop tôt. Stories 12/11 publiées, aucune erreur.
 - Stories nouveau cap : R-013 « slow in / slow out » programmée mar. 17/11 10 h (meilleur créneau, 3 images, ids 425783633/671/703 ; mardi choisi pour rester loin d'un éventuel carrousel lun/mer/ven). Aucune story fabriquée ce passage (pas d'affirmation solide non encore exploitée qui se montre en image fixe). Réserve : 1 story disponible (R-014).
