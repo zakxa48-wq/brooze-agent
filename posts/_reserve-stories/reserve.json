@@ -213,5 +213,33 @@
    "hauteur image 2",
    "apostrophes typographiques"
   ]
+ },
+ {
+  "id": "R-015-son-trop-tot",
+  "angle": "Devine : un bruit en avance se remarque bien plus vite qu’un bruit en retard",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-13",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : on attend deux décalages équivalents, l’écart fait plus du double (75 contre 190 ms)"
+  },
+  "corrections": [
+   "marteau redessiné (le manche touchait le clou, la tête frappe maintenant)",
+   "légende de la zone colorée, nuancée « en moyenne »"
+  ]
  }
 ]
