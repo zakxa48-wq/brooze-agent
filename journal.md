@@ -1,5 +1,9 @@
 # Journal de l'agent marketing Brooze
 
+## 13/11 (15 h 41) — veille : story du 13/11 non publiée (limite du compte Metricool), rien à produire
+- Veille : story R-011 du 13/11 10 h en erreur « You have reached your Metricool account limit » (3 images) ; stories 14, 15, 17, 19/11 encore en attente (risque supposé du même échec). Non reprogrammée (cause = limite du compte) ; aucune nouvelle story programmée ; alerte envoyée à Zak. Reel du 11/11 : 1 225 vues à J+2 ; carrousel illusions J+2 : portée 5, 0 enregistrement.
+- Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente ; aucune donnée nouvelle (question du 27/10 déjà répondue). Savoir du jour fait à 3 h 41. Stories nouveau cap : aucune fabriquée (programmation bloquée ; réserve : 1, R-015).
+
 ## 13/11 (3 h 41) — savoir, 1 story nouveau cap, 1 story programmée, rien d'autre à produire
 - Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle (question du 27/10 déjà répondue). Veille à 15 h 41.
 - Savoir : fenêtre de synchronie son/image recoupée par Venezia et al. 2016 (S-0028, lue en entier) et van Wassenhove 2013 (S-0029) → A-0018 probable ; A-0019 (impact d'objet : son en avance remarqué dès ~75 ms, en retard vers ~190 ms, Dixon & Spitz 1980) ; YouTube : monteur pro sur le calage de la musique (S-0030, transcription complète) → notion calage-musique, A-0020 ; S-0017 relue en entier ; P-044 (bruitage sur l'image d'impact ou 1-3 images après, jamais avant). Refusés : m1.material.io, research.cbs.dk ; 429 sur tAtKWqg2hII ; vidIQ non joint.
