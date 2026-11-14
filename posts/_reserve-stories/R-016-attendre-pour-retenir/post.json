@@ -1,0 +1,48 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": false,
+ "avatar": "Claire",
+ "pilier": "Devine",
+ "angle": "Devine : une réponse qu’on attendait avec envie reste bien plus le lendemain",
+ "hypothese": "Une devinette qui fait vivre l’attente qu’elle décrit (question d’abord, réponse après) donne envie de l’envoyer à quelqu’un qui révise.",
+ "savoir": [
+  "A-0021",
+  "A-0022"
+ ],
+ "source": "Gruber, Gelman & Ranganath (2014), Neuron 84(2), https://pmc.ncbi.nlm.nih.gov/articles/PMC4252494",
+ "emotion": {
+  "quoi": "curiosité",
+  "comment": "on doit deviner l’écart avant de passer, puis on le découvre (46 contre 28 %)",
+  "ou": "images 1 et 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Devine",
+   "titre": "Une question, 14 s d’attente, puis la réponse. Le lendemain, quelles réponses te *restent* ?",
+   "texte": "Devine l’écart avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 760\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(444 250)\"><path d=\"M-110 -170 H110 M-110 170 H110\" stroke=\"#100E0D\" stroke-width=\"14\" stroke-linecap=\"round\"/><path d=\"M-90 -165 C-90 -60 -18 -30 -18 0 C-18 30 -90 60 -90 165 H90 C90 60 18 30 18 0 C18 -30 90 -60 90 -165 Z\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"10\" stroke-linejoin=\"round\"/><path d=\"M-62 -110 H62 C50 -60 10 -40 0 -14 C-10 -40 -50 -60 -62 -110 Z\" fill=\"#6B675F\" opacity=\"0.45\"/><path d=\"M0 0 V120\" stroke=\"#6B675F\" stroke-width=\"5\" stroke-dasharray=\"6 10\"/><path d=\"M-78 160 C-50 120 50 120 78 160 Z\" fill=\"#6B675F\" opacity=\"0.45\"/><text x=\"170\" y=\"20\" font-family=\"Inter\" font-weight=\"800\" font-size=\"72\" fill=\"#100E0D\">14 s</text></g><rect x=\"60\" y=\"540\" width=\"360\" height=\"170\" rx=\"28\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><text x=\"240\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"34\" fill=\"#100E0D\">Celles que</text><text x=\"240\" y=\"645\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"34\" fill=\"#100E0D\">tu attendais</text><text x=\"240\" y=\"690\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">AVEC ENVIE</text><rect x=\"468\" y=\"540\" width=\"360\" height=\"170\" rx=\"28\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><text x=\"648\" y=\"600\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"34\" fill=\"#100E0D\">Celles qui</text><text x=\"648\" y=\"645\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"34\" fill=\"#100E0D\">t’étaient</text><text x=\"648\" y=\"690\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">ÉGALES</text></svg>",
+   "h": 760,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Réponse",
+   "titre": "Celles que tu attendais avec envie restent bien plus.",
+   "texte": "Dans une étude (Gruber et al., 2014), 46 % des réponses attendues avec envie restaient le lendemain, contre 28 %. Chez nous, la question vient toujours avant la réponse.",
+   "svg": "<svg viewBox=\"0 0 888 600\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"444\" y=\"60\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">RÉPONSES RETENUES LE LENDEMAIN</text><rect x=\"150\" y=\"520\" width=\"588\" height=\"8\" rx=\"4\" fill=\"#100E0D\"/><rect x=\"190\" y=\"214\" width=\"220\" height=\"306\" rx=\"14\" fill=\"#C8834A\"/><text x=\"300\" y=\"190\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"64\" fill=\"#100E0D\">46 %</text><rect x=\"478\" y=\"334\" width=\"220\" height=\"186\" rx=\"14\" fill=\"#6B675F\" opacity=\"0.45\"/><text x=\"588\" y=\"310\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"64\" fill=\"#100E0D\">28 %</text><text x=\"300\" y=\"575\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">AVEC ENVIE</text><text x=\"588\" y=\"575\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">ÉGALES</text></svg>",
+   "h": 600,
+   "taille": "t-m"
+  },
+  {
+   "layout": "cta",
+   "theme": "encre",
+   "titre": "Envoie cette story à quelqu’un qui révise un examen.",
+   "taille": "t-m",
+   "bouton": "Envoie-la"
+  }
+ ]
+}

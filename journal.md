@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 14/11 (3 h 41) — savoir, 1 story nouveau cap, rien d'autre à produire
+- Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle dans data/ (git ; cerveau.py nouveaux non exécutable : numpy absent, setup en cours). Veille à 15 h 41.
+- Savoir : nouvelle notion « curiosité » : Gruber et al. 2014 (S-0031, lue en entier) → A-0021 probable (réponse attendue avec envie mieux retenue : 46 % contre 28 % le lendemain), A-0022 probable (ce qui passe pendant l'attente un peu mieux retenu, effet faible) ; Kang 2009 (S-0032, résumé) ; S-0029 relue en entier ; P-045 (question d'abord, réponse après une vraie attente, jamais sur la même image). YouTube : anti-bot sur 3 vidéos (non contourné), vidIQ non joint ; refusés : www.cmu.edu, www.fanpagekarma.com ; researchgate 403.
+- Stories nouveau cap : R-016 « quelles réponses te restent ? » (curiosité, A-0021, source citée) fabriquée et contrôlée (≥ 8 ; corrigé : affirmation « presque deux fois moins » inexacte retirée, insécables). Non programmée : limite du compte Metricool constatée le 13/11 (stories 14, 15, 17, 19/11 déjà en attente). Réserve : 2 stories (R-015, R-016).
+
 ## 13/11 (15 h 41) — veille : story du 13/11 non publiée (limite du compte Metricool), rien à produire
 - Veille : story R-011 du 13/11 10 h en erreur « You have reached your Metricool account limit » (3 images) ; stories 14, 15, 17, 19/11 encore en attente (risque supposé du même échec). Non reprogrammée (cause = limite du compte) ; aucune nouvelle story programmée ; alerte envoyée à Zak. Reel du 11/11 : 1 225 vues à J+2 ; carrousel illusions J+2 : portée 5, 0 enregistrement.
 - Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente ; aucune donnée nouvelle (question du 27/10 déjà répondue). Savoir du jour fait à 3 h 41. Stories nouveau cap : aucune fabriquée (programmation bloquée ; réserve : 1, R-015).

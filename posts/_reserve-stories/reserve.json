@@ -246,5 +246,34 @@
    "marteau redessiné (le manche touchait le clou, la tête frappe maintenant)",
    "légende de la zone colorée, nuancée « en moyenne »"
   ]
+ },
+ {
+  "id": "R-016-attendre-pour-retenir",
+  "angle": "Devine : une réponse qu’on attendait avec envie reste bien plus le lendemain",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-14",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "curiosité",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "curiosité, image 1 : on veut savoir de combien l’écart est grand avant de passer"
+  },
+  "corrections": [
+   "« presque deux fois moins » retiré (inexact : 28 contre 46 %)",
+   "espaces insécables (14 s, 46 %, 28 %, « ? »)",
+   "question reformulée : « quelles réponses te restent ? » (le « celles » des cartes devient clair)"
+  ]
  }
 ]
