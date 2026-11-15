@@ -44,3 +44,9 @@
 | 2026-11-12 | Story | Stroop : clair ou foncé, lecture automatique | « Pas le mot : clair ou foncé ? » |
 | 2026-11-14 | Story | Mini-expérience : point aveugle | « Ferme l'œil gauche. Fixe la croix. » |
 | 2026-11-15 | Story | Vrai ou faux : un changement net attire autant qu'un clignotant (R-012) | « Ce qui clignote se remarque plus. » |
+| 2026-11-16 | Story | Devine : un bruit en avance se remarque plus vite qu'en retard (R-015) | « Un marteau frappe un clou. Quel décalage tu remarques ? » |
+| 2026-11-17 | Story | Devine : slow in / slow out (R-013) | « Laquelle bouge comme un vrai objet ? » |
+| 2026-11-18 | Carrousel | Jeu : une tasse en 3D, quatre lumières, devine l'heure (aucune : une seule lampe a bougé) | « Quelle heure est-il ? » |
+| 2026-11-19 | Story | Vrai ou faux : ce qu'on voit change ce qu'on entend (R-014, McGurk) | « Ce que tu vois change ce que tu entends. » |
+| 2026-11-20 | Story | Devine : une réponse attendue avec envie reste mieux (R-016) | « Le lendemain, quelles réponses te restent ? » |
+| 2026-11-22 | Story | Devine : deviner rend curieux, pas meilleur en mémoire (R-017) | « Des étudiants devinaient la réponse avant de la voir. » |

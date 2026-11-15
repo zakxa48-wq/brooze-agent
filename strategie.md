@@ -37,6 +37,12 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 | Une mini-fiction annoncée (Mina) garde plus jusqu'à la dernière image que les stories sans récit. | 2026-11-10-mina | à mesurer |
 | Une expérience à faire (point aveugle, Stroop, Hermann) obtient plus de réponses / portée qu'une question. | stories 09, 12, 14/11 | à mesurer |
 
+| Un jeu « devine l'heure » en images 3D photographiques (test osé, sans bonne réponse) obtient plus d'enregistrements + partages / portée que le carrousel d'illusions. | 2026-11-18-quelle-heure | à mesurer |
+| (verdict 15/11) Jeu d'illusions vs quiz : portée 5, 0 enregistrement. | 2026-11-11 | pas assez de données |
+
+## Contrainte en cours (15/11)
+- Limite mensuelle du compte Metricool atteinte le 13/11 (comme le 31/10) : les stories du forfait actuel ne tiennent pas un mois à 3 images par story. Si Zak garde ce forfait : 2 images par story maximum et 2 à 3 stories par semaine.
+
 ## Confirmées (devenues des règles)
 (rien pour l'instant)
 
@@ -44,5 +50,6 @@ Mise à jour à chaque exécution hebdomadaire, à partir des chiffres du journa
 (rien pour l'instant)
 
 ## Prochain nouveau format à tester
+- Carrousel en cases de BD (fiction annoncée) avec un personnage récurrent, nouvelle mise en page `cases`.
 - Série en 3 épisodes (reporté : stories lundi-mercredi déjà programmées) (stories lundi-mardi-mercredi qui se suivent).
 - Quiz « laquelle arrête le pouce ? » en carrousel (réponse en dernière diapo).

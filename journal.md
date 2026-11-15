@@ -1,5 +1,19 @@
 # Journal de l'agent marketing Brooze
 
+## 15/11 (dimanche) — semaine du 16/11 programmée (1 carrousel, 3 stories nouvelles + 2 déjà en attente)
+- **Alerte en tête : limite du compte Metricool.** Les stories des 13 et 14/11 sont en ERREUR « You have reached your Metricool account limit » (même erreur le 31/10, levée le 01/11 : limite mensuelle probable, remise à zéro le 01/12). La création reste acceptée (posts ci-dessous en attente) ; s'ils échouent à la publication comme les 13 et 14/11, seule une montée de forfait (ou une publication manuelle à partir des images du dépôt) les fera partir avant décembre.
+- Mesure : carrousel illusions (11/11) portée 5, 0 enregistrement, 0 partage, 0 commentaire, 0 abonné → hypothèse « jeu d'illusions > quiz » : pas assez de données (portée trop faible). Stories : aucune ligne IGST renvoyée sur 08-15/11 (hypothèses Mina, expériences : pas assez de données).
+- Environnement : concurrents non réévalués (aucun changement de liste, temps donné au carrousel) ; air du temps non recherché. Ce qui marche chez nous reste les démonstrations vécues (Reels 11/11 à 1 225 vues, cligné 1 552) ; le carrousel en reprend le mécanisme.
+- Banque de voix et cerveau : non relus ce passage (0 idée disponible et aucun audio selon le passage de 3 h 41) ; aucun Reel livré à placer.
+- Test osé : carrousel 100 % images 3D photographiques, jeu sans bonne réponse (quoi/pourquoi/risque/garde-fou/mesure/arrêt dans post.json).
+- Lun 16/11 10 h · story R-015 « un bruit en avance se remarque plus vite » · Karim · attirer · surprise · contrôlée le 13/11 · [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-5973012822242211085)
+- Mar 17/11 10 h · story R-013 slow in / slow out (déjà programmée le 12/11) · curiosité
+- **Mer 18/11 10 h · carrousel « Quelle heure est-il ? »** · Claire · démonstration · attirer · nouveau format oui · hook « Quelle heure est-il ? » (1 tasse rendue en 3D sous 4 lumières, révélation : une seule lampe a bougé, 3 indices vrais, question finale en message) · émotion : curiosité (diapos 1-2) puis surprise (diapo 3) · hypothèse : enregistrements + partages / portée > carrousel du 11/11 · 6 diapos sur 8 en image forte, 3 nouvelles mises en page (`photo`, `grille4`, `annote`) · contrôle ≥ 8 partout après 4 tours · [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=6743316827295074191)
+- Jeu 19/11 10 h · story R-014 McGurk (déjà programmée le 13/11) · émerveillement
+- Ven 20/11 10 h · story R-016 « quelles réponses te restent ? » · curiosité · [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-8049865802442847687)
+- Dim 22/11 10 h · story R-017 « deviner avant la réponse » · surprise · [lien](https://app.metricool.com/planner/calendar?blogId=7268093&openWithPostUuid=-7892584906643192368)
+- Sam 21/11 : sans story (voulu, pas de story de qualité disponible). Refusés : aucun. Réserve nouveau cap : 0 (non reconstruite, temps donné au carrousel ; la tâche de 3 h 41 en fabrique une par jour).
+
 ## 15/11 (3 h 41) — savoir, 1 story nouveau cap, rien d'autre à produire
 - Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle (question du 27/10 déjà répondue). Veille et revue du dimanche à 15 h 41.
 - Savoir : curiosité précisée. YouTube : conférence TEDx de M. Gruber (S-0033, transcription complète, même étude que S-0031) ; Murphy et al. 2021 (S-0034, lu en entier) → A-0023 probable (le bonus de mémoire sur ce qui passe à côté se concentre 1-2 s après la question, nul à 6-8 s) ; Brod & Breitwieser 2019 (S-0035, lu en entier) → A-0024 probable (deviner fait monter curiosité et surprise, pas la mémoire) et A-0021 solide (effet tenu avec 3 s d'attente). P-046. File à-lire non réduite : creatorflow.so et communities.pacificu.edu refusés, sagepub 403 ; vidIQ non joint.
