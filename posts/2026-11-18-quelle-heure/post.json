@@ -1,0 +1,115 @@
+{
+  "type": "carrousel",
+  "date_prevue": "2026-11-18T10:00:00+01:00",
+  "avatar": "Claire",
+  "pilier": "Démonstration",
+  "role": "attirer",
+  "hypothese": "Si un jeu « devine l'heure » en images 3D photographiques (une tasse, quatre lumières, aucune bonne réponse) pour Claire, alors enregistrements + partages / portée seront plus hauts que sur le carrousel d'illusions du 11/11 (portée 5, 0 enregistrement), parce que découvrir que tout tient à une lampe donne un savoir qu'on a envie de montrer (et une question à laquelle répondre en message).",
+  "nouveau_format": true,
+  "emotion": {
+    "quoi": "surprise",
+    "comment": "on a rangé les quatre images par heure, puis on apprend qu'il n'y a aucune heure : une seule lampe a bougé",
+    "ou": "diapo 3 (curiosité avant, diapos 1-2)"
+  },
+  "test_ose": {
+    "quoi": "Premier carrousel 100 % images 3D photographiques, jeu sans bonne réponse (le piège est la réponse)",
+    "pourquoi": "Les démonstrations où l'on vit l'expérience (Koulechov, illusions) restent notre meilleure piste ; la lumière est un sujet universel relié à l'étalonnage",
+    "risque": "Se sentir piégé (frustration) ou trouver le sujet trop technique",
+    "garde_fou": "La diapo 3 le dit franchement et les diapos 4 à 6 donnent trois indices vrais : le lecteur repart avec un savoir, pas avec un « eu »",
+    "mesure": "enregistrements + partages / portée > carrousel du 11/11 ; au moins 1 réponse en message à la question finale",
+    "arret": "commentaire négatif sur le piège, ou 2 carrousels-jeux de suite à 0 enregistrement : retour à un carrousel plus proche d'un cas client (fictif annoncé)"
+  },
+  "direction_artistique": "Nature morte 3D photographique (tasse, table en bois, mur enduit), lumière de fenêtre aux croisillons ; texte papier sur voile encre pour les images pleine page, cartes papier pour le schéma ; un seul cuivre : la trajectoire de la lampe.",
+  "fiction": "Scène 3D fabriquée par nous, annoncée comme telle en diapo 3.",
+  "slides": [
+    {
+      "layout": "photo",
+      "img": "src/soir_1080x1350.png",
+      "label": "Jeu · 1 tasse, 4 lumières",
+      "titre": "Quelle *heure* est-il ?",
+      "taille": "t-xl",
+      "texte": "Regarde la lumière. Puis glisse.",
+      "swipe": "Glisse"
+    },
+    {
+      "layout": "grille4",
+      "imgs": [
+        "src/midi_1080x1080.png",
+        "src/nuit_1080x1080.png",
+        "src/matin_1080x1080.png",
+        "src/soir_1080x1080.png"
+      ],
+      "label": "À toi · range-les dans ta tête",
+      "titre": "Matin, midi, soir ou nuit ?"
+    },
+    {
+      "layout": "visuel",
+      "theme": "studio",
+      "label": "Réponse",
+      "titre": "Aucune heure. Une seule lampe.",
+      "texte": "Même tasse, même table : une scène 3D qu'on a fabriquée. On a seulement déplacé la lumière et changé sa couleur.",
+      "svg": "<svg viewBox=\"0 0 888 560\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M114 470 A330 330 0 0 1 774 470\" fill=\"none\" stroke=\"#C8834A\" stroke-width=\"6\" stroke-dasharray=\"2 16\" stroke-linecap=\"round\"/>\n<line x1=\"60\" y1=\"470\" x2=\"828\" y2=\"470\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n<path d=\"M400 470 L488 470 M412 470 L404 392 L484 392 L476 470\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-linejoin=\"round\"/>\n<path d=\"M484 406 q34 4 30 30 q-4 22 -34 22\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"6\"/>\n<g fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\">\n<circle cx=\"127\" cy=\"379\" r=\"26\"/><circle cx=\"353\" cy=\"153\" r=\"26\"/><circle cx=\"771\" cy=\"430\" r=\"26\"/>\n</g>\n<g stroke=\"#8A8780\" stroke-width=\"4\" stroke-dasharray=\"10 12\"><line x1=\"152\" y1=\"386\" x2=\"404\" y2=\"440\"/><line x1=\"362\" y1=\"178\" x2=\"430\" y2=\"392\"/><line x1=\"745\" y1=\"433\" x2=\"484\" y2=\"440\"/></g>\n<line x1=\"250\" y1=\"0\" x2=\"250\" y2=\"262\" stroke=\"#100E0D\" stroke-width=\"4\"/>\n<path d=\"M226 262 h48 l-10 30 h-28 z\" fill=\"#100E0D\"/>\n<circle cx=\"250\" cy=\"300\" r=\"10\" fill=\"#8A8780\"/>\n<g style=\"font-family:Grotesk;font-weight:700;letter-spacing:.12em\" font-size=\"40\" fill=\"#100E0D\" text-anchor=\"middle\">\n<text x=\"127\" y=\"336\">C</text><text x=\"353\" y=\"110\">A</text><text x=\"771\" y=\"388\">D</text><text x=\"300\" y=\"250\">B</text>\n</g></svg>",
+      "h": 560
+    },
+    {
+      "layout": "annote",
+      "img": "src/matin_1080x1080.png",
+      "svg": "<svg viewBox=\"0 0 1080 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n<g stroke=\"#EDEBE7\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n<path d=\"M70 300 L330 500\"/><path d=\"M288 494 L330 500 L316 460\"/>\n<path d=\"M900 770 L900 680\"/><path d=\"M880 702 L900 680 L920 702\"/></g>\n<g style=\"font-family:Grotesk;font-weight:700;letter-spacing:.12em\" font-size=\"46\" fill=\"#EDEBE7\"><text x=\"60\" y=\"270\">SOLEIL BAS</text><text x=\"640\" y=\"815\">OMBRE LONGUE</text></g></svg>",
+      "label": "Indice 1 · la hauteur",
+      "titre": "Ombre longue = soleil bas.",
+      "texte": "Matin ou soir, la lumière arrive de côté. À midi, l’ombre se cache sous la tasse (A).",
+      "h": 560
+    },
+    {
+      "layout": "annote",
+      "img": "src/soir_1080x1080.png",
+      "svg": "<svg viewBox=\"0 0 1080 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n<g style=\"font-family:Grotesk;font-weight:700;letter-spacing:.12em\" font-size=\"46\" fill=\"#100E0D\"><text x=\"70\" y=\"270\">LUMIÈRE DORÉE</text></g>\n<g style=\"font-family:Grotesk;font-weight:700;letter-spacing:.12em\" font-size=\"46\" fill=\"#EDEBE7\"><text x=\"440\" y=\"815\">OMBRE QUI S'ÉTIRE</text></g></svg>",
+      "label": "Indice 2 · la couleur",
+      "titre": "Doré = soir. Pâle = matin.",
+      "texte": "Au cinéma, le matin se joue souvent pâle et bleuté, le soir doré. Ton cerveau connaît le code.",
+      "h": 560
+    },
+    {
+      "layout": "annote",
+      "img": "src/nuit_1080x1080.png",
+      "svg": "<svg viewBox=\"0 0 1080 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"250\" cy=\"830\" r=\"250\" fill=\"none\" stroke=\"#EDEBE7\" stroke-width=\"5\" stroke-dasharray=\"4 16\" stroke-linecap=\"round\"/>\n<g style=\"font-family:Grotesk;font-weight:700;letter-spacing:.12em\" font-size=\"46\" fill=\"#EDEBE7\"><text x=\"80\" y=\"270\">MUR DANS L'OMBRE</text><text x=\"530\" y=\"815\">LA TABLE BRILLE</text></g></svg>",
+      "label": "Indice 3 · la source",
+      "titre": "Une lampe proche = la nuit.",
+      "texte": "La lumière faiblit vite en s’éloignant : la table brille, le mur s’éteint.",
+      "h": 560
+    },
+    {
+      "layout": "phrase",
+      "label": "Ce que ça change pour toi",
+      "titre": "La lumière parle avant le *premier* mot.",
+      "taille": "t-l",
+      "texte": "Dans une vidéo, elle dit l’heure et l’humeur. La couleur se retravaille au montage, même sur des images déjà tournées."
+    },
+    {
+      "layout": "cta",
+      "theme": "encre",
+      "titre": "Ta vidéo, il est quelle heure dedans ?",
+      "taille": "t-m",
+      "texte": "Envoie-nous une image que tu as déjà tournée : on te dit ce que sa lumière raconte.",
+      "bouton": "Envoie-nous un message"
+    }
+  ],
+  "caption": "Quatre photos, une tasse : laquelle est le matin ? Le piège, c’est qu’il n’y a aucune heure.\n\nOn a fabriqué une seule scène en 3D et déplacé une seule lampe. Hauteur, couleur, distance : c’est tout ce qu’il faut à ton cerveau pour « lire » l’heure et l’humeur d’une image. Dans une vidéo, c’est pareil, et c’est une partie de notre métier : faire raconter quelque chose à la lumière de ce que tu as déjà filmé.\n\nEnvoie-nous un message → @broozeproduction\n\nTu avais mis laquelle en « matin » : A ou C ? Envoie ce carrousel à quelqu’un qui filme son café tous les matins.\n\n#lumiere #video #strasbourg",
+  "controle": {
+    "arret_du_pouce": 9,
+    "emotion_ressentie": "curiosité en diapo 2 (je voulais trancher), surprise en diapo 3 (il n'y a pas d'heure)",
+    "emotion_note": 8,
+    "divertissement": 8,
+    "apprend": 8,
+    "qualite_visuelle": 9,
+    "lisibilite": 8,
+    "charte": 8,
+    "verite": 9,
+    "lien_brooze": 8,
+    "pas_ia_generique": 8,
+    "orthographe": 9,
+    "tours": 4,
+    "corrige": "grille qui débordait, légendes coupées par le recadrage, flèche d'ombre mal placée, textes trop longs, insécables",
+    "note_charte": "les tons orangés sont ceux de la lumière photographiée (sujet du carrousel), pas un élément de design ; un seul cuivre graphique par diapo"
+  }
+}

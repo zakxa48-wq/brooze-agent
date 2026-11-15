@@ -33,6 +33,10 @@ for (const [i, s] of post.slides.entries()) {
   // Vrai logo seulement s'il a été déposé dans assets/ : jamais d'imitation en ligne
   const logo = ['logo.svg', 'logo.png'].map(f => path.join(ici, 'assets', f)).find(f => fs.existsSync(f));
   const slide = { format, logo: logo ? pathToFileURL(logo).href : null, compteur: format === 'carrousel' ? `${String(i + 1).padStart(2, '0')}/${String(post.slides.length).padStart(2, '0')}` : '', ...s };
+  // Images (mises en page photo, grille4, annote) : chemins relatifs au dossier du post
+  const url = f => pathToFileURL(path.resolve(dossier, f)).href;
+  if (slide.img) slide.img = url(slide.img);
+  if (slide.imgs) slide.imgs = slide.imgs.map(url);
   // Fichier temporaire à côté du gabarit pour que les polices se chargent en chemin relatif
   const gabarit = fs.readFileSync(path.join(ici, 'templates/slide.html'), 'utf8')
     .replace('<div id="racine"></div>', `<div id="racine"></div><script>window.SLIDE = ${JSON.stringify(slide).replace(/</g, '\\u003c')};</script>`);
