@@ -1,0 +1,48 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": false,
+ "avatar": "Claire",
+ "pilier": "Devine",
+ "angle": "Devine : deviner avant la réponse rend plus curieux, mais ne fait pas mieux retenir",
+ "hypothese": "Une devinette qui piège gentiment (on parie sur « mieux retenir ») puis révèle que deviner sert l’émotion, pas la mémoire, donne envie de répondre ou de partager.",
+ "savoir": [
+  "A-0024",
+  "A-0021"
+ ],
+ "source": "Brod & Breitwieser (2019), npj Science of Learning 4, https://pmc.ncbi.nlm.nih.gov/articles/PMC6803639/",
+ "emotion": {
+  "quoi": "surprise",
+  "comment": "on parie sur A (deviner fait mieux retenir), la réponse est B : la mémoire ne bouge pas, c’est la curiosité qui monte",
+  "ou": "image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Devine",
+   "titre": "Des étudiants devinaient la réponse avant de la voir. Ça a changé quoi ?",
+   "texte": "Choisis A ou B avant de passer. (Chez Brooze, on s’en sert souvent dans nos vidéos.)",
+   "svg": "<svg viewBox=\"0 0 888 720\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"444\" y=\"70\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">AVANT CHAQUE RÉPONSE, ILS DEVINAIENT</text><path d=\"M444 110 V200\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-dasharray=\"4 14\" stroke-linecap=\"round\"/><path d=\"M420 180 L444 210 L468 180\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"40\" y=\"250\" width=\"380\" height=\"420\" rx=\"32\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><circle cx=\"230\" cy=\"360\" r=\"62\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"8\"/><text x=\"230\" y=\"384\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"68\" fill=\"#100E0D\">A</text><text x=\"230\" y=\"500\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" fill=\"#100E0D\">Ils retiennent</text><text x=\"230\" y=\"550\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" fill=\"#100E0D\">bien mieux</text><text x=\"230\" y=\"610\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"28\" letter-spacing=\"2\" fill=\"#6B675F\">LA MÉMOIRE MONTE</text><rect x=\"468\" y=\"250\" width=\"380\" height=\"420\" rx=\"32\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><circle cx=\"658\" cy=\"360\" r=\"62\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"8\"/><text x=\"658\" y=\"384\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"68\" fill=\"#100E0D\">B</text><text x=\"658\" y=\"500\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" fill=\"#100E0D\">Ils retiennent</text><text x=\"658\" y=\"550\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" fill=\"#100E0D\">pareil</text><text x=\"658\" y=\"610\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"28\" letter-spacing=\"2\" fill=\"#6B675F\">RIEN DE PLUS</text></svg>",
+   "h": 720,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Réponse",
+   "titre": "B. Ils retenaient pareil, mais ils étaient plus curieux.",
+   "texte": "Brod et Breitwieser, 2019 (29 étudiants) : deviner fait monter la curiosité, pas la mémoire. Tu viens de le vivre. Chez nous, on fait deviner pour faire ressentir.",
+   "svg": "<svg viewBox=\"0 0 888 620\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"222\" y=\"60\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">TRÈS CURIEUX</text><text x=\"666\" y=\"60\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"26\" letter-spacing=\"2\" fill=\"#6B675F\">RÉPONSES RETENUES</text><rect x=\"60\" y=\"152\" width=\"150\" height=\"278\" rx=\"12\" fill=\"#C8834A\" opacity=\"1\"/><text x=\"135\" y=\"132\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"48\" fill=\"#100E0D\">56 %</text><rect x=\"230\" y=\"198\" width=\"150\" height=\"232\" rx=\"12\" fill=\"#6B675F\" opacity=\"0.45\"/><text x=\"305\" y=\"178\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"48\" fill=\"#100E0D\">46 %</text><rect x=\"504\" y=\"128\" width=\"150\" height=\"302\" rx=\"12\" fill=\"#6B675F\" opacity=\"0.45\"/><text x=\"579\" y=\"108\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"48\" fill=\"#100E0D\">60 %</text><rect x=\"674\" y=\"132\" width=\"150\" height=\"298\" rx=\"12\" fill=\"#6B675F\" opacity=\"0.45\"/><text x=\"749\" y=\"112\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"48\" fill=\"#100E0D\">60 %</text><rect x=\"40\" y=\"430\" width=\"808\" height=\"8\" rx=\"4\" fill=\"#100E0D\"/><path d=\"M444 100 V560\" stroke=\"#6B675F\" stroke-width=\"3\" stroke-dasharray=\"6 10\"/><text x=\"135\" y=\"495\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"30\" letter-spacing=\"1\" fill=\"#100E0D\">A DEVINÉ</text><text x=\"305\" y=\"495\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"30\" letter-spacing=\"1\" fill=\"#6B675F\">SANS</text><text x=\"579\" y=\"495\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"30\" letter-spacing=\"1\" fill=\"#100E0D\">A DEVINÉ</text><text x=\"749\" y=\"495\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"30\" letter-spacing=\"1\" fill=\"#6B675F\">SANS</text></svg>",
+   "h": 620,
+   "taille": "t-m"
+  },
+  {
+   "layout": "cta",
+   "theme": "encre",
+   "titre": "Tu avais choisi A ? Réponds-nous en un mot.",
+   "taille": "t-m",
+   "bouton": "Réponds"
+  }
+ ]
+}

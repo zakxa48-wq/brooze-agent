@@ -275,5 +275,36 @@
    "espaces insécables (14 s, 46 %, 28 %, « ? »)",
    "question reformulée : « quelles réponses te restent ? » (le « celles » des cartes devient clair)"
   ]
+ },
+ {
+  "id": "R-017-deviner-avant",
+  "angle": "Devine : deviner avant la réponse rend plus curieux, mais ne fait pas mieux retenir",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-15",
+  "utilisee_le": null,
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : on parie sur A (deviner fait mieux retenir), c’est B ; la curiosité monte, pas la mémoire"
+  },
+  "corrections": [
+   "2 cuivres sur l’image 2 → astérisque retiré",
+   "libellés SVG agrandis (30 px)",
+   "insécables « 29 étudiants », « A ou B »",
+   "« dans chaque vidéo » (invérifiable) → « souvent dans nos vidéos »",
+   "texte de l’image 2 raccourci"
+  ]
  }
 ]

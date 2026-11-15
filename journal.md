@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 15/11 (3 h 41) — savoir, 1 story nouveau cap, rien d'autre à produire
+- Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle (question du 27/10 déjà répondue). Veille et revue du dimanche à 15 h 41.
+- Savoir : curiosité précisée. YouTube : conférence TEDx de M. Gruber (S-0033, transcription complète, même étude que S-0031) ; Murphy et al. 2021 (S-0034, lu en entier) → A-0023 probable (le bonus de mémoire sur ce qui passe à côté se concentre 1-2 s après la question, nul à 6-8 s) ; Brod & Breitwieser 2019 (S-0035, lu en entier) → A-0024 probable (deviner fait monter curiosité et surprise, pas la mémoire) et A-0021 solide (effet tenu avec 3 s d'attente). P-046. File à-lire non réduite : creatorflow.so et communities.pacificu.edu refusés, sagepub 403 ; vidIQ non joint.
+- Stories nouveau cap : R-017 « deviner avant la réponse » (surprise, A-0024, source citée) fabriquée et contrôlée (≥ 8 ; corrigé : 2 cuivres, libellés agrandis, insécables, « dans chaque vidéo » invérifiable retiré). Non programmée (limite du compte Metricool constatée les 13 et 14/11). Réserve : 3 stories (R-015, R-016, R-017).
+
 ## 14/11 (15 h 41) — veille : 2e story non publiée (limite du compte Metricool), rien à produire
 - Veille : story du 14/11 10 h en ERROR « You have reached your Metricool account limit » (comme R-011 le 13/11) ; stories 15, 17, 19/11 en attente, supposées bloquées aussi. Non reprogrammée, rien de nouveau programmé ; alerte envoyée. Reels stables (11/11 : 1 225 vues), carrousel illusions figé à portée 5 (J+3).
 - Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente ; aucune donnée nouvelle (question du 27/10 déjà répondue). Savoir du jour fait à 3 h 41. Stories nouveau cap : aucune fabriquée (programmation bloquée ; réserve : 2, R-015, R-016).
