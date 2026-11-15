@@ -13,6 +13,9 @@ Mesure, image par image, l'élément qui se distingue du fond (masque de contras
   - flou_pendant   : rapport netteté directionnelle pendant la phase rapide / à l'arrêt (< 0,8 = flou de mouvement)
   - tenue_s        : durée de l'élément immobile et lisible avant la fin
   - son_attaque_s  : attaque sonore la plus forte ; ecart_son_image_images = (attaque − impact) en images
+                     (attention : un souffle AVANT la chute peut être l'attaque la plus forte, entraînement du 15/11)
+  - son_contact_s  : attaque la plus forte à ±0,25 s de l'image la plus rapide (le contact d'une chute) ;
+                     ecart_son_contact_images = (attaque − contact) en images : P-044 exige 0 à +3 (jamais < 0)
 """
 import sys, json, subprocess
 import numpy as np
@@ -27,7 +30,7 @@ def images(f, w=540):
     return np.frombuffer(r.stdout, np.uint8).reshape(-1, h, w, 3).astype(np.float32), fps, W / w
 
 
-def attaque(f):
+def attaque(f, autour=None, fenetre=.25):
     import soundfile as sf, tempfile, os
     t = tempfile.mktemp(suffix='.wav')
     if subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f, '-vn', '-ac', '1', '-ar', '48000', t], capture_output=True).returncode or not os.path.exists(t): return None
@@ -35,6 +38,10 @@ def attaque(f):
     if len(x) == 0 or np.abs(x).max() < 1e-4: return None
     pas = int(sr * .005); e = np.array([np.sqrt((x[i:i + pas] ** 2).mean() + 1e-12) for i in range(0, len(x) - pas, pas)])
     db = 20 * np.log10(e + 1e-9); flux = np.diff(db, prepend=db[0])
+    if autour is not None:          # attaque la plus forte PRÈS du contact (un souffle avant la chute ne doit pas gagner)
+        a, b = max(0, int((autour - fenetre) / .005)), min(len(flux), int((autour + fenetre) / .005) + 1)
+        if b <= a: return None
+        return round(float((a + np.argmax(flux[a:b])) * .005), 3)
     return round(float(np.argmax(flux) * .005), 3)
 
 
@@ -86,12 +93,13 @@ def main(f, fond='auto', graphique=None):
     lineaire = bool(len(mouv) >= 4 and np.std(mouv) / (np.mean(mouv) + 1e-6) < .15)
     rapide = vit > .5 * vit[pic] if vit[pic] > 0 else np.zeros(n, bool)
     flou = float(np.nanmean(N[rapide]) / np.nanmean(N[arret:])) if rapide.any() and arret < n else None
-    att = attaque(f)
+    att = attaque(f); att_c = attaque(f, autour=pic / fps)
     res = dict(images=n, ips=round(fps, 2), duree_s=round(n / fps, 2), pic_vitesse_px=round(float(vit[pic]), 1), pic_s=round(pic / fps, 3),
                impact_s=round(impact / fps, 3), duree_geste_s=round((impact - debut_geste) / fps, 3), arret_s=round(arret / fps, 3), tenue_s=round((n - 1 - arret) / fps, 2),
                course_px=round(course, 1), depassement_pct=round(depassement, 1), oscillations=oscillations, lineaire=lineaire,
                flou_pendant=round(flou, 2) if flou is not None else None, taille_finale_px=round(float(T[-1]), 0) if not np.isnan(T[-1]) else None,
-               son_attaque_s=att, ecart_son_image_images=round((att - impact / fps) * fps, 1) if att is not None else None)
+               son_attaque_s=att, ecart_son_image_images=round((att - impact / fps) * fps, 1) if att is not None else None,
+               son_contact_s=att_c, ecart_son_contact_images=round((att_c - pic / fps) * fps, 1) if att_c is not None else None)
     if graphique:
         import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
         t = np.arange(n) / fps

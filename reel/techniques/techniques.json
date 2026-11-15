@@ -121,7 +121,7 @@
   "id": "mot-qui-tombe",
   "nom": "Mot qui tombe avec du poids : lire, tomber, frapper (trois temps)",
   "categorie": "typo cinétique",
-  "note": 8,
+  "note": 8.0,
   "note_pourquoi": "note du coach (séance du 22/10, essai 4 validé après le retour de Zak) : les trois temps se lisent (mot lu en hauteur, anticipation, chute en 6 images, ombre qui claque), geste de 0,10 s, pic 50,9 px/image, impact sonore marqué. Pas 9 : la coupure « Montre- / le. » laisse « le. » un peu orphelin (à juger selon le mot, soumis à Zak). Remplace la version de l'essai 3 (7/10, dézoom de 9 % étalé, sans impact selon Zak).",
   "demo": "demos/mot-qui-tombe.mp4",
   "code": [
@@ -132,7 +132,9 @@
   "cout": "~1 min de rendu pour 3 s (Python + Pillow)",
   "source": "entraînement 2026-10-22-mot-qui-tombe-avec-poids (4 essais ; essai 4 validé 8/10)",
   "statut": "active",
-  "apparu_dans": [],
+  "apparu_dans": [
+   "entrainement-2026-11-15"
+  ],
   "deceptions": [],
   "cree_le": "2026-10-22",
   "mis_a_jour_le": "2026-10-22"
