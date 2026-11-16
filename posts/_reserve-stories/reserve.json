@@ -339,5 +339,38 @@
    "image 3 : schéma réduit pour ne plus toucher le titre, flèche double qui ne recouvre plus les objets",
    "texte de l'image 3 resserré, source entre parenthèses"
   ]
+ },
+ {
+  "id": "R-019-coupes-ratees",
+  "angle": "Devine : même en les cherchant, des spectateurs ratent environ 1 coupe sur 6 (près de 1 sur 3 sur un geste)",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-16",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "savoir": [
+   "A-0025"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : on choisit « aucune » puisqu'ils les cherchaient ; c'est environ 1 sur 6"
+  },
+  "corrections": [
+   "« 5 vues · 1 ratée » incohérent avec 1 sur 6 → 7 images, 6 coupes, 1 ratée",
+   "libellé qui touchait le trait cuivre",
+   "insécables « 1 sur 6 », « 1 sur 50 », « 1 sur 3 »",
+   "« 1 sur 3 » → « près de 1 sur 3 » (32,4 %)",
+   "pictogrammes identiques (effet gabarit) → cadrages variés, rognés dans chaque image"
+  ]
  }
 ]
