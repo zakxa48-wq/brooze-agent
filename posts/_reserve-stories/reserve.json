@@ -1,310 +1,343 @@
 [
-  {
-    "id": "R-001-avant-apres-carte",
-    "angle": "Méthode : avant / après",
-    "pilier": "Méthode : avant / après",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-02"
+ {
+  "id": "R-001-avant-apres-carte",
+  "angle": "Méthode : avant / après",
+  "pilier": "Méthode : avant / après",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-02"
+ },
+ {
+  "id": "R-002-client-ou-patron",
+  "angle": "Question directe",
+  "pilier": "Question directe",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-03"
+ },
+ {
+  "id": "R-003-coupe-le-debut",
+  "angle": "Méthode",
+  "pilier": "Méthode",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": "2026-11-04"
+ },
+ {
+  "id": "R-004-son-a-zero",
+  "angle": "Mini-exercice",
+  "pilier": "Mini-exercice",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-005-une-idee",
+  "angle": "Principe d'attention",
+  "pilier": "Principe d'attention",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-006-mythe-quotidien",
+  "angle": "Mythe / réalité",
+  "pilier": "Mythe / réalité",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-007-envoie-une-video",
+  "angle": "Appel à l'action",
+  "pilier": "Appel à l'action",
+  "role": "attirer",
+  "cree_le": "2026-10-23",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-008-combien-de-temps",
+  "angle": "Question directe",
+  "pilier": "Question directe",
+  "role": "attirer",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-009-chercher-la-phrase",
+  "angle": "Coulisses / méthode",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-010-trois-accroches",
+  "angle": "Coulisses / méthode",
+  "pilier": "Coulisses / méthode",
+  "role": "prouver",
+  "cree_le": "2026-11-01",
+  "utilisee_le": null,
+  "retiree_le": "2026-11-05",
+  "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+ },
+ {
+  "id": "R-011-regarder-pas-voir",
+  "angle": "Regarder n'est pas voir (mini-expérience)",
+  "pilier": "Expérience",
+  "role": "attirer",
+  "cree_le": "2026-11-11",
+  "utilisee_le": "2026-11-13",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : impossible de dire le mot du bas à droite sans revenir"
   },
-  {
-    "id": "R-002-client-ou-patron",
-    "angle": "Question directe",
-    "pilier": "Question directe",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-03"
+  "metricool": [
+   "424522804",
+   "424522829",
+   "424522846"
+  ]
+ },
+ {
+  "id": "R-012-clignotant",
+  "angle": "Vrai ou faux : le clignotant attire plus",
+  "pilier": "Vrai ou faux",
+  "role": "attirer",
+  "cree_le": "2026-11-11",
+  "utilisee_le": "2026-11-15",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : 86 % contre 91 %, on pariait sur un écart"
   },
-  {
-    "id": "R-003-coupe-le-debut",
-    "angle": "Méthode",
-    "pilier": "Méthode",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": "2026-11-04"
+  "metricool": [
+   "425204632",
+   "425204638",
+   "425204644"
+  ]
+ },
+ {
+  "id": "R-013-ralentir-avant-arret",
+  "angle": "Devine : slow in / slow out (une balle vivante ralentit avant l’arrêt)",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-12",
+  "utilisee_le": "2026-11-17",
+  "cap": "nouveau",
+  "emotion": "curiosité",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "curiosité, image 1 : les deux trajets se ressemblent, on cherche ce qui fait vivant ; résolue image 2 par la courbe"
   },
-  {
-    "id": "R-004-son-a-zero",
-    "angle": "Mini-exercice",
-    "pilier": "Mini-exercice",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+  "corrections": [
+   "labels SVG en Inter (Space Grotesk tombait en serif)",
+   "hauteur image 2 (titre collé au cadre)",
+   "apostrophes typographiques"
+  ],
+  "metricool": [
+   "425783633",
+   "425783671",
+   "425783703"
+  ]
+ },
+ {
+  "id": "R-014-voir-pour-entendre",
+  "angle": "Vrai ou faux : ce qu’on voit change ce qu’on entend (effet McGurk)",
+  "pilier": "Vrai ou faux",
+  "role": "attirer",
+  "cree_le": "2026-11-12",
+  "utilisee_le": "2026-11-19",
+  "cap": "nouveau",
+  "emotion": "émerveillement",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "émerveillement, image 2 : BA + GA = DA, et le savoir n’y change rien"
   },
-  {
-    "id": "R-005-une-idee",
-    "angle": "Principe d'attention",
-    "pilier": "Principe d'attention",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+  "corrections": [
+   "labels SVG en Inter",
+   "hauteur image 2",
+   "apostrophes typographiques"
+  ],
+  "metricool": [
+   "426482078",
+   "426482087",
+   "426482101"
+  ]
+ },
+ {
+  "id": "R-015-son-trop-tot",
+  "angle": "Devine : un bruit en avance se remarque bien plus vite qu’un bruit en retard",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-13",
+  "utilisee_le": "2026-11-16",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : on attend deux décalages équivalents, l’écart fait plus du double (75 contre 190 ms)"
   },
-  {
-    "id": "R-006-mythe-quotidien",
-    "angle": "Mythe / réalité",
-    "pilier": "Mythe / réalité",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+  "corrections": [
+   "marteau redessiné (le manche touchait le clou, la tête frappe maintenant)",
+   "légende de la zone colorée, nuancée « en moyenne »"
+  ]
+ },
+ {
+  "id": "R-016-attendre-pour-retenir",
+  "angle": "Devine : une réponse qu’on attendait avec envie reste bien plus le lendemain",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-14",
+  "utilisee_le": "2026-11-20",
+  "cap": "nouveau",
+  "emotion": "curiosité",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "curiosité, image 1 : on veut savoir de combien l’écart est grand avant de passer"
   },
-  {
-    "id": "R-007-envoie-une-video",
-    "angle": "Appel à l'action",
-    "pilier": "Appel à l'action",
-    "role": "attirer",
-    "cree_le": "2026-10-23",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+  "corrections": [
+   "« presque deux fois moins » retiré (inexact : 28 contre 46 %)",
+   "espaces insécables (14 s, 46 %, 28 %, « ? »)",
+   "question reformulée : « quelles réponses te restent ? » (le « celles » des cartes devient clair)"
+  ]
+ },
+ {
+  "id": "R-017-deviner-avant",
+  "angle": "Devine : deviner avant la réponse rend plus curieux, mais ne fait pas mieux retenir",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-15",
+  "utilisee_le": "2026-11-22",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 2 : on parie sur A (deviner fait mieux retenir), c’est B ; la curiosité monte, pas la mémoire"
   },
-  {
-    "id": "R-008-combien-de-temps",
-    "angle": "Question directe",
-    "pilier": "Question directe",
-    "role": "attirer",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
+  "corrections": [
+   "2 cuivres sur l’image 2 → astérisque retiré",
+   "libellés SVG agrandis (30 px)",
+   "insécables « 29 étudiants », « A ou B »",
+   "« dans chaque vidéo » (invérifiable) → « souvent dans nos vidéos »",
+   "texte de l’image 2 raccourci"
+  ]
+ },
+ {
+  "id": "R-018-qu-est-ce-qui-a-change",
+  "angle": "Fais le test : deux objets échangent leur place entre deux images, la moitié ne le voit pas (cécité au changement)",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-16",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "savoir": [
+   "A-0026",
+   "A-0025"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise, image 3 : on cherche un petit détail, ce sont deux objets bien visibles (horloge et tasse) qui ont changé d'étagère"
   },
-  {
-    "id": "R-009-chercher-la-phrase",
-    "angle": "Coulisses / méthode",
-    "pilier": "Coulisses / méthode",
-    "role": "prouver",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
-  },
-  {
-    "id": "R-010-trois-accroches",
-    "angle": "Coulisses / méthode",
-    "pilier": "Coulisses / méthode",
-    "role": "prouver",
-    "cree_le": "2026-11-01",
-    "utilisee_le": null,
-    "retiree_le": "2026-11-05",
-    "raison": "ancien cap éditorial (décision de Zak du 05/11)"
-  },
-  {
-    "id": "R-011-regarder-pas-voir",
-    "angle": "Regarder n'est pas voir (mini-expérience)",
-    "pilier": "Expérience",
-    "role": "attirer",
-    "cree_le": "2026-11-11",
-    "utilisee_le": "2026-11-13",
-    "cap": "nouveau",
-    "emotion": "surprise",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 9,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "surprise, image 2 : impossible de dire le mot du bas à droite sans revenir"
-    },
-    "metricool": [
-      "424522804",
-      "424522829",
-      "424522846"
-    ]
-  },
-  {
-    "id": "R-012-clignotant",
-    "angle": "Vrai ou faux : le clignotant attire plus",
-    "pilier": "Vrai ou faux",
-    "role": "attirer",
-    "cree_le": "2026-11-11",
-    "utilisee_le": "2026-11-15",
-    "cap": "nouveau",
-    "emotion": "surprise",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 9,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "surprise, image 2 : 86 % contre 91 %, on pariait sur un écart"
-    },
-    "metricool": [
-      "425204632",
-      "425204638",
-      "425204644"
-    ]
-  },
-  {
-    "id": "R-013-ralentir-avant-arret",
-    "angle": "Devine : slow in / slow out (une balle vivante ralentit avant l’arrêt)",
-    "pilier": "Devine",
-    "role": "attirer",
-    "cree_le": "2026-11-12",
-    "utilisee_le": "2026-11-17",
-    "cap": "nouveau",
-    "emotion": "curiosité",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 8,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "curiosité, image 1 : les deux trajets se ressemblent, on cherche ce qui fait vivant ; résolue image 2 par la courbe"
-    },
-    "corrections": [
-      "labels SVG en Inter (Space Grotesk tombait en serif)",
-      "hauteur image 2 (titre collé au cadre)",
-      "apostrophes typographiques"
-    ],
-    "metricool": [
-      "425783633",
-      "425783671",
-      "425783703"
-    ]
-  },
-  {
-    "id": "R-014-voir-pour-entendre",
-    "angle": "Vrai ou faux : ce qu’on voit change ce qu’on entend (effet McGurk)",
-    "pilier": "Vrai ou faux",
-    "role": "attirer",
-    "cree_le": "2026-11-12",
-    "utilisee_le": "2026-11-19",
-    "cap": "nouveau",
-    "emotion": "émerveillement",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 8,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "émerveillement, image 2 : BA + GA = DA, et le savoir n’y change rien"
-    },
-    "corrections": [
-      "labels SVG en Inter",
-      "hauteur image 2",
-      "apostrophes typographiques"
-    ],
-    "metricool": [
-      "426482078",
-      "426482087",
-      "426482101"
-    ]
-  },
-  {
-    "id": "R-015-son-trop-tot",
-    "angle": "Devine : un bruit en avance se remarque bien plus vite qu’un bruit en retard",
-    "pilier": "Devine",
-    "role": "attirer",
-    "cree_le": "2026-11-13",
-    "utilisee_le": "2026-11-16",
-    "cap": "nouveau",
-    "emotion": "surprise",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 9,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "surprise, image 2 : on attend deux décalages équivalents, l’écart fait plus du double (75 contre 190 ms)"
-    },
-    "corrections": [
-      "marteau redessiné (le manche touchait le clou, la tête frappe maintenant)",
-      "légende de la zone colorée, nuancée « en moyenne »"
-    ]
-  },
-  {
-    "id": "R-016-attendre-pour-retenir",
-    "angle": "Devine : une réponse qu’on attendait avec envie reste bien plus le lendemain",
-    "pilier": "Devine",
-    "role": "attirer",
-    "cree_le": "2026-11-14",
-    "utilisee_le": "2026-11-20",
-    "cap": "nouveau",
-    "emotion": "curiosité",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 9,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "curiosité, image 1 : on veut savoir de combien l’écart est grand avant de passer"
-    },
-    "corrections": [
-      "« presque deux fois moins » retiré (inexact : 28 contre 46 %)",
-      "espaces insécables (14 s, 46 %, 28 %, « ? »)",
-      "question reformulée : « quelles réponses te restent ? » (le « celles » des cartes devient clair)"
-    ]
-  },
-  {
-    "id": "R-017-deviner-avant",
-    "angle": "Devine : deviner avant la réponse rend plus curieux, mais ne fait pas mieux retenir",
-    "pilier": "Devine",
-    "role": "attirer",
-    "cree_le": "2026-11-15",
-    "utilisee_le": "2026-11-22",
-    "cap": "nouveau",
-    "emotion": "surprise",
-    "controle": {
-      "arret": 8,
-      "emotion": 8,
-      "divertissement": 8,
-      "apprend": 9,
-      "visuel": 8,
-      "lisibilite": 8,
-      "charte": 9,
-      "verite": 9,
-      "lien_brooze": 8,
-      "pas_ia": 8,
-      "orthographe": 9,
-      "emotion_ressentie": "surprise, image 2 : on parie sur A (deviner fait mieux retenir), c’est B ; la curiosité monte, pas la mémoire"
-    },
-    "corrections": [
-      "2 cuivres sur l’image 2 → astérisque retiré",
-      "libellés SVG agrandis (30 px)",
-      "insécables « 29 étudiants », « A ou B »",
-      "« dans chaque vidéo » (invérifiable) → « souvent dans nos vidéos »",
-      "texte de l’image 2 raccourci"
-    ]
-  }
+  "corrections": [
+   "étagère plus chargée (10 objets) et échange moins évident (plante/appareil → horloge/tasse)",
+   "livres du bas qui débordaient du cadre",
+   "image 3 : schéma réduit pour ne plus toucher le titre, flèche double qui ne recouvre plus les objets",
+   "texte de l'image 3 resserré, source entre parenthèses"
+  ]
+ }
 ]
