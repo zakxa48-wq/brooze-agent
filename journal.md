@@ -1,5 +1,10 @@
 # Journal de l'agent marketing Brooze
 
+## 17/11 (15 h 41) — veille : 5e story non publiée (limite du compte Metricool), rien à produire
+- Veille : story R-013 du 17/11 10 h en ERROR « You have reached your Metricool account limit » (5e échec après 13, 14, 15, 16/11) ; carrousel du 18/11 et stories 19, 20, 22/11 en attente, supposés bloqués tant que la limite tient (levée attendue le 01/12). Rien reprogrammé. Reels inchangés (14/11 : 166 vues, ×0,90 la médiane 185) ; carrousel illusions figé (portée 5).
+- Banque : 0 idée, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente ; aucune donnée nouvelle (question du 27/10 déjà répondue). Savoir du jour fait à 3 h 41.
+- Stories nouveau cap : aucune fabriquée (réserve libre : 2, R-018/R-019 ; programmation bloquée jusqu'à la levée de la limite). Pas d'entraînement ce passage (celui de 3 h 41 a mesuré les transitions ; rien de neuf à exercer sans Reel).
+
 ## 17/11 (3 h 41) — savoir, entraînement, rien à produire
 - Banque : 0 idée disponible, aucun audio (urgent/, inbox/), aucun Reel en cours ni livré en attente, aucune donnée nouvelle (question du 27/10 déjà répondue). Outils Metricool joints (veille à 15 h 41).
 - Savoir : son et coupes. YouTube : Fandor « J Cut & L Cut » (S-0039) et RocketJump « Cuts & Transitions 101 » (S-0040), transcriptions complètes → A-0027 probable (le son qui passe par-dessus la coupe la cache) et A-0028 (son en avance = élan, son qui déborde = prolongement ; praticiens seulement). File à-lire : S-0038 (Smith & Martin-Portugues 2017) et S-0023 (Material Design, domaine rouvert) relues en entier → A-0029 à vérifier (geste graphique sur téléphone 200-400 ms, courbe asymétrique) ; A-0025 passée solide au recalcul (même laboratoire : à recouper). P-047 précisée. Anti-bot sur 1 vidéo, vidIQ non joint ; sagepub et researchgate 403, communities.pacificu.edu 502.
