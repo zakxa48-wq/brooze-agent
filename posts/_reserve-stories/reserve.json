@@ -372,5 +372,39 @@
    "« 1 sur 3 » → « près de 1 sur 3 » (32,4 %)",
    "pictogrammes identiques (effet gabarit) → cadrages variés, rognés dans chaque image"
   ]
+ },
+ {
+  "id": "R-020-moitie-sur",
+  "angle": "Test : la curiosité culmine quand on est à moitié sûr de sa réponse (Kang et al. 2009) ; un bon hook joue là-dessus",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-18",
+  "cap": "nouveau",
+  "emotion": "curiosité",
+  "savoir": [
+   "A-0032"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 9,
+   "visuel": 8,
+   "lisibilite": 9,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "curiosité, image 1 : envie de connaître l'instrument de B ; image 2 : on se reconnaît (on avait choisi B) puis la réponse tombe"
+  },
+  "corrections": [
+   "carte B grisée qui soufflait la réponse → 3 cartes identiques",
+   "courbe qui dépassait sous les pastilles A et C → tracé raccourci",
+   "titre coupé « B. Tu / hésites » → « Sûrement B : tu hésites… »",
+   "graphe qui touchait le titre → graphe resserré (560)",
+   "« Et B, c’est le violon » → « d’après l’étude » (source = exemple de Kang 2009)",
+   "« 3e » → « troisième »"
+  ]
  }
 ]

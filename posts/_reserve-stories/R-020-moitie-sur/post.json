@@ -1,0 +1,40 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": false,
+ "avatar": "Claire",
+ "pilier": "Devine",
+ "angle": "Test : la curiosité est maximale quand on est à moitié sûr de sa réponse (Kang et al. 2009) ; c'est pour ça qu'un bon hook pose une question où l'on hésite",
+ "hypothese": "Un test où le spectateur se reconnaît (il a choisi B) puis comprend pourquoi donne envie de répondre en message et relie la curiosité au métier (hook).",
+ "savoir": [
+  "A-0032"
+ ],
+ "source": "Kang et al. (2009), Psychological Science 20(8):963-973, https://doi.org/10.1111/j.1467-9280.2009.02402.x (question B et sa réponse tirées de l'exemple de l'étude)",
+ "emotion": {
+  "quoi": "curiosité",
+  "comment": "image 1 : la question B donne envie de connaître la réponse ; image 2 : on découvre pourquoi on a choisi B, et la réponse (le violon)",
+  "ou": "image 1 puis image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Test",
+   "titre": "Laquelle te donne le plus envie de connaître la réponse ?",
+   "texte": "Choisis avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 640\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"20\" width=\"808\" height=\"180\" rx=\"28\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><circle cx=\"120\" cy=\"110\" r=\"46\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"7\"/><text x=\"120\" y=\"129\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"52\" letter-spacing=\"0\" fill=\"#100E0D\">A</text><text x=\"196\" y=\"98\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">Combien de pattes</text><text x=\"196\" y=\"148\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">a une araignée ?</text><rect x=\"40\" y=\"230\" width=\"808\" height=\"180\" rx=\"28\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><circle cx=\"120\" cy=\"320\" r=\"46\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"7\"/><text x=\"120\" y=\"339\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"52\" letter-spacing=\"0\" fill=\"#100E0D\">B</text><text x=\"196\" y=\"308\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">Quel instrument a été inventé</text><text x=\"196\" y=\"358\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">pour imiter la voix humaine ?</text><rect x=\"40\" y=\"440\" width=\"808\" height=\"180\" rx=\"28\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><circle cx=\"120\" cy=\"530\" r=\"46\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"7\"/><text x=\"120\" y=\"549\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"52\" letter-spacing=\"0\" fill=\"#100E0D\">C</text><text x=\"196\" y=\"518\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">Quel est le troisième mot de la</text><text x=\"196\" y=\"568\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\">page 212 de mon dictionnaire ?</text></svg>",
+   "h": 640,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Réponse",
+   "titre": "Sûrement B : tu hésites, donc tu veux savoir.",
+   "texte": "La curiosité culmine quand on est à moitié sûr (Kang et al., 2009) ; trop facile ou impossible, elle retombe. Un bon hook joue là-dessus. B ? Le violon, d’après l’étude. Tu avais choisi laquelle ?",
+   "svg": "<svg viewBox=\"0 0 888 560\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M110 70 V420 H850\" stroke=\"#6B675F\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><polyline points=\"145.5,351.3 163.2,325.5 181.0,301.2 198.8,278.4 216.5,257.1 234.2,237.2 252.0,218.8 269.8,201.9 287.5,186.4 305.2,172.4 323.0,159.9 340.8,148.9 358.5,139.3 376.2,131.2 394.0,124.6 411.8,119.4 429.5,115.7 447.2,113.5 465.0,112.8 482.8,113.5 500.5,115.7 518.2,119.4 536.0,124.6 553.8,131.2 571.5,139.3 589.2,148.9 607.0,159.9 624.8,172.4 642.5,186.4 660.2,201.9 678.0,218.8 695.8,237.2 713.5,257.1 731.2,278.4 749.0,301.2 766.8,325.5 784.5,351.3\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"131.3\" cy=\"372.9\" r=\"30\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"5\"/><text x=\"131.3\" y=\"385.93184\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"36\" letter-spacing=\"0\" fill=\"#100E0D\">C</text><circle cx=\"465.0\" cy=\"112.8\" r=\"30\" fill=\"#C8834A\" stroke=\"#100E0D\" stroke-width=\"5\"/><text x=\"465.0\" y=\"125.80000000000001\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"36\" letter-spacing=\"0\" fill=\"#F7F6F2\">B</text><circle cx=\"798.7\" cy=\"372.9\" r=\"30\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"5\"/><text x=\"798.6999999999999\" y=\"385.93184\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"36\" letter-spacing=\"0\" fill=\"#100E0D\">A</text><text x=\"100\" y=\"54\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"34\" letter-spacing=\"3\" fill=\"#6B675F\">CURIOSITÉ</text><text x=\"110\" y=\"482\" text-anchor=\"start\" font-family=\"Inter\" font-weight=\"700\" font-size=\"34\" letter-spacing=\"2\" fill=\"#6B675F\">JE N’EN SAIS RIEN</text><text x=\"850\" y=\"482\" text-anchor=\"end\" font-family=\"Inter\" font-weight=\"700\" font-size=\"34\" letter-spacing=\"2\" fill=\"#6B675F\">JE SAIS</text><text x=\"444\" y=\"526\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"34\" letter-spacing=\"2\" fill=\"#100E0D\">À QUEL POINT TU ES SÛR DE TA RÉPONSE</text></svg>",
+   "h": 560,
+   "taille": "t-m"
+  }
+ ]
+}
