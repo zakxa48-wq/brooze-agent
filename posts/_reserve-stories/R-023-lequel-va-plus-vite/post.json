@@ -1,0 +1,40 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": true,
+ "avatar": "Karim",
+ "pilier": "Devine",
+ "angle": "Devinette de monteur : un plan large où une voiture fonce au loin contre un gros plan où une tasse tourne doucement ; pour les monteurs, la taille du sujet dans le cadre pèse autant que sa vitesse sur le tempo perçu",
+ "hypothese": "Une devinette dont la réponse va contre l'intuition (le lent paraît plus rapide) surprend et fait répondre A ou B en message.",
+ "savoir": [
+  "A-0031"
+ ],
+ "source": "Monteurs praticiens, pas une étude : Inside The Edit, « Pacing in Film Editing » (https://www.youtube.com/watch?v=CdyTIng0M8Q) et StudioBinder, « What Is Pacing? » (https://www.youtube.com/watch?v=a9reuDw4cnU) ; S-0042, S-0043",
+ "emotion": {
+  "quoi": "surprise",
+  "comment": "on choisit la voiture qui fonce ; la réponse des monteurs est la tasse, et le dessin montre pourquoi (le trajet à l'écran)",
+  "ou": "image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Devine",
+   "titre": "Deux plans de 2 secondes. Lequel paraît le plus *rapide* ?",
+   "texte": "Choisis avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 740\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"30\" width=\"390\" height=\"520\" rx=\"18\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><clipPath id=\"caFalse\"><rect x=\"33\" y=\"33\" width=\"384\" height=\"514\" rx=\"16\"/></clipPath><g clip-path=\"url(#caFalse)\"><path d=\"M30 330 Q140 270 240 320 T420 300 V550 H30 Z\" fill=\"#D7D6D3\"/><path d=\"M30 390 H420\" stroke=\"#6B675F\" stroke-width=\"5\"/><path d=\"M30 430 H420\" stroke=\"#6B675F\" stroke-width=\"3\" stroke-dasharray=\"18 16\"/><g transform=\"translate(245 402) scale(1.7) translate(-245 -402)\"><rect x=\"223\" y=\"388\" width=\"44\" height=\"14\" rx=\"5\" fill=\"#100E0D\"/><rect x=\"233\" y=\"378\" width=\"22\" height=\"12\" rx=\"4\" fill=\"#100E0D\"/><circle cx=\"232\" cy=\"403\" r=\"5\" fill=\"#100E0D\"/><circle cx=\"258\" cy=\"403\" r=\"5\" fill=\"#100E0D\"/><path d=\"M205 384 H155\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M199 392 H141\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M193 400 H127\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/></g></g><rect x=\"468\" y=\"30\" width=\"390\" height=\"520\" rx=\"18\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><clipPath id=\"cbFalse\"><rect x=\"471\" y=\"33\" width=\"384\" height=\"514\" rx=\"16\"/></clipPath><g clip-path=\"url(#cbFalse)\"><path d=\"M458 530 H868\" stroke=\"#D7D6D3\" stroke-width=\"60\"/><path d=\"M478 170 H794 L772 510 Q764 532 742 532 H530 Q508 532 500 510 Z\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\" stroke-linejoin=\"round\"/><ellipse cx=\"636\" cy=\"170\" rx=\"158\" ry=\"32\" fill=\"#D7D6D3\" stroke=\"#100E0D\" stroke-width=\"7\"/><path d=\"M788 250 C858 250 858 420 776 420\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"22\" stroke-linecap=\"round\"/><path d=\"M596 100 Q636 82 676 100\" fill=\"none\" stroke=\"#8A8780\" stroke-width=\"6\" stroke-linecap=\"round\"/></g><text x=\"225.0\" y=\"620\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"60\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">A</text><text x=\"663.0\" y=\"620\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"60\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">B</text><text x=\"225.0\" y=\"672\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">une voiture</text><text x=\"225.0\" y=\"718\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">fonce au loin</text><text x=\"663.0\" y=\"672\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">une tasse</text><text x=\"663.0\" y=\"718\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">tourne lentement</text></svg>",
+   "h": 740,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Ce que disent les monteurs",
+   "titre": "Pour un monteur, c’est *B*.",
+   "texte": "Plus le sujet remplit le cadre, plus le moindre geste traverse l’écran, et plus il paraît rapide. Le rythme se règle aussi au cadrage. Et toi, A ou B ? Réponds en message.",
+   "svg": "<svg viewBox=\"0 0 888 740\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"30\" width=\"390\" height=\"520\" rx=\"18\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><clipPath id=\"caTrue\"><rect x=\"33\" y=\"33\" width=\"384\" height=\"514\" rx=\"16\"/></clipPath><g clip-path=\"url(#caTrue)\"><path d=\"M30 330 Q140 270 240 320 T420 300 V550 H30 Z\" fill=\"#D7D6D3\"/><path d=\"M30 390 H420\" stroke=\"#6B675F\" stroke-width=\"5\"/><path d=\"M30 430 H420\" stroke=\"#6B675F\" stroke-width=\"3\" stroke-dasharray=\"18 16\"/><g transform=\"translate(245 402) scale(1.7) translate(-245 -402)\"><rect x=\"223\" y=\"388\" width=\"44\" height=\"14\" rx=\"5\" fill=\"#100E0D\"/><rect x=\"233\" y=\"378\" width=\"22\" height=\"12\" rx=\"4\" fill=\"#100E0D\"/><circle cx=\"232\" cy=\"403\" r=\"5\" fill=\"#100E0D\"/><circle cx=\"258\" cy=\"403\" r=\"5\" fill=\"#100E0D\"/><path d=\"M205 384 H155\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M199 392 H141\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M193 400 H127\" stroke=\"#8A8780\" stroke-width=\"5\" stroke-linecap=\"round\"/></g><path d=\"M239 442 H285\" stroke=\"#100E0D\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M273 430 L287 442 L273 454\" stroke=\"#100E0D\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><rect x=\"468\" y=\"30\" width=\"390\" height=\"520\" rx=\"18\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"6\"/><clipPath id=\"cbTrue\"><rect x=\"471\" y=\"33\" width=\"384\" height=\"514\" rx=\"16\"/></clipPath><g clip-path=\"url(#cbTrue)\"><path d=\"M458 530 H868\" stroke=\"#D7D6D3\" stroke-width=\"60\"/><path d=\"M478 170 H794 L772 510 Q764 532 742 532 H530 Q508 532 500 510 Z\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\" stroke-linejoin=\"round\"/><ellipse cx=\"636\" cy=\"170\" rx=\"158\" ry=\"32\" fill=\"#D7D6D3\" stroke=\"#100E0D\" stroke-width=\"7\"/><path d=\"M788 250 C858 250 858 420 776 420\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"22\" stroke-linecap=\"round\"/><path d=\"M516 100 Q636 40 786 100\" fill=\"none\" stroke=\"#100E0D\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M764 78 L788 102 L756 112\" stroke=\"#100E0D\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><text x=\"225.0\" y=\"620\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"60\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">A</text><text x=\"663.0\" y=\"620\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"60\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">B</text><text x=\"225.0\" y=\"672\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">petit trajet</text><text x=\"225.0\" y=\"718\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">à l’écran</text><text x=\"663.0\" y=\"672\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">grand trajet</text><text x=\"663.0\" y=\"718\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">à l’écran</text></svg>",
+   "h": 740,
+   "taille": "t-m"
+  }
+ ]
+}

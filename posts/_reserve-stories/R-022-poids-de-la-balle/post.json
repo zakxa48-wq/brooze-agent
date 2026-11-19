@@ -1,0 +1,40 @@
+{
+ "type": "story",
+ "role": "attirer",
+ "nouveau_format": true,
+ "avatar": "Claire",
+ "pilier": "Devine",
+ "angle": "Jeu : trois balles identiques au moment de l'impact, seule la déformation change ; deviner la plus lourde. Règle d'animation (écrasement et étirement) : la déformation dit la matière, le volume reste constant ; c'est ce qui donne du poids à un logo animé",
+ "hypothese": "Un jeu où le spectateur trouve la bonne réponse sans savoir pourquoi (puis apprend pourquoi) donne une petite fierté et des réponses en message.",
+ "savoir": [
+  "A-0011"
+ ],
+ "source": "Écrasement et étirement, 1er des 12 principes de l'animation : F. Thomas & O. Johnston, The Illusion of Life (1981) ; https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation (S-0016, S-0017)",
+ "emotion": {
+  "quoi": "fierté (« je le savais sans le savoir »)",
+  "comment": "on désigne C d'instinct, sur la seule forme ; l'image 2 confirme et donne la règle que l'œil connaissait déjà",
+  "ou": "image 1 (le choix) puis image 2"
+ },
+ "slides": [
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "Devine",
+   "titre": "Trois balles touchent le sol. Laquelle est la plus *lourde* ?",
+   "texte": "Réponds dans ta tête avant de passer.",
+   "svg": "<svg viewBox=\"0 0 888 700\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 563 H864\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M144 210 V404\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M178 232 V404\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M212 254 V404\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><ellipse cx=\"178\" cy=\"576\" rx=\"147\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"178\" cy=\"500\" rx=\"140\" ry=\"60\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"125\" cy=\"473\" rx=\"31\" ry=\"10\" fill=\"#D7D6D3\"/><text x=\"178\" y=\"670\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"64\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">A</text><path d=\"M436 174 V368\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M470 196 V368\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M504 218 V368\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><ellipse cx=\"470\" cy=\"576\" rx=\"113\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"470\" cy=\"482\" rx=\"108\" ry=\"78\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"429\" cy=\"447\" rx=\"24\" ry=\"12\" fill=\"#D7D6D3\"/><text x=\"470\" y=\"670\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"64\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">B</text><path d=\"M706 146 V340\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M740 168 V340\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><path d=\"M774 190 V340\" stroke=\"#8A8780\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.55\"/><ellipse cx=\"740\" cy=\"576\" rx=\"97\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"740\" cy=\"468\" rx=\"92\" ry=\"92\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"705\" cy=\"427\" rx=\"20\" ry=\"15\" fill=\"#D7D6D3\"/><text x=\"740\" y=\"670\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"64\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">C</text></svg>",
+   "h": 700,
+   "taille": "t-m"
+  },
+  {
+   "layout": "visuel",
+   "fond": "papier",
+   "label": "La réponse",
+   "titre": "C : celle qui s’écrase *le moins*.",
+   "texte": "Règle des animateurs (The Illusion of Life, 1981) : plus un objet est dur et lourd, moins il s’écrase, et son volume ne change pas. C’est ce qui donne du poids à un logo qui tombe. Trouvé ? Dis-le-nous en message.",
+   "svg": "<svg viewBox=\"0 0 888 530\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(0 -150)\"><path d=\"M24 563 H864\" stroke=\"#100E0D\" stroke-width=\"6\" stroke-linecap=\"round\"/><ellipse cx=\"178\" cy=\"576\" rx=\"147\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"178\" cy=\"500\" rx=\"140\" ry=\"60\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"125\" cy=\"473\" rx=\"31\" ry=\"10\" fill=\"#D7D6D3\"/><text x=\"178\" y=\"652\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">A · mousse</text><ellipse cx=\"470\" cy=\"576\" rx=\"113\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"470\" cy=\"482\" rx=\"108\" ry=\"78\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"429\" cy=\"447\" rx=\"24\" ry=\"12\" fill=\"#D7D6D3\"/><text x=\"470\" y=\"652\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"38\" letter-spacing=\"0\" fill=\"#6B675F\" opacity=\"1\">B · caoutchouc</text><ellipse cx=\"740\" cy=\"576\" rx=\"97\" ry=\"10\" fill=\"#D7D6D3\"/><ellipse cx=\"740\" cy=\"468\" rx=\"92\" ry=\"92\" fill=\"#F7F6F2\" stroke=\"#100E0D\" stroke-width=\"7\"/><ellipse cx=\"705\" cy=\"427\" rx=\"20\" ry=\"15\" fill=\"#D7D6D3\"/><text x=\"740\" y=\"652\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"800\" font-size=\"38\" letter-spacing=\"0\" fill=\"#100E0D\" opacity=\"1\">C · bowling</text><text x=\"444\" y=\"328\" text-anchor=\"middle\" font-family=\"Inter\" font-weight=\"700\" font-size=\"34\" letter-spacing=\"1\" fill=\"#6B675F\" opacity=\"1\">même volume, seule la forme change</text></g></svg>",
+   "h": 530,
+   "taille": "t-m"
+  }
+ ]
+}

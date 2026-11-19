@@ -441,5 +441,73 @@
    "marge basse de la grille élargie"
   ],
   "utilisee_le": null
+ },
+ {
+  "id": "R-022-poids-de-la-balle",
+  "angle": "Devine : trois balles identiques à l'impact, laquelle est la plus lourde ? La déformation dit la matière, le volume reste constant (écrasement et étirement) ; c'est ce qui donne du poids à un logo animé",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-19",
+  "cap": "nouveau",
+  "emotion": "fierté",
+  "savoir": [
+   "A-0011"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 8,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "petite fierté image 2 : on avait désigné C sur la seule forme, la réponse le confirme et nomme la règle"
+  },
+  "corrections": [
+   "balle A qui touchait le bord du cadre → balles recentrées et agrandies, traits de chute plus visibles",
+   "ombres qui se mêlaient à la ligne du sol → décalées sous le sol",
+   "« la » seul en fin de ligne → insécable",
+   "image 2 : vide en haut du cadre réduit, « même taille » → « même volume » (exact : surfaces égales)",
+   "texte image 2 raccourci ; règle attribuée aux animateurs (The Illusion of Life, 1981), pas présentée comme une étude (A-0011 à vérifier)"
+  ],
+  "utilisee_le": null
+ },
+ {
+  "id": "R-023-lequel-va-plus-vite",
+  "angle": "Devine : plan large d'une voiture qui fonce au loin contre gros plan d'une tasse qui tourne lentement ; pour les monteurs, la taille du sujet dans le cadre pèse sur le tempo perçu",
+  "pilier": "Devine",
+  "role": "attirer",
+  "cree_le": "2026-11-19",
+  "cap": "nouveau",
+  "emotion": "surprise",
+  "savoir": [
+   "A-0031"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 8,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "surprise image 2 : on choisit la voiture qui fonce, la réponse est la tasse lente, et les flèches (petit / grand trajet à l'écran) font comprendre pourquoi"
+  },
+  "corrections": [
+   "légendes trop petites (30 → 38 px) et coupées en deux lignes",
+   "voiture agrandie (lisible au téléphone)",
+   "anse de la tasse coupée par le cadre, puis tasse qui ressemblait à un seau → tasse recentrée, anse visible",
+   "« Souvent, c'est B » (fréquence non mesurée) → « Pour un monteur, c'est B » : avis de praticiens (A-0031, aucune mesure), annoncé comme tel",
+   "texte image 2 raccourci"
+  ],
+  "utilisee_le": null
  }
 ]
