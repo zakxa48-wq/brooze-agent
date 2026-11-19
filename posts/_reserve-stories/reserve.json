@@ -406,5 +406,40 @@
    "« Et B, c’est le violon » → « d’après l’étude » (source = exemple de Kang 2009)",
    "« 3e » → « troisième »"
   ]
+ },
+ {
+  "id": "R-021-mot-qui-se-vide",
+  "angle": "Fais le test : dire « lundi » 20 fois à voix haute, le mot perd son sens (saturation sémantique) ; au montage, un mot répété devient un rythme",
+  "pilier": "Fais le test",
+  "role": "attirer",
+  "cree_le": "2026-11-19",
+  "cap": "nouveau",
+  "emotion": "rire (sourire amusé)",
+  "savoir": [
+   "A-0036",
+   "A-0033"
+  ],
+  "controle": {
+   "arret": 8,
+   "emotion": 8,
+   "divertissement": 8,
+   "apprend": 8,
+   "visuel": 8,
+   "lisibilite": 8,
+   "charte": 9,
+   "verite": 9,
+   "lien_brooze": 8,
+   "pas_ia": 8,
+   "orthographe": 9,
+   "emotion_ressentie": "sourire, image 1 (dernière ligne) puis image 2 : en le disant, « lundi » devient un drôle de son, et la grille qui se défait en « lun / di » le montre ; l'image 2 met un nom sur ce qu'on vient de sentir"
+  },
+  "corrections": [
+   "mots agrandis (40 → 58) et grille plus haute : la 1re version était trop petite pour arrêter le pouce",
+   "dernier mot qui débordait du cadre (« l u n d i ») → « lun » / « di » décalés",
+   "calendrier « LUN 18 » (une date : la story doit être intemporelle) → « LUNDI » et une grille de jours",
+   "texte de l'image 2 raccourci (7 → 5 lignes)",
+   "marge basse de la grille élargie"
+  ],
+  "utilisee_le": null
  }
 ]
